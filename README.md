@@ -1,0 +1,3 @@
+# serious-game
+
+Der res/ folder ist im myshare...

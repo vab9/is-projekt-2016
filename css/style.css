@@ -1,0 +1,87 @@
+html {
+    background-color: #160f29;
+    /*opacity: 0.5;*/
+}
+
+tw-story {
+    width:90%;
+    /* padding wichtig fuer arrow icons */
+    /*padding: 2%;*/
+    align-self: center;
+    overflow: hidden;
+}
+
+tw-passage {
+/*    background-color: #FCFBE3;*/
+    font-size: 1.8em;
+    /* golden ratio for readability */
+    line-height: 1.6;
+    width: 90%;
+    padding: 2%;
+    align-self: center;
+    white-space: normal;
+
+    border: solid #000 0.05em;
+    border-radius: 0.2em;
+
+    background-color: white;
+}
+
+/* icon arrows */
+tw-icon {
+    color: black;
+    opacity: 1;
+}
+/* Forward / backward icons */
+tw-sidebar {
+    font-size: 24px;
+    margin: auto 2%;
+    display: none;
+}
+
+/* buttons in headers and footers */
+.header button, .footer button {
+    float: right;
+    margin: 1%;
+}
+
+.footer button.uebersicht {
+    float: left;
+}
+
+.header, .footer {
+    overflow: hidden;
+    clear: both;
+}
+
+.continue {
+    text-align: center;
+}
+
+.fraubild {
+    width: 125px;
+    height: 151px;
+    margin: 2%;
+}
+
+.versteckt {
+    
+}
+
+mark {}
+
+html.kapitel2 {
+    background-color: white;
+}
+
+video {
+    width:100%;
+    height:auto;
+    align-self: center;
+}
+
+.clearFloat {
+    clear: both;
+    display: hidden;
+}
+

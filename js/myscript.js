@@ -39,8 +39,6 @@ function enlargeText() {
 
 }
 
-// debug
-console.log("myscript executed!");
 
 // add specific class to all tw-links for CSS insertion
 // $("tw-link").addClass("btn btn-primary");

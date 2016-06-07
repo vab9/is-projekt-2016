@@ -1,6 +1,7 @@
 html {
-    background-color: #160f29;
-    /*opacity: 0.5;*/
+    /*background-color: #160f29;*/
+    background-color: #0d3d56
+    
 }
 
 tw-story {
@@ -24,6 +25,7 @@ tw-passage {
     border: solid #000 0.05em;
     border-radius: 0.2em;
 
+    color:#373d3F;
     background-color: white;
 }
 
@@ -52,6 +54,8 @@ tw-sidebar {
 .header, .footer {
     overflow: hidden;
     clear: both;
+    background-color: #F26D21
+
 }
 
 .continue {
@@ -84,4 +88,6 @@ video {
     clear: both;
     display: hidden;
 }
+
+
 

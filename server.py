@@ -1,4 +1,16 @@
-#! /usr/bin/env bash 
+#! /usr/bin/env python3
 
-python3 -m http.server -b 127.0.0.1
+import http.server
+import socketserver
+
+PORT = 8000
+
+Handler = http.server.SimpleHTTPRequestHandler
+
+httpd = socketserver.TCPServer(("127.0.0.1", PORT), Handler)
+
+print("serving at port", PORT)
+httpd.serve_forever()
+
+# python3 -m http.server -b 127.0.0.1
 

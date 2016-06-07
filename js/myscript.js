@@ -1,4 +1,8 @@
+// functions & small media can be loaded at beginning
+// scripts interacting with individual passages must be called
+// on the respective passages
 
+var keinAnschluss = new Audio("res/kein_anschluss.mp3");
 // register shrink and enlarge Buttons
 
 function shrinkText() {
@@ -11,6 +15,13 @@ function enlargeText() {
    // console.log("enlarge clicked"); 
     $('tw-passage').css("font-size", "+=5%");
     $('tw-passage').css("line-height", "+=5%");
+}
+
+function berndAnrufen() {
+    keinAnschluss.play();
+    $('.anrufen').hide();
+    $('.angerufen').show();
+    // setTimeout($('.versteckt').show(), 6000);
 }
 
 

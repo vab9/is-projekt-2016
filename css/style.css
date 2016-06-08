@@ -1,11 +1,16 @@
 html {
     /*background-color: #160f29;*/
-    background-color: #0d3d56
+    background-color: #0d3d56;
     
 }
 
+hr {
+    border-color: #0d3d56;
+    background-color: #0d3d56;
+}
+
 tw-story {
-    width:90%;
+    width: 95%;
     /* padding wichtig fuer arrow icons */
     /*padding: 2%;*/
     align-self: center;
@@ -17,15 +22,15 @@ tw-passage {
     font-size: 1.8em;
     /* golden ratio for readability */
     line-height: 1.6;
-    width: 90%;
+    width: 95%;
     padding: 2%;
     align-self: center;
     white-space: normal;
 
-    border: solid #000 0.05em;
+    /*border: solid #000 0.05em;*/
     border-radius: 0.2em;
 
-    color:#373d3F;
+    /*color:#373d3F;*/
     background-color: white;
 }
 
@@ -75,7 +80,7 @@ tw-sidebar {
 mark {}
 
 html.kapitel2 {
-    background-color: white;
+    /*background-color: white;*/
 }
 
 video {

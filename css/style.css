@@ -34,6 +34,10 @@ tw-passage {
     background-color: white;
 }
 
+tw-link {
+    text-decoration-line: underline;
+}
+
 /* icon arrows */
 tw-icon {
     color: black;

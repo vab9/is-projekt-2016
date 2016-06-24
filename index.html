@@ -25,6 +25,8 @@
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -35,6 +37,8 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
+
 
 </script><tw-passagedata pid="1" name="Scenario1" tags="" position="218,410">&lt;b&gt;Das Scenario:&lt;/b&gt;
 
@@ -63,11 +67,11 @@ Was soll Susi tun?
 {
 &lt;div class=&quot;continue&quot;&gt;
 
-[[Scenario1-Option1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Telefonnummer suchen&lt;/button&gt;]]
+[[Scenario1-Option1&lt;-&lt;button class=&quot;btn btn-primary&quot;&gt;Telefonnummer suchen&lt;/button&gt;]]
 
-[[Scenario1-Option2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Gemeinsame Freunde kontaktieren&lt;/button&gt;]]
+[[Scenario1-Option2&lt;-&lt;button class=&quot;btn btn-primary&quot;&gt;Gemeinsame Freunde kontaktieren&lt;/button&gt;]]
 
-[[Scenario1-Option3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Bei Facebook suchen&lt;/button&gt;]]
+[[Scenario1-Option3&lt;-&lt;button class=&quot;btn btn-primary&quot;&gt;Bei Facebook suchen&lt;/button&gt;]]
 
 &lt;/div&gt;
 }
@@ -81,7 +85,7 @@ Was soll Susi tun?
 <tw-passagedata pid="3" name="Header" tags="header" position="568,10">{
 &lt;div class=&quot;header&quot;&gt;
 
-[[Hilfe&lt;-&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-question-sign&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Hilfe&lt;/button&gt;]]
+[[Hilfe&lt;-&lt;button class=&quot;btn btn-primary&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-question-sign&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Hilfe&lt;/button&gt;]]
 
 &lt;button class=&quot;enlarge btn btn-default&quot;&gt;Text vergrößern&lt;/button&gt;
 &lt;button class=&quot;shrink btn btn-default&quot;&gt;Text verkleinern&lt;/button&gt;
@@ -104,7 +108,7 @@ Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 Wenn Sie fertig sind, dann klicken sie auf den Knopf:
 {
 &lt;div class=&quot;continue&quot;&gt;
-[[Scenario1&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Zum Quiz&lt;/button&gt;]]
+[[Scenario1&lt;-&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Zum Quiz&lt;/button&gt;]]
 &lt;/div&gt;
 }
 </tw-passagedata>
@@ -154,22 +158,22 @@ Stand: April 2016</tw-passagedata>
 ]
 }</tw-passagedata>
 <tw-passagedata pid="9" name="Willkommen" tags="" position="18,10"> 
-{(put: (prompt: &quot;Wie ist ihr Name?&quot;) into $player)}
-&lt;!-- (set: $player to &quot;Peter&quot;) --&gt;
+&lt;!-- {(put: (prompt: &quot;Wie ist ihr Name?&quot;) into $player)} --&gt;
+(set: $player to &quot;Peter&quot;)
 &lt;b&gt;Hallo $player! Willkommen zu unserem Lernspiel!&lt;/b&gt;
 
 Sie können direkt bei Kapitel 1 anfangen, oder erstmal zur Kapitelübersicht gehen:
 
 {
 &lt;div class=&quot;continue&quot;&gt;
-[[Kapitel 1 intro&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Bei Kapitel 1 anfangen&lt;/button&gt;]]
+[[Kapitel 1 intro&lt;-&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Bei Kapitel 1 anfangen&lt;/button&gt;]]
 &lt;/div&gt;
 }</tw-passagedata>
 <tw-passagedata pid="10" name="Footer" tags="footer" position="218,210">{
 &lt;hr&gt;
 &lt;div class=&quot;footer&quot;&gt;
-(if: (history: )&#39;s length &gt; 0)[[[&lt;button class=&quot;btn btn-info&quot;&gt;Zurück&lt;/button&gt;-&gt;(string: (history:)&#39;s last)]]]
-[[Übersicht&lt;-&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Zur Übersicht&lt;/button&gt;]] 
+(if: (history: )&#39;s length &gt; 0)[[[&lt;button class=&quot;btn btn-default&quot;&gt;Zurück&lt;/button&gt;-&gt;(string: (history:)&#39;s last)]]]
+[[Übersicht&lt;-&lt;button class=&quot;btn btn-default uebersicht&quot;&gt;Zur Übersicht&lt;/button&gt;]] 
 &lt;/div&gt;
 
 &lt;script&gt;
@@ -191,7 +195,7 @@ Zuerst zeigen wir Ihnen ein kurzes Video, das solche Netzwerke erklärt, später
 
 {
 &lt;div class=&quot;continue&quot;&gt;
-[[BeispielVideo&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Zum Video&lt;/button&gt;]]
+[[BeispielVideo&lt;-&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Zum Video&lt;/button&gt;]]
 &lt;/div&gt;
 }
 </tw-passagedata>
@@ -202,8 +206,8 @@ Susi blättert in ihrem Adressbuch und findet tatsächlich eine Telefonnummer vo
 Hoffnungsvoll nimmt sie den Hörer ihres Telefons auf...
 &lt;br&gt;&lt;/br&gt;&lt;br&gt;&lt;/br&gt;
 
-&lt;button class=&quot;btn btn-default btn-lg anrufen&quot;&gt;Bernd anrufen!&lt;/button&gt;
-[[&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Lieber nichts machen!&lt;/button&gt;-&gt;Scenario1]]
+&lt;button class=&quot;btn btn-primary btn-lg anrufen&quot;&gt;Bernd anrufen!&lt;/button&gt;
+[[&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Lieber nichts machen!&lt;/button&gt;-&gt;Scenario1]]
 &lt;/div&gt;
 
 &lt;div class=&quot;angerufen&quot;&gt;
@@ -214,7 +218,7 @@ Telefonnummern ändern sich ständig. Viele Familien haben heutzutage gar keinen
 Vielleicht kann Susi ja über gemeinsame Freunde die Kontaktdaten von Bernd herausfinden...
 &lt;br&gt;&lt;/br&gt;&lt;br&gt;&lt;/br&gt;
 &lt;div class=&quot;continue&quot;&gt;
-[[Scenario1&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Andere Auswahl treffen&lt;/button&gt;]]
+[[Scenario1&lt;-&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Andere Auswahl treffen&lt;/button&gt;]]
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;script&gt;
@@ -230,7 +234,7 @@ Auch die nächsten gemeinsamen Freunde, die Susi anruft, freuen sich mal wieder 
 Susi versucht es danach über das Ehemaligen-Netzwerk ihrer Schule. Daher bekommt Sie immerhin eine Anschrift. Ihr Brief an Bernd bleibt aber wochenlang unbeantwortet... Wahrscheinlich wohnt er nicht mehr an dieser Adresse.
 {
 &lt;div class=&quot;continue&quot;&gt;
-[[Scenario1&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Andere Auswahl treffen&lt;/button&gt;]]
+[[Scenario1&lt;-&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Andere Auswahl treffen&lt;/button&gt;]]
 &lt;/div&gt;
 }</tw-passagedata>
 <tw-passagedata pid="14" name="Scenario1-Option3" tags="" position="368,610">Susi meldet sich bei Facebook an und gibt Bernds Namen in der Suchleiste ein. Sie sendet ihm einen Freundschaftsantrag und gemeinsam machen Sie einen Termin zum Kaffee trinken aus. Der gesamte Prozess dauert keine 20 Minuten.
@@ -244,7 +248,7 @@ Herzlichen Glückwunsch! Sie haben die modernste Methode gewählt und somit dies
 {
 &lt;div class=&quot;continue&quot;&gt;
 
-[[Ein weiteres Kapitel&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Auf zum nächsten Kapitel&lt;/button&gt;]]
+[[Ein weiteres Kapitel&lt;-&lt;button class=&quot;btn btn-primary btn-lg&quot;&gt;Auf zum nächsten Kapitel&lt;/button&gt;]]
 
 &lt;/div&gt;
 }</tw-passagedata>

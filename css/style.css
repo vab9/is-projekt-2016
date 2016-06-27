@@ -4,6 +4,10 @@ html {
     
 }
 
+button:focus {
+    border: dashed;
+}
+
 hr {
     border-color: #0d3d56;
     background-color: #0d3d56;
@@ -37,6 +41,11 @@ tw-passage {
 tw-link {
     text-decoration-line: underline;
 }
+
+tw-link:hover {
+    text-decoration-line: overline underline;
+}
+
 
 /* icon arrows */
 tw-icon {

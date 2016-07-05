@@ -23,9 +23,6 @@
 
 
 
-
-
-
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -35,10 +32,7 @@ $(document).ready(function() {
 	$.getScript("js/myscript.js", function(){
 		console.log("myscript.js loaded!");
 	});
-});
-
-
-</script><tw-passagedata pid="1" name="Scenario1" tags="" position="218,410">&lt;b&gt;Das Scenario:&lt;/b&gt;
+});</script><tw-passagedata pid="1" name="Scenario1" tags="" position="218.33333333333334,410">&lt;b&gt;Das Scenario:&lt;/b&gt;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;fraubild&quot; src=&quot;res/frau60.jpg&quot; alt=&quot;Frau mit 60 Jahren&quot;&gt;&lt;/div&gt;}
 Das ist Susi. Susi ist gestern 60 Jahre alt geworden. Je älter Sie wird, desto mehr vermisst Sie den Kontakt zu alten Freunden. Einige sind weggezogen und wohnen hunderte Kilometer entfernt, andere sind zu beschäftigt, um sich zu melden. Viele hat Susi einfach mit der Zeit aus den Augen verloren... 
@@ -75,12 +69,12 @@ Was soll Susi tun?
 }
 
 </tw-passagedata>
-<tw-passagedata pid="2" name="Facebook" tags="" position="408,408">Facebook ist das weltweit größte soziale Netzwerk im Internet. Es wurde 2004 von Amerikaner Mark Zuckerberg gegründet und zählt weltweit über 1,5 Milliarden aktive Nutzer.
+<tw-passagedata pid="2" name="Facebook" tags="" position="408.33333333333337,408.33333333333337">Facebook ist das weltweit größte soziale Netzwerk im Internet. Es wurde 2004 von Amerikaner Mark Zuckerberg gegründet und zählt weltweit über 1,5 Milliarden aktive Nutzer.
 
 ...
 
 (Beispiele für eine Seite mit weiterführenden Informationen)</tw-passagedata>
-<tw-passagedata pid="3" name="Header" tags="header" position="568,10">{
+<tw-passagedata pid="3" name="Header" tags="header" position="568.3333333333334,10">{
 &lt;div class=&quot;header&quot;&gt;
 
 [[Hilfe&lt;-&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-question-sign&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Hilfe&lt;/button&gt;]]
@@ -110,7 +104,7 @@ Wenn Sie fertig sind, dann klicken sie auf den Knopf:
 &lt;/div&gt;
 }
 </tw-passagedata>
-<tw-passagedata pid="5" name="Übersicht" tags="" position="218,10">&lt;b&gt;Dies ist die Kapitelübersicht.&lt;/b&gt;
+<tw-passagedata pid="5" name="Übersicht" tags="" position="218.33333333333334,10">&lt;b&gt;Dies ist die Kapitelübersicht.&lt;/b&gt;
 
 Bitte wählen Sie ein Kapitel:
 
@@ -120,16 +114,14 @@ Bitte wählen Sie ein Kapitel:
 [[Wenn Sie Hilfe benötigen, klicken Sie hier!-&gt;Hilfe]]
 
 </tw-passagedata>
-<tw-passagedata pid="6" name="Ein weiteres Kapitel" tags="kapitel2" position="668,260">Vielen Dank fürs Spielen dieses Mock-ups!
+<tw-passagedata pid="6" name="Ein weiteres Kapitel" tags="kapitel2" position="668.3333333333334,260">Vielen Dank fürs Spielen dieses Mock-ups!
 
 Hier könnte ein weiteres Kapitel beginnen.
 Im Moment ist es noch mein CSS Sandkasten...
 
-Und meiner! (Dave)
-
 Hier ein Beispiel fuer ein HTML Mark:
 &lt;mark&gt;Bli Bla blub!&lt;/mark&gt;</tw-passagedata>
-<tw-passagedata pid="7" name="Hilfe" tags="" position="433,10">&lt;b&gt;Das Spiel&lt;/b&gt;
+<tw-passagedata pid="7" name="Hilfe" tags="" position="433.33333333333337,10">&lt;b&gt;Das Spiel&lt;/b&gt;
 
 In diesem Lernspiel werden Grundkenntnisse zu digitalen Medien vermittelt. Die Aufgaben sind auf Personen im alter jenseits von 60 Jahren ausgerichtet. Wir wünschen viel Spaß!
 
@@ -150,14 +142,14 @@ Dieses Spiel wurde nur auf einer aktuellen Firefox version getesten. Stellen Sie
 Dieses Spiel wird aktiv an der Universität Osnabrück entwickelt. Wir sind Masterstudenten im Fachbereich für Unternehmensrechnung und Wirtschaftsinformatik.
 
 Stand: April 2016</tw-passagedata>
-<tw-passagedata pid="8" name="CustomPassageCSS" tags="header" position="718,10">{
+<tw-passagedata pid="8" name="CustomPassageCSS" tags="header" position="718.3333333333334,10">{
 &lt;!-- Adds passage tags to html element so they can be customized with CSS .passagetag --&gt;
 (print: &quot;&lt;script&gt;$(&#39;html&#39;).removeClass(\)&lt;/script&gt;&quot;)
 (if: (passage:)&#39;s tags&#39;s length &gt; 0)[
 (print: &quot;&lt;script&gt;$(&#39;html&#39;).addClass(&#39;&quot; + (passage:)&#39;s tags.join(&#39; &#39;) + &quot;&#39;\)&lt;/script&gt;&quot;)
 ]
 }</tw-passagedata>
-<tw-passagedata pid="9" name="Willkommen" tags="" position="18,10">&lt;!-- 
+<tw-passagedata pid="9" name="Willkommen" tags="" position="18.333333333333336,10">&lt;!-- 
 {(put: (prompt: &quot;Wie ist ihr Name?&quot;) into $player)}
 --&gt; (set: $player to &quot;Peter&quot;)
 &lt;b&gt;Hallo $player! Willkommen zu unserem Lernspiel!&lt;/b&gt;
@@ -169,7 +161,7 @@ Sie können direkt bei Kapitel 1 anfangen, oder erstmal zur Kapitelübersicht ge
 [[Kapitel 1 intro&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Bei Kapitel 1 anfangen&lt;/button&gt;]]
 &lt;/div&gt;
 }</tw-passagedata>
-<tw-passagedata pid="10" name="Footer" tags="footer" position="218,210">{
+<tw-passagedata pid="10" name="Footer" tags="footer" position="218.33333333333334,210">{
 &lt;hr&gt;
 &lt;div class=&quot;footer&quot;&gt;
 (if: (history: )&#39;s length &gt; 0)[[[&lt;button class=&quot;btn btn-info&quot;&gt;Zurück&lt;/button&gt;-&gt;(string: (history:)&#39;s last)]]]
@@ -185,7 +177,7 @@ $(document).ready(function() {
 &lt;/script&gt;
 
 }</tw-passagedata>
-<tw-passagedata pid="11" name="Kapitel 1 intro" tags="" position="18,210">&lt;b&gt;Kapitel 1 - Vorzüge von digitalen sozialen Netzwerken&lt;/b&gt;
+<tw-passagedata pid="11" name="Kapitel 1 intro" tags="" position="18.333333333333336,210">&lt;b&gt;Kapitel 1 - Vorzüge von digitalen sozialen Netzwerken&lt;/b&gt;
 
 In diesem Kapitel geht es um die Vorzüge von digitalen sozialen Netzwerken, wie zum Beispiel Facebook.
 
@@ -197,7 +189,7 @@ Zuerst zeigen wir Ihnen ein kurzes Video, das solche Netzwerke erklärt, später
 &lt;/div&gt;
 }
 </tw-passagedata>
-<tw-passagedata pid="12" name="Scenario1-Option1" tags="" position="68,610">{
+<tw-passagedata pid="12" name="Scenario1-Option1" tags="" position="68.33333333333334,610">{
 &lt;div class=&quot;continue anrufen&quot;&gt;\
 Susi blättert in ihrem Adressbuch und findet tatsächlich eine Telefonnummer von Bernd.
 &lt;br&gt;&lt;/br&gt;&lt;br&gt;&lt;/br&gt;
@@ -225,7 +217,7 @@ Vielleicht kann Susi ja über gemeinsame Freunde die Kontaktdaten von Bernd hera
 	});
 &lt;/script&gt;
 }</tw-passagedata>
-<tw-passagedata pid="13" name="Scenario1-Option2" tags="" position="218,610">Als erstes ruft Susi Petra an. Petra war damals auch sehr gut mit Bernd befreundet. Leider hat auch Petra lange nichts mehr von Bernd gehört. Petra und Susi versprechen einander, wieder öfter miteinander zu sprechen.
+<tw-passagedata pid="13" name="Scenario1-Option2" tags="" position="218.33333333333334,610">Als erstes ruft Susi Petra an. Petra war damals auch sehr gut mit Bernd befreundet. Leider hat auch Petra lange nichts mehr von Bernd gehört. Petra und Susi versprechen einander, wieder öfter miteinander zu sprechen.
 
 Auch die nächsten gemeinsamen Freunde, die Susi anruft, freuen sich mal wieder etwas von Susi zu hören. Leider kann keiner von ihnen Susi weiterhelfen.
 
@@ -235,7 +227,7 @@ Susi versucht es danach über das Ehemaligen-Netzwerk ihrer Schule. Daher bekomm
 [[Scenario1&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Andere Auswahl treffen&lt;/button&gt;]]
 &lt;/div&gt;
 }</tw-passagedata>
-<tw-passagedata pid="14" name="Scenario1-Option3" tags="" position="368,610">Susi meldet sich bei Facebook an und gibt Bernds Namen in der Suchleiste ein. Sie sendet ihm einen Freundschaftsantrag und gemeinsam machen Sie einen Termin zum Kaffee trinken aus. Der gesamte Prozess dauert keine 20 Minuten.
+<tw-passagedata pid="14" name="Scenario1-Option3" tags="" position="368.33333333333337,610">Susi meldet sich bei Facebook an und gibt Bernds Namen in der Suchleiste ein. Sie sendet ihm einen Freundschaftsantrag und gemeinsam machen Sie einen Termin zum Kaffee trinken aus. Der gesamte Prozess dauert keine 20 Minuten.
 
 Alle sozialen Netzwerke verbinden Menschen. Digitale soziale Netzwerke sind deshalb so effektiv, weil sie so weitreichend und unmittelbar sind. Jeder Mensch mit einer Internetverbindung kann sich binnen Minuten anmelden und Kontakte knüpfen oder pflegen. Man kann sich austauschen, gemeinsam Termine planen, Interessen vergleichen und mittlerweile sogar telefonieren. So können problemlos selbst die größten Entfernungen uberwunden werden.
 

@@ -4,6 +4,10 @@ html {
     
 }
 
+button:focus {
+    border: dashed;
+}
+
 hr {
     border-color: #0d3d56;
     background-color: #0d3d56;
@@ -34,17 +38,26 @@ tw-passage {
     background-color: white;
 }
 
+tw-link {
+    text-decoration-line: underline;
+}
+
+tw-link:hover {
+    text-decoration-line: overline underline;
+}
+
+
 /* icon arrows */
 tw-icon {
     color: black;
     opacity: 1;
 }
 /* Forward / backward icons */
-tw-sidebar {
+/*tw-sidebar {
     font-size: 24px;
     margin: auto 2%;
     display: none;
-}
+}*/
 
 /* buttons in headers and footers */
 .header button, .footer button {
@@ -87,6 +100,7 @@ video {
     width:100%;
     height:auto;
     align-self: center;
+    preload: none;
 }
 
 .clearFloat {

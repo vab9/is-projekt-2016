@@ -28,6 +28,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -38,6 +39,7 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
 
 
 
@@ -84,7 +86,7 @@ Was soll Susi tun?
 ...
 
 (Beispiele für eine Seite mit weiterführenden Informationen)</tw-passagedata>
-<tw-passagedata pid="3" name="Header" tags="header" position="1000,13.333333333333334">{
+<tw-passagedata pid="3" name="Header" tags="header" position="1000,13">{
 &lt;div class=&quot;header&quot;&gt;
 
 [[Hilfe&lt;-&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-question-sign&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Hilfe&lt;/button&gt;]]
@@ -114,19 +116,23 @@ Wenn Sie fertig sind, dann klicken sie auf den Knopf:
 &lt;/div&gt;
 }
 </tw-passagedata>
-<tw-passagedata pid="5" name="Übersicht" tags="" position="638.3333333333334,200">&lt;b&gt;Dies ist die Kapitelübersicht.&lt;/b&gt;
+<tw-passagedata pid="5" name="Übersicht" tags="" position="638,200">&lt;b&gt;Dies ist die Kapitelübersicht.&lt;/b&gt;
 
 Bitte wählen Sie ein Kapitel:
 
 [[1. Kapitel-&gt;Kapitel 1 intro]] - Vorzüge von digitalen sozialen Netzwerken
 [[- Anderes Kapitel-&gt;Ein weiteres Kapitel]] - Andere interessante Dinge
 
+[[1. Kapitel - Grundfunktionen von Facebook-&gt;Kapitel 1]] 
+
 [[2. Kapitel - Sicherheit-&gt;Kapitel 2]] 
+
+
 
 [[Wenn Sie Hilfe benötigen, klicken Sie hier!-&gt;Hilfe]]
 
 </tw-passagedata>
-<tw-passagedata pid="6" name="Ein weiteres Kapitel" tags="kapitel2" position="621.6666666666667,726.6666666666667">Vielen Dank fürs Spielen dieses Mock-ups!
+<tw-passagedata pid="6" name="Ein weiteres Kapitel" tags="kapitel2" position="621,726">Vielen Dank fürs Spielen dieses Mock-ups!
 
 Hier könnte ein weiteres Kapitel beginnen.
 Im Moment ist es noch mein CSS Sandkasten...
@@ -135,7 +141,7 @@ Und meiner! (Dave)
 
 Hier ein Beispiel fuer ein HTML Mark:
 &lt;mark&gt;Bli Bla blub!&lt;/mark&gt;</tw-passagedata>
-<tw-passagedata pid="7" name="Hilfe" tags="" position="846.6666666666667,13.333333333333334">&lt;b&gt;Das Spiel&lt;/b&gt;
+<tw-passagedata pid="7" name="Hilfe" tags="" position="846,13">&lt;b&gt;Das Spiel&lt;/b&gt;
 
 In diesem Lernspiel werden Grundkenntnisse zu digitalen Medien vermittelt. Die Aufgaben sind auf Personen im alter jenseits von 60 Jahren ausgerichtet. Wir wünschen viel Spaß!
 
@@ -156,7 +162,7 @@ Dieses Spiel wurde nur auf einer aktuellen Firefox version getesten. Stellen Sie
 Dieses Spiel wird aktiv an der Universität Osnabrück entwickelt. Wir sind Masterstudenten im Fachbereich für Unternehmensrechnung und Wirtschaftsinformatik.
 
 Stand: April 2016</tw-passagedata>
-<tw-passagedata pid="8" name="CustomPassageCSS" tags="header" position="1136.6666666666667,20">{
+<tw-passagedata pid="8" name="CustomPassageCSS" tags="header" position="1136,20">{
 &lt;!-- Adds passage tags to html element so they can be customized with CSS .passagetag --&gt;
 (print: &quot;&lt;script&gt;$(&#39;html&#39;).removeClass(\)&lt;/script&gt;&quot;)
 (if: (passage:)&#39;s tags&#39;s length &gt; 0)[
@@ -253,7 +259,7 @@ Herzlichen Glückwunsch! Sie haben die modernste Methode gewählt und somit dies
 
 &lt;/div&gt;
 }</tw-passagedata>
-<tw-passagedata pid="15" name="Kapitel 2.1" tags="" position="943.3333333333334,330">&#39;&#39;Verhalten in sozialen Netzwerken&#39;&#39;
+<tw-passagedata pid="15" name="Kapitel 2.1" tags="" position="2404.0001,294">&#39;&#39;Verhalten in sozialen Netzwerken&#39;&#39;
 
 Vermittelte Inhalte:
 
@@ -262,7 +268,7 @@ Vermittelte Inhalte:
 * Umgang mit Freunden und anderen Gefahren
 * Gesundes Misstrauen gegenüber Unbekanntem und potenziell Gefährlichem
 [[Weiter zu den Lernzielen-&gt;F1.2]]</tw-passagedata>
-<tw-passagedata pid="16" name="F1.2" tags="" position="940,495">&#39;&#39;Lernziele: Sensibilisierung und Motivation&#39;&#39;
+<tw-passagedata pid="16" name="F1.2" tags="" position="2404.0001,419">&#39;&#39;Lernziele: Sensibilisierung und Motivation&#39;&#39;
 
 In diesem Kapitel sollst Du lernen …
 
@@ -270,12 +276,12 @@ In diesem Kapitel sollst Du lernen …
 * … dein Verhalten in bestimmten Situationen auf sozialen Netzwerken anzupassen
 * … bewerten zu können, was Du in einem sozialen Netzwerk machen kannst und was du nicht machen solltest
 Weiter zu [[&quot;Sich selbst treu bleiben&quot;-&gt;F1.3]]</tw-passagedata>
-<tw-passagedata pid="17" name="F1.3" tags="" position="940,653">&#39;&#39;Sich selbst treu bleiben&#39;&#39;
+<tw-passagedata pid="17" name="F1.3" tags="" position="2000,865">&#39;&#39;Sich selbst treu bleiben&#39;&#39;
 
 Facebook ist eine Gemeinschaft, in der Nutzer ihre echten Namen und Identitäten verwenden sollen. So übernehmen alle die Verantwortung für ihr Handeln. Es stellt einen Verstoß gegen die allgemeinen Geschäftsbedingungen von Facebook dar, in Bezug auf Namen oder Alter falsche Angaben zu machen.
 
 [[Weiter zum Szenario-&gt;F1.3.1]]</tw-passagedata>
-<tw-passagedata pid="18" name="F1.3.1" tags="" position="941,811">&#39;&#39;Stelle dir folgendes Szenario vor&#39;&#39;
+<tw-passagedata pid="18" name="F1.3.1" tags="" position="2000,1021.6666666666667">&#39;&#39;Stelle dir folgendes Szenario vor&#39;&#39;
 
 Du möchtest dich bei Facebook anmelden. Wie das geht, hast du bereits in Kapitel X.X gelernt.
 &lt;!--&gt;evtl. Button, um zu diesem Kapitel zu springen, und ein Button dort, um wieder zurück zu springen&lt;/!--&gt;
@@ -286,7 +292,7 @@ Wenn du einen Anmelde-Namen aus folgender Auswahl aussuchen müsstest, welchen w
 * [[Gundula Gause-&gt;F1.3.3]]
 * [[Pumuckl-&gt;F1.3.3]]
 </tw-passagedata>
-<tw-passagedata pid="19" name="F1.3.3" tags="" position="1026,961">&#39;&#39;Achtung!&#39;&#39;
+<tw-passagedata pid="19" name="F1.3.3" tags="" position="2083.3333333333335,1173.3333333333335">&#39;&#39;Achtung!&#39;&#39;
 
 Du hast vermutlich einen falschen Namen als deinen Facebook-Namen angegeben!
 
@@ -295,14 +301,14 @@ Du hast vermutlich einen falschen Namen als deinen Facebook-Namen angegeben!
 [[Einen anderen Namen wählen-&gt;F1.3.1]]
 
 [[Was bedeutet es, wenn ein falscher Name verwendet wird?-&gt;F1.3.4]]</tw-passagedata>
-<tw-passagedata pid="20" name="F1.3.2" tags="" position="866.6666666666667,960">&#39;&#39;Gut gemacht!&#39;&#39;
+<tw-passagedata pid="20" name="F1.3.2" tags="" position="1923.3333333333335,1173.3333333333335">&#39;&#39;Gut gemacht!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
 
 Du hast den richtigen Namen angegeben. Dies ist wichtig, um zum einen den allgemeinen Geschäftsbedingungen (AGBs) von Facebook zu entsprechen und zum anderen um anderen Nutzern von Facebook die Chance zu geben, dich zu identifizieren.
 
 [[Was bedeutet es, wenn ein falscher Name verwendet wird?-&gt;F1.3.4]]</tw-passagedata>
-<tw-passagedata pid="21" name="F1.3.4" tags="" position="942,1108">&#39;&#39;Gib Acht bei der Wahl deines Facebook-Namens&#39;&#39;
+<tw-passagedata pid="21" name="F1.3.4" tags="" position="2000,1321.6666666666667">&#39;&#39;Gib Acht bei der Wahl deines Facebook-Namens&#39;&#39;
 
 Was passiert, wenn ich bei der Anmeldung einen falschen Namen angebe?
 
@@ -316,27 +322,27 @@ Was passiert, wenn jemand anderes einen falschen Namen angibt?
 
 Weiter zu [[„Sparsamkeit mit Profilinformationen“-&gt;F1.4]]
 </tw-passagedata>
-<tw-passagedata pid="22" name="F1.4" tags="" position="942,1258">&#39;&#39;Sparsamkeit mit Profilinformationen&#39;&#39;
+<tw-passagedata pid="22" name="F1.4" tags="" position="2000,1470">&#39;&#39;Sparsamkeit mit Profilinformationen&#39;&#39;
 
 Stell dir folgendes Szenario vor:	
 
 Susi Sorglos trifft ihre Nachbarin, die sie nur flüchtig kennt auf der Straße auf dem Weg zum Bäcker. Völlig unvermittelt erzählt sie der Nachbarin aus ihrem Leben. Susi erzählt, dass Sie gerne Hunde, Wellensittiche, Greenpeace und Helene Fischer mag. Außerdem, dass sie Vegetarierin ist und dass sie gerne schläft. Weiterhin berichtet Susi wo sie zur Schule gegangen ist und fragt ihre Nachbarin, ob diese nicht Bilder von Susis letztem Urlaub und von Susis Enkelkindern sehen möchte.
 
 [[Weiter zu Beurteilung dieser Situation-&gt;F1.4.1]]</tw-passagedata>
-<tw-passagedata pid="23" name="F1.4.1" tags="" position="939,1396">&#39;&#39;Wie würdest du dieses Verhalten einschätzen?&#39;&#39;
+<tw-passagedata pid="23" name="F1.4.1" tags="" position="1995,1579">&#39;&#39;Wie würdest du dieses Verhalten einschätzen?&#39;&#39;
 
 * [[Völlig normal-&gt;F1.4.1.2]]
 * [[Ungewöhnlich-&gt;F1.4.1.3]]
 * [[Dazu habe ich keine Meinung-&gt;F1.4.1.2]]
 </tw-passagedata>
-<tw-passagedata pid="24" name="F1.4.1.2" tags="" position="939,1546">&#39;&#39;Achtung!&#39;&#39; 
+<tw-passagedata pid="24" name="F1.4.1.2" tags="" position="1995,1731">&#39;&#39;Achtung!&#39;&#39; 
 
 In dem Szenario handelt Susi sehr sorglos und ungewöhnlich. Da sie die Nachbarin kaum kennt, teilt sie viel zu offen zu private Informationen.
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_surprised.jpg&quot; alt=&quot;Verwirrtes altes Ehepaar&quot;&gt;&lt;/div&gt;}
 
 [[Warum ist das relevant?-&gt;F1.4.2]]</tw-passagedata>
-<tw-passagedata pid="25" name="F1.4.1.3" tags="" position="1089,1546">&#39;&#39;Genau!&#39;&#39;
+<tw-passagedata pid="25" name="F1.4.1.3" tags="" position="2146.666666666667,1756.6666666666667">&#39;&#39;Genau!&#39;&#39;
 
 Das Verhalten von Susi ist sehr sorglos und ungewöhnlich. Sie teilt sehr private Informationen mit einer Person, die sie kaum kennt.
 
@@ -344,7 +350,7 @@ Das Verhalten von Susi ist sehr sorglos und ungewöhnlich. Sie teilt sehr privat
 
 [[Warum ist das relevant?-&gt;F1.4.2]]
 </tw-passagedata>
-<tw-passagedata pid="26" name="F1.4.2" tags="" position="1004,1702">&#39;&#39;Warum ist das Szenario relevant?&#39;&#39;
+<tw-passagedata pid="26" name="F1.4.2" tags="" position="1984,1704">&#39;&#39;Warum ist das Szenario relevant?&#39;&#39;
 
 Das Verhalten von Susi ist ungewöhnlich und gefährlich. Wahrscheinlich würdest du dieses Verhalten im echten Leben nicht an den Tag legen. Das gleiche solltest du auch beachten, wenn du ein soziales Netzwerk wie Facebook benutzt. Denn hier können andere Nutzer Informationen über dich erfahren. Es liegt an dir, darauf zu achten, dass nur die Informationen mit anderen geteilt werden, die du bestimmst. 
 
@@ -354,7 +360,7 @@ So wie du einer flüchtigen Bekanntschaft keine intimen Details über dein Leben
 
 [[Das gleiche gilt für Geheimnisse-&gt;F1.5]]
 </tw-passagedata>
-<tw-passagedata pid="27" name="F1.5" tags="" position="1004,1852">&#39;&#39;Keine Geheimnisse teilen&#39;&#39;
+<tw-passagedata pid="27" name="F1.5" tags="" position="1984,1856">&#39;&#39;Keine Geheimnisse teilen&#39;&#39;
 
 Stell dir folgendes Szenario vor: 
 
@@ -363,7 +369,7 @@ Du hast deinen Urlaub geplant. Du freust dich so sehr, dass du Anderen davon erz
 * [[Du besuchst deine Kinder oder Enkelkinder und erzählst ihnen davon-&gt;F1.5.1]]
 * [[Du machst einen Status-Update an deiner Pinnwand und teilst deine Pläne-&gt;F1.5.2]]
 </tw-passagedata>
-<tw-passagedata pid="28" name="F1.5.1" tags="" position="918,1983">&#39;&#39;Gute Idee!&#39;&#39;
+<tw-passagedata pid="28" name="F1.5.1" tags="" position="1896,1984">&#39;&#39;Gute Idee!&#39;&#39;
 
 Alternativ kannst du dies auch in einem privaten Chat oder in einer Gruppe mit deiner Familie über Facebook teilen.
 
@@ -371,7 +377,7 @@ Alternativ kannst du dies auch in einem privaten Chat oder in einer Gruppe mit d
 
 [[Zusätzlich mache ich noch ein Status-Update an meiner Pinnwand und teile meine Pläne-&gt;F1.5.2]]
 </tw-passagedata>
-<tw-passagedata pid="29" name="F1.5.2" tags="" position="1096.6666666666667,1983.3333333333335">&#39;&#39;Das ist gefährlich!&#39;&#39;
+<tw-passagedata pid="29" name="F1.5.2" tags="" position="2076,1984">&#39;&#39;Das ist gefährlich!&#39;&#39;
 
 Das wäre, als würdest du einen Hinweis auf deine Haustür kleben, von wann bis wann du wo im Urlaub bist.
 Auf die Idee würdest du sicher niemals kommen. Genau das entspricht aber dem unbedachten Teilen von solchen heiklen Informationen an deiner Pinnwand.
@@ -381,7 +387,7 @@ Es besteht immer die Gefahr, dass jemand mitliest, der Böses im Sinn hat!
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_surprised.jpg&quot; alt=&quot;Überraschtes altes Ehepaar&quot;&gt;&lt;/div&gt;}
 
 [[Wie verhalte ich mich bei Spielen und Umfragen?-&gt;F1.6]]</tw-passagedata>
-<tw-passagedata pid="30" name="F1.6" tags="" position="1010,2139">&#39;&#39;Vorsicht bei Spielen und Umfragen&#39;&#39;
+<tw-passagedata pid="30" name="F1.6" tags="" position="1988,2140">&#39;&#39;Vorsicht bei Spielen und Umfragen&#39;&#39;
 
 Umfragen, Spiele und Ratespiele sind auf Facebook beliebt.
 
@@ -390,7 +396,7 @@ Umfragen, Spiele und Ratespiele sind auf Facebook beliebt.
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face_picture&quot; src=&quot;res/facebook_game_invitation.png&quot; alt=&quot;Spieleeinladungen auf Facebook&quot;&gt;&lt;/div&gt;}
 
 [[Was gilt es zu beachten?-&gt;F1.6.1]]</tw-passagedata>
-<tw-passagedata pid="31" name="F1.6.1" tags="" position="1010,2287">&#39;&#39;Was gilt es bei Spielen und Umfragen zu beachten?&#39;&#39;
+<tw-passagedata pid="31" name="F1.6.1" tags="" position="1988,2288">&#39;&#39;Was gilt es bei Spielen und Umfragen zu beachten?&#39;&#39;
 
 * Man sollte sich immer genau überlegen, ob man bei diesen Partizipations-bzw. Entertainmentmöglichkeiten mitmachen muss. 
 * Du solltest dir darüber im Klaren sein, dass diese Programme und Veranstalter im Gegenzug Zugriff haben wollen auf deine in Facebook hinterlegten Daten
@@ -400,13 +406,13 @@ Umfragen, Spiele und Ratespiele sind auf Facebook beliebt.
 
 [[Weiter zu „Misstrauisch sein“-&gt;F1.7]]
 </tw-passagedata>
-<tw-passagedata pid="32" name="F1.7" tags="" position="1010,2439">&#39;&#39;Misstrauisch sein&#39;&#39;
+<tw-passagedata pid="32" name="F1.7" tags="" position="1988,2440">&#39;&#39;Misstrauisch sein&#39;&#39;
 
 Wie du im Punkt „Sich selbst treu bleiben“ gelernt hast, kann man sich theoretisch auch unter falschem Namen bei Facebook anmelden. Du solltest also immer auf evtl. gemeinsame Freunde und weitere Informationen achten, die die Person als eine dir bekannte Bekanntschaft identifiziert. 
 
 [[Beispiele gefährlicher Situationen-&gt;F1.7.1]]
 </tw-passagedata>
-<tw-passagedata pid="33" name="F1.7.1" tags="" position="1010,2589">&#39;&#39;Gefahr: Unbekannte Person&#39;&#39;
+<tw-passagedata pid="33" name="F1.7.1" tags="" position="1988,2592">&#39;&#39;Gefahr: Unbekannte Person&#39;&#39;
 
 Wenn du Nachrichten oder Freundschaftsanfragen von unbekannten Person erhältst…
 … vor allem, wenn diese Person vorgibt ein Verwandter zu sein.
@@ -421,7 +427,7 @@ Im Zweifel solltest du den Kontakt abbrechen!
 
 [[Gefahr: Unbekannte Intention-&gt;F1.7.2]]
 </tw-passagedata>
-<tw-passagedata pid="34" name="F1.7.2" tags="" position="1010,2739">&#39;&#39;Gefahr: Unbekannte Intention&#39;&#39;
+<tw-passagedata pid="34" name="F1.7.2" tags="" position="1988,2740">&#39;&#39;Gefahr: Unbekannte Intention&#39;&#39;
 
 Wenn man eine Einladung erhält, eine Facebook-Seite mit &quot;gefällt mir&quot; zu kennzeichnen, die man nicht kennt.
 
@@ -431,7 +437,7 @@ Wenn man eine Einladung erhält, eine Facebook-Seite mit &quot;gefällt mir&quot
 
 Weiter zu [[„Beenden von Freundschaften“-&gt;F1.8]]
 </tw-passagedata>
-<tw-passagedata pid="35" name="F1.8" tags="" position="1010,2889">&#39;&#39;Das Beenden von Freundschaften&#39;&#39;
+<tw-passagedata pid="35" name="F1.8" tags="" position="1988,2892">&#39;&#39;Das Beenden von Freundschaften&#39;&#39;
 
 Im echten Leben, wenn man den Kontakt zu einem Menschen abbrechen möchte, vermeidet man den	sozialen Umgang mit dieser Person.
 
@@ -447,7 +453,7 @@ Es ist ebenfalls möglich, einen Schritt weiter gehen, und die Person blockieren
 Die genaue Vorgehensweise lernst du im [[dritten Kapitel-&gt;F3.7]]
 
 [[Was mache ich nach meiner Facebook-Session?-&gt;F1.9]]</tw-passagedata>
-<tw-passagedata pid="36" name="F3.7" tags="" position="2198.3333333333335,2238.3333333333335">&#39;&#39;Wer kann mich kontaktieren?&#39;&#39;
+<tw-passagedata pid="36" name="F3.7" tags="" position="3176,2240">&#39;&#39;Wer kann mich kontaktieren?&#39;&#39;
 
 [Bild: Wo „Wer kann mich kontaktieren“ zu finden ist -&gt; Locker-Symbol oben]
 
@@ -464,7 +470,7 @@ Dazu gibt es unterschiedliche Wege.
 -&gt; Hiervon sollest du Gebrauch machen, wenn sich jemand dir gegenüber seltsam / abwertend / beleidigend o.ä. verhält und die Person nicht nur aus deinem Freundeskreis entfernen möchtest, sondern sicherstellen willst, dass die Person auch nicht indirekt (z. B. über Freundes-Freunde) deine Aktivitäten verfolgt oder Informationen über dich einsieht.
 
 Weiter zu [[„Aktivitätenprotokoll und Chroniküberprüfung-&gt;F3.8]]</tw-passagedata>
-<tw-passagedata pid="37" name="F1.9" tags="" position="1011,3046">&#39;&#39;Abmelden nach dem Besuch von Facebook&#39;&#39;
+<tw-passagedata pid="37" name="F1.9" tags="" position="1988,3048">&#39;&#39;Abmelden nach dem Besuch von Facebook&#39;&#39;
 
 Gerade, wenn man sich an öffentlichen Orten auf Facebook einloggt (z. B. am Flughafen, in einem Internet Café, in einem öffentlichen WLAN,…), solltest du dich nach deiner Facebook-Session abmelden.
 
@@ -475,7 +481,7 @@ Gerade, wenn man sich an öffentlichen Orten auf Facebook einloggt (z. B. am Flu
 
 [[Was habe ich in diesem Kapitel gelernt?-&gt;F1.10.1]]
 </tw-passagedata>
-<tw-passagedata pid="38" name="F1.10.1" tags="" position="1011.6666666666667,3196.666666666667">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
+<tw-passagedata pid="38" name="F1.10.1" tags="" position="1988,3200">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
 Frage 1: 
 Ist es wichtig seinen richtigen Namen bei der Anmeldung bei Facebook anzugeben?
@@ -483,12 +489,12 @@ Ist es wichtig seinen richtigen Namen bei der Anmeldung bei Facebook anzugeben?
 Antworten: 
 0. [[Ja, denn so stelle ich sicher, dass andere mich unter meinem korrekten Namen finden und, dass ich nicht gegen die Allgemeinen Geschäftsbedingungen (AGBs) verstoße.-&gt;F1.10.1.1]]
 0. [[Nein, weil alle Nutzer von Facebook vertrauenswürdig sind und mich Bekannte auf jeden Fall unter einem Pseudonym finden werden.-&gt;F1.10.1.2]]</tw-passagedata>
-<tw-passagedata pid="39" name="Kapitel 2" tags="" position="1363.3333333333335,201.66666666666669">&#39;&#39;Kapitel 2 - Sicherheit bei der Nutzung sozialer Netzwerke&#39;&#39;
+<tw-passagedata pid="39" name="Kapitel 2" tags="" position="2824.0001,155">&#39;&#39;Kapitel 2 - Sicherheit bei der Nutzung sozialer Netzwerke&#39;&#39;
 
 0. [[Verhalten in sozialen Netzwerken-&gt;Kapitel 2.1]]
 0. [[Maßnahmen zur Sicherung des Facebook-Accounts-&gt;Kapitel 2.2]]
 0. [[Privatsphären-Einstellungen-&gt;Kapitel 2.3]]</tw-passagedata>
-<tw-passagedata pid="40" name="Kapitel 2.2" tags="" position="1366,391">&#39;&#39;Maßnahmen zur Sicherung des Facebook-Accounts&#39;&#39;
+<tw-passagedata pid="40" name="Kapitel 2.2" tags="" position="2828.0002000000004,303">&#39;&#39;Maßnahmen zur Sicherung des Facebook-Accounts&#39;&#39;
 
 Vermittelte Inhalte:
 * Sichere Passwörter und wie sie behandelt werden sollten
@@ -497,7 +503,7 @@ Vermittelte Inhalte:
 
 [[Weiter zu den Lernzielen-&gt;F2.2]]
 </tw-passagedata>
-<tw-passagedata pid="41" name="Kapitel 2.3" tags="" position="1864,276">&#39;&#39;Privatsphären-Einstellung in Facebook&#39;&#39;
+<tw-passagedata pid="41" name="Kapitel 2.3" tags="" position="3328,288">&#39;&#39;Privatsphären-Einstellung in Facebook&#39;&#39;
 
 Vermittelte Inhalte:
 * Was Privatsphäre auf Facebook bedeutet und wie sie sichergestellt werden kann
@@ -505,7 +511,7 @@ Vermittelte Inhalte:
 * Was meldungswürdige Inhalte sind und wie sie gemeldet werden können
 
 [[Weiter zu den Lerninhalten-&gt;F3.2]]</tw-passagedata>
-<tw-passagedata pid="42" name="F2.2" tags="" position="1366,541">&#39;&#39;Lernziele: Befähigung und Motivation&#39;&#39;
+<tw-passagedata pid="42" name="F2.2" tags="" position="2828.0002000000004,455">&#39;&#39;Lernziele: Befähigung und Motivation&#39;&#39;
 
 In diesem Kapitel sollst Du …
 * … kennenlernen, was bei der Erstellung und dem Umgang mit Passwörtern wichtig ist
@@ -514,7 +520,7 @@ In diesem Kapitel sollst Du …
 
 Weiter zu [[„Kontoinformationen aktualisieren“-&gt;F2.3]]
 </tw-passagedata>
-<tw-passagedata pid="43" name="F2.3" tags="" position="1365,691">&#39;&#39;Kontoinformationen aktualisieren&#39;&#39;
+<tw-passagedata pid="43" name="F2.3" tags="" position="2344,692">&#39;&#39;Kontoinformationen aktualisieren&#39;&#39;
 
 Kontoinformationen sollten immer auf dem aktuellen Stand sein und regelmäßig überprüft werden. Bei Bedarf können Änderungen unter &#39;&#39;&quot;https://www.facebook.com/settings&quot;&#39;&#39; vorgenommen werden.
 
@@ -529,7 +535,7 @@ Wie ändere ich meine Sicherheitseinstellungen:
 Besonders wichtig: Die Wahl eines guten Passwortes.
 
 [[Weiter zum Passwort-Tester-&gt;F2.4]]</tw-passagedata>
-<tw-passagedata pid="44" name="F2.4" tags="" position="1366.6666666666667,841.6666666666667">&#39;&#39;Passwort-Tester&#39;&#39;
+<tw-passagedata pid="44" name="F2.4" tags="" position="2344,844">&#39;&#39;Passwort-Tester&#39;&#39;
 
 Gib ein Passwort ein, von dem du denkst, dass es sicher ist. Auf der nächsten Seite bekommst du eine Einschätzung, wie sicher es ist.
 
@@ -539,7 +545,7 @@ Gib ein Passwort ein, von dem du denkst, dass es sicher ist. Auf der nächsten S
 
 [[F2.4.1-&gt;F2.4.1]]
 [[F2.4.2-&gt;F2.4.2]]</tw-passagedata>
-<tw-passagedata pid="45" name="F2.4.1" tags="" position="1241.6666666666667,1038.3333333333335">&#39;&#39;Das Passwort ist ausbaufähig. Versuche es nochmal!&#39;&#39;
+<tw-passagedata pid="45" name="F2.4.1" tags="" position="2220,1040">&#39;&#39;Das Passwort ist ausbaufähig. Versuche es nochmal!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
 
@@ -548,7 +554,7 @@ Gib ein Passwort ein, von dem du denkst, dass es sicher ist. Auf der nächsten S
 //Tipp: Versuche es mit Groß- und Kleinschreibung und Sonderzeichen.//
 
 [[Zurück zur Passwort-Eingabe-&gt;F2.4]]</tw-passagedata>
-<tw-passagedata pid="46" name="F2.4.2" tags="" position="1485,1041.6666666666667">&#39;&#39;Sehr gute Wahl!&#39;&#39;
+<tw-passagedata pid="46" name="F2.4.2" tags="" position="2464,1044">&#39;&#39;Sehr gute Wahl!&#39;&#39;
 
 So muss ein sicheres Passwort aussehen.
 
@@ -564,7 +570,7 @@ Hier nochmal die wichtigsten Regeln, die bei der Erstellung eines Passwortes bea
 
 [[Wie merke ich mir ein gutes Passwort?-&gt;F2.4.3]]
 </tw-passagedata>
-<tw-passagedata pid="47" name="F2.4.3" tags="" position="1485,1191">{
+<tw-passagedata pid="47" name="F2.4.3" tags="" position="2464,1192">{
 &lt;video controls&gt;
   &lt;source src=&quot;res/sicheres_passwort-bsi.mp4&quot; type=&quot;video/mp4&quot;&gt;
 Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
@@ -583,7 +589,7 @@ Auf diese Weise hat man sich eine gute &quot;Eselsbrücke&quot; gebaut. Wichtig 
 
 [[Was ist im Umgang mit Passwörtern noch zu beachten?-&gt;F2.4.4]]
 </tw-passagedata>
-<tw-passagedata pid="48" name="F2.4.4" tags="" position="1486,1340">&#39;&#39;Was es im Umgang mit Passwörtern noch zu beachten gibt:&#39;&#39;
+<tw-passagedata pid="48" name="F2.4.4" tags="" position="2464,1344">&#39;&#39;Was es im Umgang mit Passwörtern noch zu beachten gibt:&#39;&#39;
 
 * Passwörter sollten niemals auf dem berühmten Notizzettel am Bildschirm kleben. Wer sich Passwörter notieren will, sollte diese stattdessen auf Papier an einem sicheren Ort unter Verschluss halten.
 * Jedes Passwort sollte in regelmäßigen Zeitabständen geändert werden.
@@ -591,7 +597,7 @@ Auf diese Weise hat man sich eine gute &quot;Eselsbrücke&quot; gebaut. Wichtig 
 
 Weiter zu [[„Zusätzliche Optionen der Autorisierung&quot;-&gt;F2.5]]
 </tw-passagedata>
-<tw-passagedata pid="49" name="F2.5" tags="" position="1485,1491">&#39;&#39;Zusätzliche Optionen der Autorisierung&#39;&#39;
+<tw-passagedata pid="49" name="F2.5" tags="" position="2464,1492">&#39;&#39;Zusätzliche Optionen der Autorisierung&#39;&#39;
 
 Zusätzlich zur Sicherung des Facebook-Accounts durch ein Passwort gibt es weitere Möglichkeiten, den Zugriff auf seinen Account zu sichern.
 
@@ -602,14 +608,14 @@ Zusätzlich zur Sicherung des Facebook-Accounts durch ein Passwort gibt es weite
 [Bilder / Video Klickpfade: Einstellungen (Handy-Autorisierung, …)]
 
 [[Kann mir trotzdem etwas passieren?-&gt;F2.6]]</tw-passagedata>
-<tw-passagedata pid="50" name="F2.6" tags="" position="1486.6666666666667,1641.6666666666667">&#39;&#39;Ausspähung des Facebook Passwortes&#39;&#39;
+<tw-passagedata pid="50" name="F2.6" tags="" position="2464,1644">&#39;&#39;Ausspähung des Facebook Passwortes&#39;&#39;
 
 Stell dir folgendes Szenario vor:
 
 Du warst unaufmerksam beim Umgang mit deinem Passwort oder dein Passwort wurde gestohlen und jemand nutzt dies aus.
 
 [[Es können zwei mögliche Konsequenzen auftreten-&gt;F2.6.1]]</tw-passagedata>
-<tw-passagedata pid="51" name="F2.6.1" tags="" position="1485,1791.6666666666667">&#39;&#39;Konsequenz 1&#39;&#39;
+<tw-passagedata pid="51" name="F2.6.1" tags="" position="2464,1792">&#39;&#39;Konsequenz 1&#39;&#39;
 
 Es passieren unerklärliche Dinge mit deinem Facebook-Konto, z. B.:
 * es werden Facebook-Seiten geliked oder
@@ -618,7 +624,7 @@ Es passieren unerklärliche Dinge mit deinem Facebook-Konto, z. B.:
 * usw.
 
 [[Und jetzt?-&gt;F2.6.2]]</tw-passagedata>
-<tw-passagedata pid="52" name="F2.6.2" tags="" position="1485,1941.6666666666667">&#39;&#39;Was ist passiert?&#39;&#39;
+<tw-passagedata pid="52" name="F2.6.2" tags="" position="2464,1944">&#39;&#39;Was ist passiert?&#39;&#39;
 
 Dein Facebook-Konto wurde infiltriert und jemand loggt sich unter deinem Namen ein
 
@@ -636,7 +642,7 @@ Wie du das machst:
 
 [[Weiter zur zweiten Konsequenz-&gt;F2.6.3]]
 </tw-passagedata>
-<tw-passagedata pid="53" name="F2.6.3" tags="" position="1485,2091.666666666667">&#39;&#39;Konsequenz 2&#39;&#39;
+<tw-passagedata pid="53" name="F2.6.3" tags="" position="2464,2092">&#39;&#39;Konsequenz 2&#39;&#39;
 
 Du kannst dich nicht mehr einloggen, angeblich soll das Passwort geändert worden sein.
 
@@ -645,7 +651,7 @@ Du kannst dich nicht mehr einloggen, angeblich soll das Passwort geändert worde
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_confused.jpg&quot; alt=&quot;Verwirrtes altes Ehepaar&quot;&gt;&lt;/div&gt;}
 
 [[Und jetzt?-&gt;F2.6.4]]</tw-passagedata>
-<tw-passagedata pid="54" name="F2.6.4" tags="" position="1485,2241.666666666667">&#39;&#39;Was ist passiert?&#39;&#39;
+<tw-passagedata pid="54" name="F2.6.4" tags="" position="2464,2244">&#39;&#39;Was ist passiert?&#39;&#39;
 
 Du hast den Zugriff auf dein Facebook-Konto verloren, weil sich jemand mit deinem Passwort eingeloggt hat und dann das Passwort geändert hat.
 
@@ -659,7 +665,7 @@ Wie du das machst:
 
 [[Weiter zum abschließenden Quiz-&gt;F2.7.1]]
 </tw-passagedata>
-<tw-passagedata pid="55" name="F2.7.1" tags="" position="1485,2391.666666666667">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
+<tw-passagedata pid="55" name="F2.7.1" tags="" position="2464,2392">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
 Frage 1: 
 Wie sieht ein sicheres Passwort aus?
@@ -669,7 +675,7 @@ Antworten:
 0. [[Nußbaumgarten-&gt;F2.7.1.2]]
 0. [[(Hier Zugriff auf den Namen des Spielers)1234-&gt;F2.7.1.3]]
 0. [[abcdefg-&gt;F2.7.1.4]]</tw-passagedata>
-<tw-passagedata pid="56" name="F3.2" tags="" position="1864,426">&#39;&#39;Lernziele: Sensibilisierung und Befähigung&#39;&#39;
+<tw-passagedata pid="56" name="F3.2" tags="" position="2996.666666666667,405">&#39;&#39;Lernziele: Sensibilisierung und Befähigung&#39;&#39;
 
 In diesem Kapitel sollst Du lernen…
 * … und verstehen, wie die Einsicht in private Informationen in Facebook funktioniert
@@ -677,7 +683,7 @@ In diesem Kapitel sollst Du lernen…
 * … entscheiden zu können, wie du die unterschiedlichen Einstellungsmöglichkeiten kombinierst, um ein deinen Bedürfnissen gerechtes Ergebnis zu bekommen
 
 [[Weiter zu „Was bedeutet Privatsphäre auf Facebook?-&gt;F3.3]]</tw-passagedata>
-<tw-passagedata pid="57" name="F3.3" tags="" position="1864,576">&#39;&#39;Was bedeutet Privatsphäre auf Facebook?&#39;&#39;
+<tw-passagedata pid="57" name="F3.3" tags="" position="2844,580">&#39;&#39;Was bedeutet Privatsphäre auf Facebook?&#39;&#39;
 
 Über deine Privatsphäre-Einstellungen kannst du festlegen, wer deine Beiträge und deine Chronik sehen kann. Du kannst die Privatsphäre auch für einzelne Nachrichten oder Beiträge definieren und kontrollieren, auf wie viele Informationen Anwendungen (z. B. Quiz oder Spiele) zugreifen können. Klicke auf das Schlosssymbol, das sich bei den meisten Facebook-Seiten oben rechts befindet, um die Privatsphäre-Einstellungen zu öffnen.
 
@@ -685,7 +691,7 @@ In diesem Kapitel sollst Du lernen…
 
 [[Welche Einstellungen sind die richtigen für dich?-&gt;F3.4]]
 </tw-passagedata>
-<tw-passagedata pid="58" name="F3.4" tags="" position="1864,726">&#39;&#39;Stelle dir folgende Frage:&#39;&#39;
+<tw-passagedata pid="58" name="F3.4" tags="" position="2844,728">&#39;&#39;Stelle dir folgende Frage:&#39;&#39;
 
 Welche Einstellungen bezüglich deiner Privatsphäre hast du? Wähle eine für dich passende Aussage aus.
 
@@ -694,17 +700,17 @@ Welche Einstellungen bezüglich deiner Privatsphäre hast du? Wähle eine für d
 0. [[Ich würde gerne differenzieren können zwischen verschiedenen Gruppen. Manche Informationen und Beiträge möchte ich nur mit meinen Angehörigen teilen, während ich mir wünschen würde andere Informationen und Beiträge nur mit einem bestimmten Freundeskreis oder sehr engen Freunden zu teilen.-&gt;F3.4.3]]
 0. [[Ich habe keinerlei Hemmungen alle Informationen mit jedem auf Facebook zu teilen. Auch Personen, die nicht auf Facebook sind, können ruhig Einsicht haben auf meine Beiträge und private Informationen wie meinen Geburtstag.-&gt;F3.4.4]]
 </tw-passagedata>
-<tw-passagedata pid="59" name="F3.4.1" tags="" position="1864,876">Deiner Einstellung entsprechend solltest du die Privatsphären-Einstellung „//Nur Ich//“ wählen.
+<tw-passagedata pid="59" name="F3.4.1" tags="" position="2844,880">Deiner Einstellung entsprechend solltest du die Privatsphären-Einstellung „//Nur Ich//“ wählen.
 
 Diese Einstellung stellt sicher, dass niemand außer dir deine Beiträge lesen kann und Informationen wie dein Geburtsdatum nur dir einsehbar ist.
 
 [[Erfahre hier wie du die Privatsphären-Einstellung änderst-&gt;F3.5]]</tw-passagedata>
-<tw-passagedata pid="60" name="F3.4.2" tags="" position="2014,876">Deiner Einstellung entsprechend solltest du die Privatsphären-Einstellung „//Freunde//“ wählen.
+<tw-passagedata pid="60" name="F3.4.2" tags="" position="2992,880">Deiner Einstellung entsprechend solltest du die Privatsphären-Einstellung „//Freunde//“ wählen.
 
 Diese Einstellung bestimmt, dass alle deine Freunde deine Beiträge lesen können und ihnen Informationen wie dein Geburtsdatum einsehbar sind.
 
 [[Erfahre hier wie du die Privatsphären-Einstellung änderst-&gt;F3.5]]</tw-passagedata>
-<tw-passagedata pid="61" name="F3.4.3" tags="" position="2164,876">Deiner Einstellung entsprechend solltest du die Privatsphären-Einstellung „//Freunde außer Bekannte//“ oder eine //benutzerdefinierte Einstellung// wählen.
+<tw-passagedata pid="61" name="F3.4.3" tags="" position="3144,880">Deiner Einstellung entsprechend solltest du die Privatsphären-Einstellung „//Freunde außer Bekannte//“ oder eine //benutzerdefinierte Einstellung// wählen.
 
 Diese Einstellung bestimmt, dass alle nur die ausgewählte Gruppe deine Beiträge lesen können und ihnen Informationen wie dein Geburtsdatum einsehbar sind.
 
@@ -715,14 +721,14 @@ Wie markiere ich Freunde als Bekannte?
 [Bild: Wie markiere ich Freunde als Bekannte]
 
 [[Erfahre hier wie du die Privatsphären-Einstellung änderst-&gt;F3.5]]</tw-passagedata>
-<tw-passagedata pid="62" name="F3.4.4" tags="" position="2314,876">Deiner Einstellung entsprechend kannst du die Privatsphären-Einstellung „//Öffentlich//“ wählen.
+<tw-passagedata pid="62" name="F3.4.4" tags="" position="3292,880">Deiner Einstellung entsprechend kannst du die Privatsphären-Einstellung „//Öffentlich//“ wählen.
 
 Diese Einstellung bestimmt, dass alle Nutzer und auch die Nicht-Nutzer von Facebook deine Beiträge lesen können und ihnen Informationen wie dein Geburtsdatum einsehbar sind.
 
 Hinweis: Diese Einstellung ist &#39;&#39;nicht&#39;&#39; empfehlenswert.
 
 [[Erfahre hier wie du die Privatsphären-Einstellung festlegst-&gt;F3.5]]</tw-passagedata>
-<tw-passagedata pid="63" name="F3.5" tags="" position="1864,1026">Wie ich die Privatsphären-Einstellungen vornehmen kann: 
+<tw-passagedata pid="63" name="F3.5" tags="" position="2844,1028">Wie ich die Privatsphären-Einstellungen vornehmen kann: 
 
 * Zum einen so:
 (Mock-Up mit Erklärung über das Locker-Symbol oben)
@@ -732,12 +738,12 @@ Hinweis: Diese Einstellung ist &#39;&#39;nicht&#39;&#39; empfehlenswert.
 
 Weiter zu [[„Wie ich Listen einrichte, um zwischen unterschiedlichen Freunden zu differenzieren&quot;-&gt;F3.6]]
 </tw-passagedata>
-<tw-passagedata pid="64" name="F3.6" tags="" position="1864,1176">Wie ich Listen einrichte, um zwischen unterschiedlichen Freunden zu differenzieren:
+<tw-passagedata pid="64" name="F3.6" tags="" position="2844,1180">Wie ich Listen einrichte, um zwischen unterschiedlichen Freunden zu differenzieren:
 
 (Mock-Up mit Erklärung, wie Listen erstellt werden)
 
 [[Weitere Privatsphären-Einstellungen-&gt;F3.7]]</tw-passagedata>
-<tw-passagedata pid="65" name="F3.8" tags="" position="2198.3333333333335,2388.3333333333335">&#39;&#39;Aktivitätenprotokoll&#39;&#39;
+<tw-passagedata pid="65" name="F3.8" tags="" position="3176,2392">&#39;&#39;Aktivitätenprotokoll&#39;&#39;
 
 Es ist zudem sinnvoll, das Aktivitätenprotokoll zu nutzen. Dies ist eine wichtige Funktion, die es Nutzern erlaubt, zu überprüfen und zu verwalten, was sie auf Facebook geteilt haben. Anhand deines Aktivitätenprotokolls kannst du festlegen, wer deine Inhalte auf Facebook sieht. Niemand außer dir kann dein Aktivitätenprotokoll sehen.
 
@@ -751,14 +757,14 @@ Das gleiche gilt für die Chroniküberprüfung, die dich festlegen lässt, welch
 
 Weiter zu [[„Inhalte melden“-&gt;F3.9]]
 </tw-passagedata>
-<tw-passagedata pid="66" name="F3.9" tags="" position="2216.666666666667,2538.3333333333335">&#39;&#39;Inhalte melden: Grundregeln&#39;&#39;
+<tw-passagedata pid="66" name="F3.9" tags="" position="3196,2540">&#39;&#39;Inhalte melden: Grundregeln&#39;&#39;
 
 Du hast die Möglichkeit alle möglichen Inhalte in Facebook zu melden. Wenn z. B. einen Post über dich	veröffentlicht wurde, auch ohne direkte Nennung deines Namens, oder ein rassistischer oder	außerordentlich geschmackloser Post verfasst wurde, gibt es die Möglichkeit diese Inhalte zu melden. Dies benachrichtigt Mitarbeiter von Facebook und diese befassen sich dann mit der Meldung.
 
 Die beste Möglichkeit zum Melden von Missbrauch ist direkt dort, wo er auf Facebook stattfindet, mithilfe des „Melden“-Links in der Nähe des Beitrags, der Chronik oder der Seite.
 
 Weiter zum Quiz: [[&quot;Was ist ein meldungswürdiger Post und was nicht?&quot;-&gt;F3.9.1]]</tw-passagedata>
-<tw-passagedata pid="67" name="F3.9.1" tags="" position="2198.3333333333335,2688.3333333333335">&#39;&#39;Quiz: Was ist ein meldungswürdiger Post und was nicht?&#39;&#39;
+<tw-passagedata pid="67" name="F3.9.1" tags="" position="3176,2692">&#39;&#39;Quiz: Was ist ein meldungswürdiger Post und was nicht?&#39;&#39;
 
 Frage: 
 Was ist ein Post, der deiner Meinung nach gegen die Allgemeinen Geschäftsbedingungen von Facebook verstößt und gemeldet werden sollte?
@@ -770,36 +776,36 @@ Antworten:
 0. [[„Das ganze Politiker-Pack gehört abgeschafft. Wenn ich diesen Wowereit auf der Straße sehen würde, dann würde ich so lange auf ihn einprügeln, bis er sich nicht mehr bewegt. Und das sollte allen Schwulen so ergehen!“-&gt;F3.9.1.4]]
 
 Wähle die Antwort aus, von der Du denkst, dass sie die richtige ist.</tw-passagedata>
-<tw-passagedata pid="68" name="F3.9.1.1" tags="" position="2198.3333333333335,2838.3333333333335">&#39;&#39;Korrekt&#39;&#39;, dies ist ein meldungswürdiger Beitrag.
+<tw-passagedata pid="68" name="F3.9.1.1" tags="" position="3176,2840">&#39;&#39;Korrekt&#39;&#39;, dies ist ein meldungswürdiger Beitrag.
 
 Er ist rassistisch und hetzerisch und würde so gegen die AGBs von Facebook verstoßen.
 
 [[Zurück zum Quiz-&gt;F3.9.1]]
 
 [[Weiter zum Fazit-&gt;3.9.2]]</tw-passagedata>
-<tw-passagedata pid="69" name="3.9.2" tags="" position="2198.3333333333335,2988.3333333333335">&#39;&#39;Melden von Inhalten - Fazit&#39;&#39;
+<tw-passagedata pid="69" name="3.9.2" tags="" position="3176,2992">&#39;&#39;Melden von Inhalten - Fazit&#39;&#39;
 
 Wie du vielleicht festgestellt hast, ist es nicht immer leicht, sicher zu sein, ob ein Beitrag meldungswürdig ist, oder nicht. Solltest du dir nicht sicher sein, dann behalte im Hinterkopf, dass Meldungen immer vertraulich behandelt werden. Es wird für den Verfasser eines Beitrages nicht erkenntlich, dass du ihn gemeldet hast. Nachdem du Facebook eine Meldung geschickt hast, untersucht Facebook das Problem und entscheidet anhand der Allgemeinen Geschäftsbedingungen, ob der Inhalt entfernt werden soll oder nicht. Facebook prüft jede Meldung, um dann über die geeignete Vorgehensweise zu entscheiden.
 
 [[Weiter zum abschließenden Quiz-&gt;F3.10.1]]</tw-passagedata>
-<tw-passagedata pid="70" name="F3.9.1.2" tags="" position="2340,2845">Dies ist kein Beitrag, der meldungswürdig ist.
+<tw-passagedata pid="70" name="F3.9.1.2" tags="" position="3320,2848">Dies ist kein Beitrag, der meldungswürdig ist.
 Es handelt es sich hierbei um &#39;&#39;freie Meinungsäußerung&#39;&#39;.
 
 [[Zurück zum Quiz-&gt;F3.9.1]]
 
 [[Weiter zum Fazit-&gt;3.9.2]]</tw-passagedata>
-<tw-passagedata pid="71" name="F3.9.1.3" tags="" position="2480,2843.3333333333335">Dieser Beitrag ist zwar in gewissem Maße beleidigend, aber würde vermutlich nicht reichen, gegen die AGBs von Facebook zu verstoßen.
+<tw-passagedata pid="71" name="F3.9.1.3" tags="" position="3460,2844">Dieser Beitrag ist zwar in gewissem Maße beleidigend, aber würde vermutlich nicht reichen, gegen die AGBs von Facebook zu verstoßen.
 
 [[Zurück zum Quiz-&gt;F3.9.1]]
 
 [[Weiter zum Fazit-&gt;3.9.2]]</tw-passagedata>
-<tw-passagedata pid="72" name="F3.9.1.4" tags="" position="2626.666666666667,2841.666666666667">&#39;&#39;Genau&#39;&#39;, dies ist ein &#39;&#39;meldungswürdiger&#39;&#39; Beitrag.
+<tw-passagedata pid="72" name="F3.9.1.4" tags="" position="3604,2844">&#39;&#39;Genau&#39;&#39;, dies ist ein &#39;&#39;meldungswürdiger&#39;&#39; Beitrag.
 Er ist schwulenfeindlich, menschenverachtend und hetzerisch. Außerdem wird darin eine Straftat angekündigt.
 
 [[Zurück zum Quiz-&gt;F3.9.1]]
 
 [[Weiter zum Fazit-&gt;3.9.2]]</tw-passagedata>
-<tw-passagedata pid="73" name="F3.10.1" tags="" position="2198.3333333333335,3140">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
+<tw-passagedata pid="73" name="F3.10.1" tags="" position="3176,3144">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
 Frage 1: 
 Facebook bietet unterschiedliche Privatsphären-Einstellung an, die festlegen, welcher meiner Freunde z. B. meine Beiträge sehen können. Dabei unterscheidet Facebook lediglich in „Öffentlich“, also für alle Sichtbar und „Freunde“, also für alle Freunde sichtbar. Stimmt diese Aussage?
@@ -807,7 +813,7 @@ Facebook bietet unterschiedliche Privatsphären-Einstellung an, die festlegen, w
 Antworten: 
 0. [[Ja, es gibt nur die beiden Einstellungsmöglichkeiten „Öffentlich“ und „Freunde“.-&gt;F3.10.1.1]]
 0. [[Nein, es gibt weitere Einstellungsmöglichkeiten.-&gt;F3.10.1.2]]</tw-passagedata>
-<tw-passagedata pid="74" name="F3.10.1.1" tags="" position="2196.666666666667,3286.666666666667">Frage 1: 
+<tw-passagedata pid="74" name="F3.10.1.1" tags="" position="3176,3288">Frage 1: 
 Facebook bietet unterschiedliche Privatsphären-Einstellung an, die festlegen, welcher meiner Freunde z. B. meine Beiträge sehen können. Dabei unterscheidet Facebook lediglich in „Öffentlich“, also für alle Sichtbar und „Freunde“, also für alle Freunde sichtbar. Stimmt diese Aussage?
 
 Deine Antwort: 
@@ -822,7 +828,7 @@ Neben den Optionen „Öffentlich“ und „Freunde“ gibt es die weiteren Eins
 [[Zurück zur Frage-&gt;F3.10.1]]
 
 [[Weiter zur nächsten Frage-&gt;F3.10.2]]</tw-passagedata>
-<tw-passagedata pid="75" name="F3.10.1.2" tags="" position="2348.3333333333335,3288.3333333333335">Frage 1: 
+<tw-passagedata pid="75" name="F3.10.1.2" tags="" position="3328,3292">Frage 1: 
 Facebook bietet unterschiedliche Privatsphären-Einstellung an, die festlegen, welcher meiner Freunde z. B. meine Beiträge sehen können. Dabei unterscheidet Facebook lediglich in „Öffentlich“, also für alle Sichtbar und „Freunde“, also für alle Freunde sichtbar. Stimmt diese Aussage?
 
 Deine Antwort: 
@@ -835,7 +841,7 @@ Deine Antwort:
 Neben den Optionen „Öffentlich“ und „Freunde“ gibt es die weiteren Einstellungen „Freunde ohne Bekannte“, „Nur ich“, sowie benutzerdefinierte Listen.
 
 [[Weiter zur nächsten Frage-&gt;F3.10.2]]</tw-passagedata>
-<tw-passagedata pid="76" name="F3.10.2" tags="" position="2196.666666666667,3436.666666666667">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
+<tw-passagedata pid="76" name="F3.10.2" tags="" position="3176,3440">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
 Frage 2: 
 Gibt es eine Möglichkeit, Veröffentlichungen auf Facebook, in denen ich erwähnt werde oder wo ich auf einem Bild markiert wurde zu unterdrücken, sodass ich pro-aktiv zustimmen muss, damit ein solcher Post mit meiner Markierung auf meinem Profil erscheint?
@@ -843,7 +849,7 @@ Gibt es eine Möglichkeit, Veröffentlichungen auf Facebook, in denen ich erwäh
 Antworten: 
 0. [[Ja, es gibt diese Möglichkeit.-&gt;F3.10.2.1]]
 0. [[Leider ist das nicht möglich, und sobald ich bei Facebook angemeldet bin, muss ich damit leben, dass mich andere auf Fotos markieren können und mich in anderen Veröffentlichungen mit Namen erwähnen.-&gt;F3.10.2.2]]</tw-passagedata>
-<tw-passagedata pid="77" name="F3.10.2.1" tags="" position="2198.3333333333335,3586.666666666667">Frage 2: 
+<tw-passagedata pid="77" name="F3.10.2.1" tags="" position="3176,3588">Frage 2: 
 Gibt es eine Möglichkeit, Veröffentlichungen auf Facebook, in denen ich erwähnt werde oder wo ich auf einem Bild markiert wurde zu unterdrücken, sodass ich pro-aktiv zustimmen muss, damit ein solcher Post mit meiner Markierung auf meinem Profil erscheint?
 
 Deine Antwort: 
@@ -856,7 +862,7 @@ Deine Antwort:
 Es gibt die sogenannte „Chroniküberprüfung“, die dich festlegen lässt, welche Beiträge von Freunden, oder Markierungen mit deinem Namen in deiner Chronik veröffentlich werden dürfen, bevor sie tatsächlich an deiner Pinnwand zu sehen sind.
 
 [[Weiter zur nächsten Frage-&gt;F3.10.3]]</tw-passagedata>
-<tw-passagedata pid="78" name="F3.10.2.2" tags="" position="2348.3333333333335,3586.666666666667">Frage 2: 
+<tw-passagedata pid="78" name="F3.10.2.2" tags="" position="3328,3588">Frage 2: 
 Gibt es eine Möglichkeit, Veröffentlichungen auf Facebook, in denen ich erwähnt werde oder wo ich auf einem Bild markiert wurde zu unterdrücken, sodass ich pro-aktiv zustimmen muss, damit ein solcher Post mit meiner Markierung auf meinem Profil erscheint?
 
 Deine Antwort: 
@@ -869,7 +875,7 @@ Deine Antwort:
 Es gibt die sogenannte „Chroniküberprüfung“, die dich festlegen lässt, welche Beiträge von Freunden, oder Markierungen mit deinem Namen in deiner Chronik veröffentlich werden dürfen, bevor sie tatsächlich an deiner Pinnwand zu sehen sind.
 
 [[Weiter zur nächsten Frage-&gt;F3.10.3]]</tw-passagedata>
-<tw-passagedata pid="79" name="F3.10.3" tags="" position="2198.3333333333335,3736.666666666667">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
+<tw-passagedata pid="79" name="F3.10.3" tags="" position="3176,3740">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
 Frage 3: 
 Ist es möglich, seine letzten Aktionen in Facebook einzusehen, um nachzuvollziehen, welche Seiten man besucht und mit „gefällt mir“ markiert hat und wo man von anderen erwähnt wurde?
@@ -877,7 +883,7 @@ Ist es möglich, seine letzten Aktionen in Facebook einzusehen, um nachzuvollzie
 Antworten: 
 0. [[Das ist möglich, da dies eine wichtige Möglichkeit ist, seine Aktivitäten nachzuvollziehen.-&gt;F3.10.3.1]]
 0. [[Das ist nicht möglich, das es viel zu aufwendig wäre, alle Aktionen zu speichern.-&gt;F3.10.3.2]]</tw-passagedata>
-<tw-passagedata pid="80" name="F3.10.3.1" tags="" position="2200,3886.666666666667">Frage 3: 
+<tw-passagedata pid="80" name="F3.10.3.1" tags="" position="3180,3888">Frage 3: 
 Ist es möglich, seine letzten Aktionen in Facebook einzusehen, um nachzuvollziehen, welche Seiten man besucht und mit „gefällt mir“ markiert hat und wo man von anderen erwähnt wurde?
 
 Deine Antwort:
@@ -890,7 +896,7 @@ Deine Antwort:
 Das sogenannte „Aktivitätenprotokoll“ ermöglicht genau dies. Es listet alle Aktivitäten auf, die von dir getätigt wurden. So erhältst du einen Überblick um deine Entscheidungen nachzuvollziehen.
 
 [[Weiter zur nächsten Frage-&gt;F3.10.4]]</tw-passagedata>
-<tw-passagedata pid="81" name="F3.10.3.2" tags="" position="2348.3333333333335,3886.666666666667">Frage 3: 
+<tw-passagedata pid="81" name="F3.10.3.2" tags="" position="3328,3888">Frage 3: 
 Ist es möglich, seine letzten Aktionen in Facebook einzusehen, um nachzuvollziehen, welche Seiten man besucht und mit „gefällt mir“ markiert hat und wo man von anderen erwähnt wurde?
 
 Deine Antwort:
@@ -903,7 +909,7 @@ Deine Antwort:
 Das sogenannte „Aktivitätenprotokoll“ ermöglicht genau dies. Es listet alle Aktivitäten auf, die von dir getätigt wurden. So erhältst du einen Überblick um deine Entscheidungen nachzuvollziehen.
 
 [[Weiter zur nächsten Frage-&gt;F3.10.4]]</tw-passagedata>
-<tw-passagedata pid="82" name="F3.10.4" tags="" position="2198.3333333333335,4036.666666666667">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
+<tw-passagedata pid="82" name="F3.10.4" tags="" position="3176,4040">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
 Frage 4: 
 Kann man seine Meinung ändern und Personen, die man als Freunde hinzugefügt hat, wieder aus der Freundesliste entfernen?
@@ -911,7 +917,7 @@ Kann man seine Meinung ändern und Personen, die man als Freunde hinzugefügt ha
 Antworten: 
 0. [[Das ist, so wie es im echten Leben möglich ist, auch auf Facebook möglich.-&gt;F3.10.4.1]]
 0. [[Da Facebook ein soziales Netzwerk ist, das darauf ausgelegt ist Menschen zu verbinden, können Freundeslisten nur vergrößert und nicht wieder verkleinert werden.-&gt;F3.10.4.2]]</tw-passagedata>
-<tw-passagedata pid="83" name="F3.10.4.1" tags="" position="2198.3333333333335,4186.666666666667">Frage 4: 
+<tw-passagedata pid="83" name="F3.10.4.1" tags="" position="3176,4188">Frage 4: 
 Kann man seine Meinung ändern und Personen, die man als Freunde hinzugefügt hat, wieder aus der Freundesliste entfernen?
 
 Deine Antwort: 
@@ -924,7 +930,7 @@ Deine Antwort:
 Es ist natürlich auch möglich, Personen, die man vielleicht vor einiger Zeit als Freunde hinzugefügt hat, man jetzt aber nicht mehr in der Freundesliste haben möchte, aus dieser wieder zu entfernen. Ein anderer Grund wäre, wenn man von einer Person belästigt oder bedroht wird. Dann kann man diese Person zusätzlich noch blockieren und so jeglichen Kontakt unterbinden. 
 
 [[Weiter zur nächsten Frage-&gt;F3.10.5]]</tw-passagedata>
-<tw-passagedata pid="84" name="F3.10.4.2" tags="" position="2348.3333333333335,4186.666666666667">Frage 4: 
+<tw-passagedata pid="84" name="F3.10.4.2" tags="" position="3328,4188">Frage 4: 
 Kann man seine Meinung ändern und Personen, die man als Freunde hinzugefügt hat, wieder aus der Freundesliste entfernen?
 
 Deine Antwort: 
@@ -937,7 +943,7 @@ Deine Antwort:
 Es ist möglich, Personen, die man vielleicht vor einiger Zeit als Freunde hinzugefügt hat, man jetzt aber nicht mehr in der Freundesliste haben möchte, aus dieser wieder zu entfernen. Ein anderer Grund wäre, wenn man von einer Person belästigt oder bedroht wird. Dann kann man diese Person zusätzlich noch blockieren und so jeglichen Kontakt unterbinden.
 
 [[Weiter zur nächsten Frage-&gt;F3.10.5]]</tw-passagedata>
-<tw-passagedata pid="85" name="F3.10.5" tags="" position="2198.3333333333335,4336.666666666667">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
+<tw-passagedata pid="85" name="F3.10.5" tags="" position="3176,4340">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
 Frage 5: 
 Wenn ich auf Facebook Inhalte sehe, von denen ich überzeugt bin, dass sie rassistisch, sexistisch, ausländerfeindlich, strafbar oder ähnliches sind, habe die Möglichkeit diese Inhalte jemandem zu melden?
@@ -946,7 +952,7 @@ Antworten:
 0. [[Solche Inhalte immer direkt bei der Polizei melden.-&gt;F3.10.5.1]]
 0. [[Solche Inhalte werden zunächst am besten über die „Melden-Funktion“ von Facebook bei Facebook selber gemeldet.-&gt;F3.10.5.2]]
 0. [[Aufgrund der großen Zahl an Beiträgen und Mitgliedern kann man nichts gegen solche Kommentare machen.-&gt;F3.10.5.3]]</tw-passagedata>
-<tw-passagedata pid="86" name="F3.10.5.1" tags="" position="2198.3333333333335,4485">Frage 5: 
+<tw-passagedata pid="86" name="F3.10.5.1" tags="" position="3176,4488">Frage 5: 
 Wenn ich auf Facebook Inhalte sehe, von denen ich überzeugt bin, dass sie rassistisch, sexistisch, ausländerfeindlich, strafbar oder ähnliches sind, habe die Möglichkeit diese Inhalte jemandem zu melden?
 
 Deine Antwort: 
@@ -959,7 +965,7 @@ Deine Antwort:
 Die Polizei solltest du nur kontaktieren, wenn es absolut akut ist. Dies wäre bspw. bei einem angekündigten Amoklauf oder Suizid-Versuch. In der Regel sollte es ausreichend sein, zunächst die „Melden-Funktion“ von Facebook zu nutzen und Facebook entscheiden zu lassen, ob der Inhalt tatsächlich gegen die AGBs oder gar Gesetze verstoßen.
 
 [[Weiter zum Punktestand-&gt;F3.11]]</tw-passagedata>
-<tw-passagedata pid="87" name="F3.10.5.2" tags="" position="2351.666666666667,4486.666666666667">Frage 5: 
+<tw-passagedata pid="87" name="F3.10.5.2" tags="" position="3328,4488">Frage 5: 
 Wenn ich auf Facebook Inhalte sehe, von denen ich überzeugt bin, dass sie rassistisch, sexistisch, ausländerfeindlich, strafbar oder ähnliches sind, habe die Möglichkeit diese Inhalte jemandem zu melden?
 
 Deine Antwort: 
@@ -972,7 +978,7 @@ Deine Antwort:
 Sobald du das Gefühl hast, dass du auf einen Inhalt gestoßen bist, der gegen geltende Gesetze oder die AGBs verstößt, kannst du über die „Melden-Funktion“ Facebook darauf hinweisen. Diese befassen sich daraufhin damit und entscheiden von Fall zu Fall.
 
 [[Weiter zum Punktestand-&gt;F3.11]]</tw-passagedata>
-<tw-passagedata pid="88" name="F3.10.5.3" tags="" position="2496.666666666667,4485">Frage 5: 
+<tw-passagedata pid="88" name="F3.10.5.3" tags="" position="3476,4488">Frage 5: 
 Wenn ich auf Facebook Inhalte sehe, von denen ich überzeugt bin, dass sie rassistisch, sexistisch, ausländerfeindlich, strafbar oder ähnliches sind, habe die Möglichkeit diese Inhalte jemandem zu melden?
 
 Deine Antwort: 
@@ -985,10 +991,10 @@ Deine Antwort:
 Sobald du das Gefühl hast, dass du auf einen Inhalt gestoßen bist, der gegen geltende Gesetze oder die AGBs verstößt, kannst du über die „Melden-Funktion“ Facebook darauf hinweisen. Diese befassen sich daraufhin damit und entscheiden von Fall zu Fall.
 
 [[Weiter zum Punktestand-&gt;F3.11]]</tw-passagedata>
-<tw-passagedata pid="89" name="F3.11" tags="" position="2021.6666666666667,4698.333333333334">&#39;&#39;Punktestand&#39;&#39;
+<tw-passagedata pid="89" name="F3.11" tags="" position="3000,4700">&#39;&#39;Punktestand&#39;&#39;
 
 [[Das Quiz noch einmal machen.-&gt;F3.10.1]]</tw-passagedata>
-<tw-passagedata pid="90" name="F1.10.1.1" tags="" position="1010,3345">Frage 1: 
+<tw-passagedata pid="90" name="F1.10.1.1" tags="" position="1988,3348">Frage 1: 
 Ist es wichtig seinen richtigen Namen bei der Anmeldung bei Facebook anzugeben?
 
 Deine Antwort: 
@@ -1001,7 +1007,7 @@ Deine Antwort:
 Halte dich an die Allgemeinen Geschäftsbedingungen von Facebook und helfe deinen bekannten bei der Suche nach deinem Benutzerprofil.
 
 [[Weiter zur nächsten Frage-&gt;F1.10.2]]</tw-passagedata>
-<tw-passagedata pid="91" name="F1.10.1.2" tags="" position="1161.6666666666667,3346.666666666667">Frage 1: 
+<tw-passagedata pid="91" name="F1.10.1.2" tags="" position="2140,3348">Frage 1: 
 Ist es wichtig seinen richtigen Namen bei der Anmeldung bei Facebook anzugeben?
 
 Deine Antwort: 
@@ -1014,7 +1020,7 @@ Deine Antwort:
 Wenn du einen falschen Namen angibst, dann verstößt du gegen die Allgemeinen Geschäftsbedingungen von Facebook und du würdest Bekannten die Suche nach deinem Benutzerprofil erschweren.
 
 [[Weiter zur nächsten Frage-&gt;F1.10.2]]</tw-passagedata>
-<tw-passagedata pid="92" name="F1.10.2" tags="" position="1010,3501.666666666667">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
+<tw-passagedata pid="92" name="F1.10.2" tags="" position="1988,3504">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
 Frage 2: 
 Welcher Aussage würdest du zustimmen?
@@ -1022,7 +1028,7 @@ Welcher Aussage würdest du zustimmen?
 Antworten: 
 0. [[Wenn ich eine fremde Person kennenlerne, dann erzähle ich ihr möglichst viel aus meinem Leben.-&gt;F1.10.2.1]]
 0. [[Private Informationen teile ich nur mit meinen engsten Bekannten und Familienmitgliedern.-&gt;F1.10.2.2]]</tw-passagedata>
-<tw-passagedata pid="93" name="F1.10.2.1" tags="" position="1010,3651.666666666667">Frage 2: 
+<tw-passagedata pid="93" name="F1.10.2.1" tags="" position="1988,3652">Frage 2: 
 Welcher Aussage würdest du zustimmen?
 
 Deine Antwort:
@@ -1037,7 +1043,7 @@ Das wäre ein sehr unvorsichtiges und gefährliches Verhalten. Das gleiche würd
 Wie du das machst, wirst im Verlaufe dieses Spiels im dritten Kapitel lernen.
 
 [[Weiter zur nächsten Frage-&gt;F1.10.3]]</tw-passagedata>
-<tw-passagedata pid="94" name="F1.10.2.2" tags="" position="1163.3333333333335,3651.666666666667">Frage 2: 
+<tw-passagedata pid="94" name="F1.10.2.2" tags="" position="2140,3652">Frage 2: 
 Welcher Aussage würdest du zustimmen?
 
 Deine Antwort: 
@@ -1050,7 +1056,7 @@ Deine Antwort:
 Und wie du auf Facebook Informationen nur mit Menschen teilst, mit denen du sie auch wirklich teilen möchtest, lernst du in Kapitel drei.
 
 [[Weiter zur nächsten Frage-&gt;F1.10.3]]</tw-passagedata>
-<tw-passagedata pid="95" name="F1.10.3" tags="" position="1010,3800">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
+<tw-passagedata pid="95" name="F1.10.3" tags="" position="1988,3804">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
 Frage 3: 
 Ist es eine gute Idee, einen Post mit deinen Urlaubsplänen auf deiner Pinnwand für alle deine Freunde sichtbar zu veröffentlichen?
@@ -1058,7 +1064,7 @@ Ist es eine gute Idee, einen Post mit deinen Urlaubsplänen auf deiner Pinnwand 
 Antworten: 
 0. [[Nein, denn das ist eine sehr sensible Information. In den falschen Händen könnte ich so Opfer eines Einbruchs sein.-&gt;F1.10.3.1]]
 0. [[Ja, denn so kann ich meine Freunde und Verwandten an meinen Plänen teilhaben lassen und vielleicht kann ich sie sogar neidisch machen.-&gt;F1.10.3.2]]</tw-passagedata>
-<tw-passagedata pid="96" name="F1.10.3.1" tags="" position="1008.3333333333334,3945">Frage 3: 
+<tw-passagedata pid="96" name="F1.10.3.1" tags="" position="1988,3948">Frage 3: 
 Ist es eine gute Idee, einen Post mit deinen Urlaubsplänen auf deiner Pinnwand für alle deine Freunde sichtbar zu veröffentlichen?
 
 Deine Antwort: 
@@ -1071,7 +1077,7 @@ Deine Antwort:
 Gehe auf Nummer Sicher und teile sensible Informationen nur im privaten Chat oder mit eingerichteten Gruppen, die nur aus Personen besteht, denen du uneingeschränkt vertrauen kannst.
 
 [[Weiter zur nächsten Frage-&gt;F1.10.4]]</tw-passagedata>
-<tw-passagedata pid="97" name="F1.10.3.2" tags="" position="1158.3333333333335,3948.3333333333335">Frage 3: 
+<tw-passagedata pid="97" name="F1.10.3.2" tags="" position="2136,3952">Frage 3: 
 Ist es eine gute Idee, einen Post mit deinen Urlaubsplänen auf deiner Pinnwand für alle deine Freunde sichtbar zu veröffentlichen?
 
 Deine Antwort: 
@@ -1084,7 +1090,7 @@ Deine Antwort:
 So solltest du dich nicht auf Facebook verhalten. Gehe auf Nummer Sicher und teile sensible Informationen nur im privaten Chat oder mit eingerichteten Gruppen, die nur aus Personen besteht, denen du uneingeschränkt vertrauen kannst.
 
 [[Weiter zur nächsten Frage-&gt;F1.10.4]]</tw-passagedata>
-<tw-passagedata pid="98" name="F1.10.4" tags="" position="1008.3333333333334,4096.666666666667">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
+<tw-passagedata pid="98" name="F1.10.4" tags="" position="1988,4100">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
 Frage 4: 
 Jemand mit dem gleichen Nachnamen wie du möchte dich hinzufügen, aber du bist dir nicht sicher, ob du die Person kennst. Wie reagierst du?
@@ -1092,7 +1098,7 @@ Jemand mit dem gleichen Nachnamen wie du möchte dich hinzufügen, aber du bist 
 Antworten: 
 0. [[Ich füge die Person trotzdem zu meinen Freunden hinzu, schließlich haben wir den gleichen Nachnahmen.-&gt;F1.10.4.1]]
 0. [[Ich kontaktiere die Person und frage sie, warum sie mich zu den Freunden hinzufügen möchte. Außerdem informiere ich mich bei anderen Verwandten oder Bekannten, ob die Person ihnen bekannt ist.-&gt;F1.10.4.2]]</tw-passagedata>
-<tw-passagedata pid="99" name="F1.10.4.1" tags="" position="1008.3333333333334,4246.666666666667">Frage 4: 
+<tw-passagedata pid="99" name="F1.10.4.1" tags="" position="1988,4248">Frage 4: 
 Jemand mit dem gleichen Nachnamen wie du möchte dich hinzufügen, aber du bist dir nicht sicher, ob du die Person kennst. Wie reagierst du?
 
 Deine Antwort: 
@@ -1105,7 +1111,7 @@ Deine Antwort:
 Du solltest grundsätzlich misstrauisch sein und sicherstellen, dass du die Person auch kennst, die dich zu ihren Freunden hinzufügen möchte. Vergiss nicht, dass es möglich ist, sich unter einem falschen Namen bei Facebook anzumelden. Die Person könnte ein Betrüger sein, der dich z. B. durch den Enkeltrick täuschen möchte.
 
 [[Weiter zur nächsten Frage-&gt;F1.10.5]]</tw-passagedata>
-<tw-passagedata pid="100" name="F1.10.4.2" tags="" position="1156.6666666666667,4246.666666666667">Frage 4: 
+<tw-passagedata pid="100" name="F1.10.4.2" tags="" position="2136,4248">Frage 4: 
 Jemand mit dem gleichen Nachnamen wie du möchte dich hinzufügen, aber du bist dir nicht sicher, ob du die Person kennst. Wie reagierst du?
 
 Deine Antwort: 
@@ -1118,7 +1124,7 @@ Deine Antwort:
 In solchen Situationen Misstrauen zu zeigen kann dich vor Betrügern schützen.
 
 [[Weiter zur nächsten Frage-&gt;F1.10.5]]</tw-passagedata>
-<tw-passagedata pid="101" name="F1.10.5" tags="" position="1008.3333333333334,4396.666666666667">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
+<tw-passagedata pid="101" name="F1.10.5" tags="" position="1988,4400">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
 Frage 5: 
 Wenn du eine Freundschaft auf Facebook beenden möchtest, reicht es dann, die Person zu ignorieren?
@@ -1126,7 +1132,7 @@ Wenn du eine Freundschaft auf Facebook beenden möchtest, reicht es dann, die Pe
 Antworten: 
 0. [[Ja, denn auf Facebook ist es wie im echten Leben, wenn ich die Person ignoriere, dann habe ich auch nichts mehr mit ihr zu tun.-&gt;F1.10.5.1]]
 0. [[Nein, denn auf Facebook muss ich pro-aktiv sein und die Person aus meinem Freundeskreis entfernen.-&gt;F1.10.5.2]]</tw-passagedata>
-<tw-passagedata pid="102" name="F1.10.5.1" tags="" position="1003.3333333333334,4541.666666666667">Frage 5: 
+<tw-passagedata pid="102" name="F1.10.5.1" tags="" position="1980,4544">Frage 5: 
 Wenn du eine Freundschaft auf Facebook beenden möchtest, reicht es dann, die Person zu ignorieren?
 
 Deine Antwort: 
@@ -1139,7 +1145,7 @@ Deine Antwort:
 Um eine Freundschaft auf Facebook zu beenden musst du pro-aktiv vorgehen und die Person aus deinem Freundeskreis entfernen. Wie du das machst, lernst du in Kapitel drei.
 
 [[Weiter zur nächsten Frage-&gt;F1.10.6]]</tw-passagedata>
-<tw-passagedata pid="103" name="F1.10.5.2" tags="" position="1158.3333333333335,4546.666666666667">Frage 5: 
+<tw-passagedata pid="103" name="F1.10.5.2" tags="" position="2136,4548">Frage 5: 
 Wenn du eine Freundschaft auf Facebook beenden möchtest, reicht es dann, die Person zu ignorieren?
 
 Deine Antwort: 
@@ -1152,7 +1158,7 @@ Deine Antwort:
 Merke dir, dass du deine Freundeslisten aktiv pflegen musst, damit du nur mit den Menschen die Freundschaft aufrechterhältst, mit denen du dich gut verstehst und denen du vertraust.
 
 [[Weiter zur nächsten Frage-&gt;F1.10.6]]</tw-passagedata>
-<tw-passagedata pid="104" name="F1.10.6" tags="" position="1003.3333333333334,4691.666666666667">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
+<tw-passagedata pid="104" name="F1.10.6" tags="" position="1980,4692">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
 Frage 6: 
 Gibt es etwas, das du am Ende einer Facebook-Session beachten solltest?
@@ -1160,7 +1166,7 @@ Gibt es etwas, das du am Ende einer Facebook-Session beachten solltest?
 Antworten: 
 0. [[Ja, ich sollte mich von Facebook abmelden.-&gt;F1.10.6.1]]
 0. [[Nein, nicht, dass ich wüsste.-&gt;F1.10.6.2]]</tw-passagedata>
-<tw-passagedata pid="105" name="F1.10.6.1" tags="" position="1001.6666666666667,4841.666666666667">Frage 6: 
+<tw-passagedata pid="105" name="F1.10.6.1" tags="" position="1980,4844">Frage 6: 
 Gibt es etwas, das du am Ende einer Facebook-Session beachten solltest?
 
 Deine Antwort: 
@@ -1173,7 +1179,7 @@ Deine Antwort:
 Nach dem Benutzen von Facebook solltest du dich über den „Abmelden-Button“ von Facebook abmelden. Dies ist vor allem dann wichtig, wenn du an einem öffentlichen Ort wie einem Internet-Café oder einem Flughafen bist, wo auch andere Personen den gleichen Computer benutzen.
 
 [[Weiter zum Punktestand-&gt;F1.11]]</tw-passagedata>
-<tw-passagedata pid="106" name="F1.10.6.2" tags="" position="1156.6666666666667,4843.333333333334">Frage 6: 
+<tw-passagedata pid="106" name="F1.10.6.2" tags="" position="2136,4844">Frage 6: 
 Gibt es etwas, das du am Ende einer Facebook-Session beachten solltest?
 
 Deine Antwort: 
@@ -1186,10 +1192,10 @@ Deine Antwort:
 Grundsätzlich ist es ratsam, sich nach einer Facebook-Session von Facebook über den „Abmelde-Button“ abzumelden. Dies ist vor allem dann wichtig, wenn du an einem öffentlichen Ort wie einem Internet-Café oder einem Flughafen bist, wo auch andere Personen den gleichen Computer benutzen.
 
 [[Weiter zum Punktestand-&gt;F1.11]]</tw-passagedata>
-<tw-passagedata pid="107" name="F1.11" tags="" position="788.3333333333334,5015">&#39;&#39;Punktestand&#39;&#39;
+<tw-passagedata pid="107" name="F1.11" tags="" position="1768,5016">&#39;&#39;Punktestand&#39;&#39;
 
 [[Das Quiz noch einmal machen.-&gt;F1.10.1]]</tw-passagedata>
-<tw-passagedata pid="108" name="F2.7.1.1" tags="" position="1480,2755">Frage 1: 
+<tw-passagedata pid="108" name="F2.7.1.1" tags="" position="2460,2756">Frage 1: 
 Wie sieht ein sicheres Passwort aus?
 
 Deine Antwort: 
@@ -1203,7 +1209,7 @@ Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch
 Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleinschreibung mit einfließen zu lassen.
 
 [[Weiter zur nächsten Frage-&gt;F2.7.2]]</tw-passagedata>
-<tw-passagedata pid="109" name="F2.7.1.2" tags="" position="1620,2755">Frage 1: 
+<tw-passagedata pid="109" name="F2.7.1.2" tags="" position="2600,2756">Frage 1: 
 Wie sieht ein sicheres Passwort aus?
 
 Deine Antwort: 
@@ -1217,7 +1223,7 @@ Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch
 Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleinschreibung mit einfließen zu lassen.
 
 [[Weiter zur nächsten Frage-&gt;F2.7.2]]</tw-passagedata>
-<tw-passagedata pid="110" name="F2.7.1.3" tags="" position="1763.3333333333335,2755">Frage 1: 
+<tw-passagedata pid="110" name="F2.7.1.3" tags="" position="2740,2756">Frage 1: 
 Wie sieht ein sicheres Passwort aus?
 
 Deine Antwort: 
@@ -1231,7 +1237,7 @@ Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch
 Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleinschreibung mit einfließen zu lassen.
 
 [[Weiter zur nächsten Frage-&gt;F2.7.2]]</tw-passagedata>
-<tw-passagedata pid="111" name="F2.7.1.4" tags="" position="1906.6666666666667,2755">Frage 1: 
+<tw-passagedata pid="111" name="F2.7.1.4" tags="" position="2884,2756">Frage 1: 
 Wie sieht ein sicheres Passwort aus?
 
 Deine Antwort: 
@@ -1245,7 +1251,7 @@ Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch
 Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleinschreibung mit einfließen zu lassen.
 
 [[Weiter zur nächsten Frage-&gt;F2.7.2]]</tw-passagedata>
-<tw-passagedata pid="112" name="F2.7.2" tags="" position="1480,2905">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
+<tw-passagedata pid="112" name="F2.7.2" tags="" position="2460,2908">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
 Frage 2: 
 Ich habe Probleme mir mein Passwort zu merken, wo bewahre ich es auf?
@@ -1254,7 +1260,7 @@ Antworten:
 0. [[Auf einem Post-It am Bildschirm, dann kann ich es sofort einsehen.-&gt;F2.7.2.1]]
 0. [[In meiner Geldbörse, die habe ich schließlich immer dabei.-&gt;F2.7.2.2]]
 0. [[An einem geheimen Ort in meiner Wohnung oder meinem Haus an einem sicheren Ort.-&gt;F2.7.2.3]]</tw-passagedata>
-<tw-passagedata pid="113" name="F2.7.2.1" tags="" position="1480,3055">Frage 2: 
+<tw-passagedata pid="113" name="F2.7.2.1" tags="" position="2460,3056">Frage 2: 
 Ich habe Probleme mir mein Passwort zu merken, wo bewahre ich es auf?
 
 Deine Antwort: 
@@ -1268,7 +1274,7 @@ Das solltest du nicht tun. Das ist zwar auf dem ersten Blick verlockend, aber de
 Besser: An einem geheimen Ort in deiner Wohnung oder deinem Haus an einem sicheren Platz.
 
 [[Weiter zur nächsten Frage-&gt;F2.7.3]]</tw-passagedata>
-<tw-passagedata pid="114" name="F2.7.2.2" tags="" position="1626.6666666666667,3055">Frage 2: 
+<tw-passagedata pid="114" name="F2.7.2.2" tags="" position="2604,3056">Frage 2: 
 Ich habe Probleme mir mein Passwort zu merken, wo bewahre ich es auf?
 
 Deine Antwort: 
@@ -1282,7 +1288,7 @@ Deine Geldbörse trägst du mit dir wenn du das Haus verlässt, immer mit der Ge
 Besser: An einem geheimen Ort in deiner Wohnung oder deinem Haus an einem sicheren Platz.
 
 [[Weiter zur nächsten Frage-&gt;F2.7.3]]</tw-passagedata>
-<tw-passagedata pid="115" name="F2.7.2.3" tags="" position="1781.6666666666667,3055">Frage 2: 
+<tw-passagedata pid="115" name="F2.7.2.3" tags="" position="2760,3056">Frage 2: 
 Ich habe Probleme mir mein Passwort zu merken, wo bewahre ich es auf?
 
 Deine Antwort: 
@@ -1295,7 +1301,7 @@ Deine Antwort:
 Optimal ist es natürlich, wenn du dein Passwort gar nicht aufschreibst. Wenn du aber auf Nummer sicher gehen möchtest, kannst du es am besten an einem geheimen Ort in deiner Wohnung oder deinem Haus an einem sicheren Platz verwahren.
 
 [[Weiter zur nächsten Frage-&gt;F2.7.3]]</tw-passagedata>
-<tw-passagedata pid="116" name="F2.7.3" tags="" position="1480,3205">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
+<tw-passagedata pid="116" name="F2.7.3" tags="" position="2460,3208">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
 Frage 3: 
 Leider war ich unvorsichtig und du hast den Verdacht, dass sich jemand hat unter meinem Namen bei Facebook eingeloggt hat. Welche Schritte leitest du am besten in welcher Reihenfolge ein?
@@ -1304,7 +1310,7 @@ Antworten:
 0. [[Facebook über www.facebook.com/hacked kontaktieren und dann Passwort zurücksetzen.-&gt;F2.7.3.1]]
 0. [[Passwort zurücksetzen und dann Facebook über www.facebook.com/hacked kontaktieren.-&gt;F2.7.3.2]]
 0. [[Erstmal abwarten und dann Passwort zurücksetzen und dann  Facebook über www.facebook.com/hacked kontaktieren.-&gt;F2.7.3.3]]</tw-passagedata>
-<tw-passagedata pid="117" name="F2.7.3.1" tags="" position="1480,3355">Frage 3: 
+<tw-passagedata pid="117" name="F2.7.3.1" tags="" position="2460,3356">Frage 3: 
 Leider war ich unvorsichtig und du hast den Verdacht, dass sich jemand hat unter meinem Namen bei Facebook eingeloggt hat. Welche Schritte leitest du am besten in welcher Reihenfolge ein?
 
 Deine Antwort: 
@@ -1317,7 +1323,7 @@ Deine Antwort:
 Sofern du dich noch bei Facebook einloggen kannst, solltest du zunächst versuchen, dein Passwort zurückzusetzen und ein neues einzurichten.
 
 [[Weiter zum Punktestand-&gt;F2.8]]</tw-passagedata>
-<tw-passagedata pid="118" name="F2.7.3.2" tags="" position="1630,3355">Frage 3: 
+<tw-passagedata pid="118" name="F2.7.3.2" tags="" position="2608,3356">Frage 3: 
 Leider war ich unvorsichtig und du hast den Verdacht, dass sich jemand hat unter meinem Namen bei Facebook eingeloggt hat. Welche Schritte leitest du am besten in welcher Reihenfolge ein?
 
 Deine Antwort: 
@@ -1330,7 +1336,7 @@ Deine Antwort:
 So solltest du vorgehen. Versuche zunächst dein Passwort zurückzusetzen und ein neues einzurichten. Ist dies nicht mehr möglich, weil z. B. deine E-Mail-Adresse geändert wurde, dann kontaktiere Facebook über www.facebook.com/hacked.
 
 [[Weiter zum Punktestand-&gt;F2.8]]</tw-passagedata>
-<tw-passagedata pid="119" name="F2.7.3.3" tags="" position="1780,3355">Frage 3: 
+<tw-passagedata pid="119" name="F2.7.3.3" tags="" position="2760,3356">Frage 3: 
 Leider war ich unvorsichtig und du hast den Verdacht, dass sich jemand hat unter meinem Namen bei Facebook eingeloggt hat. Welche Schritte leitest du am besten in welcher Reihenfolge ein?
 
 Deine Antwort: 
@@ -1343,9 +1349,133 @@ Deine Antwort:
 Solltest du den Verdacht haben, dass dein Facebook-Konto infiltriert worden ist, solltest du sofort handeln und zunächst versuchen dein Passwort zurückzusetzen und ein neues einzurichten. Ist dies nicht mehr möglich, weil z. B. deine E-Mail-Adresse geändert wurde, dann kontaktiere Facebook über www.facebook.com/hacked.
 
 [[Weiter zum Punktestand-&gt;F2.8]]</tw-passagedata>
-<tw-passagedata pid="120" name="F2.8" tags="" position="1361.6666666666667,3585">&#39;&#39;Punktestand&#39;&#39;
+<tw-passagedata pid="120" name="F2.8" tags="" position="2340,3588">&#39;&#39;Punktestand&#39;&#39;
 
 [[Das Quiz noch einmal machen.-&gt;F2.7.1]]</tw-passagedata>
+<tw-passagedata pid="121" name="Kapitel 1" tags="" position="1108,340">&#39;&#39;Einleitung&#39;&#39;
+
+Hallo zusammen,
+
+&lt;-- img susi_happy --&gt;
+
+ich bin Susi Sorglos. Ich bin 80 Jahre alt und lebe mit meinem Ehemann in einem kleinen Dorf in Deutschland. Ich habe mehrere Enkelkinder, welche bereits nicht mehr zu Hause wohnen. Eine Enkelin macht gerade ein Au Pair Jahr in den Vereinigten Staaten von Amerika. Die anderen sind in ganz Deutschland verteilt. Zum einen studieren sie und zum anderen sind sie mit ihren eigenen Familien in andere Teile Deutschlands gezogen. Vielleicht kennen einige von euch diese Situation.
+
+Ich möchte gerne mit ihnen in Kontakt bleiben. Briefe schreibt die heutige Jugend nicht mehr. Außerdem wüsste ich nicht einmal die Adresse, zu welcher ich die Briefe schicken sollte. Heutzutage werden ganz andere Möglichkeiten für den Kontakt zwischen Menschen eingesetzt. Eine Möglichkeit um ortsunabhängig und zeitunabhängig zu kommunizieren, ist es über Facebook zu kommunizieren. Aus diesem Grunde habe ich mich dazu entschlossen, dass ich Facebook nutzen möchte. Auf diesem Weg könnte ich mit meinen Enkeln und mit allen anderen Menschen in Kontakt bleiben und dabei nicht einmal das Haus verlassen. Begleitet mich auf meinen Weg Facebook zu entdecken und schließt euch dem größten Netzwerk der Welt an. Ich freue mich darauf.
+
+Im [[Inhaltsverzeichnis-&gt;Kapitel 1 - Inhaltsverzeichnis]] findet ihr verschiedene Kapitel, in denen ihr Facebook näher erkunden könnt. Klickt einfach auf die Kapitel und habt Spaß. Anschließend könnt ihr euer erworbenes Wissen noch in einem Spiel testen.
+
+Eure Susi
+
+[[Kapitel 1 - Inhaltsverzeichnis&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Inhaltsverzeichnis&lt;/button&gt;]]</tw-passagedata>
+<tw-passagedata pid="122" name="Kapitel 1 - Inhaltsverzeichnis" tags="" position="1108,490">#Inhaltsverzeichnis
+
+Hier findet ihr den Aufbau des Kapitels. Klickt euch durch die verschiedenen Kapitel und erweitert euer Wissen. Am Ende der Lektion werdet ihr in der Lage sein, Facebook zu benutzen und zu verstehen. Ich wünsche euch Viel Spaß!
+Eure Susi
+
+&lt;-- img susi_happier --&gt;
+
+&lt;-- add links to chapters --&gt;
+
+
+1.	[[Anmeldung-&gt;1.1 Anmeldung]]
+2. 	[[Profil einrichten-&gt;1.2 Profil einrichten]]
+3. 	[[Freundschaftsanfragen-&gt;1.3 Freundschaftsanfragen]]
+4.	[[Beiträge-&gt;1.4 Beiträge]]
+5.	[[Listen-&gt;1.5 Listen]]
+6.	[[Gruppen-&gt;1.6 Gruppen]]
+7.	[[Personen abonnieren-&gt;1.7 Abonnieren]]
+8.	[[Facebook mit dem Smartphone benutzen-&gt;1.8 Smartphone]]
+9.	[[Abschlusstest-&gt;1.9 Abschlusstest]]
+</tw-passagedata>
+<tw-passagedata pid="123" name="1.1 Anmeldung" tags="" position="731.6666666666667,486.6666666666667">#Anmeldung
+Um Facebook zu öffnen, müssen wir die folgende Internetadresse https://de-de.facebook.com/ eingeben. Alternativ könnt ihr über eine Suchmaschine nach Facebook suchen. Egal für welchen Weg ihr euch entscheidet, ihr kommt auf die gleiche Seite. ;-)
+
+Wir sehen nun ein blaues Fenster mit dem Facebook Logo und vielen freien Felder, in denen man etwas von seinen persönlichen Daten eingeben soll.
+
+Dieser erste Blick hat mir viele Fragen beschert, welche mich sehr verunsichert haben. Am liebsten hätte ich die Seite geschlossen und etwas Anderes gemacht.
+
+&lt;-- BILD img_1_1 --&gt;
+
+Jedoch habe ich mich wieder daran erinnert, weswegen ich mich bei Facebook anmelden wollte. Ich wollte mit meinen Freunden und Verwandten schreiben können, egal an welchen Ort ich sitze. Dies werde ich jetzt auch machen. Nach einer kleineren Recherche habe ich die Lösungen gefunden. Diese möchte ich euch gerne präsentieren.
+
+[[1.1 Anmeldung 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
+<tw-passagedata pid="124" name="1.2 Profil einrichten" tags="" position="861.6666666666667,645"># Profil einrichten
+Den ersten Schritt haben wir geschafft. :-)
+
+&lt;-- susy_happy.jpg --&gt;
+
+Als nächstes müssen wir unserem Profil etwas Leben einhauchen.
+
+Wenn Freunde derzeit auf unser Facebook-Profil schauen, dann sehen sie nicht viel. Fast jede Beschreibung unserer Person ist leer. Nur der Name ist zu sehen, da wir diesen bereits bei der Anmeldung angegeben haben.
+
+Als erstes wollen wir ein Profil- und Titelbild hochladen und einfügen. Ihr fragt euch, wie dies funktioniert? Kein Problem. Mit dem folgenden Video könnt ihr die einzelnen Schritte sehen und dies kinderleicht nachahmen. Ihr müsst lediglich entscheiden welche Bilder ihr verwenden wollt ;-)
+
+EMBED VIDEO HERE
+&lt;-- profil_teilbild.mp4 --&gt;
+
+[[1.2 Profil einrichten 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
+<tw-passagedata pid="125" name="1.3 Freundschaftsanfragen" tags="" position="1071.6666666666667,670">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="126" name="1.4 Beiträge" tags="" position="1221.6666666666667,670">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="127" name="1.5 Listen" tags="" position="1371.6666666666667,670">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="128" name="1.6 Gruppen" tags="" position="1521.6666666666667,670">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="129" name="1.7 Abonnieren" tags="" position="1646.6666666666667,670">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="130" name="1.8 Smartphone" tags="" position="1860,670">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="131" name="1.9 Abschlusstest" tags="" position="1985,670">Double-click this passage to edit it.</tw-passagedata>
+<tw-passagedata pid="132" name="1.1 Anmeldung 2" tags="" position="736.6666666666667,645"># Anmeldung
+
+&lt;-- img_1_2 --&gt;
+
+Auf dieser Seite möchte ich euch erklären, wie ihr die Fragen auflösen könnten. Ich habe die Seite von Facebook in drei Bereiche eingeteilt und werde diese nacheinander erläutern.
+
+1.	Dieser Bereich ist für bereits registrierte Benutzer. Hier kann sich jede Person anmelden. Voraussetzung hierfür ist nur, dass man sich bereits angemeldet hat. Also die Bereiche 2 &amp; 3 ausgefüllt und abgeschickt hat.
+
+2.	Dieser Bereich ist für uns interessant, denn hier müssen wir unsere Daten eingeben.
+
+	Vorname: Susi
+	Nachname: Sorglos
+	E-Mail-Adresse eingeben: susi-sorglos@gmx.net
+	E-Mail-Adresse erneut eingeben: susi-sorglos@gmx.net
+	Passwort: 12345678
+	Geburtstag: 10.03.1936
+	Geschlecht: weiblich
+
+	Hinweise:
+
+	Mein Passwort lautet natürlich nicht 12345678 ;-)	
+
+Nach meiner Meinung ist es besser die E-Mail-Adresse einzugeben, anstatt die 			Nummer des Handys. Somit könnt ihr euer Handy, falls ihr es wünscht, frei von Facebook halten.
+
+Die E-Mail-Adresse muss doppelt eingegeben werden, damit sichergestellt wird, dass dies 	auch die richtige ist. Wenn sie zwei Mal gleich eingegeben wird, dann kann Facebook davon 	ausgehen, dass dies auch die korrekte Adresse ist.
+
+3.	 Wenn alle Daten korrekt eingegeben wurden, dann einfach auf Registrieren klicken
+
+Ihr habt es geschafft!!!! Gut gemacht!!!
+
+{
+[[1.1 Anmeldung&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Kapitelanfang&lt;/button&gt;]]
+
+[[Kapitel 1 - Inhaltsverzeichnis&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Inhaltsverzeichnis&lt;/button&gt;]]
+}
+</tw-passagedata>
+<tw-passagedata pid="133" name="1.2 Profil einrichten 2" tags="" position="861.6666666666667,795"># Profil einrichten
+
+Ihr müsst zugeben, dass es mit einem Bild besser aussieht als ohne, oder? Ich finde es auf jeden Fall mit Bild schöner :-)
+
+Im Beispielvideo haben wir meinen guten Freund Bernd Meyer gesucht. Das Problem hierbei war, ihn zwischen den ganzen Bernd Meyers zu finden. Zum Glück hatte er ein Profilbild, auf dem er gut zu sehen war, sonst hätte ich wahrscheinlich ewig gesucht.
+
+Diese Suche wollen wir anderen Personen ersparen, deswegen sollten wir weitere Informationen über unsere Person angeben. Ich rede nicht von sensiblen Daten, wie Haus-, Konto- oder Telefonnummer, sondern von normalen Daten, welche man bei einem persönlichen Gespräch auch sagen würde. Zum Beispiel aus welchen Dorf ich komme, in welchen Dorf ich jetzt wohne, zu welcher Schule ich gegangen bin oder was ich für einen Beruf gelernt habe.
+
+
+&lt;-- profil_einrichten.jpg --&gt;
+
+Hierfür müssen wir lediglich auf unser Profil klicken und schon können wir dieses Bild sehen. Auf der linken Seite, also die grünen Pfeile, können wir die einzelnen Kategorien sehen. Diese Kategorien könnt ihr mit der Maus anklicken.
+
+Auf der rechten Seite finden die einzelnen Eigenschaften. Hier könnt ihr eure Angaben einfügen. Aber denkt daran, dass euch keiner dazu zwingt und ihr wirklich nur das Angeben sollt, wobei ihr euch auch wohl fühlt. Anschließend müsst ihr diese Eingaben nur noch speichern und schon habe ihr euch ein Profil erstellt und eingerichtet.  
+
+[[1.2 Profil einrichten&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Kapitelanfang&lt;/button&gt;]]
+
+[[Kapitel 1 - Inhaltsverzeichnis&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Inhaltsverzeichnis&lt;/button&gt;]]
+</tw-passagedata>
 </tw-storydata>
 
 

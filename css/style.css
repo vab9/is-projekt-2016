@@ -108,16 +108,24 @@ video {
     display: hidden;
 }
 
+/* ====================== */
+/* PASSWORD TESTER STUFF  */
+/* ====================== */
+
+#passwordContainer {
+    text-align: center;
+}
+
+#complexity, #inputPassword {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
 /* Farben fuer den Passwort-Tester */
 .inactive{background-color: #FFF;}
-.tooShort{background-color: #FFF;}
-.weak{background-color: #9a2617;}
+.tooShort{background-color: #17b0da;}
+.weak{color: #FFF; background-color: #9a2617;}
 .strong{background-color: #f26d21;}
 .stronger{background-color: #6eca74;}
 .strongest{background-color: #3fad46;}
-/*.inactive{background-color: grey;}
-.tooShort{background-color: #000;}
-.weak{background-color: #FF5353;}
-.strong{background-color: #FAD054;}
-.stronger{background-color: #93C9F4;}
-.strongest{background-color: #B6FF6C;}*/

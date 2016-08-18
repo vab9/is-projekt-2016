@@ -22,7 +22,6 @@ bonus.FlatLower = 0;
 bonus.FlatNumber = 0;
 
 outputResult();
-// $("#inputPassword").bind("keyup", checkVal);
 $("#inputPassword").on('input', checkVal);
 
 

@@ -33,6 +33,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -43,6 +44,7 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
 
 
 
@@ -198,9 +200,7 @@ Sie können direkt bei Kapitel 1 anfangen, oder erstmal zur Kapitelübersicht ge
 
 &lt;script&gt;
 $(document).ready(function() {
-	$.getScript(&quot;js/footer.js&quot;, function(){
-		console.log(&quot;footer.js loaded!&quot;);
-	});
+	$.getScript(&quot;js/footer.js&quot;);
 });
 &lt;/script&gt;</tw-passagedata>
 <tw-passagedata pid="11" name="Kapitel 1 intro" tags="" position="200,291">&lt;b&gt;Kapitel 1 - Vorzüge von digitalen sozialen Netzwerken&lt;/b&gt;
@@ -559,14 +559,30 @@ Besonders wichtig: Die Wahl eines guten Passwortes.
 [[Weiter zum Passwort-Tester-&gt;F2.4]]</tw-passagedata>
 <tw-passagedata pid="44" name="F2.4" tags="" position="2888,864">&#39;&#39;Passwort-Tester&#39;&#39;
 
-Gib ein Passwort ein, von dem du denkst, dass es sicher ist. Auf der nächsten Seite bekommst du eine Einschätzung, wie sicher es ist.
+Gib ein Passwort ein, von dem du denkst, dass es sicher ist. Unter dem Eingabefeld bekommst du eine Einschätzung, wie sicher es wirklich ist.
 
-(Text-Feld für das Passwort)
+{
+&lt;div id=&quot;passwordContainer&quot;&gt;
+&lt;input id=&quot;inputPassword&quot;/&gt;
+&lt;div id=&quot;complexity&quot; class=&quot;inactive&quot;&gt;Bitte ein Password eingeben!&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+}
+
+Sichere Passwörter sind länger als 8 Zeichen und beinhalten Ziffern, Sonderzeichen (z.B. &quot;!&quot; oder &quot;$&quot;) und Großbuchstaben.
 
 [Passwort prüfen] (F2.4.1) oder (2.4.2)
 
 [[F2.4.1-&gt;F2.4.1]]
-[[F2.4.2-&gt;F2.4.2]]</tw-passagedata>
+[[F2.4.2-&gt;F2.4.2]]
+
+{
+&lt;script&gt;
+	$.getScript(&quot;js/passwort-tester.js&quot;, function(){
+			console.log(&quot;passwort-tester.js loaded!&quot;);
+	});
+&lt;/script&gt;
+}</tw-passagedata>
 <tw-passagedata pid="45" name="F2.4.1" tags="" position="2828,1100">&#39;&#39;Das Passwort ist ausbaufähig. Versuche es nochmal!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
@@ -1505,7 +1521,7 @@ Dieser erste Blick hat mir viele Fragen beschert, welche mich sehr verunsichert 
 Jedoch habe ich mich wieder daran erinnert, weswegen ich mich bei Facebook anmelden wollte. Ich wollte mit meinen Freunden und Verwandten schreiben können, egal an welchen Ort ich sitze. Dies werde ich jetzt auch machen. Nach einer kleineren Recherche habe ich die Lösungen gefunden. Diese möchte ich euch gerne präsentieren.
 
 [[1.1 Anmeldung 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="124" name="1.2 Profil einrichten" tags="" position="861.0001,645">&#39;&#39;Profil einrichten&#39;&#39;
+<tw-passagedata pid="124" name="1.2 Profil einrichten" tags="" position="861,645">&#39;&#39;Profil einrichten&#39;&#39;
 Den ersten Schritt haben wir geschafft. :-)
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
@@ -2792,7 +2808,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 [[Zurück zur Frage-&gt;1.9.4]]
 </tw-passagedata>
-<tw-passagedata pid="227" name="1.9.5" tags="" position="2131.666666666667,2016.6666666666667">&#39;&#39;Frage 5&#39;&#39;
+<tw-passagedata pid="227" name="1.9.5" tags="" position="2131,2016">&#39;&#39;Frage 5&#39;&#39;
 
 Thema: //Freundschaftsanfragen//
 

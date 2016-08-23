@@ -37,6 +37,8 @@
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -47,6 +49,8 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
+
 
 
 
@@ -136,9 +140,6 @@ Wenn Sie fertig sind, dann klicken sie auf den Knopf:
 
 Bitte wählen Sie ein Kapitel:
 
-[[1. Kapitel-&gt;Kapitel 1 intro]] - Vorzüge von digitalen sozialen Netzwerken
-[[- Anderes Kapitel-&gt;Ein weiteres Kapitel]] - Andere interessante Dinge
-
 [[1. Kapitel - Grundfunktionen von Facebook-&gt;Kapitel 1]] 
 
 [[2. Kapitel - Sicherheit-&gt;Kapitel 2]] 
@@ -148,7 +149,8 @@ Bitte wählen Sie ein Kapitel:
 
 [[Wenn Sie Hilfe benötigen, klicken Sie hier!-&gt;Hilfe]]
 
-</tw-passagedata>
+
+[[REMOVE ME-&gt;Kapitel 1 intro]]</tw-passagedata>
 <tw-passagedata pid="6" name="Ein weiteres Kapitel" tags="kapitel2" position="621,726">Vielen Dank fürs Spielen dieses Mock-ups!
 
 Hier könnte ein weiteres Kapitel beginnen.
@@ -187,16 +189,18 @@ Stand: April 2016</tw-passagedata>
 ]
 }</tw-passagedata>
 <tw-passagedata pid="9" name="Willkommen" tags="" position="195,53">&lt;!-- 
+
+(set: $player to &quot;Peter&quot;)
+--&gt; 
 {(put: (prompt: &quot;Wie ist ihr Name?&quot;) into $player)}
---&gt; (set: $player to &quot;Peter&quot;)
 
 &lt;b&gt;Hallo $player! Willkommen zu unserem Lernspiel!&lt;/b&gt;
 
-Sie können direkt bei Kapitel 1 anfangen, oder erstmal zur Kapitelübersicht gehen:
+Dieses Spiel vermittelt Grundkenntnisse über das digitale soziale Netzwerk Facebook!
 
 {
 &lt;div class=&quot;continue&quot;&gt;
-[[Kapitel 1 intro&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Bei Kapitel 1 anfangen&lt;/button&gt;]]
+[[Übersicht&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Los geht&#39;s!&lt;/button&gt;]]
 &lt;/div&gt;
 }</tw-passagedata>
 <tw-passagedata pid="10" name="Footer" tags="footer" position="470,405">&lt;hr&gt;

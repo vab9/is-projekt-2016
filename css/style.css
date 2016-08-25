@@ -61,7 +61,8 @@ tw-icon {
 
 /* Try to make images scale */
 img {
-    width: 100%;
+    max-width: 100%;
+    width: auto;
     height: auto;
     margin: 2%;
 }

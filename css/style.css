@@ -62,6 +62,7 @@ tw-icon {
 /* Span containing Player name and score */
 .score {
     float: left;
+    margin: 1%;
 }
 
 /* buttons in headers and footers */

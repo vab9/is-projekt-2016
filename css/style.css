@@ -59,6 +59,13 @@ tw-icon {
     display: none;
 }*/
 
+/* Try to make images scale */
+img {
+    width: 100%;
+    height: auto;
+    margin: 2%;
+}
+
 /* Span containing Player name and score */
 .score {
     float: left;
@@ -84,12 +91,6 @@ tw-icon {
 
 .continue {
     text-align: center;
-}
-
-.fraubild {
-    width: 125px;
-    height: 151px;
-    margin: 2%;
 }
 
 .versteckt {

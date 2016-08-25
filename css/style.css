@@ -168,6 +168,10 @@ video {
   text-align: center;
 }
 
+.target span {
+  pointer-events: none;
+}
+
 [draggable] {
   user-select: none;
 }

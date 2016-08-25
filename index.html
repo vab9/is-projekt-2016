@@ -39,6 +39,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -49,6 +50,7 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
 
 
 
@@ -109,7 +111,18 @@ Was soll Susi tun?
 <tw-passagedata pid="3" name="Header" tags="header" position="1000,13">{
 &lt;div class=&quot;header&quot;&gt;
 
+&lt;span class=&quot;score&quot;&gt;
+Punkte: $score
+&lt;/span&gt;
+
+&lt;!-- Dieser eklige Syntax ist noetig um beim klinken eines Links eine Variable zu veraendern --&gt;
+
+(link: &#39;&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-question-sign&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Hilfe&lt;/button&gt;&#39;)[(set: $score to it - 1)(goto: &quot;Hilfe&quot;)]
+
+&lt;!-- Muss spaeter wieder rein XXXXX
 [[Hilfe&lt;-&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-question-sign&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Hilfe&lt;/button&gt;]]
+--&gt;
+
 
 &lt;button class=&quot;enlarge btn btn-default&quot;&gt;Text vergrößern&lt;/button&gt;
 &lt;button class=&quot;shrink btn btn-default&quot;&gt;Text verkleinern&lt;/button&gt;
@@ -160,7 +173,11 @@ Und meiner! (Dave)
 
 Hier ein Beispiel fuer ein HTML Mark:
 &lt;mark&gt;Bli Bla blub!&lt;/mark&gt;</tw-passagedata>
-<tw-passagedata pid="7" name="Hilfe" tags="" position="846,13">&lt;b&gt;Das Spiel&lt;/b&gt;
+<tw-passagedata pid="7" name="Hilfe" tags="" position="846,13">{
+(if: $score &gt; 0)[(set: $score to $score - 1)]
+}
+
+&lt;b&gt;Das Spiel&lt;/b&gt;
 
 In diesem Lernspiel werden Grundkenntnisse zu digitalen Medien vermittelt. Die Aufgaben sind auf Personen im alter jenseits von 60 Jahren ausgerichtet. Wir wünschen viel Spaß!
 
@@ -193,6 +210,7 @@ Stand: April 2016</tw-passagedata>
 (set: $player to &quot;Peter&quot;)
 --&gt; 
 {(put: (prompt: &quot;Wie ist ihr Name?&quot;) into $player)}
+{(set: $score to 0)}
 
 &lt;b&gt;Hallo $player! Willkommen zu unserem Lernspiel!&lt;/b&gt;
 
@@ -203,11 +221,20 @@ Dieses Spiel vermittelt Grundkenntnisse über das digitale soziale Netzwerk Face
 [[Übersicht&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Los geht&#39;s!&lt;/button&gt;]]
 &lt;/div&gt;
 }</tw-passagedata>
-<tw-passagedata pid="10" name="Footer" tags="footer" position="470,405">&lt;hr&gt;
+<tw-passagedata pid="10" name="Footer" tags="footer" position="470,405">{
+&lt;hr&gt;
 &lt;div class=&quot;footer&quot;&gt;
-(if: (history: )&#39;s length &gt; 0)[[[&lt;button class=&quot;btn btn-info&quot;&gt;Zurück&lt;/button&gt;-&gt;(string: (history:)&#39;s last)]]]
-[[Übersicht&lt;-&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Zur Übersicht&lt;/button&gt;]] 
+(if: (history:)&#39;s length &gt; 0)[[[&lt;button class=&quot;btn btn-info&quot;&gt;Zurück&lt;/button&gt;-&gt;(string: (history:)&#39;s last)]]]
+
+&lt;!-- Dieser eklige Syntax ist noetig um beim klinken eines Links eine Variable zu veraendern --&gt;
+
+(link: &#39;&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Zur Übersicht&lt;/button&gt;&#39;)[(set: $score to it + 1)(goto: &quot;Übersicht&quot;)]
+
+&lt;!-- Muss spaeter wieder rein XXXXX
+[[Übersicht&lt;-&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Zur Übersicht&lt;/button&gt;]]
+--&gt;
 &lt;/div&gt;
+}
 
 &lt;script&gt;
 $(document).ready(function() {
@@ -530,7 +557,8 @@ Antworten:
 Klicke auf das gewünschte Kapitel um zum Inhalt zu gelangen:
 * [[Teil 1: Verhalten in sozialen Netzwerken-&gt;Kapitel 2.1]]
 * [[Teil 2: Maßnahmen zur Sicherung des Facebook-Accounts-&gt;Kapitel 2.2]]
-* [[Teil 3: Privatsphären-Einstellungen-&gt;Kapitel 2.3]]</tw-passagedata>
+* [[Teil 3: Privatsphären-Einstellungen-&gt;Kapitel 2.3]]
+{}</tw-passagedata>
 <tw-passagedata pid="40" name="Kapitel 2.2" tags="" position="3372,320">&#39;&#39;Teil 2: Maßnahmen zur Sicherung des Facebook-Accounts&#39;&#39;
 
 Vermittelte Inhalte:

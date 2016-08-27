@@ -42,6 +42,8 @@
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -52,6 +54,8 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
+
 
 
 
@@ -119,7 +123,7 @@ Was soll Susi tun?
 Punkte: $score
 &lt;/span&gt;
 
-&lt;!-- Dieser eklige Syntax ist noetig um beim klinken eines Links eine Variable zu veraendern --&gt;
+&lt;!-- Dieser eklige Syntax ist noetig um beim klicken eines Links eine Variable zu veraendern --&gt;
 
 (link: &#39;&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-question-sign&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Hilfe&lt;/button&gt;&#39;)[(set: $score to it - 1)(goto: &quot;Hilfe&quot;)]
 
@@ -210,7 +214,7 @@ Stand: April 2016</tw-passagedata>
 
 Wir freuen uns, dass du dich entschieden hast, unser Lernspiel auszuprobieren. Dieses Spiel vermittelt Grundkenntnisse über das digitale soziale Netzwerk Facebook.
 
-Wir hoffen das es dir gefällt! Viel Spaß!
+Wir hoffen, dass es dir gefällt. Viel Spaß!
 
 {
 &lt;div class=&quot;continue&quot;&gt;
@@ -223,7 +227,7 @@ Wir hoffen das es dir gefällt! Viel Spaß!
 &lt;div class=&quot;footer&quot;&gt;
 (if: (history:)&#39;s length &gt; 0)[[[&lt;button class=&quot;btn btn-info&quot;&gt;Zurück&lt;/button&gt;-&gt;(string: (history:)&#39;s last)]]]
 
-&lt;!-- Dieser eklige Syntax ist noetig um beim klinken eines Links eine Variable zu veraendern --&gt;
+&lt;!-- Dieser eklige Syntax ist noetig um beim klicken eines Links eine Variable zu veraendern --&gt;
 
 (link: &#39;&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Zur Übersicht&lt;/button&gt;&#39;)[(set: $score to it + 1)(goto: &quot;Übersicht&quot;)]
 
@@ -1318,27 +1322,23 @@ Solltest du den Verdacht haben, dass dein Facebook-Konto infiltriert worden ist,
 
 Hallo zusammen,
 
-&lt;-- img susi_happy --&gt;
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 
 ich bin Susi Sorglos. Ich bin 80 Jahre alt und lebe mit meinem Ehemann in einem kleinen Dorf in Deutschland. Ich habe mehrere Enkelkinder, welche bereits nicht mehr zu Hause wohnen. Eine Enkelin macht gerade ein Au Pair Jahr in den Vereinigten Staaten von Amerika. Die anderen sind in ganz Deutschland verteilt. Zum einen studieren sie und zum anderen sind sie mit ihren eigenen Familien in andere Teile Deutschlands gezogen. Vielleicht kennen einige von euch diese Situation.
 
-Ich möchte gerne mit ihnen in Kontakt bleiben. Briefe schreibt die heutige Jugend nicht mehr. Außerdem wüsste ich nicht einmal die Adresse, zu welcher ich die Briefe schicken sollte. Heutzutage werden ganz andere Möglichkeiten für den Kontakt zwischen Menschen eingesetzt. Eine Möglichkeit um ortsunabhängig und zeitunabhängig zu kommunizieren, ist es über Facebook zu kommunizieren. Aus diesem Grunde habe ich mich dazu entschlossen, dass ich Facebook nutzen möchte. Auf diesem Weg könnte ich mit meinen Enkeln und mit allen anderen Menschen in Kontakt bleiben und dabei nicht einmal das Haus verlassen. Begleitet mich auf meinen Weg Facebook zu entdecken und schließt euch dem größten Netzwerk der Welt an. Ich freue mich darauf.
+Ich möchte gerne mit ihnen in Kontakt bleiben. Briefe schreibt die heutige Jugend nicht mehr. Außerdem wüsste ich nicht einmal die Adresse, zu welcher ich die Briefe schicken sollte. Heutzutage werden ganz andere Möglichkeiten für den Kontakt zwischen Menschen eingesetzt. Eine Möglichkeit um ortsunabhängig und zeitunabhängig zu kommunizieren, sind soziale Netzwerke wie Facebokk. Aus diesem Grund habe ich mich dazu entschlossen Facebook zu nutzen. Auf diesem Weg könnte ich mit meiner Familie und anderen Bekannten in Kontakt bleiben und muss dabei nicht einmal das Haus verlassen. Begleitet mich auf meinen Weg Facebook zu entdecken und schließt euch dem größten Netzwerk der Welt an. Ich freue mich darauf.
 
-Im [[Inhaltsverzeichnis-&gt;Kapitel 1 - Inhaltsverzeichnis]] findet ihr verschiedene Kapitel, in denen ihr Facebook näher erkunden könnt. Klickt einfach auf die Kapitel und habt Spaß. Anschließend könnt ihr euer erworbenes Wissen noch in einem Spiel testen.
+Im Inhaltsverzeichnis findet ihr verschiedene Kapitel, in denen ihr Facebook näher erkunden könnt. Klickt einfach auf die Kapitel und habt Spaß. Das erworbene Wissen könnt ihr am Ende jedes Kapitels in einem Quiz testen. Auf eurem Weg durch das dieses Spiel sammelt ihr Punkte, die euch oben links angezeigt werden. Je mehr Punkte ihr sammelt, umso besser!
 
 Eure Susi
 
 [[Kapitel 1 - Inhaltsverzeichnis&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Inhaltsverzeichnis&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="120" name="Kapitel 1 - Inhaltsverzeichnis" tags="" position="1108,490">&#39;&#39;Inhaltsverzeichnis&#39;&#39;
 
-Hier findet ihr den Aufbau des Kapitels. Klickt euch durch die verschiedenen Kapitel und erweitert euer Wissen. Am Ende der Lektion werdet ihr in der Lage sein, Facebook zu benutzen und zu verstehen. Ich wünsche euch Viel Spaß!
+Hier findet ihr den Aufbau des Kapitels. Klickt euch durch die verschiedenen Kapitel und erweitert euer Wissen. Am Ende der Lektion werdet ihr in der Lage sein, Facebook zu benutzen und zu verstehen. Ich wünsche euch viel Spaß!
+
 Eure Susi
-
-&lt;-- img susi_happier --&gt;
-
-&lt;-- add links to chapters --&gt;
-
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happier.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 1.	[[Anmeldung-&gt;1.1 Anmeldung]]
 2. 	[[Profil einrichten-&gt;1.2 Profil einrichten]]
 3. 	[[Freundschaftsanfragen-&gt;1.3 Freundschaftsanfragen]]
@@ -1350,96 +1350,151 @@ Eure Susi
 9.	[[Quiz-&gt;1.9 Quiz]]
 </tw-passagedata>
 <tw-passagedata pid="121" name="1.1 Anmeldung" tags="" position="730,485">&#39;&#39;Anmeldung&#39;&#39;
-Um Facebook zu öffnen, müssen wir die folgende Internetadresse https://de-de.facebook.com/ eingeben. Alternativ könnt ihr über eine Suchmaschine nach Facebook suchen. Egal für welchen Weg ihr euch entscheidet, ihr kommt auf die gleiche Seite. ;-)
+Um Facebook zu öffnen, gibst du die Internetadresse &#39;&#39;facebook.com&#39;&#39; in deinen Browser ein. Alternativ kannst du über eine Suchmaschine nach Facebook suchen. Egal für welchen Weg du dich entscheidet, du kommt auf die gleiche Seite.
 
-Wir sehen nun ein blaues Fenster mit dem Facebook Logo und vielen freien Felder, in denen man etwas von seinen persönlichen Daten eingeben soll.
+Wir sehen nun ein blaues Fenster mit dem Facebook Logo und vielen freien Felder, in denen man persönliche Daten eingeben soll.
 
 Dieser erste Blick hat mir viele Fragen beschert, welche mich sehr verunsichert haben. Am liebsten hätte ich die Seite geschlossen und etwas Anderes gemacht.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.1/anmeldung1.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
-
-Jedoch habe ich mich wieder daran erinnert, weswegen ich mich bei Facebook anmelden wollte. Ich wollte mit meinen Freunden und Verwandten schreiben können, egal an welchen Ort ich sitze. Dies werde ich jetzt auch machen. Nach einer kleineren Recherche habe ich die Lösungen gefunden. Diese möchte ich euch gerne präsentieren.
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/anmeldung1.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
+Jedoch habe ich mich wieder daran erinnert, weswegen ich mich bei Facebook anmelden wollte. Ich wollte mit meinen Freunden und Verwandten schreiben können, egal an welchem Ort ich sitze. Dies werde ich jetzt auch machen. Nach einer kleineren Recherche habe ich die Lösungen gefunden. Diese möchte ich euch gerne präsentieren.
 
 [[1.1 Anmeldung 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="122" name="1.2 Profil einrichten" tags="" position="861,645">&#39;&#39;Profil einrichten&#39;&#39;
-Den ersten Schritt haben wir geschafft. :-)
+Den ersten Schritt haben wir geschafft!
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Als nächstes müssen wir unserem Profil etwas Leben einhauchen.
 
 Wenn Freunde derzeit auf unser Facebook-Profil schauen, dann sehen sie nicht viel. Fast jede Beschreibung unserer Person ist leer. Nur der Name ist zu sehen, da wir diesen bereits bei der Anmeldung angegeben haben.
 
-Als erstes wollen wir ein Profil- und Titelbild hochladen und einfügen. Ihr fragt euch, wie dies funktioniert? Kein Problem. Mit dem folgenden Video könnt ihr die einzelnen Schritte sehen und dies kinderleicht nachahmen. Ihr müsst lediglich entscheiden welche Bilder ihr verwenden wollt ;-)
+Als erstes wollen wir ein Profil- und Titelbild hochladen und einfügen. Ihr fragt euch, wie dies funktioniert? Kein Problem. Mit dem folgenden Video könnt ihr die einzelnen Schritte sehen und dies kinderleicht nachahmen. Ihr müsst lediglich entscheiden welche Bilder ihr verwenden wollt.
 
-EMBED VIDEO HERE
-&lt;-- profil_teilbild.mp4 --&gt;
+{
+&lt;video controls&gt;
+  &lt;source src=&quot;res/kap1/profil_teilbild.mp4&quot; type=&quot;video/mp4&quot;&gt;
+Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
+&lt;/video&gt;
+}
 
 [[1.2 Profil einrichten 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="123" name="1.3 Freundschaftsanfragen" tags="" position="1071,670">&#39;&#39;Freundschaftsanfragen&#39;&#39;
 
-Wie im normalen Leben, ist es auch auf Facebook wichtig Freunde zu haben. Durch den Status &quot;Freunde&quot; ist es möglich mit den anderen zu chatten, deren Profilinformationen zu lesen und ihre Beiträge zu sehen. Andersherum kann man seine eigenen Informationen mit anderen tauschen und teilen. Eure Freunde können deine verfassten Beiträge mit &quot;gefällt mir&quot; markieren und ihren Kommentar hinzufügen.
+Wie im richtigen Leben, kann es auch Facebook Sinn machen, Freundeschaftliche Kontakte zu pflegen. Durch den Status &quot;Freunde&quot; ist es möglich mit den anderen zu chatten, deren Profilinformationen zu lesen und ihre Beiträge zu sehen. Andersherum kann man seine eigenen Informationen mit anderen tauschen und teilen. Eure Freunde können deine verfassten Beiträge mit &quot;Gefällt mir&quot; markieren und ihren Kommentar hinzufügen.
 Es entsteht also ein Austausch zwischen dir und deinen Freunden. Jeder Austausch ist dabei schöner als gar kein Austausch. Genau dieses Thema wollen wir in diesem Kapitel behandeln.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.3/keine_freunde.jpg&quot; alt=&quot;Profil einrichten&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/keine_freunde.jpg&quot; alt=&quot;Profil einrichten&quot;&gt;&lt;/div&gt;}
 [[1.3 Freundschaftsanfragen 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="124" name="1.4 Kommunikation" tags="" position="1221,670">&#39;&#39;Kommunikation&#39;&#39;
 
-Nun haben wir hoffentlich viele neue Personen in Facebook zu unserer Freundesliste hinzugefügt. Nun wollen wir auch mit ihnen kommunizieren, denn einfach nur die Freundesliste zu füllen, ist eher nicht zu empfehlen.
+Nun hast du hoffentlich viele neue Personen in Facebook zu unserer Freundesliste hinzugefügt. Nun wollen wir auch mit ihnen kommunizieren, denn einfach nur die Freundesliste zu füllen, ist eher nicht zu empfehlen.
 
-Es gibt mehrere Arten, um mit Freunden zu kommunizieren. Diese Formen werde ich euch nun vorstellen.
+Es gibt mehrere Arten, um mit Freunden zu kommunizieren. Diese Formen werde ich dir nun vorstellen.
 
-Privater Chat: Hier könnt ihr in einem privaten Chatraum mit euren Freunden kommunizieren. Keine andere Person kann Beiträge in diesem Raum lesen, es sei denn, ihr habt diese eingeladen. So sieht ein Beispiel im Facebook-Fenster aus. Auf der nächsten Seite findet ihr die wichtigsten Bildausschnitte in vergrößerter Form.
+&#39;&#39;Privater Chat:&#39;&#39; Hier kannst du in einem privaten Chatraum mit euren Freunden kommunizieren. Keine andere Person kann Beiträge in diesem Raum lesen, es sei denn, du hast diese eingeladen. So sieht ein Beispiel im Facebook-Fenster aus. Auf der nächsten Seite findest du die wichtigsten Bildausschnitte in vergrößerter Form.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.4/privater_chat.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/privater_chat.jpg&quot; alt=&quot;Privater Chat&quot;&gt;&lt;/div&gt;}
 [[1.4 Kommunikation 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="125" name="1.5 Listen" tags="" position="1371,670">&#39;&#39;Listen&#39;&#39;
 
 Nach einer gewissen Zeit haben wir eine Menge Freunde zu unserer Freundesliste hinzugefügt. Das erzeugt leider ein Problem. Es wir unübersichtlich. 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces_surprised.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces/surprised.jpg&quot; alt=&quot;Überraschte Susi&quot;&gt;&lt;/div&gt;}
+Wenn wir beispielweise eine Geburtstagseinladung verschicken wollen, dann sollten diese nicht alle Personen auf Facebook lesen, denn wir wollen nur unseren engsten Freundeskreis einladen und nicht auch Personen, die wir vielleicht nur ein bis zweimal im Jahr sehen. Daher sollten wir beschreiben, welche Personen zu unserem engsten Freundeskreis oder zu unserer Familie gehören.
 
-Wenn wir beispielweise eine Geburtstagseinladung verschicken wollen, dann sollten diese nicht alle Personen auf Facebook lesen, denn wir wollen nur unseren engsten Freundeskreis einladen und nicht jede Person, die wir ein bis zweimal im Jahr sehen. Daher sollten wir beschreiben, welche Personen zu unserem engsten Freundeskreis oder zu unserer Familie gehören. Facebook weiß dies nämlich nicht. 
+Die Listenfunktion dient also dazu, Freunde in separaten Listen zu kategorisieren, damit es übersichtlicher wird. Hier ein Beispiel für eine mögliche Aufteilung:
 
-Die Listenfunktion dient also dazu, Freunde in separaten Listen zu kategorisieren, damit es übersichtlicher wird.
-
-Name								Liste
-
-Peter Müller						Familie			
-Bernd Meyer							Klassenkamerad
-Susanne Schmidt						enge Freunde
-Willy Schmidt				=&gt;		enge Freunde
-Thorsten Engels						Klassenkamerad
-Stefan Janssen						Familie
-Stefanie Otten						Klassenkamerad
-Kirsten Tellmann					Familie
-
+{
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;&lt;/th&gt;
+    &lt;th&gt;Liste&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Peter Müller&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;Familie&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Bernd Meyer&lt;/td&gt;
+    &lt;td&gt; &lt;/td&gt;
+    &lt;td&gt;Klassenkamerad&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Susanne Schmidt&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;enge Freunde&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Willy Schmidt&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;enge Freunde&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Thorsten Engels&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;Klassenkamerad&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Stefan Janssen&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;Familie&lt;/td&gt;
+  &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;Stefanie Otten&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;Klassenkamerad&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/html&gt;
+}
 Mit diesen einfachen Beispiel wird unsere Freundesliste schon übersichtlicher und wir sind in der Lage Beiträge für eine bestimmte Liste zu schreiben. Wenn wir beispielweise einen Beitrag nur für die Familie verfassen und posten, dann kann Bernd Meyer diese nicht lesen, da dieser nicht in der Liste „Familie“ ist.
 
-Wie die Listenfunktion und benutzerspezifische Beiträge funktionieren, wird euch in diesem Video gezeigt.
+Wie die Listenfunktion und benutzerspezifische Beiträge funktionieren, erfährst du in diesem Video:
 
-EMBED VIDEO
-&lt;-- benutzer_listen.mp4 --&gt;
+{
+&lt;video controls&gt;
+  &lt;source src=&quot;res/kap1/benutzer_listen.mp4&quot; type=&quot;video/mp4&quot;&gt;
+Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
+&lt;/video&gt;
+}
 
 [[Kapitel 1 - Inhaltsverzeichnis&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Inhaltsverzeichnis&lt;/button&gt;]]
 </tw-passagedata>
 <tw-passagedata pid="126" name="1.6 Gruppen" tags="" position="1521,670">&#39;&#39;Gruppen&#39;&#39;
 
-Nachdem wir unsere Freunde und Familie in verschiedene Freundschaftslisten hinzugefügt haben, sollten wir Kontakte zu Gleichgesinnten suchen. Ich meine hiermit, unbekannte Leute, die die gleichen Interessen wie wir selber haben. 
+Nachdem wir unsere Freunde und Familie in verschiedene Freundschaftslisten hinzugefügt haben, sollten wir Kontakte zu Gleichgesinnten suchen. Ich meine hiermit unbekannte Menschen, die die gleichen Interessen wie wir haben.
 
-In der Familie kann man sich prima austauschen, aber in manchen Bereichen ist man jedoch auf sich alleine gestellt, da sich kein anderer für das Thema interessiert. Es können Sportmannschaften, Berufszweige oder Hobbys sein. Es muss doch einen Weg geben, um Personen mit den gleichen Interessen zu finden.
+In der Familie kann man sich prima austauschen, aber in manchen Bereichen ist man jedoch auf sich alleine gestellt, da sich sonst niemand für das Thema interessiert. Es können Sportmannschaften, Berufszweige oder Hobbys sein. Es muss doch einen Weg geben, um Personen mit den gleichen Interessen zu finden.
 
-Genau dies wird in diesem Kapitel behandelt. Wir werden lernen, was Gruppen sind, wie man diese finden und wie eine Person diesen Gruppen beitreten und verlassen kann. 
+Genau dies wird in diesem Kapitel behandelt. Wir werden lernen, was Gruppen sind, wie man diese finden und wie du diesen Gruppen beitreten und diese wieder verlassen kannst.
 
-Gruppen sind ein eigener Bereich, in denen gleichgesinnte Personen zusammenkommen, um über ein Thema zu reden. Es gibt Gruppen über Sportmannschaften, über die Heimat und sonstige Themen.
+Gruppen sind ein eigener Bereich, in denen gleichgesinnte Personen zusammenkommen, um über ein Thema zu reden. Es gibt Gruppen über Sportmannschaften, über die Heimat und viele andere Themen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.5/groups.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/groups.jpg&quot; alt=&quot;Gruppen&quot;&gt;&lt;/div&gt;}
+Ich bin eine Hobbygärtnerin und möchte gerne Bilder von anderen Gärten sehen. Deswegen habe ich nach einer Gruppe für Hobbygärtner gesucht. Um eine derartige Gruppe zu finden, musste ich im Suchfeld oben links den Begriff &quot;Hobbygärtner&quot; eingeben. Dann hat mir Facebook einige Seiten und Gruppen vorgeschlagen. Ich habe mich für die größte Gruppe entschieden, welche über 1884 Mitglieder verfügt. Anschließend muss ich nur auf das Feld &#39;&#39;Gruppe beitreten&#39;&#39; klicken. 
 
-Ich bin eine Hobbygärtnerin und möchte gerne Bilder von anderen Gärten sehen. Deswegen habe ich nach einer Gruppe für Hobbygärtner gesucht. Um eine derartige Gruppe zu finden, musste ich im Suchfeld oben links den Begriff Hobbygärtner eingeben. Dann hat mir Facebook einige Seiten und Gruppen vorgeschlagen. Ich habe mich für die größte Gruppe entschieden, welche über 1884 Mitglieder verfügt. Anschließend muss ich nur auf das Feld Gruppe beitreten klicken. 
-
-In der Gruppenbeschreibung sehen wir, dass dies eine geschlossene Gruppe ist, dass bedeutet ich muss auf eine Freischaltung warten. Also die Person, welche die Gruppe erstellt hat, muss mich annehmen. 
+In der Gruppenbeschreibung sehen wir, dass dies eine geschlossene Gruppe ist, das bedeutet, dass ich auf eine Freischaltung warten muss. Das bedeutet, dass die Person, die die Gruppe verwaltet, mich erst annehmen muss.
 
 [[1.6 Gruppen 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]
 </tw-passagedata>
@@ -1449,26 +1504,20 @@ Facebook ist nicht nur eine Plattform zur Kommunikation, sondern auch dazu geeig
 
 Dies können Personen des öffentlichen Lebens sein, wie etwa Sportler oder Musiker. Thomas Müller beispielsweise verfügt über eine Facebook Seite, welche von 9,5 Millionen Menschen verfolgt wird. Er liefert dort seinen Fans Informationen über Spiele, über seine Werbedeals oder über seinen Urlaub. Somit wissen seine Fans immer, was um die Person Thomas Müller geschieht.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.7/thomas_mueller.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/thomas_mueller.jpg&quot; alt=&quot;Thomas Müller Facebook&quot;&gt;&lt;/div&gt;}
 [[1.7 Abonnieren 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="128" name="1.8 Smartphone" tags="" position="1813,668">&#39;&#39;Smartphone&#39;&#39;
 
-Facebook kann überall und jederzeit verwendet werden. Jedoch ist es oft mühsam immer seinen Laptop mitzunehmen. Daher kann ich es empfehlen, sich Facebook auf sein Smartphone zu laden, um somit überall mit den Smartphone online zu gehen. Wie das Ganze funktioniert, werde ich euch in diesem Kapitel erklären.
+Facebook kann überall und jederzeit verwendet werden. Jedoch ist es oft mühsam immer seinen Laptop mitzunehmen. Daher kann es sich empfehlen, sich Facebook auf sein Smartphone zu laden, um somit überall mit den Smartphone online zu gehen. Wie das Ganze funktioniert, werde ich in diesem Kapitel erklären.
 
-Wenn die Facebook-App auf eurem Smartphone installiert ist, müsstet ihr sie mit diesem Knopf unter euren Apps auftauchen:
-
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.8/fb_app.png&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
-Auf vielen Smartphones ist die Facebook-App schon vorinstalliert, wenn dies bei euch der Fall ist, dann könnt ihr zur nächsten Seite gehen. Falls nicht, dann solltet ihr den weiteren Text lesen. 
+Auf vielen Smartphones ist die Facebook-App schon vorinstalliert, wenn dies bei dir der Fall ist, dann kannst du zur nächsten Seite gehen. Falls nicht, dann solltest du den weiteren Text lesen. 
 
 [[1.8 Smartphone 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]
 
-Zuerst müsst ihr Facebook auf euer Smartphone laden. Dies ist abhängig von eurem Handy. Es gibt drei verschiedene Betriebssysteme, die bei uns verbreitet sind. Android, IOS und das Windowsphone.
+Lade Facebook also auf dein Smartphone herunter. Dies ist abhängig von deinem Handy. Es gibt drei verschiedene Betriebssysteme, die bei uns verbreitet sind. Android, IOS und das Windows Phone.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.8/app_stores.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
-Jeder Anbieter benutzt seine eigene App, daher müsst ihr schauen, welches Betriebssystem ihr habt oder welches dieser drei Symbole bei euch zu finden ist. Wenn ihr dieses gefunden habt, dann müsst ihr darauf klicken. Oben müsste nun eine Suchleiste auftauchen, in der ihr Facebook reinschreiben müsst. Dann verweist euch die App direkt zu der Facebook-App. Dort ist ein Knopf zu finden, auf dem Installieren steht. Auf diesem müsst ihr klicken und das Handy macht den Rest.
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/app_stores.jpg&quot; alt=&quot;App Stores&quot;&gt;&lt;/div&gt;}
+Jeder Anbieter benutzt seine eigene App, daher musst du schauen, welches Betriebssystem du hast oder welches dieser drei Symbole bei dir zu finden ist. Wenn du dieses gefunden hast, dann musst du darauf klicken. Oben müsste nun eine Suchleiste auftauchen, in der du nun Facebook eingibst. Dann verweist dich die App direkt zu der Facebook-App. Dort ist ein Knopf zu finden, auf dem //Installieren// steht. Auf diesem musst du klicken und das Handy macht den Rest.
 
 [[1.8 Smartphone 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]
 
@@ -1476,25 +1525,23 @@ Jeder Anbieter benutzt seine eigene App, daher müsst ihr schauen, welches Betri
 </tw-passagedata>
 <tw-passagedata pid="129" name="1.9 Quiz" tags="" position="1985,670">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Herzlich Willkommen zum Abschlussrollenspiel dieses Kapitels!
+Herzlich Willkommen zum Abschlussquiz dieses Kapitels!
 
-Hier werden dir 20 Fragen gestellt, welche du beantworten solltest. Falls du eine falsch beantwortest, dann erhältst du nochmal die Möglichkeit diese Frage richtig zu beantworten. Alle Fragen befassen sich mit dem Lernstoff, welcher dir in diesem Kapitel vermittelt wurde.
+Hier werden dir 20 Fragen gestellt, die du im Folgenden beantwortest. Falls du eine Frage falsch beantwortest, dann erhältst du nochmal die Möglichkeit diese Frage richtig zu beantworten. Alle Fragen befassen sich mit dem Lernstoff, der dir in diesem Kapitel vermittelt wurde.
 
-Falls du in einem Thema noch Schwierigkeiten hast, dann kannst du dir den Lernstoff jederzeit wieder durchlesen. Du kannst diesen Test jederzeit durchführen und vergleichen, wie sehr du dich verbesserst hast.
+Falls du in einem Thema noch Schwierigkeiten hast, kannst du dir den Lernstoff jederzeit wieder durchlesen. Du kannst diesen Test jederzeit durchführen und vergleichen, wie sehr du dich verbesserst hast.
 
 Klick auf den unteren Link und schon startet das Quiz.
 
-Viel Spaß wünscht euch,
-eure Susi
+Viel Spaß!
 
 [[1.9.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Quiz&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="130" name="1.1 Anmeldung 2" tags="" position="736,645">&#39;&#39;Anmeldung&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.1/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 2&quot;&gt;&lt;/div&gt;}
+Auf dieser Seite möchte ich erklären, wie du die Fragen auflösen kannst. Ich habe die Seite von Facebook in drei Bereiche eingeteilt und werde diese nacheinander erläutern.
 
-Auf dieser Seite möchte ich euch erklären, wie ihr die Fragen auflösen könnten. Ich habe die Seite von Facebook in drei Bereiche eingeteilt und werde diese nacheinander erläutern.
-
-1.	Dieser Bereich ist für bereits registrierte Benutzer. Hier kann sich jede Person anmelden. Voraussetzung hierfür ist nur, dass man sich bereits angemeldet hat. Also die Bereiche 2 &amp; 3 ausgefüllt und abgeschickt hat.
+1.	Dieser Bereich ist für bereits registrierte Benutzer. Hier kann sich jede Person anmelden. Voraussetzung hierfür ist, dass man sich bereits angemeldet hat. Also die Bereiche 2 &amp; 3 ausgefüllt und abgeschickt hat.
 
 2.	Dieser Bereich ist für uns interessant, denn hier müssen wir unsere Daten eingeben.
 
@@ -1507,38 +1554,35 @@ Auf dieser Seite möchte ich euch erklären, wie ihr die Fragen auflösen könnt
 	Geschlecht: weiblich
 
 	Hinweise:
+	Dies sind die Daten, die ich für meine Registrierung eingegeben habe. Passe die Eingaben deinen eigenen Daten an.
+	Mein Passwort lautet natürlich nicht 12345678!
+	
+Du hast die Wahl eine E-Mail-Adresse oder eine Handynummer einzugeben. Diese muss dann doppelt eingegeben werden, damit sichergestellt wird, dass du keinen Fehler einbaust.
 
-	Mein Passwort lautet natürlich nicht 12345678 ;-)	
+3.	 Wenn alle Daten korrekt eingegeben wurden, dann einfach auf Registrieren klicken.
 
-Nach meiner Meinung ist es besser die E-Mail-Adresse einzugeben, anstatt die 			Nummer des Handys. Somit könnt ihr euer Handy, falls ihr es wünscht, frei von Facebook halten.
-
-Die E-Mail-Adresse muss doppelt eingegeben werden, damit sichergestellt wird, dass dies 	auch die richtige ist. Wenn sie zwei Mal gleich eingegeben wird, dann kann Facebook davon 	ausgehen, dass dies auch die korrekte Adresse ist.
-
-3.	 Wenn alle Daten korrekt eingegeben wurden, dann einfach auf Registrieren klicken
-
-Ihr habt es geschafft!!!! Gut gemacht!!!
+Du hast es geschafft, gut gemacht!
 
 {
-[[F1.3.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurük zu Kapitel 2&lt;/button&gt;]]
-
 [[1.1 Anmeldung&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Kapitelanfang&lt;/button&gt;]]
 
 [[Kapitel 1 - Inhaltsverzeichnis&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Inhaltsverzeichnis&lt;/button&gt;]]
+
+[[F1.3.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurük zu Kapitel 2&lt;/button&gt;]]
 }
 </tw-passagedata>
 <tw-passagedata pid="131" name="1.2 Profil einrichten 2" tags="" position="863,795">&#39;&#39;Profil einrichten&#39;&#39;
 
-Ihr müsst zugeben, dass es mit einem Bild besser aussieht als ohne, oder? Ich finde es auf jeden Fall mit Bild schöner :-)
+Ihr müsst zugeben, dass es mit einem Bild besser aussieht als ohne, oder?
 
-Im Beispielvideo haben wir meinen guten Freund Bernd Meyer gesucht. Das Problem hierbei war, ihn zwischen den ganzen Bernd Meyers zu finden. Zum Glück hatte er ein Profilbild, auf dem er gut zu sehen war, sonst hätte ich wahrscheinlich ewig gesucht.
+Im Beispielvideo haben wir meinen guten Freund Bernd Meyer gesucht. Das Problem hierbei war, ihn zwischen den ganzen Bernd Meyers zu finden. Zum Glück hatte er ein Profilbild, auf dem er gut zu sehen war, sonst hätten wir wahrscheinlich ewig gesucht.
 
 Diese Suche wollen wir anderen Personen ersparen, deswegen sollten wir weitere Informationen über unsere Person angeben. Ich rede nicht von sensiblen Daten, wie Haus-, Konto- oder Telefonnummer, sondern von normalen Daten, welche man bei einem persönlichen Gespräch auch sagen würde. Zum Beispiel aus welchen Dorf ich komme, in welchen Dorf ich jetzt wohne, zu welcher Schule ich gegangen bin oder was ich für einen Beruf gelernt habe.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.2/profil_einrichten.jpg&quot; alt=&quot;Profil einrichten&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/profil_einrichten.jpg&quot; alt=&quot;Profil einrichten&quot;&gt;&lt;/div&gt;}
+Hierfür müssen wir lediglich auf unser Profil klicken und schon können wir dieses Bild sehen. Auf der linken Seite, also die grünen Pfeile, können wir die einzelnen Kategorien sehen. Diese Kategorien kannst du mit der Maus anklicken.
 
-Hierfür müssen wir lediglich auf unser Profil klicken und schon können wir dieses Bild sehen. Auf der linken Seite, also die grünen Pfeile, können wir die einzelnen Kategorien sehen. Diese Kategorien könnt ihr mit der Maus anklicken.
-
-Auf der rechten Seite finden die einzelnen Eigenschaften. Hier könnt ihr eure Angaben einfügen. Aber denkt daran, dass euch keiner dazu zwingt und ihr wirklich nur das Angeben sollt, wobei ihr euch auch wohl fühlt. Anschließend müsst ihr diese Eingaben nur noch speichern und schon habe ihr euch ein Profil erstellt und eingerichtet.  
+Auf der rechten Seite finden die einzelnen Eigenschaften. Hier kannst du deine Angaben einfügen. Aber denke daran, dass dich keiner dazu zwingt und du wirklich nur das Angeben solltest, wobei du dich auch wohl fühlst. Anschließend musst du diese Eingaben nur noch speichern und schon hast du dir ein Profil erstellt und eingerichtet.
 {
 [[1.2 Profil einrichten&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Kapitelanfang&lt;/button&gt;]]
 
@@ -1547,32 +1591,33 @@ Auf der rechten Seite finden die einzelnen Eigenschaften. Hier könnt ihr eure A
 </tw-passagedata>
 <tw-passagedata pid="132" name="1.3 Freundschaftsanfragen 2" tags="" position="1070,820">&#39;&#39;Freundschaftsanfragen&#39;&#39;
 
-Heutzutage ist fast jeder auf Facebook und daher kann man mit sehr vielen Leuten befreundet sein. Doch wie werde ich der Freund einer anderen Person? Wie suche ich nach einer Person? Wie kann ich eine Freundschaftsanfrage annehmen?
+Heutzutage sind sehr viele Menschen auf Facebook und daher kann man mit sehr vielen Leuten befreundet sein. Doch wie werde ich der Freund einer anderen Person? Wie suche ich nach einer Person? Wie kann ich eine Freundschaftsanfrage annehmen?
 
 Als erstes betrachten wir die Möglichkeit, dass uns eine Freundschaftsanfrage gestellt wird.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.3/freundschaftsanfrage.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/freundschaftsanfrage.jpg&quot; alt=&quot;Freundschaftsanfrage1&quot;&gt;&lt;/div&gt;}
 Wenn wir eine Anfrage erhalten, dann leuchtet in unserem Bild oben rechts ein Symbol auf. In diesem Symbol sehen wir zwei Personen mit einer Zahl. Wenn diese Bild aufleuchtet, dann haben wir eine Freundschaftsanfrage erhalten. Die Zahl daneben zeigt, wie viele Anfragen wir erhalten haben. Für weitere Informationen müssen wir auf das Symbol klicken.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.3/freundschaftsanfrage2.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/freundschaftsanfrage2.jpg&quot; alt=&quot;Freundschaftsanfrage2&quot;&gt;&lt;/div&gt;}
 Nun erhalten wir nähere Informationen zu diesem Thema. Wir sehen die Personen, die uns Anfragen geschickt haben. Außerdem können wir nun die Anfrage bestätigen oder löschen.
 
 [[1.3 Freundschaftsanfragen 3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="133" name="1.3 Freundschaftsanfragen 3" tags="" position="1071,970">&#39;&#39;Freundschaftsanfragen&#39;&#39;
 
-Als nächstes betrachten wir uns in der aktiven Position, das bedeutet, dass wir nun eine Freundschaftsanfrage verschicken. Hierzu gibt es ein Video, welches euch erklärt wie ihr Leute findet, ihnen Freundschaftsanfragen schickt und anschließend befreundet seid. Viel Spaß beim Zuschauen.
+Als nächstes betrachten wir die andere Seite, also wenn wir eine Freundschaftsanfrage verschicken. Hierzu gibt es ein Video, das erklärt wie ihr andere Nutzer findet, ihnen Freundschaftsanfragen schickt und anschließend befreundet seid. Viel Spaß beim schauen.
 
-EMBED VIDEO
-&lt;-- freundschaftsanfragen.mp4 --&gt;
+{
+&lt;video controls&gt;
+  &lt;source src=&quot;res/kap1/freundschaftsanfragen.mp4&quot; type=&quot;video/mp4&quot;&gt;
+Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
+&lt;/video&gt;
+}
 
-Nachdem wir das Video angeguckt haben, können wir nun Freundschaftsanfragen verschicken. Bedenkt dabei, dass die Antworten länger dauern können, als es in diesem Video gezeigt wurde. Eine Person wird vielleicht nur alle drei Tage mal bei Facebook vorbeischauen. Dann wird sie eure Freundschaftsanfrage sehen und akzeptieren.
+Nachdem wir das Video angeguckt haben, können wir nun Freundschaftsanfragen verschicken. Bedenke dabei, dass die Antwort aud die Freundschaftsanfrage länger dauern können, als es in diesem Video der Fall ist. Eine Person wird vielleicht nur alle drei Tage mal bei Facebook vorbeischauen. Dann wird sie eure Freundschaftsanfrage sehen und kann sie akzeptieren.
 
 Nun könnt ihr eure Freundesliste füllen und wahrscheinlich wird euer Ergebnis bald genauso aussehen wie meines!
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.3/viele_freunde.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/viele_freunde.jpg&quot; alt=&quot;Viele Freunde&quot;&gt;&lt;/div&gt;}
 {
 [[1.3 Freundschaftsanfragen&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Kapitelanfang&lt;/button&gt;]]
 
@@ -1581,40 +1626,36 @@ Nun könnt ihr eure Freundesliste füllen und wahrscheinlich wird euer Ergebnis 
 </tw-passagedata>
 <tw-passagedata pid="134" name="1.4 Kommunikation 2" tags="" position="1221,820">&#39;&#39;Kommunikation&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.4/privater_chat_gezoomt.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/privater_chat_gezoomt.jpg&quot; alt=&quot;Privater Chat gezoomt&quot;&gt;&lt;/div&gt;}
+0. Dieses Symbol leuchtet auf, wenn uns eine Person eine private Nachricht geschrieben hat. Die Zahl daneben zeigt uns, wie viele Nachrichten wir bekommen haben.
 
-1. Dieses Symbol leuchtet auf, wenn uns eine Person eine private Nachricht geschrieben hat. Die Zahl daneben zeigt uns, wie viele Nachrichten wir bekommen haben
+0. In dieser Liste werden unsere Freunde angezeigt. Der grüne Kreis daneben zeigt uns an, dass diese Person gerade online ist. Wenn wir auf einen Namen in dieser Liste klicken, dann öffnet sich ein privater Chatraum, so wie er in &#39;&#39;3&#39;&#39; zu sehen ist.
 
-2. In dieser Liste werden unsere Freunde angezeigt. Der grüne Kreis daneben, zeigt uns an, dass diese Person gerade online ist. Wenn wir auf einen Namen in dieser Liste klicken, dann öffnet sich ein privater Chatraum, so wie er in 3 zu sehen ist.
-
-3. Das ist ein privater Chatraum. Hier können die Beteiligten Person ungestört miteinander kommunizieren. Wenn wir auf das + Symbol klicken, dann können wir weitere Personen zu diesem Gespräch hinzufügen. 
+0. Das ist ein privater Chatraum. Hier können die Beteiligten Person ungestört miteinander kommunizieren. Wenn wir auf das &#39;&#39;+-Symbol&#39;&#39; klicken, dann können wir weitere Personen zu diesem Gespräch hinzufügen. 
 
 [[1.4 Kommunikation 3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="135" name="1.4 Kommunikation 3" tags="" position="1221,970">&#39;&#39;Kommunikation&#39;&#39;
 
-Beiträge werden in Facebook direkt auf der Startseite angezeigt und können von jeder Person gesehen werden. Es sei denn ihr habt einen benutzerspezifischen Beitrag verfasst. Dazu kommen wir aber später noch ;-).
+Beiträge werden in Facebook direkt auf der Startseite angezeigt und können von jeder Person gesehen werden. Es sei denn ihr habt einen benutzerspezifischen Beitrag verfasst. Dazu kommen wir im zweiten Kapitel noch.
 
-Beiträge können mit Videos, Bildern, Ortsangaben und weiteren Elementen verziert werden. In unserem Beispiel habe ich ein Bild meines letzten Urlaubs verwendet. Unter dem Bild können Freunde das Bild kommentieren, teilen oder liken. 
+Beiträge können mit Videos, Bildern, Ortsangaben und weiteren Elementen angereichert werden. In unserem Beispiel habe ich ein Bild meines letzten Urlaubs verwendet. Unter dem Bild können Freunde das Bild kommentieren, teilen oder liken.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.4/beitrag_1.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
-Nun stellt sich noch die Frage: „Wie erstelle ich einen Beitrag?“
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/beitrag_1.jpg&quot; alt=&quot;Beitrag 1&quot;&gt;&lt;/div&gt;}
+Nun stellt sich noch die Frage: &#39;&#39;„Wie erstelle ich einen Beitrag?“&#39;&#39;
 
 Das ist ganz einfach. Auf unsere Startseite finden wir diesen Abschnitt an erster Stelle.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.4/beitrag_verfassen_1.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/beitrag_verfassen_1.jpg&quot; alt=&quot;Beitrag verfassen 1&quot;&gt;&lt;/div&gt;}
 Im Bereich „Was machst du gerade?“ können wir unseren Text schreiben. Wenn wir auf Foto/Video oder Fotoalbum klicken, dann können wir Fotos &amp; Videos zu unserem Beitrag hinzufügen. Das würde dann so aussehen:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.4/beitrag_verfassen_2.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/beitrag_verfassen_2.jpg&quot; alt=&quot;Beitrag Verfassen 2&quot;&gt;&lt;/div&gt;}
 Darunter erlaubt uns Facebook, unseren Beitrag nach eigenen Wünschen zu gestalten.
 
-Orange: Hier haben wir die Möglichkeit Personen hinzufügen, welche mit uns auf dem Bild sind. 
+&#39;&#39;Orange:&#39;&#39; Hier haben wir die Möglichkeit Personen hinzufügen, welche mit uns auf dem Bild sind. 
 
-Rot: Hier können wir unsere Emotionen hinzufügen. Macht uns das Bild glücklich oder eher traurig?
+&#39;&#39;Rot:&#39;&#39; Hier können wir unsere Emotionen hinzufügen. Macht uns das Bild glücklich oder eher traurig?
 
-Gelb: Bei manchen Bildern ist eine Ortsangabe wichtig. Dann weiß jeder, wo das Foto entstanden ist. Strände gibt es ja häufiger auf der Welt ☺
+&#39;&#39;Gelb:&#39;&#39; Bei manchen Bildern ist eine Ortsangabe wichtig. Dann weiß jeder, wo das Foto entstanden ist. Strände gibt es ja häufiger auf der Welt ☺
 
 Rechts finden wir noch einen Bereich, auf dem „Öffentlich“ steht. Hier können wir einstellen, wer unsere Beiträge lesen darf. Ein näheres Beispielvideo wird zu diesem Thema noch folgen.
 
@@ -1624,40 +1665,35 @@ Wenn wir zufrieden mit unserem Post sind, dann können wir auf „Posten“ klic
 </tw-passagedata>
 <tw-passagedata pid="136" name="1.4 Kommunikation 4" tags="" position="1221,1120">&#39;&#39;Kommunikation&#39;&#39;
 
-Jetzt kann ich einen Beitrag schreiben, aber was passiert, wenn ich einen Fehler gemacht habe z.B. einen Rechtschreibfehler oder einen falschen Ort angegeben habe.
+Jetzt bin ich in der Lage, meine eigenen Beiträge zu verfassen. Aber was passiert, wenn ich einen Fehler, z.B. bei der Rechtschreibung oder bei der Ortsangabe gemacht habe?
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Keine Panik! Auch für dieses Problem gibt es Lösungen.
 Folgendes Bild zeigt, welche Lösungen es hierzu gibt.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.4/beitrag_bearbeiten_1.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/beitrag_bearbeiten_1.jpg&quot; alt=&quot;Beiträge bearbeiten 1&quot;&gt;&lt;/div&gt;}
 
 Wenn wir auf unseren Beitrag schauen, dann bemerken wir oben rechts einen Pfeil. Wenn wir auf diesen klicken, dann öffnen sich neue Optionen, mit denen wir den Beitrag bearbeiten können. Wir haben die Möglichkeit, den Beitrag zu bearbeiten, zu löschen oder zu speichern.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.4/beitrag_bearbeiten_2.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
-Auf der linken Seite finden wir ebenfalls einen Pfeil. Wenn wir auf diesen klicken, dann können wir die Privatsphäre Einstellungen verändern. Wir geben also an, wer den Beitrag lesen darf.
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/beitrag_bearbeiten_2.jpg&quot; alt=&quot;Beitrag bearbeiten 2&quot;&gt;&lt;/div&gt;}
+Auf der linken Seite finden wir ebenfalls einen Pfeil. Wenn wir auf diesen klicken, dann können wir die Privatsphäre-Einstellungen verändern. Wir geben also an, wer den Beitrag lesen darf. 
+Wie genau die Privatsphäre-Einstellungen getroffen werden, erfährst du in Kapitel Zwei!
 
 [[1.4 Kommunikation 5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="137" name="1.4 Kommunikation 5" tags="" position="1221,1270">&#39;&#39;Kommunikation&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces_confused.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces/confused.jpg&quot; alt=&quot;Verwirrte Susi&quot;&gt;&lt;/div&gt;}
+Innerhalb dieses Kapitels kamen schon wieder neue Begriffe vor! Was bedeuten &#39;&#39;liken&#39;&#39;, &#39;&#39;kommentieren&#39;&#39; und &#39;&#39;teilen&#39;&#39; auf Facebook?
 
-Innerhalb dieses Kapitels kamen schon wieder neue Begriffe vor!!! Was bedeuten liken, kommentieren und teilen auf Facebook?
+Mit //liken// wird dem Verfasser gezeigt, welche Gefühle der Leser damit verbindet. Wenn die Maus länger auf dem Begriff „Gefällt mir“ steht, dann werden sechs Bilder gezeigt, welche unterschiedliche Gefühle demonstrieren. Hier kann sich der Leser aussuchen, welches am besten seine Gefühle zu diesem Beitrag beschreibt.
 
-Mit liken wird dem Verfasser gezeigt, welche Gefühle der Leser damit verbindet. Wenn die Maus länger auf dem Begriff „Gefällt mir“ steht, dann werden sechs Bilder gezeigt, welche unterschiedliche Gefühle demonstrieren. Hier kann sich der Leser aussuchen, welches am besten seine Gefühle zu diesem Beitrag beschreibt.
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/liken.jpg&quot; alt=&quot;Liken&quot;&gt;&lt;/div&gt;}
+//Kommentieren// ist ganz einfach. Hier kann jeder Leser sein Kommentar zu diesem Bild abgeben. Zu meinem Strandbeitrag hat Bernd Meyer geschrieben: „Wow. Da wird man glatt neidisch“.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.4/liken.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
+Mit //teilen// ist gemeint, dass eine Person diesen Beitrag auch auf seiner Pinnwand zeigt, damit auch seine Freunde diesen Beitrag sehen. Der Nutzen hieran ist, dass dieser Beitrag eine höhere Reichweite erhält. 
 
-Kommentieren ist ganz einfach. Hier kann jeder Leser sein Kommentar zu diesem Bild abgeben. Zu meinem Strandbeitrag hat Bernd Meyer geschrieben: „Wow. Da wird man glatt neidisch.“.
-
-Mit Teilen ist gemeint, dass eine Person diesen Beitrag auch auf seiner Pinnwand zeigt, damit auch seine Freunde diesen Beitrag sehen. Der Nutzen hieran ist, dass dieser Beitrag eine höhere Reichweite erhält. 
-
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.4/schnittmenge.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
-Beispiel: Person A sucht eine vermisste Person. Ihre Reichweite (die Freunde, die das lesen können) ist begrenzt. Person B möchte Person A helfen und teilt ihren Beitrag. Dadurch können mehr Leute diesen Beitrag lesen, da Person B Freunde besitzt, welche Person A nicht besitzt. Somit erhält ein Beitrag eine viel größere Reichweite.
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/schnittmenge.jpg&quot; alt=&quot;Schnittmenge&quot;&gt;&lt;/div&gt;}
+Beispiel: Person A sucht eine vermisste Person. Ihre Reichweite (die Freunde, die das lesen können) ist begrenzt. Person B möchte Person A helfen und teilt ihren Beitrag. Dadurch können mehr Leute diesen Beitrag lesen, da Person B Freunde besitzt, welche Person A nicht besitzt. Somit erhält ein Beitrag eine größere Reichweite.
 {
 [[1.4 Kommunikation&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Kapitelanfang&lt;/button&gt;]]
 
@@ -1666,13 +1702,15 @@ Beispiel: Person A sucht eine vermisste Person. Ihre Reichweite (die Freunde, di
 </tw-passagedata>
 <tw-passagedata pid="138" name="1.6 Gruppen 2" tags="" position="1521,820">&#39;&#39;Gruppen&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.6/faces_happier.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Überglückliche Susi&quot;&gt;&lt;/div&gt;}
 Natürlich kann jede Person auch eigene Gruppen erstellen und Leute hierzu einladen. Im folgenden Video wird erläutert, wie Gruppen in Facebook erstellt und bearbeitet werden. Außerdem gibt es noch eine Erläuterung der Privatsphäre-Einstellungen (Offene, geschlossene und geheime Gruppen).
 
-EMBED VIDEO
-&lt;-- create_groups.mp4 --&gt;
-
+{
+&lt;video controls&gt;
+  &lt;source src=&quot;res/kap1/create_groups.mp4&quot; type=&quot;video/mp4&quot;&gt;
+Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
+&lt;/video&gt;
+}
 {
 [[1.6 Gruppen&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Kapitelanfang&lt;/button&gt;]]
 
@@ -1681,17 +1719,19 @@ EMBED VIDEO
 </tw-passagedata>
 <tw-passagedata pid="139" name="1.7 Abonnieren 2" tags="" position="1646,820">&#39;&#39;Abonnieren&#39;&#39;
 
-Nicht nur Personen, sondern auch Organisationen, Verbände oder Agenturen haben ihre eigenen Facebook Seiten. Überprüft doch mal euren Arbeitsgeber. Höchstwahrscheinlich ist dieser auch auf Facebook vertreten und informiert alle Interessierten über die neuesten Entwicklungen.
+Nicht nur Personen, sondern auch Organisationen, Verbände oder Agenturen haben ihre eigenen Facebook Seiten. Du könntest nach deinem (ehemaligen) Arbeitgeber suchen. Höchstwahrscheinlich ist dieser auch auf Facebook vertreten und informiert alle Interessierten über die neuesten Entwicklungen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.7/deutsche_post.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/deutsche_post.jpg&quot; alt=&quot;Deutsche Post&quot;&gt;&lt;/div&gt;}
+Ebenfalls besteht die Möglichkeit Nachrichtenagenturen zu abonnieren, damit keine aktuellen Geschehnisse in der Welt mehr verpasst werden. Somit müsste man kein Geld mehr für eine Zeitung ausgeben. Einfach Facebook starten und sich informieren lassen.
 
-Ebenfalls besteht die Möglichkeit Nachrichtenagenturen zu abonnieren, damit keine aktuellen Informationen mehr verpasst werden. Somit müsste man kein Geld mehr für eine Zeitung ausgeben. Einfach Facebook starten und sich informieren lassen.
+Habe ich dein Interesse geweckt? Dann schau dir das folgende Video an. Dort wird euch erklärt, wie ihr solche Seiten abonnieren könnt.
 
-Habe ich euer Interesse geweckt? Dann schaut euch das folgende Video an. Dort wird euch erklärt, wie ihr solche Seiten abonnieren könnt.
-
-EMBED VIDEO
-&lt;-- person_abonnieren.mp4 --&gt;
-
+{
+&lt;video controls&gt;
+  &lt;source src=&quot;res/kap1/person_abonnieren.mp4&quot; type=&quot;video/mp4&quot;&gt;
+Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
+&lt;/video&gt;
+}
 {
 [[1.7 Abonnieren&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Kapitelanfang&lt;/button&gt;]]
 
@@ -1700,15 +1740,14 @@ EMBED VIDEO
 </tw-passagedata>
 <tw-passagedata pid="140" name="1.8 Smartphone 2" tags="" position="1813,818">&#39;&#39;Smartphone&#39;&#39;
 
-Nun könnt ihr auf eurem Smartphone das Facebook Symbol finden. Dort müsst ihr raufklicken. Anschließend werdet ihr wie auch auf dem Laptop nach eurem Passwort und Benutzernamen gefragt. 
+Nun kannst du auf deinem Smartphone das Facebook-Symbol finden. Auf dieses klickst du nun, anschließend wirst du wie auch auf dem Laptop nach deinem Passwort und Benutzernamen gefragt.
 
-Nun seid ihr auch mobil mit Facebook verbunden und könnt jederzeit informiert werden. Das Bild auf dem Handy ist zwar etwas kleiner, aber jedoch lassen sich alle bekannten Knöpfe und Funktionen finden.
+Nun bist du auch mobil mit Facebook verbunden und kannst jederzeit informiert werden. Das Bild auf dem Handy ist zwar etwas kleiner, aber jedoch lassen sich alle bekannten Schaltflächen und Funktionen finden.
 
-Wichtig zu wissen ist noch, was das Symbol ganz rechts mit den drei Balken darstellt. Hier findet ihr eure Freunde, Listen, Gruppen und so weiter...
+Wichtig zu wissen ist noch, was das Symbol ganz rechts mit den drei Balken darstellt. Hier findet ihr eure Freunde, Listen, Gruppen und so weiter.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.8/handy_1.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1.8/handy_2.jpg&quot; alt=&quot;&quot;&gt;&lt;/div&gt;}
-
-Diese beiden Bilder zeigen euch, wie es auf einem Handy (Android) aussieht. Wenn ihr ein anderes Betriebssystem benutzt, dann sollten die Unterschiede nur gering ausfallen.
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/handy_1.jpg&quot; alt=&quot;Facebook Handy 1&quot;&gt;&lt;/div&gt;}{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/handy_2.jpg&quot; alt=&quot;Facebook Handy 2&quot;&gt;&lt;/div&gt;}
+Diese beiden Bilder zeigen euch, wie es auf einem Handy (mit dem Betriebssystem Android) aussieht. Wenn du ein anderes Betriebssystem benutzt, dann sollten die Unterschiede nur gering ausfallen.
 
 {
 [[1.8 Smartphone&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Kapitelanfang&lt;/button&gt;]]
@@ -2552,8 +2591,7 @@ Thema: //Anmeldung//
 
 Betrachte das folgende Bild:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1.9/anmeldung1.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1/anmeldung1.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
 Welches Feld müssen Anwender ausfüllen, welche sich neu auf Facebook registrieren wollen?
 
 * [[Feld 1 -&gt;1.9.1.1]]
@@ -2563,18 +2601,15 @@ Welches Feld müssen Anwender ausfüllen, welche sich neu auf Facebook registrie
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
-[[Zurück zur Frage-&gt;1.9.1]]
-</tw-passagedata>
+[[Zurück zur Frage-&gt;1.9.1]]</tw-passagedata>
 <tw-passagedata pid="215" name="1.9.1.2" tags="" position="2135,970">&#39;&#39;Frage 1&#39;&#39; 
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2586,8 +2621,7 @@ Thema: //Anmeldung//
 
 Betrachte das folgende Bild:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1.9/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
 Welche Personen können das Feld 1 benutzen?
 
 * [[Personen, die bereits bei Facebook registriert sind.-&gt;1.9.2.1]]
@@ -2599,8 +2633,7 @@ Welche Personen können das Feld 1 benutzen?
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2611,8 +2644,7 @@ Weiter geht’s zur nächsten Frage:
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.2]]
@@ -2630,8 +2662,7 @@ Warum ist es ratsam ein Profilbild zu verwenden?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.3]]
@@ -2640,8 +2671,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2654,8 +2684,7 @@ Thema: //Freundschaftsanfragen//
 
 Welches dieser Symbole zeigt dem Anwender, dass er eine neue Freundschaftsanfrage erhalten hat?
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1.9/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
 * [[Symbol 1-&gt;1.9.4.1]]
 * [[Symbol 2-&gt;1.9.4.2]]
 * [[Symbol 3-&gt;1.9.4.2]]</tw-passagedata>
@@ -2663,8 +2692,7 @@ Welches dieser Symbole zeigt dem Anwender, dass er eine neue Freundschaftsanfrag
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2675,8 +2703,7 @@ Weiter geht’s zur nächsten Frage:
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.4]]
@@ -2694,8 +2721,7 @@ Wieviele Freunde kann eine Person maximal haben?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.5]]
@@ -2704,8 +2730,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2725,8 +2750,7 @@ Was für Kommunikationsformen gibt es?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.6]]
@@ -2735,8 +2759,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2749,8 +2772,7 @@ Thema: //Beiträge//
 
 Welches Symbol zeigt private Nachrichten an?
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1.9/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
 * [[Symbol 1-&gt;1.9.7.1]]
 * [[Symbol 2-&gt;1.9.7.2]]
 * [[Symbol 3-&gt;1.9.7.1]]</tw-passagedata>
@@ -2758,8 +2780,7 @@ Welches Symbol zeigt private Nachrichten an?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.7]]
@@ -2768,8 +2789,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2789,8 +2809,7 @@ Was ist eine Private Nachricht?
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2801,8 +2820,7 @@ Weiter geht’s zur nächsten Frage:
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.8]]
@@ -2820,8 +2838,7 @@ Können Beiträge nachträglich geändert werden?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.9]]
@@ -2830,8 +2847,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2844,15 +2860,14 @@ Thema: //Allgemein//
 
 Wieviele Arten von Likes gibt es?
 
-* [[2-&gt;1.9.10.1]]
-* [[4-&gt;1.9.10.1]]
+* [[1-&gt;1.9.10.1]]
+* [[12-&gt;1.9.10.1]]
 * [[6-&gt;1.9.10.2]]</tw-passagedata>
 <tw-passagedata pid="241" name="1.9.10.1" tags="" position="1955,3649">&#39;&#39;Frage 10&#39;&#39; 
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.10]]
@@ -2861,8 +2876,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2882,8 +2896,7 @@ Wozu dienen Listen?
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2893,8 +2906,7 @@ Weiter geht’s zur nächsten Frage:
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.11]]
@@ -2912,8 +2924,7 @@ Können eigene Gruppen erstellt werden?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.12]]
@@ -2922,8 +2933,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2942,8 +2952,7 @@ Wer kann Gruppenmitglieder aus der Gruppe werfen?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.13]]
@@ -2952,8 +2961,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2972,8 +2980,7 @@ Was kann ein Außenstehender von einer „geschlossenen Gruppe“ sehen?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.14]]
@@ -2982,8 +2989,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -3002,8 +3008,7 @@ Was ist eine geheime Gruppe?
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -3013,8 +3018,7 @@ Weiter geht’s zur nächsten Frage:
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.15]]
@@ -3032,8 +3036,7 @@ Welche Privatsphäre Einstellungen gibt es?
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -3043,8 +3046,7 @@ Weiter geht’s zur nächsten Frage:
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.16]]
@@ -3062,8 +3064,7 @@ Kann ich eine Person des öffentlichen Lebens abonnieren?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.17]]
@@ -3072,8 +3073,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -3092,8 +3092,7 @@ Sieht Facebook auf jedem Smartphone gleich aus?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_sad.jpg&quot; alt=&quot;Unglückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[Zurück zur Frage-&gt;1.9.18]]
@@ -3102,8 +3101,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces_happy.jpg&quot; alt=&quot;Glückliches altes Ehepaar&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 [[Weiter zum Punktestand-&gt;1.10]]</tw-passagedata>

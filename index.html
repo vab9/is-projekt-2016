@@ -49,6 +49,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -59,6 +60,7 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
 
 
 
@@ -133,13 +135,7 @@ Was soll Susi tun?
 Punkte: $score
 &lt;/span&gt;
 
-&lt;!-- Dieser eklige Syntax ist noetig um beim klicken eines Links eine Variable zu veraendern --&gt;
-
-(link: &#39;&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-question-sign&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Hilfe&lt;/button&gt;&#39;)[(set: $score to it - 1)(goto: &quot;Hilfe&quot;)]
-
-&lt;!-- Muss spaeter wieder rein XXXXX
 [[Hilfe&lt;-&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-question-sign&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Hilfe&lt;/button&gt;]]
---&gt;
 
 
 &lt;button class=&quot;enlarge btn btn-default&quot;&gt;Text vergrößern&lt;/button&gt;
@@ -188,7 +184,7 @@ Und meiner! (Dave)
 
 Hier ein Beispiel fuer ein HTML Mark:
 &lt;mark&gt;Bli Bla blub!&lt;/mark&gt;</tw-passagedata>
-<tw-passagedata pid="7" name="Hilfe" tags="" position="845,11.666666666666668">
+<tw-passagedata pid="7" name="Hilfe" tags="" position="845,11">
 &lt;b&gt;Das Spiel&lt;/b&gt;
 
 In diesem Lernspiel werden Grundkenntnisse zu digitalen Medien vermittelt. Die Lerninhalte und Aufgaben sind auf Personen im Alter jenseits von 50 Jahren ausgerichtet. In jedem Kapitel wird zunächst Wissen vermittelt, das im Anschluss durch Szenarien oder Quizzen mit Fragen getestet wird. So verfestigst du dein erlerntes Wissen und durch deinen Punktestand kannst du dich mit anderen und dir selber messen.
@@ -236,13 +232,8 @@ Wir hoffen, dass es dir gefällt. Viel Spaß!
 &lt;div class=&quot;footer&quot;&gt;
 (if: (history:)&#39;s length &gt; 0)[[[&lt;button class=&quot;btn btn-info&quot;&gt;Zurück&lt;/button&gt;-&gt;(string: (history:)&#39;s last)]]]
 
-&lt;!-- Dieser eklige Syntax ist noetig um beim klicken eines Links eine Variable zu veraendern --&gt;
-
-(link: &#39;&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Zur Übersicht&lt;/button&gt;&#39;)[(set: $score to it + 1)(goto: &quot;Übersicht&quot;)]
-
-&lt;!-- Muss spaeter wieder rein XXXXX
 [[Übersicht&lt;-&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Zur Übersicht&lt;/button&gt;]]
---&gt;
+
 &lt;/div&gt;
 
 &lt;script&gt;
@@ -444,12 +435,10 @@ Umfragen, Spiele und Ratespiele sind auf Facebook beliebt.
 
 * Ein Beispiel für eine Umfrage:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.1/facebook_umfrage.jpg&quot; alt=&quot;Umfrage auf Facebook&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_umfrage.jpg&quot; alt=&quot;Umfrage auf Facebook&quot;&gt;&lt;/div&gt;}
 * Ein Beispiel für ein (Rate-)Spiel:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.1/facebook_game_invitation.png&quot; alt=&quot;Spieleeinladungen auf Facebook&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_game_invitation.png&quot; alt=&quot;Spieleeinladungen auf Facebook&quot;&gt;&lt;/div&gt;}
 [[F1.6.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Was gilt es zu beachten?&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="31" name="F1.6.1" tags="" position="2608,2708">&#39;&#39;Was gilt es bei Spielen und Umfragen zu beachten?&#39;&#39;
 
@@ -459,7 +448,7 @@ Umfragen, Spiele und Ratespiele sind auf Facebook beliebt.
 
 Ein Beispiel für eine Meldung eines solchen Programmes: 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.1/zugriff_facebook_hinterlegte_informationen.png&quot; alt=&quot;Zugriff auf in Facebook hinterlegte Informationen&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/zugriff_facebook_hinterlegte_informationen.png&quot; alt=&quot;Zugriff auf in Facebook hinterlegte Informationen&quot;&gt;&lt;/div&gt;}
 
 [[F1.7&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu „Misstrauisch sein“&lt;/button&gt;]]
 
@@ -509,8 +498,7 @@ Im echten Leben, wenn man den Kontakt zu einem Menschen abbrechen möchte, verme
 0. Dann gehst du oben rechts auf //Freunde// (&#39;&#39;1.&#39;&#39;)
 0. Anschließend auf //Als Freund entfernen// (&#39;&#39;2.&#39;&#39;)
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.1/facebook_unfriend.png&quot; alt=&quot;Freundschaft beenden auf Facebook&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_unfriend.png&quot; alt=&quot;Freundschaft beenden auf Facebook&quot;&gt;&lt;/div&gt;}
 Es ist ebenfalls möglich, einen Schritt weiter gehen, und die Person blockieren, damit sie nicht mehr die Chance hat indirekt deine Aktivitäten zu verfolgen und Informationen über dich zu erhalten.
 
 Die genaue Vorgehensweise hierzu lernst du im dritten Teil.
@@ -522,17 +510,17 @@ Die genaue Vorgehensweise hierzu lernst du im dritten Teil.
 
 Über das Schloss-Symbol oben rechts kommst du zum //Privatsphären-Check//. Dort klickst du auf //Wer kann mich kontaktieren//. Dort kann differenziert werden zwischen //Alle// und //Freunde von Freunden//:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2.3/facebook_privacy_contact.png&quot; alt=&quot;Facebook Privatsphäreneinstellung Kontakt&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy_contact.png&quot; alt=&quot;Facebook Privatsphäreneinstellung Kontakt&quot;&gt;&lt;/div&gt;}
 &#39;&#39;Wie verhindere ich, dass mich jemand belästigt?&#39;&#39;
 
 Dazu gibt es unterschiedliche Wege.
 
 * Über das Schloss-Symbol oben rechts und dann auf //Wie verhindere ich, dass mich jemand belästigt//:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2.3/facebook_block1.png&quot; alt=&quot;Facebook Kontakt blockieren 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_block1.png&quot; alt=&quot;Facebook Kontakt blockieren 1&quot;&gt;&lt;/div&gt;}
 * Wenn du auf dem Profil einer Personoben rechts auf die drei Punkte klickst und anschließend auf //Blockieren//, wird die Person von deiner Freundesliste entfernen:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2.3/facebook_block3.png&quot; alt=&quot;Facebook Kontakt blockieren 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_block3.png&quot; alt=&quot;Facebook Kontakt blockieren 2&quot;&gt;&lt;/div&gt;}
 Hiervon sollest du Gebrauch machen, wenn sich jemand dir gegenüber seltsam, abwertend, beleidigend oder ähnlich negativ verhält. Wenn die Person nicht nur aus deinem Freundeskreis entfernt werden soll, sondern du sicherstellen willst, dass die Person auch nicht indirekt (z. B. über Freundes-Freunde) deine Aktivitäten verfolgt oder Informationen über dich einsieht.
 
 [[F3.8&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu „Aktivitätenprotokoll und Chroniküberprüfung&quot;&lt;/button&gt;]]</tw-passagedata>
@@ -545,8 +533,7 @@ Gerade, wenn man sich an öffentlichen Orten auf Facebook einloggt (z. B. am Flu
 
 Dazu klickst du auf den Pfeil oben rechts und dann auf //Abmelden//:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.1/facebook_logout.png&quot; alt=&quot;Ausloggen Facebook&quot;&gt;&lt;/div&gt;}
-
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_logout.png&quot; alt=&quot;Ausloggen Facebook&quot;&gt;&lt;/div&gt;}
 [[F1.10.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Quiz&lt;/button&gt;]]
 </tw-passagedata>
 <tw-passagedata pid="38" name="F1.10.1" tags="" position="2608,3620">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
@@ -585,20 +572,20 @@ In diesem Kapitel sollst Du …
 * … Erlerntes anwenden, um ein sicheres Passwort wählen zu können
 * … lernen, wie unterschiedliche Facebook-Einstellungen kombiniert werden können, um dich möglichst sicher und nach deinen Vorstellungen auf Facebook fortzubewegen
 
-[[F2.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu „Kontoinformationen aktualisieren&lt;/button&gt;]]</tw-passagedata>
+[[F2.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu „Kontoinformationen aktualisieren&quot;&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="43" name="F2.3" tags="" position="2888,712">&#39;&#39;Kontoinformationen aktualisieren&#39;&#39;
 
 Kontoinformationen sollten immer auf dem aktuellen Stand sein und regelmäßig überprüft werden. Bei Bedarf können Änderungen unter &#39;&#39;&quot;https://www.facebook.com/settings&quot;&#39;&#39; vorgenommen werden.
 
 Oben rechts in der blauen Leiste klickst du neben das Schloss-Symbol auf den Pfeil nach unten und anschließend auf //Einstellungen//. So kommst du zu den &#39;&#39;Kontoeinstellungen&#39;&#39;.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.2/facebook_settings1.png&quot; alt=&quot;Facebook Settings 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_settings1.png&quot; alt=&quot;Facebook Settings 1&quot;&gt;&lt;/div&gt;}
 Unter //Allgemein// hast du Zugriff auf deine allgemeinen Kontoeinstellungen, wie das Ändern des Passwortes.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.2/facebook_settings2.png&quot; alt=&quot;Facebook Settings 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_settings2.png&quot; alt=&quot;Facebook Settings 2&quot;&gt;&lt;/div&gt;}
 Wie du deine Sicherheitseinstellungen änderst:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.2/facebook_settings3.png&quot; alt=&quot;Facebook Settings 3&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_settings3.png&quot; alt=&quot;Facebook Settings 3&quot;&gt;&lt;/div&gt;}
 Besonders wichtig: Die Wahl eines guten Passwortes.
 
 [[F2.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Passwort-Tester&lt;/button&gt;]]</tw-passagedata>
@@ -673,14 +660,14 @@ Zusätzlich zur Sicherung des Facebook-Accounts durch ein Passwort gibt es weite
 Es ist möglich das Mobiltelefon als zusätzliche Sicherheitsmaßnahme zu verwenden, um den Zugriff auf dein Konto durch andere Personen zu verhindern. 
 Gehe hierzu in die Kontoeinstellungen (Pfeil-Symbol oben rechts und dann //Einstellungen//), dann links auf //Sicherheit// und dann auf aktiviere das Häkchen //Sicherheitscode für den Zugriff auf mein Kontoüber einen unbekannten Browser anfordern//.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2.2/facebook_authorisation1.png&quot; alt=&quot;Facebook Autorisierung 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_authorisation1.png&quot; alt=&quot;Facebook Autorisierung 1&quot;&gt;&lt;/div&gt;}
 Hinweis: Dazu muss eine Telefonnummer in Facebook hinterlegt sein.
 
 &#39;&#39;Zweite E-Mail-Adresse oder Telefonnummer hinzufügen:&#39;&#39;
 
 Um eine weitere E-Mail-Adresse oder eine Telefonnummer hinzuzufügen, klicke in den Kontoeinstellungen (Pfeil-Symbol oben rechts und dann //Einstellungen//) auf //Kontakt// und anschließend auf //Änderungen speichern//.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2.2/facebook_authorisation2.png&quot; alt=&quot;Facebook Autorisierung 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_authorisation2.png&quot; alt=&quot;Facebook Autorisierung 2&quot;&gt;&lt;/div&gt;}
 
 [[F2.6&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Kann mir trotzdem etwas passieren?&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="49" name="F2.6" tags="" position="3072,1704">&#39;&#39;Ausspähung des Facebook Passwortes&#39;&#39;
@@ -714,11 +701,11 @@ Dein Facebook-Konto wurde infiltriert und jemand loggt sich unter deinem Namen e
 Wie du das machst:
 
 Klicke zunächst auf der Website &#39;&#39;www.facebook.com&#39;&#39; auf //Konto vergessen//:
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.2/facebook_resetpw1.png&quot; alt=&quot;Facebook Passwort zurücksetzen 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_resetpw1.png&quot; alt=&quot;Facebook Passwort zurücksetzen 1&quot;&gt;&lt;/div&gt;}
 Anschließend gibst du deine E-Mail-Adresse, Telefonnummer oder Benutzernamen ein:
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.2/facebook_resetpw2.png&quot; alt=&quot;Facebook Passwort zurücksetzen 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_resetpw2.png&quot; alt=&quot;Facebook Passwort zurücksetzen 2&quot;&gt;&lt;/div&gt;}
 Im folgenden Dialog klickst du auf //Weiter//:
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.2/facebook_resetpw3.png&quot; alt=&quot;Facebook Passwort zurücksetzen 3&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_resetpw3.png&quot; alt=&quot;Facebook Passwort zurücksetzen 3&quot;&gt;&lt;/div&gt;}
 Nun bekommst du eine E-Mail an deine bei Facebook hinterlegte Adresse mit den nächsten Schritten, um ein neues Passwort anzulegen.
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
@@ -728,7 +715,7 @@ Nun bekommst du eine E-Mail an deine bei Facebook hinterlegte Adresse mit den n�
 
 Du kannst dich nicht mehr einloggen, angeblich ist das eingegebene Passwort falsch.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.2/facebook_wrong_password.png&quot; alt=&quot;Falsches Facebook Passwort&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_wrong_password.png&quot; alt=&quot;Falsches Facebook Passwort&quot;&gt;&lt;/div&gt;}
 [[F2.6.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Und jetzt?&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="53" name="F2.6.4" tags="" position="3072,2304">&#39;&#39;Was ist passiert?&#39;&#39;
 
@@ -743,7 +730,7 @@ Wie du das machst:
 Besuche zunächst die Internetseite &#39;&#39;www.facebook.com/hacked&#39;&#39;.
 
 Dort klickst du auf den Button //Mein Konto wurde kompromittiert//:
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.2/facebook_hacked1.png&quot; alt=&quot;Facebook Hacked 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_hacked1.png&quot; alt=&quot;Facebook Hacked 1&quot;&gt;&lt;/div&gt;}
 Im folgenden Fenster gibst du deine E-Mail-Adress, Telefonnummer oder Benutzernamen ein und klickst auf //Suchen//.
 
 Folge anschließend den Anweisungen aus der E-Mail um zusammen mit Facebook dein Konto zurückzuerlangen.
@@ -785,19 +772,19 @@ Welche Einstellungen bezüglich deiner Privatsphäre hast du? Wähle eine für d
 * [[Ich habe keinerlei Hemmungen alle Informationen mit jedem auf Facebook zu teilen. Auch Personen, die nicht auf Facebook sind, können ruhig Einsicht haben auf meine Beiträge und private Informationen wie meinen Geburtstag.-&gt;F3.4.4]]</tw-passagedata>
 <tw-passagedata pid="58" name="F3.4.1" tags="" position="3388,900">Deiner Einstellung entsprechend solltest du die Privatsphären-Einstellung „&#39;&#39;//Nur Ich//&#39;&#39;“ wählen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2.3/facebook_privacy4.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 4&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy4.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 4&quot;&gt;&lt;/div&gt;}
 Diese Einstellung stellt sicher, dass niemand außer dir deine Beiträge lesen kann und Informationen wie dein Geburtsdatum nur für dich einsehbar sind.
 
 [[F3.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Erfahre wie du die Privatsphären-Einstellung änderst&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="59" name="F3.4.2" tags="" position="3536,900">Deiner Einstellung entsprechend solltest du die Privatsphären-Einstellung „&#39;&#39;//Freunde//&#39;&#39;“ wählen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2.3/facebook_privacy3.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 3&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy3.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 3&quot;&gt;&lt;/div&gt;}
 Diese Einstellung bestimmt, dass alle deine Freunde deine Beiträge lesen können und ihnen Informationen wie dein Geburtsdatum einsehbar sind.
 
 [[F3.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Erfahre wie du die Privatsphären-Einstellung änderst&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="60" name="F3.4.3" tags="" position="3688,900">Deiner Einstellung entsprechend solltest du die Privatsphären-Einstellung „//&#39;&#39;Freunde außer Bekannte&#39;&#39;//“ oder eine //&#39;&#39;benutzerdefinierte Einstellung&#39;&#39;// wählen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2.3/facebook_privacy5.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 5&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy5.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 5&quot;&gt;&lt;/div&gt;}
 
 Diese Einstellung bestimmt, dass alle nur die ausgewählte Gruppe deine Beiträge lesen können und ihnen Informationen wie dein Geburtsdatum einsehbar sind.
 
@@ -807,11 +794,11 @@ Diese Einstellung bestimmt, dass alle nur die ausgewählte Gruppe deine Beiträg
 
 Zunächst gehst du auf das Profil des Freundes. Dann klickst du oben rechts auf //Freunde// und anschließend auf //Bekannte//, woraufhin ein Häkchen neben daneben auftaucht.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2.3/facebook_privacy6.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 6&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy6.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 6&quot;&gt;&lt;/div&gt;}
 [[F3.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Erfahre wie du die Privatsphären-Einstellung änderst&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="61" name="F3.4.4" tags="" position="3836,900">Deiner Einstellung entsprechend kannst du die Privatsphären-Einstellung „//&#39;&#39;Öffentlich&#39;&#39;//“ wählen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2.3/facebook_privacy2.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy2.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 2&quot;&gt;&lt;/div&gt;}
 Diese Einstellung bestimmt, dass alle Nutzer und auch die Nicht-Nutzer von Facebook deine Beiträge lesen können und ihnen Informationen wie dein Geburtsdatum einsehbar sind.
 
 Hinweis: Diese Einstellung ist &#39;&#39;nicht&#39;&#39; empfehlenswert, wenn du Wert auf Privatsphäre legst.
@@ -821,9 +808,9 @@ Hinweis: Diese Einstellung ist &#39;&#39;nicht&#39;&#39; empfehlenswert, wenn du
 
 Die eine Möglichkeit ist der sogenannte Privatsphären-Check. Diesen öffnest du, indem du auf das //Schloss-Symbol// klickst, das sich bei den meisten Facebook-Seiten oben rechts befindet, um die Privatsphäre-Einstellungen zu öffnen. Dort hast du verschiedene Einstellungsmöglichkeiten zur Auswahl:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2.3/facebook_privacy1.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy1.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 1&quot;&gt;&lt;/div&gt;}
 Zum anderen kannst du für jeden Beitrag den du veröffentlichen möchtest einstellen, wer ihn sehen soll:
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2.3/facebook_privacy7.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 7&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy7.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 7&quot;&gt;&lt;/div&gt;}
 [[F3.7&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weitere Privatsphären-Einstellungen&lt;/button&gt;]]
 </tw-passagedata>
 <tw-passagedata pid="63" name="F3.8" tags="" position="3784,2452">&#39;&#39;Aktivitätenprotokoll&#39;&#39;
@@ -832,14 +819,14 @@ Es ist zudem sinnvoll, das Aktivitätenprotokoll zu nutzen. Dies ist eine wichti
 
 Du erreichst es über den Pfeil oben rechts und dann mit einem Klick auf //Aktivitätenprotokoll//:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.3/facebook_activityprotocol.png&quot; alt=&quot;Facebook Aktivitätenprotokoll&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_activityprotocol.png&quot; alt=&quot;Facebook Aktivitätenprotokoll&quot;&gt;&lt;/div&gt;}
 &#39;&#39;Chroniküberprüfung&#39;&#39;
 
 Das gleiche gilt für die Chroniküberprüfung, die dich festlegen lässt, welche Beiträge von Freunden in deiner Chronik veröffentlich werden dürfen, bevor sie tatsächlich an deiner Pinnwand zu sehen sind.
 
 Diese Funktion aktivierst du, indem Du in den Kontoeinstellungen auf //Chronik und Markierungseinstellungen// gehst. Dort klickst du rechts auf //Bearbeiten// und anschließend auf //Aktiviert//:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.3/facebook_chroniccheck.png&quot; alt=&quot;Facebook Chroniküberprüfung&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_chroniccheck.png&quot; alt=&quot;Facebook Chroniküberprüfung&quot;&gt;&lt;/div&gt;}
 [[F3.9&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu „Inhalte melden“&lt;/button&gt;]]
 </tw-passagedata>
 <tw-passagedata pid="64" name="F3.9" tags="" position="3785,2600">&#39;&#39;Inhalte melden: Grundregeln&#39;&#39;
@@ -850,7 +837,7 @@ Die beste Möglichkeit zum Melden von Missbrauch ist direkt dort, wo er auf Face
 
 Ein auf deiner Pinnwand veröffentlichter Beitrag kann über das Pfeil-Symbol rechts und anschließend auf //Beitrag melden// gemeldet werden.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2.3/facebook_block2.png&quot; alt=&quot;Facebook Post melden&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_block2.png&quot; alt=&quot;Facebook Post melden&quot;&gt;&lt;/div&gt;}
 [[F3.9.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Quiz: Meldungswürdiger Post?&lt;/button&gt;]]
 
 [[K3.2.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zu Kapitel 3: Fremde Inhalte posten&lt;/button&gt;]]</tw-passagedata>

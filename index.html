@@ -50,7 +50,6 @@
 
 
 
-
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -61,7 +60,6 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
-
 
 
 
@@ -203,7 +201,7 @@ Mit den &quot;Text vergrößern&quot; und &quot;Text verkleinern&quot; Knöpfen 
 &lt;!--(Tastatursteuerung kommt noch)--&gt;
 &lt;b&gt;Kompatibilität&lt;/b&gt;
 
-Stelle sicher, dass du die neuste Version des Chrome Browsers nutzt. Außerdem kannst du über dein Handy oder Tablet mit einem Chrome oder dem Safari-Browser auf das Spiel zugreifen.
+Dieses Spiel wurde nur auf einer aktuellen Firefox Version getesten. Stelle sicher, dass du mindestens die Version 40.0 benutzt.
 
 &lt;b&gt;Info&lt;/b&gt;
 
@@ -2446,18 +2444,18 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 * Beweise sichern, indem man unangenehme Nachrichten, Bilder oder Chats speichert oder ausdruckt
 
 [[Kapitel 3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Übersicht&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="213" name="1.9.1" tags="" position="1986.6666666666667,820">&#39;&#39;Frage 1&#39;&#39; 
+<tw-passagedata pid="213" name="1.9.1" tags="" position="1985,820">&#39;&#39;Frage 1&#39;&#39; 
 
 Thema: //Anmeldung//
 
 Betrachte das folgende Bild:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1/anmeldung1.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
 Welches Feld müssen Anwender ausfüllen, welche sich neu auf Facebook registrieren wollen?
 * (link: &#39;&lt;strong&gt;Feld 1&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.1.1&quot;)]
 * (link: &#39;&lt;strong&gt;Feld 2&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.1.2&quot;)]
 * (link: &#39;&lt;strong&gt;Feld 3&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.1.1&quot;)]</tw-passagedata>
-<tw-passagedata pid="214" name="1.9.1.1" tags="" position="1983.3333333333335,970">&#39;&#39;Frage 1&#39;&#39; 
+<tw-passagedata pid="214" name="1.9.1.1" tags="" position="1985,970">&#39;&#39;Frage 1&#39;&#39; 
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2538,7 +2536,7 @@ Thema: //Freundschaftsanfragen//
 
 Welches dieser Symbole zeigt dem Anwender, dass er eine neue Freundschaftsanfrage erhalten hat?
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1/quiz.jpg&quot; alt=&quot;Facebook Benachrichtigung&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
 * (link: &#39;&lt;strong&gt;Symbol 1&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.4.1&quot;)]
 * (link: &#39;&lt;strong&gt;Symbol 2&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.4.2&quot;)]
 * (link: &#39;&lt;strong&gt;Symbol 3&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.4.2&quot;)]</tw-passagedata>
@@ -2618,13 +2616,13 @@ Weiter geht’s zur nächsten Frage:
 
 [[1.9.7&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Nächste Frage&lt;/button&gt;]]
 </tw-passagedata>
-<tw-passagedata pid="231" name="1.9.7" tags="" position="2133.3333333333335,2613.3333333333335">&#39;&#39;Frage 7&#39;&#39;
+<tw-passagedata pid="231" name="1.9.7" tags="" position="2134,2614">&#39;&#39;Frage 7&#39;&#39;
 
 Thema: //Beiträge//
 
 Welches Symbol zeigt private Nachrichten an?
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1/quiz.jpg&quot; alt=&quot;Facebook Benachrichtigung&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
 * (link: &#39;&lt;strong&gt;Symbol 1&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.7.1&quot;)]
 * (link: &#39;&lt;strong&gt;Symbol 2&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.7.2&quot;)]
 * (link: &#39;&lt;strong&gt;Symbol 3&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.7.1&quot;)]</tw-passagedata>

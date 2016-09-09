@@ -55,6 +55,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -65,6 +66,7 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
 
 
 
@@ -2966,7 +2968,9 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 &lt;b&gt;Willkommen zu unserem Lernspiel!&lt;/b&gt;
 
 Bitte verrate uns, wie du heißt:
-(link: &#39;&lt;button class=&quot;btn btn-info&quot;&gt;Namen eingeben&lt;/button&gt;&#39;)[(put: (prompt: &quot;Wie ist ihr Name?&quot;) into $player)(goto: &quot;Willkommen&quot;)]
+(link: &#39;&lt;button class=&quot;btn btn-info&quot;&gt;Namen eingeben&lt;/button&gt;&#39;)[(put: (prompt: &quot;Wie ist ihr Name?&quot;) into $player)(if: $player&#39;s length &lt; 1)[(set: $player to &quot;Spieler&quot;)](goto: &quot;Willkommen&quot;)]
+
+
 </tw-passagedata>
 </tw-storydata>
 

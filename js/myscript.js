@@ -12,7 +12,7 @@ function shrinkText() {
 }
 
 function enlargeText() {
-   // console.log("enlarge clicked"); 
+    // console.log("enlarge clicked"); 
     $('tw-passage').css("font-size", "+=5%");
     $('tw-passage').css("line-height", "+=5%");
 }

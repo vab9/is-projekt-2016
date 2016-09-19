@@ -1,4 +1,5 @@
-﻿
+﻿"use strict";
+
 function dragenter(ev) {
     ev.target.style.opacity = 0.4;
 }
@@ -8,12 +9,12 @@ function dragleave(ev) {
 }
 
 function allowDrop(ev) {
-  ev.preventDefault();
+    ev.preventDefault();
 }
 
 function dragstart(ev) {
-  ev.dataTransfer.setData("id", ev.target.id);
-  ev.dataTransfer.setData("text", ev.target.classList[1]);
+    ev.dataTransfer.setData("id", ev.target.id);
+    ev.dataTransfer.setData("text", ev.target.classList[1]);
 }
 
 function drop(ev) {
@@ -34,10 +35,12 @@ function drop(ev) {
 
     // check if game complete
     var left_column = document.getElementById("left_column");
-    if (left_column.childElementCount == 0) {
-        console.log("YESSA");
+    if (left_column.childElementCount === 0) {
+        var newSpan = document.createElement("span");
         var newChild = document.createTextNode("Super! Alle Maßnahmen wurden richtig zugeordnet!");
-        left_column.appendChild(newChild);
+        newSpan.appendChild(newChild);
+        left_column.appendChild(newSpan);
+
     }
 }
 

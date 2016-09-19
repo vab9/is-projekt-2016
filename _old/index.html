@@ -57,6 +57,8 @@
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -67,6 +69,8 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
+
 
 
 
@@ -240,7 +244,7 @@ Wir hoffen, dass es dir gefällt. Viel Spaß!
 [[Übersicht&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Los geht&#39;s!&lt;/button&gt;]]
 &lt;/div&gt;
 }</tw-passagedata>
-<tw-passagedata pid="10" name="Footer" tags="footer" position="418,202">{}
+<tw-passagedata pid="10" name="Footer" tags="footer" position="473,304">{}
 {
 &lt;hr&gt;
 &lt;div class=&quot;footer&quot;&gt;
@@ -268,7 +272,7 @@ Zuerst zeigen wir Ihnen ein kurzes Video, das solche Netzwerke erklärt, später
 &lt;/div&gt;
 }
 </tw-passagedata>
-<tw-passagedata pid="12" name="Scenario1-Option1" tags="" position="71,779">{
+<tw-passagedata pid="12" name="Scenario1-Option1" tags="" position="72,779">{
 &lt;div class=&quot;continue anrufen&quot;&gt;\
 Susi blättert in ihrem Adressbuch und findet tatsächlich eine Telefonnummer von Bernd.
 &lt;br&gt;&lt;/br&gt;&lt;br&gt;&lt;/br&gt;
@@ -1404,7 +1408,7 @@ Es gibt mehrere Arten, um mit Freunden zu kommunizieren. Diese Formen werde ich 
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/privater_chat.jpg&quot; alt=&quot;Privater Chat&quot;&gt;&lt;/div&gt;}
 [[1.4 Kommunikation 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="125" name="1.5 Listen" tags="" position="1371,670">&#39;&#39;Listen&#39;&#39;
+<tw-passagedata pid="125" name="1.5 Listen" tags="" position="1370,670">&#39;&#39;Listen&#39;&#39;
 
 Nach einer gewissen Zeit haben wir eine Menge Freunde zu unserer Freundesliste hinzugefügt. Das erzeugt leider ein Problem. Es wir unübersichtlich. 
 
@@ -2963,14 +2967,15 @@ Das war die richtige Antwort.
 Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$score Punkte!]}
 
 [[Das Quiz noch einmal machen.-&gt;1.9 Quiz]]</tw-passagedata>
-<tw-passagedata pid="268" name="Einleitung" tags="" position="200,64">{
-(set: $player to &quot;Spieler&quot;)
+<tw-passagedata pid="268" name="Einleitung" tags="" position="204,14">{
+&lt;!--(set: $player to &quot;Spieler&quot;)--&gt;
 (set: $score to 0)
 }
 &lt;b&gt;Willkommen zu unserem Lernspiel!&lt;/b&gt;
 
 Bitte verrate uns, wie du heißt:
-(link: &#39;&lt;button class=&quot;btn btn-info&quot;&gt;Namen eingeben&lt;/button&gt;&#39;)[(put: (prompt: &quot;Wie ist ihr Name?&quot;) into $player)(if: $player&#39;s length &lt; 1)[(set: $player to &quot;Spieler&quot;)](goto: &quot;Willkommen&quot;)]
+(link: &#39;&lt;button class=&quot;btn btn-info&quot;&gt;Namen eingeben&lt;/button&gt;&#39;)[(put: (prompt: &quot;Wie ist ihr Name?&quot;) into $player)(goto: &quot;Willkommen&quot;)]
+
 
 (set: $player to &quot;your unnamed rival&quot;)
 You and [$player]&lt;fname|.
@@ -2992,10 +2997,114 @@ You and [$player]&lt;fname|.
 		(stop:)
 	]
 ]
+
+[[Willkommen&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter&lt;/button&gt;]]
+</tw-passagedata>
+<tw-passagedata pid="269" name="Willkommen zurück" tags="" position="205,154">&lt;div id=&quot;main&quot;&gt;
+    &lt;b&gt;Willkommen zurück, $player!&lt;/b&gt;
+    &lt;div id=&quot;lastsession&quot;&gt;
+      Wo habe ich das letzte Mal aufgehört?
+	  [[Zum zuletzt bearbeiteten Kapitel-&gt;$lastsession]]
+    &lt;/div&gt;
+    &lt;div id=&quot;scoreandrang&quot;&gt;
+      Aktueller Punktestand: $score
+      &lt;br&gt;
+      Aktueller Rang: $rang
+    &lt;/div&gt;
+    &lt;div id=&quot;top10&quot;&gt;
+      Übersicht Punktestand der 10 besten Spieler:
+	  {
+&lt;div class=&quot;continue&quot;&gt;
+[[Top10&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Top 10 Spieler&lt;/button&gt;]]
+&lt;/div&gt;
+}
+    &lt;/div&gt;
+  &lt;/div&gt;
 {
 &lt;div class=&quot;continue&quot;&gt;
-[[Willkommen&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Weiter&lt;/button&gt;]]
+[[Übersicht&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Weiter zur Übersicht&lt;/button&gt;]]
 &lt;/div&gt;
+}</tw-passagedata>
+<tw-passagedata pid="270" name="Top10" tags="" position="74,296">&lt;!-- Hier soll die Top 10 der Spieler mit den meisten Punkten aufgelistet werden --&gt;
+
+{
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;&lt;/th&gt;
+    &lt;th&gt;Anzahl Punkte&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Spieler1&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;Punktestand1&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Spieler2&lt;/td&gt;
+    &lt;td&gt; &lt;/td&gt;
+    &lt;td&gt;Punktestand2&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Spieler3&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;Punktestand3&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Spieler4&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;Punktestand4&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Spieler5&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;Punktestand5&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Spieler6&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;Punktestand6&lt;/td&gt;
+  &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;Spieler7&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;Punktestand7&lt;/td&gt;
+  &lt;/tr&gt;
+      &lt;tr&gt;
+    &lt;td&gt;Spieler8&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;Punktestand8&lt;/td&gt;
+  &lt;/tr&gt;
+      &lt;tr&gt;
+    &lt;td&gt;Spieler9&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;Punktestand9&lt;/td&gt;
+  &lt;/tr&gt;
+      &lt;tr&gt;
+    &lt;td&gt;Spieler10&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;Punktestand10&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/html&gt;
 }</tw-passagedata>
 </tw-storydata>
 

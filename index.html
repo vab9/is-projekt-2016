@@ -2963,7 +2963,7 @@ Das war die richtige Antwort.
 Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$score Punkte!]}
 
 [[Das Quiz noch einmal machen.-&gt;1.9 Quiz]]</tw-passagedata>
-<tw-passagedata pid="268" name="Einleitung" tags="" position="200,64">{
+<tw-passagedata pid="268" name="Einleitung" tags="" position="199,64">{
 (set: $player to &quot;Spieler&quot;)
 (set: $score to 0)
 }
@@ -2972,6 +2972,7 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 Bitte verrate uns, wie du heißt:
 (link: &#39;&lt;button class=&quot;btn btn-info&quot;&gt;Namen eingeben&lt;/button&gt;&#39;)[(put: (prompt: &quot;Wie ist ihr Name?&quot;) into $player)(if: $player&#39;s length &lt; 1)[(set: $player to &quot;Spieler&quot;)](goto: &quot;Willkommen&quot;)]
 
+var userInput;
 (set: $player to &quot;your unnamed rival&quot;)
 You and [$player]&lt;fname|.
 
@@ -2979,7 +2980,7 @@ You and [$player]&lt;fname|.
 &lt;button type=&quot;submit&quot; onclick=&quot;userInput.submitName(&#39;fname&#39;)&quot;&gt;Yes that&#39;s it&lt;/button&gt;
 
 &lt;script&gt;
-	$.getScript(&quot;js/myscript.js&quot;, function() {
+	$.getScript(&quot;js/myscript.js&quot;, function(inputName) {
 		console.log(&quot;myscript.js loaded!&quot;)
 	});
 &lt;/script&gt;

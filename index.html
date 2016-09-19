@@ -57,6 +57,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -67,6 +68,7 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
 
 
 
@@ -2972,17 +2974,21 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 Bitte verrate uns, wie du heißt:
 (link: &#39;&lt;button class=&quot;btn btn-info&quot;&gt;Namen eingeben&lt;/button&gt;&#39;)[(put: (prompt: &quot;Wie ist ihr Name?&quot;) into $player)(if: $player&#39;s length &lt; 1)[(set: $player to &quot;Spieler&quot;)](goto: &quot;Willkommen&quot;)]
 
-var userInput;
 (set: $player to &quot;your unnamed rival&quot;)
 You and [$player]&lt;fname|.
 
 &lt;input type=&quot;text&quot; name=&quot;fname&quot; value=&quot;Johnson&quot;&gt;
-&lt;button type=&quot;submit&quot; onclick=&quot;userInput.submitName(&#39;fname&#39;)&quot;&gt;Yes that&#39;s it&lt;/button&gt;
+&lt;button type=&quot;submit&quot; onclick=&quot;submitName(&#39;fname&#39;)&quot;&gt;Yes that&#39;s it&lt;/button&gt;
 
 &lt;script&gt;
-	$.getScript(&quot;js/myscript.js&quot;, function(inputName) {
-		console.log(&quot;myscript.js loaded!&quot;)
-	});
+function submitName(inputName) {
+	//Get the value of the textbox at time of click
+	var newName = $(&quot;input[name=&#39;&quot; + inputName + &quot;&#39;]&quot;)[0].value;
+	//Find the hook node based on name and set the text inside
+	$(&quot;tw-hook[name*=&#39;&quot; + inputName + &quot;&#39;]&quot;).text(newName);
+	//Log the Change
+	console.log(inputName + &quot; changed.&quot;)
+}
 &lt;/script&gt;
 
 |link&gt;[]

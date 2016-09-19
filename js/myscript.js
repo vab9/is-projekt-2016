@@ -29,18 +29,18 @@ function berndAnrufen() {
 // $("tw-link").addClass("btn btn-primary");
 
 
- ===============================
- TO GET USER INPUT FROM TEXT BOX
- ===============================
-  if (typeof window.userInput == "undefined") {
-     window.userInput = {
-         submitName: function(inputName) {
-             //Get the value of the textbox at time of click
-             var newName = $("input[name='" + inputName + "']")[0].value;
-             //Find the hook node based on name and set the text inside
-             $("tw-hook[name*='" + inputName + "']").text(newName);
-             //Log the Change
-             console.log(inputName + " changed.")
-         }
-     }
-  }
+// ===============================
+// TO GET USER INPUT FROM TEXT BOX
+// ===============================
+//  if (typeof window.userInput == "undefined") {
+//     window.userInput = {
+//         submitName: function(inputName) {
+//             //Get the value of the textbox at time of click
+//             var newName = $("input[name='" + inputName + "']")[0].value;
+//             //Find the hook node based on name and set the text inside
+//             $("tw-hook[name*='" + inputName + "']").text(newName);
+//             //Log the Change
+//             console.log(inputName + " changed.")
+//         }
+//     }
+//  }

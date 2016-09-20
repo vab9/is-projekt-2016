@@ -57,6 +57,9 @@
 
 
 
+
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -67,6 +70,9 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
+
+
 
 
 
@@ -268,7 +274,7 @@ Zuerst zeigen wir Ihnen ein kurzes Video, das solche Netzwerke erklärt, später
 &lt;/div&gt;
 }
 </tw-passagedata>
-<tw-passagedata pid="12" name="Scenario1-Option1" tags="" position="71,779">{
+<tw-passagedata pid="12" name="Scenario1-Option1" tags="" position="71,778">{
 &lt;div class=&quot;continue anrufen&quot;&gt;\
 Susi blättert in ihrem Adressbuch und findet tatsächlich eine Telefonnummer von Bernd.
 &lt;br&gt;&lt;/br&gt;&lt;br&gt;&lt;/br&gt;
@@ -2963,40 +2969,36 @@ Das war die richtige Antwort.
 Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$score Punkte!]}
 
 [[Das Quiz noch einmal machen.-&gt;1.9 Quiz]]</tw-passagedata>
-<tw-passagedata pid="268" name="Einleitung" tags="" position="200,64">{
+<tw-passagedata pid="268" name="Einleitung" tags="" position="198,64">{
 (set: $player to &quot;Spieler&quot;)
 (set: $score to 0)
 }
 &lt;b&gt;Willkommen zu unserem Lernspiel!&lt;/b&gt;
 
-Bitte verrate uns, wie du heißt:
-(link: &#39;&lt;button class=&quot;btn btn-info&quot;&gt;Namen eingeben&lt;/button&gt;&#39;)[(put: (prompt: &quot;Wie ist ihr Name?&quot;) into $player)(if: $player&#39;s length &lt; 1)[(set: $player to &quot;Spieler&quot;)](goto: &quot;Willkommen&quot;)]
+Hallo [$player]&lt;fname|!
 
-(set: $player to &quot;your unnamed rival&quot;)
-You and [$player]&lt;fname|.
+Gib doch bitte deinen Namen ein:
 
-&lt;input type=&quot;text&quot; name=&quot;fname&quot; value=&quot;Johnson&quot;&gt;
-&lt;button type=&quot;submit&quot; onclick=&quot;userInput.submitName(&#39;fname&#39;)&quot;&gt;Yes that&#39;s it&lt;/button&gt;
+&lt;input type=&quot;text&quot; name=&quot;fname&quot; value=&quot;&quot;&gt;
 
-&lt;script&gt;
-	$.getScript(&quot;js/myscript.js&quot;, function() {
-		console.log(&quot;myscript.js loaded!&quot;)
-	});
-&lt;/script&gt;
+&lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;fname&#39;)&quot;&gt;Bestätigen&lt;/button&gt;
 
 |link&gt;[]
 (live:100ms)[
 	(set: $player to ?fname)
-	(if: $player is not &quot;your unnamed rival&quot;)[
-		(replace: ?link)[(link-goto: &quot;Next Passage&quot;, &quot;Next Passage&quot;)]
+	(if: $player is not &quot;Spieler&quot;)[
+		(replace: ?link)[(link-goto: &quot;Weiter&quot;, &quot;Willkommen&quot;)]
 		(stop:)
 	]
 ]
 {
-&lt;div class=&quot;continue&quot;&gt;
-[[Willkommen&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Weiter&lt;/button&gt;]]
-&lt;/div&gt;
-}</tw-passagedata>
+&lt;script&gt;
+$(document).ready(function() {
+	$.getScript(&quot;js/get-variable.js&quot;);
+});
+&lt;/script&gt;
+}
+</tw-passagedata>
 </tw-storydata>
 
 

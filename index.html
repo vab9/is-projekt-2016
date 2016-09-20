@@ -60,6 +60,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -70,6 +71,7 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
 
 
 
@@ -155,13 +157,18 @@ Was soll Susi tun?
 Punkte: $score
 &lt;/span&gt;
 
-[[Hilfe&lt;-&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-question-sign&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Hilfe&lt;/button&gt;]]
+&lt;span&gt;[[Hilfe&lt;-&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-question-sign&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Hilfe&lt;/button&gt;]]&lt;/span&gt;
 
+[&lt;span&gt;&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-disk&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;   Spiel speichern&lt;/button&gt;&lt;/span&gt;]&lt;saveGame|
+(click: ?saveGame)[
+	(if:(save-game:&quot;Slot A&quot;))[
+    	(replace: ?saveGame)[&lt;span&gt;&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-saved&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;   Spiel speichern&lt;/button&gt;&lt;/span&gt;]]
+		(else: )[
+    	(replace: ?saveGame)[&lt;span&gt;&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-disk&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;   Spiel speichern&lt;/button&gt;&lt;/span&gt;]]]
 
 &lt;button class=&quot;enlarge btn btn-default&quot;&gt;Text vergrößern&lt;/button&gt;
 &lt;button class=&quot;shrink btn btn-default&quot;&gt;Text verkleinern&lt;/button&gt;
 
-&lt;div class=&quot;clearFloat&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;hr&gt;
 }</tw-passagedata>

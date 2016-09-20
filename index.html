@@ -56,6 +56,8 @@
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -66,6 +68,8 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
+
 
 
 
@@ -266,7 +270,7 @@ Zuerst zeigen wir Ihnen ein kurzes Video, das solche Netzwerke erklärt, später
 &lt;/div&gt;
 }
 </tw-passagedata>
-<tw-passagedata pid="12" name="Scenario1-Option1" tags="" position="71,779">{
+<tw-passagedata pid="12" name="Scenario1-Option1" tags="" position="71,778">{
 &lt;div class=&quot;continue anrufen&quot;&gt;\
 Susi blättert in ihrem Adressbuch und findet tatsächlich eine Telefonnummer von Bernd.
 &lt;br&gt;&lt;/br&gt;&lt;br&gt;&lt;/br&gt;
@@ -2961,17 +2965,38 @@ Das war die richtige Antwort.
 Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$score Punkte!]}
 
 [[Das Quiz noch einmal machen.-&gt;1.9 Quiz]]</tw-passagedata>
-<tw-passagedata pid="268" name="Einleitung" tags="" position="200,64">{
+<tw-passagedata pid="268" name="Einleitung" tags="" position="199,64">{
 (set: $player to &quot;Spieler&quot;)
 (set: $score to 0)
 }
 &lt;b&gt;Willkommen zu unserem Lernspiel!&lt;/b&gt;
 
-Bitte verrate uns, wie du heißt:
-(link: &#39;&lt;button class=&quot;btn btn-info&quot;&gt;Namen eingeben&lt;/button&gt;&#39;)[(put: (prompt: &quot;Wie ist ihr Name?&quot;) into $player)(if: $player&#39;s length &lt; 1)[(set: $player to &quot;Spieler&quot;)](goto: &quot;Willkommen&quot;)]
+Hallo [$player]&lt;fname|!
 
+Gib doch bitte deinen Namen ein:
 
-</tw-passagedata>
+&lt;input type=&quot;text&quot; name=&quot;fname&quot; value=&quot;&quot;&gt;
+
+&lt;button type=&quot;submit&quot; onclick=&quot;submitName(&#39;fname&#39;)&quot;&gt;Bestätigen&lt;/button&gt;
+&lt;script&gt;
+function submitName(inputName) {
+	//Get the value of the textbox at time of click
+	var newName = $(&quot;input[name=&#39;&quot; + inputName + &quot;&#39;]&quot;)[0].value;
+	//Find the hook node based on name and set the text inside
+	$(&quot;tw-hook[name*=&#39;&quot; + inputName + &quot;&#39;]&quot;).text(newName);
+	//Log the Change
+	console.log(inputName + &quot; changed.&quot;)
+}
+&lt;/script&gt;
+
+|link&gt;[]
+(live:100ms)[
+	(set: $player to ?fname)
+	(if: $player is not &quot;Spieler&quot;)[
+		(replace: ?link)[(link-goto: &quot;Weiter&quot;, &quot;Willkommen&quot;)]
+		(stop:)
+	]
+]</tw-passagedata>
 </tw-storydata>
 
 

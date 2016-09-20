@@ -32,8 +32,8 @@ function berndAnrufen() {
 // ===============================
 // TO GET USER INPUT FROM TEXT BOX
 // ===============================
-// if (typeof window.customScripts == "undefined") {
-//     window.customScripts = {
+//  if (typeof window.userInput == "undefined") {
+//     window.userInput = {
 //         submitName: function(inputName) {
 //             //Get the value of the textbox at time of click
 //             var newName = $("input[name='" + inputName + "']")[0].value;
@@ -42,5 +42,5 @@ function berndAnrufen() {
 //             //Log the Change
 //             console.log(inputName + " changed.")
 //         }
-//     }; 
-// };
+//     }
+//  }

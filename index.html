@@ -2902,7 +2902,7 @@ Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot
     (set: $firstname to ?firstname)
 	(set: $lastname to ?lastname)
 	(set: $age to ?age)
-	(if: ?firstname is not &quot;Vorname&quot; and ?lastname is not &quot;Nachname&quot; and ?age is not &quot;Alter&quot;)[
+	(if: $firstname is not &quot;Vorname&quot; and $lastname is not &quot;Nachname&quot; and $age is not &quot;Alter&quot;)[
 		(replace: ?message)[(link-goto: &quot;Hallo $firstname!&quot;, &quot;Willkommen zurück&quot;)]
 	]
 	(else: )[

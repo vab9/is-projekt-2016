@@ -64,6 +64,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -74,6 +75,7 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
 
 
 
@@ -2897,14 +2899,14 @@ Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot
 
 |message&gt;[]
 (click: ?register)[
+    (set: $firstname to ?firstname)
+	(set: $lastname to ?lastname)
+	(set: $age to ?age)
 	(if: ?firstname is not &quot;Vorname&quot; and ?lastname is not &quot;Nachname&quot; and ?age is not &quot;Alter&quot;)[
-    	(set: $firstname to ?firstname)
-		(set: $lastname to ?lastname)
-		(set: $age to ?age)
-		(replace: ?message)[(link-goto: &quot;Hallo $firstname&quot;, &quot;Willkommen zurück&quot;)]
+		(replace: ?message)[(link-goto: &quot;Hallo $firstname!&quot;, &quot;Willkommen zurück&quot;)]
 	]
 	(else: )[
-		(replace: ?message)[Bitte gib deinen Vornamen, deinen Nachnachem und dein Alter ein!]
+		(replace: ?message)[Bitte gib deinen Vornamen, deinen Nachnamen und dein Alter ein!]
 	]
 ]
 {

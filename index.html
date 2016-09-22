@@ -2896,7 +2896,7 @@ Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot
 [&lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;firstname&#39;);submitVariable(&#39;lastname&#39;);submitVariable(&#39;age&#39;)&quot;&gt;Bestätigen&lt;/button&gt;]&lt;register|
 
 (click: ?register)[
-	(if: ?firstname is not &quot;Vorname&quot;) and (if: ?lastname is not &quot;Nachname&quot;) and (if: ?age is not &quot;Alter&quot;)[
+	(if: ?firstname is not &quot;Vorname&quot; and ?lastname is not &quot;Nachname&quot; and ?age is not &quot;Alter&quot;)[
     	(set: $firstname to ?firstname)
 		(set: $lastname to ?lastname)
 		(set: $age to ?age)

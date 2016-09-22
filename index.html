@@ -2895,19 +2895,18 @@ Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot
 
 [&lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;firstname&#39;);submitVariable(&#39;lastname&#39;);submitVariable(&#39;age&#39;)&quot;&gt;Bestätigen&lt;/button&gt;]&lt;register|
 
+|message&gt;[]
 (click: ?register)[
 	(if: ?firstname is not &quot;Vorname&quot; and ?lastname is not &quot;Nachname&quot; and ?age is not &quot;Alter&quot;)[
     	(set: $firstname to ?firstname)
 		(set: $lastname to ?lastname)
 		(set: $age to ?age)
-		(replace: ?message)[(link-goto: &quot;Hallo&quot; $firstname, &quot;Willkommen zurück&quot;)]
+		(replace: ?message)[(link-goto: &quot;Hallo $firstname&quot;, &quot;Willkommen zurück&quot;)]
 	]
 	(else: )[
 		(replace: ?message)[Bitte gib deinen Vornamen, deinen Nachnachem und dein Alter ein!]
 	]
 ]
-|message&gt;[]
-
 {
 &lt;script&gt;
 $(document).ready(function() {
@@ -2918,6 +2917,8 @@ $(document).ready(function() {
 </tw-passagedata>
 <tw-passagedata pid="262" name="Willkommen zurück" tags="" position="200,217">&lt;div id=&quot;main&quot;&gt;
     &lt;b&gt;Willkommen zurück, $firstname!&lt;/b&gt;
+	Nachname: $lastname
+	Alter: $age
     &lt;div id=&quot;lastsession&quot;&gt;
       Wo habe ich das letzte Mal aufgehört?
     &lt;/div&gt;

@@ -2898,16 +2898,19 @@ Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot
 [&lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;firstname&#39;);submitVariable(&#39;lastname&#39;);submitVariable(&#39;age&#39;);&quot;&gt;Bestätigen&lt;/button&gt;]&lt;register|
 
 |message&gt;[]
-(click: ?register)[
-    (set: $firstname to ?firstname)
-	(set: $lastname to ?lastname)
-	(set: $age to ?age)
-	(if: $firstname is not &quot;Vorname&quot; and $lastname is not &quot;Nachname&quot; and $age is not &quot;Alter&quot;)[
-		(replace: ?message)[(link-goto: &quot;Hallo $firstname!&quot;, &quot;Willkommen zurück&quot;)]
-	]
-	(else: )[
-		(replace: ?message)[Bitte gib deinen Vornamen, deinen Nachnamen und dein Alter ein!]
-	]
+(live:100ms)[
+  (click: ?register)[
+	  (set: $firstname to ?firstname)
+	  (set: $lastname to ?lastname)
+	  (set: $age to ?age)
+	  (if: $firstname is not &quot;Vorname&quot; and $lastname is not &quot;Nachname&quot; and $age is not &quot;Alter&quot;)[
+		  (replace: ?message)[(link-goto: &quot;Hallo $firstname!&quot;, &quot;Willkommen zurück&quot;)]
+	  ]
+	  (else: )[
+		  (replace: ?message)[Bitte gib deinen Vornamen, deinen Nachnamen und dein Alter ein!]
+	  ]
+	  (stop:)
+  ]
 ]
 {
 &lt;script&gt;

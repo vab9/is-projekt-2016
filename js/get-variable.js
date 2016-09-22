@@ -6,5 +6,5 @@ function submitVariable(input) {
     //Find the hook node based on name and set the text inside
     $("tw-hook[name*='" + input + "']").text(newVariable);
     //Log the Change
-    console.log(input + " changed.")
+    console.log(input + " changed to " + newVariable)
 }

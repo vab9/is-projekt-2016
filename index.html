@@ -2908,16 +2908,17 @@ Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot
 
 |message&gt;[]
 (live:100ms)[
+	(set: $firstname to ?firstname)
+	(set: $lastname to ?lastname)
+	(set: $age to ?age)
 	(if: $firstname is not &quot;Vorname&quot; and $lastname is not &quot;Nachname&quot; and $age is not &quot;Alter&quot;)[
-		(set: $firstname to ?firstname)
-		(set: $lastname to ?lastname)
-		(set: $age to ?age)
 		(replace: ?message)[(link-goto: &quot;Weiter&quot;, &quot;Willkommen zurück&quot;)]
 		(stop:)
-	  ] 
+	  ]
 	  (else: )[
 	  (replace: ?message)[Bitte gib die geforderten Daten ein!]
 	  ]
+	  (stop:)
 ]
 {
 &lt;script&gt;

@@ -42,5 +42,5 @@ function berndAnrufen() {
 //             //Log the Change
 //             console.log(inputName + " changed.")
 //         }
-//     }
-//  }
+//     };
+//  };

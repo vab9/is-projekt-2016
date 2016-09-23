@@ -11,9 +11,11 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="index" startnode="260" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("css/bootstrap.min.css");
+<tw-storydata name="index" startnode="261" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("css/bootstrap.min.css");
 @import url("css/bootstrap-theme.min.css");
 @import url("css/style.css");
+
+
 
 
 
@@ -74,6 +76,8 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
+
 
 
 
@@ -2870,9 +2874,6 @@ Gib doch bitte deinen Namen ein:
 		(stop:)
 	]
 ]
-
-[[Zur Anmeldung-&gt;Anmeldung]]
-
 {
 &lt;script&gt;
 $(document).ready(function() {
@@ -2893,21 +2894,22 @@ Vorname:  &lt;input type=&quot;text&quot; name=&quot;firstname&quot; value=&quot
 Nachname: &lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;&quot;&gt;
 Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot;&gt;
 
-[&lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;firstname&#39;);submitVariable(&#39;lastname&#39;);submitVariable(&#39;age&#39;)&quot;&gt;Bestätigen&lt;/button&gt;]&lt;register|
+&lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;firstname&#39;);submitVariable(&#39;lastname&#39;);submitVariable(&#39;age&#39;);&quot;&gt;Bestätigen&lt;/button&gt;
 
-(click: ?register)[
-	(if: ?firstname is not &quot;Vorname&quot;) and (if: ?lastname is not &quot;Nachname&quot;) and (if: ?age is not &quot;Alter&quot;)[
-    	(set: $firstname to ?firstname)
-		(set: $lastname to ?lastname)
-		(set: $age to ?age)
-		(replace: ?message)[(link-goto: &quot;Hallo&quot; $firstname, &quot;Willkommen zurück&quot;)]
-	]
-	(else: )[
-		(replace: ?message)[Bitte gib deinen Vornamen, deinen Nachnachem und dein Alter ein!]
-	]
-]
+Vorname:  [$firstname]&lt;firstname|
+Nachname: [$lastname]&lt;lastname|
+Alter:    [$age]&lt;age|
+
 |message&gt;[]
-
+(live:100ms)[
+	(set: $firstname to ?firstname)
+	(set: $lastname to ?lastname)
+	(set: $age to ?age)
+	(if: $firstname is not &quot;Vorname&quot; and $lastname is not &quot;Nachname&quot; and $age is not &quot;Alter&quot;)[
+		(replace: ?message)[(link-goto: &quot;Weiter&quot;, &quot;Willkommen zurück&quot;)]
+		(stop:)
+	  ]
+]
 {
 &lt;script&gt;
 $(document).ready(function() {
@@ -2918,6 +2920,8 @@ $(document).ready(function() {
 </tw-passagedata>
 <tw-passagedata pid="262" name="Willkommen zurück" tags="" position="200,217">&lt;div id=&quot;main&quot;&gt;
     &lt;b&gt;Willkommen zurück, $firstname!&lt;/b&gt;
+	Nachname: $lastname
+	Alter: $age
     &lt;div id=&quot;lastsession&quot;&gt;
       Wo habe ich das letzte Mal aufgehört?
     &lt;/div&gt;

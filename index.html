@@ -2889,6 +2889,11 @@ $(document).ready(function() {
 {(set: $firstname to &quot;Vorname&quot;)
 (set: $lastname to &quot;Nachname&quot;)
 (set: $age to &quot;Alter&quot;)}
+
+Vorname:  $firstname
+Nachname: $lastname
+Alter:    $age
+
 Nutze folgendes Formular, um dich bei erstmaligem Anmelden zu registrieren. 
 
 Wenn du schon registriert bist, klicke [[hier-&gt;Einleitung]].
@@ -2897,19 +2902,17 @@ Vorname:  &lt;input type=&quot;text&quot; name=&quot;firstname&quot; value=&quot
 Nachname: &lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;&quot;&gt;
 Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot;&gt;
 
-[&lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;firstname&#39;);submitVariable(&#39;lastname&#39;);submitVariable(&#39;age&#39;);&quot;&gt;Bestätigen&lt;/button&gt;]&lt;register|
+&lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;firstname&#39;);submitVariable(&#39;lastname&#39;);submitVariable(&#39;age&#39;);&quot;&gt;Bestätigen&lt;/button&gt;
 
 |message&gt;[]
-  (click: ?register)[
-	  (set: $firstname to ?firstname)
-	  (set: $lastname to ?lastname)
-	  (set: $age to ?age)
-	  (if: $firstname is not &quot;Vorname&quot; and $lastname is not &quot;Nachname&quot; and $age is not &quot;Alter&quot;)[
+(live:100ms)[
+	(set: $firstname to ?firstname)
+	(set: $lastname to ?lastname)
+	(set: $age to ?age)
+	(if: $firstname is not &quot;Vorname&quot; and $lastname is not &quot;Nachname&quot; and $age is not &quot;Alter&quot;)[
 		  (replace: ?message)[(link-goto: &quot;Weiter&quot;, &quot;Willkommen zurück&quot;)]
 	  ]
-	  (else: )[
-		  (replace: ?message)[Bitte gib deinen Vornamen, deinen Nachnamen und dein Alter ein!]
-  ]
+	(stop:)
 ]
 {
 &lt;script&gt;

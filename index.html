@@ -2902,7 +2902,12 @@ Nachname: &lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;
 Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot;&gt;
 
 &lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;firstname&#39;);submitVariable(&#39;lastname&#39;);submitVariable(&#39;age&#39;);&quot;&gt;Bestätigen&lt;/button&gt;
-
+{[]&lt;variablen|
+(click: ?variablen)[
+[$firstname]&lt;firstname|
+[$lastname]&lt;lastname|
+[$age]&lt;age|
+]}
 |message&gt;[]
 (live:100ms)[
 	(set: $firstname to ?firstname)
@@ -2912,12 +2917,6 @@ Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot
 		(replace: ?message)[(link-goto: &quot;Weiter&quot;, &quot;Willkommen zurück&quot;)]
 		(stop:)
 	  ]]
-{[]&lt;variablen|
-(click: ?variablen)[
-[$firstname]&lt;firstname|
-[$lastname]&lt;lastname|
-[$age]&lt;age|
-]}
 {
 &lt;script&gt;
 $(document).ready(function() {
@@ -2927,7 +2926,7 @@ $(document).ready(function() {
 }</tw-passagedata>
 <tw-passagedata pid="262" name="Willkommen zurück" tags="" position="200,217">{
 &lt;!-- Here the savegame is loaded --&gt;
-(if: (savedgames:) contains &quot;A&quot;)[(loadgame: &quot;A&quot;)]
+(if: (savedgames:) contains &quot;Slot A&quot;)[(loadgame: &quot;Slot A&quot;)]
 }
 &lt;div id=&quot;main&quot;&gt;
     &lt;b&gt;Willkommen, $firstname $lastname!&lt;/b&gt;

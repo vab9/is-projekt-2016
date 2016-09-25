@@ -2875,7 +2875,7 @@ Nachname: &lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;
 	(set: $firstname to ?firstname)
 	(set: $lastname to ?lastname)
 	(if: $firstname is not &quot;Spieler&quot;)[
-		(replace: ?link)[(link-goto: &quot;Zur zuletzt besuchten Seite&quot;, &quot;Letzte Session&quot;)oder:&lt;br&gt;(link-goto: &quot;Weiter zur Hauptseite&quot;, &quot;Hauptseite&quot;)]
+		(replace: ?link)[(link-goto: &quot;Zur zuletzt besuchten Seite&quot;, &quot;Letzte Session&quot;)]
 		(stop:)
 	]
 ]
@@ -2923,35 +2923,30 @@ $(document).ready(function() {
 });
 &lt;/script&gt;
 }</tw-passagedata>
-<tw-passagedata pid="262" name="Hauptseite" tags="" position="200,217">&lt;div id=&quot;main&quot;&gt;
-    &lt;b&gt;Willkommen, $firstname $lastname!&lt;/b&gt;
-	
-	Alter: $age
-    &lt;div id=&quot;lastsession&quot;&gt;
-      Wo habe ich das letzte Mal aufgehört?
-	  {(if: (saved-games:) contains &quot;Slot A&quot;)[
-  (link: &quot;Load game&quot;)[(load-game:&quot;Slot A&quot;)]
-	  ]}
-    &lt;/div&gt;
-    &lt;div id=&quot;scoreandrang&quot;&gt;
-      Aktueller Punktestand: $score
-      &lt;br&gt;
-      {Aktueller Rang: 
-	  (if: $score &lt;= 5)[Neuling]
-	  (else-if: 5 &lt; $score and $score &lt;= 10)[Fortgeschrittener Anfänger]
-	  (else-if: 10 &lt; $score and $score &lt;= 15)[Kompetenter]
-	  (else-if: 15 &lt; $score and $score &lt;= 20)[Gewandter]
-	  (else-if: $score &gt; 20)[Experte]}
-    &lt;/div&gt;
-    &lt;div id=&quot;top10&quot;&gt;
-      Übersicht Punktestand der 10 besten Spieler:
-	  {
+<tw-passagedata pid="262" name="Hauptseite" tags="" position="200,217">&lt;b&gt;Willkommen, $firstname $lastname!&lt;/b&gt;
+
+Alter: $age
+
+Hier klicken, um den letzten Speicherstand zu laden:
+{(if: (saved-games:) contains &quot;Slot A&quot;)[
+(link: &quot;Load game&quot;)[(load-game:&quot;Slot A&quot;)]
+]}
+
+Aktueller Punktestand: $score
+
+{Aktueller Rang: 
+(if: $score &lt;= 5)[Neuling]
+(else-if: 5 &lt; $score and $score &lt;= 10)[Fortgeschrittener Anfänger]
+(else-if: 10 &lt; $score and $score &lt;= 15)[Kompetenter]
+(else-if: 15 &lt; $score and $score &lt;= 20)[Gewandter]
+(else-if: $score &gt; 20)[Experte]}
+
+Übersicht Punktestand der 10 besten Spieler:
+{
 &lt;div class=&quot;continue&quot;&gt;
 [[Top10&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Top 10 Spieler&lt;/button&gt;]]
-&lt;/div&gt;
 }
-     &lt;/div&gt;
-&lt;/div&gt;
+
 {
 &lt;div class=&quot;continue&quot;&gt;
 [[Übersicht&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Weiter zur Übersicht&lt;/button&gt;]]

@@ -202,7 +202,7 @@ Wir hoffen, dass es dir gefällt. Viel Spaß!
 &lt;div class=&quot;footer&quot;&gt;
 (if: (history:)&#39;s length &gt; 0)[[[&lt;button class=&quot;btn btn-info&quot;&gt;Zurück&lt;/button&gt;-&gt;(string: (history:)&#39;s last)]]]
 
-[[Übersicht&lt;-&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Zur Übersicht&lt;/button&gt;]]
+[[Hauptseite&lt;-&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Hauptseite&lt;/button&gt;]]
 
 &lt;/div&gt;
 
@@ -2875,7 +2875,7 @@ Nachname: &lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;
 	(set: $firstname to ?firstname)
 	(set: $lastname to ?lastname)
 	(if: $firstname is not &quot;Spieler&quot;)[
-		(replace: ?link)[(link-goto: &quot;Weiter&quot;, &quot;Willkommen zurück&quot;)]
+		(replace: ?link)[(link-goto: &quot;Zur zuletzt besuchten Seite&quot;, &quot;Letzte Session&quot;)oder:&lt;br&gt;(link-goto: &quot;Weiter zur Hauptseite&quot;, &quot;Hauptseite&quot;)]
 		(stop:)
 	]
 ]
@@ -2914,7 +2914,7 @@ Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot
 	(set: $lastname to ?lastname)
 	(set: $age to ?age)
 	(if: $firstname is not &quot;Vorname&quot; and $lastname is not &quot;Nachname&quot; and $age is not &quot;Alter&quot;)[
-		(replace: ?message)[(link-goto: &quot;Weiter&quot;, &quot;Willkommen zurück&quot;)]
+		(replace: ?message)[(link-goto: &quot;Weiter&quot;, &quot;Hauptseite&quot;)]
 		(stop:)
 	  ]]
 {
@@ -2924,11 +2924,7 @@ $(document).ready(function() {
 });
 &lt;/script&gt;
 }</tw-passagedata>
-<tw-passagedata pid="262" name="Willkommen zurück" tags="" position="200,217">{
-&lt;!-- Here the savegame is loaded --&gt;
-(if: (savedgames:) contains &quot;Slot A&quot;)[(loadgame: &quot;Slot A&quot;)]
-}
-&lt;div id=&quot;main&quot;&gt;
+<tw-passagedata pid="262" name="Hauptseite" tags="" position="200,217">&lt;div id=&quot;main&quot;&gt;
     &lt;b&gt;Willkommen, $firstname $lastname!&lt;/b&gt;
 	
 	Alter: $age
@@ -2936,7 +2932,7 @@ $(document).ready(function() {
       Wo habe ich das letzte Mal aufgehört?
 	  {(if: (saved-games:) contains &quot;Slot A&quot;)[
   (link: &quot;Load game&quot;)[(load-game:&quot;Slot A&quot;)]
-]}
+	  ]}
     &lt;/div&gt;
     &lt;div id=&quot;scoreandrang&quot;&gt;
       Aktueller Punktestand: $score
@@ -3042,6 +3038,10 @@ tr:nth-child(even) {
   &lt;/tr&gt;
 &lt;/table&gt;
 &lt;/html&gt;
+}</tw-passagedata>
+<tw-passagedata pid="264" name="Letzte Session" tags="" position="48,371">{
+&lt;!-- Here the savegame is loaded --&gt;
+(if: (savedgames:) contains &quot;Slot A&quot;)[(loadgame: &quot;Slot A&quot;)]
 }</tw-passagedata>
 </tw-storydata>
 

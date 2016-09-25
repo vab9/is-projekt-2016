@@ -2902,12 +2902,11 @@ Nachname: &lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;
 Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot;&gt;
 
 &lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;firstname&#39;);submitVariable(&#39;lastname&#39;);submitVariable(&#39;age&#39;);&quot;&gt;Bestätigen&lt;/button&gt;
-{[]&lt;variablen|
-(click: ?variablen)[
+{
 [$firstname]&lt;firstname|
 [$lastname]&lt;lastname|
 [$age]&lt;age|
-]}
+}
 |message&gt;[]
 (live:100ms)[
 	(set: $firstname to ?firstname)

@@ -66,6 +66,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("js/bootstrap.min.js", function(){
@@ -118,9 +119,15 @@ $(document).ready(function() {
 
 
 
+
 </script><tw-passagedata pid="1" name="Header" tags="header" position="1000,12">{
 &lt;div class=&quot;header&quot;&gt;
-
+{
+&lt;!-- Auto-save our progress (unless a passage forbids it) --&gt;
+(unless: (passage:)&#39;s tags contains &quot;nosave&quot;)[
+	(save-game: $_autosave_slot, $_autosave_filename)
+]
+}
 &lt;span class=&quot;score&quot;&gt;
 Punkte: $score
 &lt;/span&gt;
@@ -2852,25 +2859,28 @@ Das war die richtige Antwort.
 Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$score Punkte!]}
 
 [[Das Quiz noch einmal machen.-&gt;1.9 Quiz]]</tw-passagedata>
-<tw-passagedata pid="260" name="Einleitung" tags="" position="198,64">{
-(set: $player to &quot;Spieler&quot;)
+<tw-passagedata pid="260" name="Einleitung" tags="" position="199,72">{
 (set: $score to 0)
+(set: $firstname to &quot;Spieler&quot;)
+(set: $lastname to &quot;&quot;)
 }
-&lt;b&gt;Willkommen zu unserem Lernspiel!&lt;/b&gt;
+&lt;b&gt;Willkommen zurück zu unserem Lernspiel!&lt;/b&gt;
 
-Hallo [$player]&lt;fname|!
+Hallo [$firstname]&lt;firstname| [$lastname]&lt;lastname|!
 
-Gib doch bitte deinen Namen ein:
+Gib doch bitte deinen Namen und deinen Nachnamen ein um dich einzuloggen:
 
-&lt;input type=&quot;text&quot; name=&quot;fname&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;text&quot; name=&quot;firstname&quot; value=&quot;&quot;&gt;
+&lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;&quot;&gt;
 
-&lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;fname&#39;)&quot;&gt;Bestätigen&lt;/button&gt;
+&lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;firstname&#39;);submitVariable(&#39;lastname&#39;)&quot;&gt;Bestätigen&lt;/button&gt;
 
 |link&gt;[]
 (live:100ms)[
-	(set: $player to ?fname)
-	(if: $player is not &quot;Spieler&quot;)[
-		(replace: ?link)[(link-goto: &quot;Weiter&quot;, &quot;Willkommen&quot;)]
+	(set: $firstname to ?firstname)
+	(set: $lastname to ?lastname)
+	(if: $firstname is not &quot;Spieler&quot;)[
+		(replace: ?link)[(link-goto: &quot;Weiter&quot;, &quot;Willkommen zurück&quot;)]
 		(stop:)
 	]
 ]
@@ -2882,23 +2892,28 @@ $(document).ready(function() {
 &lt;/script&gt;
 }
 </tw-passagedata>
-<tw-passagedata pid="261" name="Anmeldung" tags="" position="35,68">&#39;&#39;Anmeldung&#39;&#39;
-{(set: $firstname to &quot;Vorname&quot;)
+<tw-passagedata pid="261" name="Anmeldung" tags="" position="32,166">&#39;&#39;Anmeldung&#39;&#39;
+{
+(set: $firstname to &quot;Vorname&quot;)
 (set: $lastname to &quot;Nachname&quot;)
-(set: $age to &quot;Alter&quot;)}
-Nutze folgendes Formular, um dich bei erstmaligem Anmelden zu registrieren. 
-
+(set: $age to &quot;Alter&quot;)
+}
+{
+&lt;!-- Set autosave variables --&gt;
+(set: $_version to &quot;1.0&quot;)
+(set: $_autosave_slot to &quot;autosave&quot;)
+(set: $_autosave_filename to &quot;save v&quot;+$_version)
+(set: $_start_passage to &quot;Anmeldung&quot;)
+}
 Wenn du schon registriert bist, klicke [[hier-&gt;Einleitung]].
+
+Nutze folgendes Formular, um dich bei erstmaligem Anmelden zu registrieren:
 
 Vorname:  &lt;input type=&quot;text&quot; name=&quot;firstname&quot; value=&quot;&quot;&gt;
 Nachname: &lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;&quot;&gt;
 Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot;&gt;
 
 &lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;firstname&#39;);submitVariable(&#39;lastname&#39;);submitVariable(&#39;age&#39;);&quot;&gt;Bestätigen&lt;/button&gt;
-
-Vorname:  [$firstname]&lt;firstname|
-Nachname: [$lastname]&lt;lastname|
-Alter:    [$age]&lt;age|
 
 |message&gt;[]
 (live:100ms)[
@@ -2908,19 +2923,27 @@ Alter:    [$age]&lt;age|
 	(if: $firstname is not &quot;Vorname&quot; and $lastname is not &quot;Nachname&quot; and $age is not &quot;Alter&quot;)[
 		(replace: ?message)[(link-goto: &quot;Weiter&quot;, &quot;Willkommen zurück&quot;)]
 		(stop:)
-	  ]
-]
+	  ]]
+{[]&lt;variablen|
+(click: ?variablen)[
+[$firstname]&lt;firstname|
+[$lastname]&lt;lastname|
+[$age]&lt;age|
+]}
 {
 &lt;script&gt;
 $(document).ready(function() {
 	$.getScript(&quot;js/get-variable.js&quot;);
 });
 &lt;/script&gt;
+}</tw-passagedata>
+<tw-passagedata pid="262" name="Willkommen zurück" tags="" position="200,217">{
+&lt;!-- Here the score must be loaded --&gt;
+(set: $score to 0)
 }
-</tw-passagedata>
-<tw-passagedata pid="262" name="Willkommen zurück" tags="" position="200,217">&lt;div id=&quot;main&quot;&gt;
-    &lt;b&gt;Willkommen zurück, $firstname!&lt;/b&gt;
-	Nachname: $lastname
+&lt;div id=&quot;main&quot;&gt;
+    &lt;b&gt;Willkommen zurück, $firstname $lastname!&lt;/b&gt;
+	
 	Alter: $age
     &lt;div id=&quot;lastsession&quot;&gt;
       Wo habe ich das letzte Mal aufgehört?
@@ -2928,7 +2951,12 @@ $(document).ready(function() {
     &lt;div id=&quot;scoreandrang&quot;&gt;
       Aktueller Punktestand: $score
       &lt;br&gt;
-      Aktueller Rang: $rang
+      {Aktueller Rang: 
+	  (if: $score &lt;= 5)[Neuling]
+	  (else-if: 5 &lt; $score and $score &lt;= 10)[Fortgeschrittener Anfänger]
+	  (else-if: 10 &lt; $score and $score &lt;= 15)[Kompetenter]
+	  (else-if: 15 &lt; $score and $score &lt;= 20)[Gewandter]
+	  (else-if: $score &gt; 20)[Experte]}
     &lt;/div&gt;
     &lt;div id=&quot;top10&quot;&gt;
       Übersicht Punktestand der 10 besten Spieler:
@@ -2937,14 +2965,13 @@ $(document).ready(function() {
 [[Top10&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Top 10 Spieler&lt;/button&gt;]]
 &lt;/div&gt;
 }
-    &lt;/div&gt;
-  &lt;/div&gt;
+     &lt;/div&gt;
+&lt;/div&gt;
 {
 &lt;div class=&quot;continue&quot;&gt;
 [[Übersicht&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Weiter zur Übersicht&lt;/button&gt;]]
 &lt;/div&gt;
-}
-</tw-passagedata>
+}</tw-passagedata>
 <tw-passagedata pid="263" name="Top10" tags="" position="199,371">&lt;!-- Hier soll die Top 10 der Spieler mit den meisten Punkten aufgelistet werden --&gt;
 
 {
@@ -3026,6 +3053,16 @@ tr:nth-child(even) {
 &lt;/table&gt;
 &lt;/html&gt;
 }</tw-passagedata>
+<tw-passagedata pid="264" name="Loading Game" tags="nosave" position="30,344">{
+&lt;!-- Set initial variables that change here instead of in the Startup passage --&gt;
+(set: $firstname to &quot;Vorname&quot;)
+(set: $lastname to &quot;Nachname&quot;)
+(set: $age to &quot;Alter&quot;)
+
+(unless: (saved-games:) contains $_autosave_slot and (datavalues: (saved-games:)) contains $_autosave_filename)[(goto: $_start_passage)]
+}&#39;&#39;[[NEW GAME-&gt;$_start_passage]]
+
+(link: &quot;CONTINUE&quot;)[(load-game: $_autosave_slot)]&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;(link: &quot;No&quot;)[(goto: $_start_passage)]&#39;&#39;</tw-passagedata>
 </tw-storydata>
 
 

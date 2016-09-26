@@ -1,12 +1,17 @@
 #! /usr/bin/env python
 
-from flask import Flask
+from flask import Flask, request, send_file
+from whitenoise import WhiteNoise
 
 app = Flask(__name__)
+# root should really point to a sub-directory. This is a security hole
+noiseapp = WhiteNoise(app, root='./')
 
-# @app.route('/')
-# def index():
-#     return 'HELP! !'
+@app.route('/baum')
+def index():
+    return send_file(open('index.html'))
+    # return app.root_path
+    # return render_template('index.html')
 
 @app.route('/kaum')
 def test():

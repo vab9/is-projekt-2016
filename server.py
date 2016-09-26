@@ -5,13 +5,11 @@ from whitenoise import WhiteNoise
 
 app = Flask(__name__)
 # root should really point to a sub-directory. This is a security hole
-noiseapp = WhiteNoise(app, root='./')
+noiseapp = WhiteNoise(app, root='./static/')
 
-@app.route('/baum')
+@app.route('/')
 def index():
     return send_file(open('index.html'))
-    # return app.root_path
-    # return render_template('index.html')
 
 @app.route('/kaum')
 def test():

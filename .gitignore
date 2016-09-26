@@ -1,7 +1,8 @@
 .DS_Store
 res/
 
-# python executable
+# python executable and cache
 server.pyc
+__pycache__/
 
 iwas_reinschreiben

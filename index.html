@@ -11,9 +11,10 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="index" startnode="261" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("css/bootstrap.min.css");
-@import url("css/bootstrap-theme.min.css");
-@import url("css/style.css");
+<tw-storydata name="index" startnode="261" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("static/css/bootstrap.min.css");
+@import url("static/css/bootstrap-theme.min.css");
+@import url("static/css/style.css");
+
 
 
 
@@ -69,14 +70,15 @@
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
-	$.getScript("js/bootstrap.min.js", function(){
+	$.getScript("static/js/bootstrap.min.js", function(){
 		console.log("bootstrap.min.js loaded!");
 	});
 
-	$.getScript("js/myscript.js", function(){
+	$.getScript("static/js/myscript.js", function(){
 		console.log("myscript.js loaded!");
 	});
 });
+
 
 
 

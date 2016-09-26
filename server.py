@@ -1,16 +1,25 @@
 #! /usr/bin/env python3
 
-import http.server
-import socketserver
+from flask import Flask
+app = Flask(__name__)
 
-PORT = 8000
+@app.route('/')
+def hello_world():
+    return 'Damn it feels good to be a gangster!'
 
-Handler = http.server.SimpleHTTPRequestHandler
 
-httpd = socketserver.TCPServer(("127.0.0.1", PORT), Handler)
 
-print("serving at port", PORT)
-httpd.serve_forever()
+
+# import http.server
+# import socketserver
+
+# PORT = 8000
+
+# Handler = http.server.SimpleHTTPRequestHandler
+
+# httpd = socketserver.TCPServer(("127.0.0.1", PORT), Handler)
+
+# print("serving at port", PORT)
+# httpd.serve_forever()
 
 # python3 -m http.server -b 127.0.0.1
-

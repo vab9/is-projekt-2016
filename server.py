@@ -4,9 +4,9 @@ from flask import Flask
 
 app = Flask(__name__)
 
-# @app.route('/')
-# def index():
-#     return app.send_file(open('index.html'))
+@app.route('/')
+def index():
+    return 'HELP! !'
 
 @app.route('/kaum')
 def test():

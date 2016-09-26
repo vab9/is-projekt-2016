@@ -1,11 +1,16 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python
 
 from flask import Flask
+
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return 'Damn it feels good to be a gangster!'
+# @app.route('/')
+# def index():
+#     return app.send_file(open('index.html'))
+
+@app.route('/kaum')
+def test():
+    return "Hello My Friend!"
 
 
 

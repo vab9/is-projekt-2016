@@ -70,6 +70,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("static/js/bootstrap.min.js", function(){
@@ -80,6 +81,7 @@ $(document).ready(function() {
 		console.log("myscript.js loaded!");
 	});
 });
+
 
 
 
@@ -253,14 +255,14 @@ Wenn du einen Anmelde-Namen aus folgender Auswahl aussuchen müsstest, welchen w
 
 Du hast vermutlich einen falschen Namen als deinen Facebook-Namen angegeben!
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 
 [[F1.3.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Einen anderen Namen wählen&lt;/button&gt;]]
 
 [[F1.3.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Falschen Namen verwenden?&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="12" name="F1.3.2" tags="" position="2540,1592">&#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 
 Du hast den richtigen Namen angegeben. Dies ist wichtig, um zum einen den allgemeinen Geschäftsbedingungen (AGB) von Facebook zu entsprechen und zum anderen um anderen Nutzern von Facebook die Chance zu geben, dich zu identifizieren.
 
@@ -293,14 +295,14 @@ Susi Sorglos trifft ihre Nachbarin, die sie nur flüchtig kennt auf der Straße 
 
 In dem Szenario handelt Susi sehr sorglos und ungewöhnlich. Da sie die Nachbarin kaum kennt, teilt sie viel zu offen zu private Informationen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/surprised.jpg&quot; alt=&quot;Überraschte Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/surprised.jpg&quot; alt=&quot;Überraschte Susi&quot;&gt;&lt;/div&gt;}
 
 [[F1.4.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Warum ist das relevant?&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="17" name="F1.4.1.3" tags="" position="2782,1980">&#39;&#39;Genau!&#39;&#39;
 
 Das Verhalten von Susi ist sehr sorglos und ungewöhnlich. Sie teilt sehr private Informationen mit einer Person, die sie kaum kennt.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 
 [[F1.4.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Warum ist das relevant?&lt;/button&gt;]]
 </tw-passagedata>
@@ -326,7 +328,7 @@ Was machst du?
 
 Alternativ kannst du dies auch in einem privaten Chat oder in einer Gruppe mit deiner Familie über Facebook teilen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 * (link: &#39;&lt;strong&gt;Zusätzlich mache ich ein Status-Update an meiner Pinnwand und teile meine Pläne&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F1.5.2&quot;)]
 
 [[F1.6&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu &quot;Wie verhalte ich mich bei Spielen und Umfragen?&quot;&lt;/button&gt;]]</tw-passagedata>
@@ -337,7 +339,7 @@ Auf die Idee würdest du sicher niemals kommen. Genau das entspricht aber dem un
 
 Es besteht immer die Gefahr, dass jemand mitliest, der Böses im Sinn hat!
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/surprised.jpg&quot; alt=&quot;Überraschte Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/surprised.jpg&quot; alt=&quot;Überraschte Susi&quot;&gt;&lt;/div&gt;}
 
 [[F1.6&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu &quot;Wie verhalte ich mich bei Spielen und Umfragen?&quot;&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="22" name="F1.6" tags="" position="2608,2560">&#39;&#39;Vorsicht bei Spielen und Umfragen&#39;&#39;
@@ -346,10 +348,10 @@ Umfragen, Spiele und Ratespiele sind auf Facebook beliebt.
 
 * Ein Beispiel für eine Umfrage:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_umfrage.jpg&quot; alt=&quot;Umfrage auf Facebook&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_umfrage.jpg&quot; alt=&quot;Umfrage auf Facebook&quot;&gt;&lt;/div&gt;}
 * Ein Beispiel für ein (Rate-)Spiel:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_game_invitation.png&quot; alt=&quot;Spieleeinladungen auf Facebook&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_game_invitation.png&quot; alt=&quot;Spieleeinladungen auf Facebook&quot;&gt;&lt;/div&gt;}
 [[F1.6.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Was gilt es zu beachten?&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="23" name="F1.6.1" tags="" position="2608,2708">&#39;&#39;Was gilt es bei Spielen und Umfragen zu beachten?&#39;&#39;
 
@@ -359,7 +361,7 @@ Umfragen, Spiele und Ratespiele sind auf Facebook beliebt.
 
 Ein Beispiel für eine Meldung eines solchen Programmes: 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/zugriff_facebook_hinterlegte_informationen.png&quot; alt=&quot;Zugriff auf in Facebook hinterlegte Informationen&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/zugriff_facebook_hinterlegte_informationen.png&quot; alt=&quot;Zugriff auf in Facebook hinterlegte Informationen&quot;&gt;&lt;/div&gt;}
 
 [[F1.7&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu „Misstrauisch sein“&lt;/button&gt;]]
 
@@ -409,7 +411,7 @@ Im echten Leben, wenn man den Kontakt zu einem Menschen abbrechen möchte, verme
 0. Dann gehst du oben rechts auf //Freunde// (&#39;&#39;1.&#39;&#39;)
 0. Anschließend auf //Als Freund entfernen// (&#39;&#39;2.&#39;&#39;)
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_unfriend.png&quot; alt=&quot;Freundschaft beenden auf Facebook&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_unfriend.png&quot; alt=&quot;Freundschaft beenden auf Facebook&quot;&gt;&lt;/div&gt;}
 Es ist ebenfalls möglich, einen Schritt weiter gehen, und die Person blockieren, damit sie nicht mehr die Chance hat indirekt deine Aktivitäten zu verfolgen und Informationen über dich zu erhalten.
 
 Die genaue Vorgehensweise hierzu lernst du im dritten Teil.
@@ -421,17 +423,17 @@ Die genaue Vorgehensweise hierzu lernst du im dritten Teil.
 
 Über das Schloss-Symbol oben rechts kommst du zum //Privatsphären-Check//. Dort klickst du auf //Wer kann mich kontaktieren//. Dort kann differenziert werden zwischen //Alle// und //Freunde von Freunden//:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy_contact.png&quot; alt=&quot;Facebook Privatsphäreneinstellung Kontakt&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;static/res/kap2/facebook_privacy_contact.png&quot; alt=&quot;Facebook Privatsphäreneinstellung Kontakt&quot;&gt;&lt;/div&gt;}
 &#39;&#39;Wie verhindere ich, dass mich jemand belästigt?&#39;&#39;
 
 Dazu gibt es unterschiedliche Wege.
 
 * Über das Schloss-Symbol oben rechts und dann auf //Wie verhindere ich, dass mich jemand belästigt//:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_block1.png&quot; alt=&quot;Facebook Kontakt blockieren 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;static/res/kap2/facebook_block1.png&quot; alt=&quot;Facebook Kontakt blockieren 1&quot;&gt;&lt;/div&gt;}
 * Wenn du auf dem Profil einer Personoben rechts auf die drei Punkte klickst und anschließend auf //Blockieren//, wird die Person von deiner Freundesliste entfernen:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_block3.png&quot; alt=&quot;Facebook Kontakt blockieren 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;static/res/kap2/facebook_block3.png&quot; alt=&quot;Facebook Kontakt blockieren 2&quot;&gt;&lt;/div&gt;}
 Hiervon sollest du Gebrauch machen, wenn sich jemand dir gegenüber seltsam, abwertend, beleidigend oder ähnlich negativ verhält. Wenn die Person nicht nur aus deinem Freundeskreis entfernt werden soll, sondern du sicherstellen willst, dass die Person auch nicht indirekt (z. B. über Freundes-Freunde) deine Aktivitäten verfolgt oder Informationen über dich einsieht.
 
 [[F3.8&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu „Aktivitätenprotokoll und Chroniküberprüfung&quot;&lt;/button&gt;]]</tw-passagedata>
@@ -444,7 +446,7 @@ Gerade, wenn man sich an öffentlichen Orten auf Facebook einloggt (z. B. am Flu
 
 Dazu klickst du auf den Pfeil oben rechts und dann auf //Abmelden//:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_logout.png&quot; alt=&quot;Ausloggen Facebook&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_logout.png&quot; alt=&quot;Ausloggen Facebook&quot;&gt;&lt;/div&gt;}
 [[F1.10.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Quiz&lt;/button&gt;]]
 </tw-passagedata>
 <tw-passagedata pid="30" name="F1.10.1" tags="" position="2608,3620">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
@@ -490,13 +492,13 @@ Kontoinformationen sollten immer auf dem aktuellen Stand sein und regelmäßig �
 
 Oben rechts in der blauen Leiste klickst du neben das Schloss-Symbol auf den Pfeil nach unten und anschließend auf //Einstellungen//. So kommst du zu den &#39;&#39;Kontoeinstellungen&#39;&#39;.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_settings1.png&quot; alt=&quot;Facebook Settings 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_settings1.png&quot; alt=&quot;Facebook Settings 1&quot;&gt;&lt;/div&gt;}
 Unter //Allgemein// hast du Zugriff auf deine allgemeinen Kontoeinstellungen, wie das Ändern des Passwortes.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_settings2.png&quot; alt=&quot;Facebook Settings 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_settings2.png&quot; alt=&quot;Facebook Settings 2&quot;&gt;&lt;/div&gt;}
 Wie du deine Sicherheitseinstellungen änderst:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_settings3.png&quot; alt=&quot;Facebook Settings 3&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_settings3.png&quot; alt=&quot;Facebook Settings 3&quot;&gt;&lt;/div&gt;}
 Besonders wichtig: Die Wahl eines guten Passwortes.
 
 [[F2.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Passwort-Tester&lt;/button&gt;]]</tw-passagedata>
@@ -539,7 +541,7 @@ Hier die wichtigsten Regeln, die bei der Erstellung eines Passwortes beachtet we
 
 {
 &lt;video controls&gt;
-  &lt;source src=&quot;res/kap2/sicheres_passwort-bsi.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;static/res/kap2/sicheres_passwort-bsi.mp4&quot; type=&quot;video/mp4&quot;&gt;
 Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 &lt;/video&gt;
 }
@@ -571,14 +573,14 @@ Zusätzlich zur Sicherung des Facebook-Accounts durch ein Passwort gibt es weite
 Es ist möglich das Mobiltelefon als zusätzliche Sicherheitsmaßnahme zu verwenden, um den Zugriff auf dein Konto durch andere Personen zu verhindern. 
 Gehe hierzu in die Kontoeinstellungen (Pfeil-Symbol oben rechts und dann //Einstellungen//), dann links auf //Sicherheit// und dann auf aktiviere das Häkchen //Sicherheitscode für den Zugriff auf mein Kontoüber einen unbekannten Browser anfordern//.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_authorisation1.png&quot; alt=&quot;Facebook Autorisierung 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;static/res/kap2/facebook_authorisation1.png&quot; alt=&quot;Facebook Autorisierung 1&quot;&gt;&lt;/div&gt;}
 Hinweis: Dazu muss eine Telefonnummer in Facebook hinterlegt sein.
 
 &#39;&#39;Zweite E-Mail-Adresse oder Telefonnummer hinzufügen:&#39;&#39;
 
 Um eine weitere E-Mail-Adresse oder eine Telefonnummer hinzuzufügen, klicke in den Kontoeinstellungen (Pfeil-Symbol oben rechts und dann //Einstellungen//) auf //Kontakt// und anschließend auf //Änderungen speichern//.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_authorisation2.png&quot; alt=&quot;Facebook Autorisierung 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;static/res/kap2/facebook_authorisation2.png&quot; alt=&quot;Facebook Autorisierung 2&quot;&gt;&lt;/div&gt;}
 
 [[F2.6&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Kann mir trotzdem etwas passieren?&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="41" name="F2.6" tags="" position="3072,1704">&#39;&#39;Ausspähung des Facebook Passwortes&#39;&#39;
@@ -603,7 +605,7 @@ Es passieren unerklärliche Dinge mit deinem Facebook-Konto, z. B.:
 
 Dein Facebook-Konto wurde infiltriert und jemand loggt sich unter deinem Namen ein.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/confused.jpg&quot; alt=&quot;Verwirrte Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/confused.jpg&quot; alt=&quot;Verwirrte Susi&quot;&gt;&lt;/div&gt;}
 
 &#39;&#39;Was kann ich dagegen machen?&#39;&#39;
 
@@ -612,21 +614,21 @@ Dein Facebook-Konto wurde infiltriert und jemand loggt sich unter deinem Namen e
 Wie du das machst:
 
 Klicke zunächst auf der Website &#39;&#39;www.facebook.com&#39;&#39; auf //Konto vergessen//:
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_resetpw1.png&quot; alt=&quot;Facebook Passwort zurücksetzen 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_resetpw1.png&quot; alt=&quot;Facebook Passwort zurücksetzen 1&quot;&gt;&lt;/div&gt;}
 Anschließend gibst du deine E-Mail-Adresse, Telefonnummer oder Benutzernamen ein:
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_resetpw2.png&quot; alt=&quot;Facebook Passwort zurücksetzen 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_resetpw2.png&quot; alt=&quot;Facebook Passwort zurücksetzen 2&quot;&gt;&lt;/div&gt;}
 Im folgenden Dialog klickst du auf //Weiter//:
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_resetpw3.png&quot; alt=&quot;Facebook Passwort zurücksetzen 3&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_resetpw3.png&quot; alt=&quot;Facebook Passwort zurücksetzen 3&quot;&gt;&lt;/div&gt;}
 Nun bekommst du eine E-Mail an deine bei Facebook hinterlegte Adresse mit den nächsten Schritten, um ein neues Passwort anzulegen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 
 [[F2.6.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zu Konsequenz 2&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="44" name="F2.6.3" tags="" position="3072,2152">&#39;&#39;Konsequenz 2&#39;&#39;
 
 Du kannst dich nicht mehr einloggen, angeblich ist das eingegebene Passwort falsch.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_wrong_password.png&quot; alt=&quot;Falsches Facebook Passwort&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_wrong_password.png&quot; alt=&quot;Falsches Facebook Passwort&quot;&gt;&lt;/div&gt;}
 [[F2.6.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Und jetzt?&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="45" name="F2.6.4" tags="" position="3072,2304">&#39;&#39;Was ist passiert?&#39;&#39;
 
@@ -641,7 +643,7 @@ Wie du das machst:
 Besuche zunächst die Internetseite &#39;&#39;www.facebook.com/hacked&#39;&#39;.
 
 Dort klickst du auf den Button //Mein Konto wurde kompromittiert//:
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_hacked1.png&quot; alt=&quot;Facebook Hacked 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_hacked1.png&quot; alt=&quot;Facebook Hacked 1&quot;&gt;&lt;/div&gt;}
 Im folgenden Fenster gibst du deine E-Mail-Adress, Telefonnummer oder Benutzernamen ein und klickst auf //Suchen//.
 
 Folge anschließend den Anweisungen aus der E-Mail um zusammen mit Facebook dein Konto zurückzuerlangen.
@@ -683,19 +685,19 @@ Welche Einstellungen bezüglich deiner Privatsphäre hast du? Wähle eine für d
 * [[Ich habe keinerlei Hemmungen alle Informationen mit jedem auf Facebook zu teilen. Auch Personen, die nicht auf Facebook sind, können ruhig Einsicht haben auf meine Beiträge und private Informationen wie meinen Geburtstag.-&gt;F3.4.4]]</tw-passagedata>
 <tw-passagedata pid="50" name="F3.4.1" tags="" position="3388,900">Deiner Einstellung entsprechend solltest du die Privatsphären-Einstellung „&#39;&#39;//Nur Ich//&#39;&#39;“ wählen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy4.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 4&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;static/res/kap2/facebook_privacy4.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 4&quot;&gt;&lt;/div&gt;}
 Diese Einstellung stellt sicher, dass niemand außer dir deine Beiträge lesen kann und Informationen wie dein Geburtsdatum nur für dich einsehbar sind.
 
 [[F3.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Erfahre wie du die Privatsphären-Einstellung änderst&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="51" name="F3.4.2" tags="" position="3536,900">Deiner Einstellung entsprechend solltest du die Privatsphären-Einstellung „&#39;&#39;//Freunde//&#39;&#39;“ wählen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy3.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 3&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;static/res/kap2/facebook_privacy3.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 3&quot;&gt;&lt;/div&gt;}
 Diese Einstellung bestimmt, dass alle deine Freunde deine Beiträge lesen können und ihnen Informationen wie dein Geburtsdatum einsehbar sind.
 
 [[F3.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Erfahre wie du die Privatsphären-Einstellung änderst&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="52" name="F3.4.3" tags="" position="3688,900">Deiner Einstellung entsprechend solltest du die Privatsphären-Einstellung „//&#39;&#39;Freunde außer Bekannte&#39;&#39;//“ oder eine //&#39;&#39;benutzerdefinierte Einstellung&#39;&#39;// wählen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy5.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 5&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;static/res/kap2/facebook_privacy5.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 5&quot;&gt;&lt;/div&gt;}
 
 Diese Einstellung bestimmt, dass alle nur die ausgewählte Gruppe deine Beiträge lesen können und ihnen Informationen wie dein Geburtsdatum einsehbar sind.
 
@@ -705,11 +707,11 @@ Diese Einstellung bestimmt, dass alle nur die ausgewählte Gruppe deine Beiträg
 
 Zunächst gehst du auf das Profil des Freundes. Dann klickst du oben rechts auf //Freunde// und anschließend auf //Bekannte//, woraufhin ein Häkchen neben daneben auftaucht.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy6.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 6&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;static/res/kap2/facebook_privacy6.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 6&quot;&gt;&lt;/div&gt;}
 [[F3.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Erfahre wie du die Privatsphären-Einstellung änderst&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="53" name="F3.4.4" tags="" position="3836,900">Deiner Einstellung entsprechend kannst du die Privatsphären-Einstellung „//&#39;&#39;Öffentlich&#39;&#39;//“ wählen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy2.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;static/res/kap2/facebook_privacy2.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 2&quot;&gt;&lt;/div&gt;}
 Diese Einstellung bestimmt, dass alle Nutzer und auch die Nicht-Nutzer von Facebook deine Beiträge lesen können und ihnen Informationen wie dein Geburtsdatum einsehbar sind.
 
 Hinweis: Diese Einstellung ist &#39;&#39;nicht&#39;&#39; empfehlenswert, wenn du Wert auf Privatsphäre legst.
@@ -719,9 +721,9 @@ Hinweis: Diese Einstellung ist &#39;&#39;nicht&#39;&#39; empfehlenswert, wenn du
 
 Die eine Möglichkeit ist der sogenannte Privatsphären-Check. Diesen öffnest du, indem du auf das //Schloss-Symbol// klickst, das sich bei den meisten Facebook-Seiten oben rechts befindet, um die Privatsphäre-Einstellungen zu öffnen. Dort hast du verschiedene Einstellungsmöglichkeiten zur Auswahl:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy1.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;static/res/kap2/facebook_privacy1.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 1&quot;&gt;&lt;/div&gt;}
 Zum anderen kannst du für jeden Beitrag den du veröffentlichen möchtest einstellen, wer ihn sehen soll:
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;res/kap2/facebook_privacy7.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 7&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;static/res/kap2/facebook_privacy7.png&quot; alt=&quot;Facebook Privatsphäreneinstellung 7&quot;&gt;&lt;/div&gt;}
 [[F3.7&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weitere Privatsphären-Einstellungen&lt;/button&gt;]]
 </tw-passagedata>
 <tw-passagedata pid="55" name="F3.8" tags="" position="3784,2452">&#39;&#39;Aktivitätenprotokoll&#39;&#39;
@@ -730,14 +732,14 @@ Es ist zudem sinnvoll, das Aktivitätenprotokoll zu nutzen. Dies ist eine wichti
 
 Du erreichst es über den Pfeil oben rechts und dann mit einem Klick auf //Aktivitätenprotokoll//:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_activityprotocol.png&quot; alt=&quot;Facebook Aktivitätenprotokoll&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_activityprotocol.png&quot; alt=&quot;Facebook Aktivitätenprotokoll&quot;&gt;&lt;/div&gt;}
 &#39;&#39;Chroniküberprüfung&#39;&#39;
 
 Das gleiche gilt für die Chroniküberprüfung, die dich festlegen lässt, welche Beiträge von Freunden in deiner Chronik veröffentlich werden dürfen, bevor sie tatsächlich an deiner Pinnwand zu sehen sind.
 
 Diese Funktion aktivierst du, indem Du in den Kontoeinstellungen auf //Chronik und Markierungseinstellungen// gehst. Dort klickst du rechts auf //Bearbeiten// und anschließend auf //Aktiviert//:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_chroniccheck.png&quot; alt=&quot;Facebook Chroniküberprüfung&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_chroniccheck.png&quot; alt=&quot;Facebook Chroniküberprüfung&quot;&gt;&lt;/div&gt;}
 [[F3.9&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu „Inhalte melden“&lt;/button&gt;]]
 </tw-passagedata>
 <tw-passagedata pid="56" name="F3.9" tags="" position="3785,2600">&#39;&#39;Inhalte melden: Grundregeln&#39;&#39;
@@ -748,7 +750,7 @@ Die beste Möglichkeit zum Melden von Missbrauch ist direkt dort, wo er auf Face
 
 Ein auf deiner Pinnwand veröffentlichter Beitrag kann über das Pfeil-Symbol rechts und anschließend auf //Beitrag melden// gemeldet werden.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap2/facebook_block2.png&quot; alt=&quot;Facebook Post melden&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/facebook_block2.png&quot; alt=&quot;Facebook Post melden&quot;&gt;&lt;/div&gt;}
 [[F3.9.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Quiz: Meldungswürdiger Post?&lt;/button&gt;]]
 
 [[K3.2.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zu Kapitel 3: Fremde Inhalte posten&lt;/button&gt;]]</tw-passagedata>
@@ -806,7 +808,7 @@ Antworten:
 
 &#39;&#39;Das ist leider nicht richtig.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Neben den Optionen „Öffentlich“ und „Freunde“ gibt es die weiteren Einstellungen „Freunde ohne Bekannte“, „Nur ich“, sowie benutzerdefinierte Listen.
 
 [[F3.10.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -815,7 +817,7 @@ Neben den Optionen „Öffentlich“ und „Freunde“ gibt es die weiteren Eins
 
 &#39;&#39;Genau!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Neben den Optionen „Öffentlich“ und „Freunde“ gibt es die weiteren Einstellungen „Freunde ohne Bekannte“, „Nur ich“, sowie benutzerdefinierte Listen.
 
 [[F3.10.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -832,7 +834,7 @@ Antworten:
 
 &#39;&#39;Vollkommen korrekt!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Es gibt die sogenannte „Chroniküberprüfung“, die dich festlegen lässt, welche Beiträge von Freunden, oder Markierungen mit deinem Namen in deiner Chronik veröffentlich werden dürfen, bevor sie tatsächlich an deiner Pinnwand zu sehen sind.
 
 [[F3.10.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -841,7 +843,7 @@ Es gibt die sogenannte „Chroniküberprüfung“, die dich festlegen lässt, we
 
 &#39;&#39;Das stimmt leider nicht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Es gibt die sogenannte „Chroniküberprüfung“, die dich festlegen lässt, welche Beiträge von Freunden, oder Markierungen mit deinem Namen in deiner Chronik veröffentlich werden dürfen, bevor sie tatsächlich an deiner Pinnwand zu sehen sind.
 
 [[F3.10.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -858,7 +860,7 @@ Antworten:
 
 &#39;&#39;Richtig!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das sogenannte „Aktivitätenprotokoll“ ermöglicht genau dies. Es listet alle Aktivitäten auf, die von dir getätigt wurden. So erhältst du einen Überblick um deine Entscheidungen nachzuvollziehen.
 
 [[F3.10.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -867,7 +869,7 @@ Das sogenannte „Aktivitätenprotokoll“ ermöglicht genau dies. Es listet all
 
 &#39;&#39;Falsch!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Das sogenannte „Aktivitätenprotokoll“ ermöglicht genau dies. Es listet alle Aktivitäten auf, die von dir getätigt wurden. So erhältst du einen Überblick um deine Entscheidungen nachzuvollziehen.
 
 [[F3.10.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -884,7 +886,7 @@ Antworten:
 
 &#39;&#39;Korrekte Antwort!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Es ist natürlich auch möglich, Personen, die man vielleicht vor einiger Zeit als Freunde hinzugefügt hat, man jetzt aber nicht mehr in der Freundesliste haben möchte, aus dieser wieder zu entfernen. Ein anderer Grund wäre, wenn man von einer Person belästigt oder bedroht wird. Dann kann man diese Person zusätzlich noch blockieren und so jeglichen Kontakt unterbinden. 
 
 [[F3.10.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -893,7 +895,7 @@ Es ist natürlich auch möglich, Personen, die man vielleicht vor einiger Zeit a
 
 &#39;&#39;Leider falsch!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Es ist möglich, Personen, die man vielleicht vor einiger Zeit als Freunde hinzugefügt hat, man jetzt aber nicht mehr in der Freundesliste haben möchte, aus dieser wieder zu entfernen. Ein anderer Grund wäre, wenn man von einer Person belästigt oder bedroht wird. Dann kann man diese Person zusätzlich noch blockieren und so jeglichen Kontakt unterbinden.
 
 [[F3.10.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -911,7 +913,7 @@ Antworten:
 
 &#39;&#39;Vorsicht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Die Polizei solltest du nur kontaktieren, wenn es absolut akut ist. Dies wäre bspw. bei einem angekündigten Amoklauf oder Suizid-Versuch. In der Regel sollte es ausreichend sein, zunächst die „Melden-Funktion“ von Facebook zu nutzen und Facebook entscheiden zu lassen, ob der Inhalt tatsächlich gegen die AGBs oder gar Gesetze verstoßen.
 
 [[F3.11&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>
@@ -920,7 +922,7 @@ Die Polizei solltest du nur kontaktieren, wenn es absolut akut ist. Dies wäre b
 
 &#39;&#39;Genau richtig!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Sobald du das Gefühl hast, dass du auf einen Inhalt gestoßen bist, der gegen geltende Gesetze oder die AGBs verstößt, kannst du über die „Melden-Funktion“ Facebook darauf hinweisen. Diese befassen sich daraufhin damit und entscheiden von Fall zu Fall.
 
 [[F3.11&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>
@@ -929,7 +931,7 @@ Sobald du das Gefühl hast, dass du auf einen Inhalt gestoßen bist, der gegen g
 
 &#39;&#39;Leider nicht korrekt!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Sobald du das Gefühl hast, dass du auf einen Inhalt gestoßen bist, der gegen geltende Gesetze oder die AGBs verstößt, kannst du über die „Melden-Funktion“ Facebook darauf hinweisen. Diese befassen sich daraufhin damit und entscheiden von Fall zu Fall.
 
 [[F3.11&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>
@@ -943,7 +945,7 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 
 &#39;&#39;Genau, das ist die richtige Antwort.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 
 Halte dich an die Allgemeinen Geschäftsbedingungen von Facebook und helfe deinen bekannten bei der Suche nach deinem Benutzerprofil.
 
@@ -953,7 +955,7 @@ Halte dich an die Allgemeinen Geschäftsbedingungen von Facebook und helfe deine
 
 &#39;&#39;Vorsicht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 
 Wenn du einen falschen Namen angibst, dann verstößt du gegen die Allgemeinen Geschäftsbedingungen von Facebook und du würdest Bekannten die Suche nach deinem Benutzerprofil erschweren.
 
@@ -971,7 +973,7 @@ Antworten:
 
 &#39;&#39;Vorsicht!&#39;&#39; 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 
 Das wäre ein sehr unvorsichtiges und gefährliches Verhalten. Das gleiche würdest du tun, wenn du fremde Menschen als Freunde bei Facebook hinzufügen würdest oder wenn du deine Privatsphären-Einstellung so offen gestaltest, dass mehr Menschen deine Informationen einsehen können, als du möchtest.
 
@@ -983,7 +985,7 @@ Wie du das machst, lernst in Teil drei dieses Kapitels.
 
 &#39;&#39;Das ist eine gute Einstellung!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 
 Und wie du auf Facebook Informationen nur mit Menschen teilst, mit denen du sie auch wirklich teilen möchtest, lernst du in Teil drei dieses Kapitels.
 
@@ -1001,7 +1003,7 @@ Antworten:
 
 &#39;&#39;Genau, das hast du gut erkannt.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 
 Gehe auf Nummer Sicher und teile sensible Informationen nur im privaten Chat oder mit eingerichteten Gruppen, die nur aus Personen besteht, denen du uneingeschränkt vertrauen kannst.
 
@@ -1011,7 +1013,7 @@ Gehe auf Nummer Sicher und teile sensible Informationen nur im privaten Chat ode
 
 &#39;&#39;Achtung!&#39;&#39; 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 
 So solltest du dich nicht auf Facebook verhalten. Gehe auf Nummer Sicher und teile sensible Informationen nur im privaten Chat oder mit eingerichteten Gruppen, die nur aus Personen besteht, denen du uneingeschränkt vertrauen kannst.
 
@@ -1029,7 +1031,7 @@ Antworten:
 
 &#39;&#39;Vorsicht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 
 Du solltest grundsätzlich misstrauisch sein und sicherstellen, dass du die Person auch kennst, die dich zu ihren Freunden hinzufügen möchte. Vergiss nicht, dass es möglich ist, sich unter einem falschen Namen bei Facebook anzumelden. Die Person könnte ein Betrüger sein, der dich z. B. durch den Enkeltrick täuschen möchte.
 
@@ -1039,7 +1041,7 @@ Du solltest grundsätzlich misstrauisch sein und sicherstellen, dass du die Pers
 
 &#39;&#39;Gute Vorgehensweise!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 
 In solchen Situationen Misstrauen zu zeigen kann dich vor Betrügern schützen.
 
@@ -1057,7 +1059,7 @@ Antworten:
 
 &#39;&#39;Falsch!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 
 Um eine Freundschaft auf Facebook zu beenden musst du pro-aktiv vorgehen und die Person aus deinem Freundeskreis entfernen. Wie du das machst, lernst du in Teil drei dieses Kapitels.
 
@@ -1067,7 +1069,7 @@ Um eine Freundschaft auf Facebook zu beenden musst du pro-aktiv vorgehen und die
 
 &#39;&#39;Genau!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 
 Merke dir, dass du deine Freundeslisten aktiv pflegen musst, damit du nur mit den Menschen die Freundschaft aufrechterhältst, mit denen du dich gut verstehst und denen du vertraust.
 
@@ -1085,7 +1087,7 @@ Antworten:
 
 &#39;&#39;Richtig!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 
 Nach dem Benutzen von Facebook solltest du dich über den „Abmelden-Button“ von Facebook abmelden. Dies ist vor allem dann wichtig, wenn du an einem öffentlichen Ort wie einem Internet-Café oder einem Flughafen bist, wo auch andere Personen den gleichen Computer benutzen.
 
@@ -1095,7 +1097,7 @@ Nach dem Benutzen von Facebook solltest du dich über den „Abmelden-Button“ 
 
 &#39;&#39;Hier aufpassen!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 
 Grundsätzlich ist es ratsam, sich nach einer Facebook-Session von Facebook über den „Abmelde-Button“ abzumelden. Dies ist vor allem dann wichtig, wenn du an einem öffentlichen Ort wie einem Internet-Café oder einem Flughafen bist, wo auch andere Personen den gleichen Computer benutzen.
 
@@ -1110,7 +1112,7 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 
 &#39;&#39;Genau!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch aus Buchstaben- oder Zahlenfolgen und schon gar nicht den eigenen Namen benutzen. 
 Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleinschreibung mit einfließen zu lassen.
 
@@ -1120,7 +1122,7 @@ Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleins
 
 &#39;&#39;Vorsicht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch aus Buchstaben- oder Zahlenfolgen und schon gar nicht den eigenen Namen benutzen. 
 Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleinschreibung mit einfließen zu lassen.
 
@@ -1130,7 +1132,7 @@ Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleins
 
 &#39;&#39;Vorsicht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch aus Buchstaben- oder Zahlenfolgen und schon gar nicht den eigenen Namen benutzen. 
 Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleinschreibung mit einfließen zu lassen.
 
@@ -1140,7 +1142,7 @@ Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleins
 
 &#39;&#39;Vorsicht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch aus Buchstaben- oder Zahlenfolgen und schon gar nicht den eigenen Namen benutzen. 
 Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleinschreibung mit einfließen zu lassen.
 
@@ -1159,7 +1161,7 @@ Antworten:
 
 &#39;&#39;Achtung!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Das solltest du nicht tun. Das ist zwar auf dem ersten Blick verlockend, aber der wahrscheinlich unsicherste Ort, den es gibt.
 Besser: An einem geheimen Ort in deiner Wohnung oder deinem Haus an einem sicheren Platz.
 
@@ -1169,7 +1171,7 @@ Besser: An einem geheimen Ort in deiner Wohnung oder deinem Haus an einem sicher
 
 &#39;&#39;Gefährlich!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Deine Geldbörse trägst du mit dir wenn du das Haus verlässt, immer mit der Gefahr, dass es abhandenkommt. 
 Besser: An einem geheimen Ort in deiner Wohnung oder deinem Haus an einem sicheren Platz.
 
@@ -1179,7 +1181,7 @@ Besser: An einem geheimen Ort in deiner Wohnung oder deinem Haus an einem sicher
 
 &#39;&#39;Sehr gut!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Optimal ist es natürlich, wenn du dein Passwort gar nicht aufschreibst. Wenn du aber auf Nummer sicher gehen möchtest, kannst du es am besten an einem geheimen Ort in deiner Wohnung oder deinem Haus an einem sicheren Platz verwahren.
 
 [[F2.7.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -1197,7 +1199,7 @@ Antworten:
 
 &#39;&#39;//Fast// richtig!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Sofern du dich noch bei Facebook einloggen kannst, solltest du zunächst versuchen, dein Passwort zurückzusetzen und ein neues einzurichten.
 
 [[F2.8&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>
@@ -1206,7 +1208,7 @@ Sofern du dich noch bei Facebook einloggen kannst, solltest du zunächst versuch
 
 &#39;&#39;Sehr gut!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 So solltest du vorgehen. Versuche zunächst dein Passwort zurückzusetzen und ein neues einzurichten. Ist dies nicht mehr möglich, weil z. B. deine E-Mail-Adresse geändert wurde, dann kontaktiere Facebook über www.facebook.com/hacked.
 
 [[F2.8&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>
@@ -1215,7 +1217,7 @@ So solltest du vorgehen. Versuche zunächst dein Passwort zurückzusetzen und ei
 
 &#39;&#39;Keine gute Idee!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Solltest du den Verdacht haben, dass dein Facebook-Konto infiltriert worden ist, solltest du sofort handeln und zunächst versuchen dein Passwort zurückzusetzen und ein neues einzurichten. Ist dies nicht mehr möglich, weil z. B. deine E-Mail-Adresse geändert wurde, dann kontaktiere Facebook über www.facebook.com/hacked.
 
 [[F2.8&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>
@@ -1228,7 +1230,7 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 
 Hallo zusammen,
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 
 ich bin Susi Sorglos. Ich bin 80 Jahre alt und lebe mit meinem Ehemann in einem kleinen Dorf in Deutschland. Ich habe mehrere Enkelkinder, welche bereits nicht mehr zu Hause wohnen. Eine Enkelin macht gerade ein Au Pair Jahr in den Vereinigten Staaten von Amerika. Die anderen sind in ganz Deutschland verteilt. Zum einen studieren sie und zum anderen sind sie mit ihren eigenen Familien in andere Teile Deutschlands gezogen. Vielleicht kennen einige von euch diese Situation.
 
@@ -1262,14 +1264,14 @@ Wir sehen nun ein blaues Fenster mit dem Facebook Logo und vielen freien Felder,
 
 Dieser erste Blick hat mir viele Fragen beschert, welche mich sehr verunsichert haben. Am liebsten hätte ich die Seite geschlossen und etwas Anderes gemacht.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/anmeldung1.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/anmeldung1.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
 Jedoch habe ich mich wieder daran erinnert, weswegen ich mich bei Facebook anmelden wollte. Ich wollte mit meinen Freunden und Verwandten schreiben können, egal an welchem Ort ich sitze. Dies werde ich jetzt auch machen. Nach einer kleineren Recherche habe ich die Lösungen gefunden. Diese möchte ich euch gerne präsentieren.
 
 [[1.1 Anmeldung 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="114" name="1.2 Profil einrichten" tags="" position="861,645">&#39;&#39;Profil einrichten&#39;&#39;
 Den ersten Schritt haben wir geschafft!
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Als nächstes müssen wir unserem Profil etwas Leben einhauchen.
 
 Wenn Freunde derzeit auf unser Facebook-Profil schauen, dann sehen sie nicht viel. Fast jede Beschreibung unserer Person ist leer. Nur der Name ist zu sehen, da wir diesen bereits bei der Anmeldung angegeben haben.
@@ -1278,7 +1280,7 @@ Als erstes wollen wir ein Profil- und Titelbild hochladen und einfügen. Ihr fra
 
 {
 &lt;video controls&gt;
-  &lt;source src=&quot;res/kap1/profil_teilbild.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;static/res/kap1/profil_teilbild.mp4&quot; type=&quot;video/mp4&quot;&gt;
 Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 &lt;/video&gt;
 }
@@ -1289,7 +1291,7 @@ Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 Wie im richtigen Leben, kann es auch Facebook Sinn machen, Freundeschaftliche Kontakte zu pflegen. Durch den Status &quot;Freunde&quot; ist es möglich mit den anderen zu chatten, deren Profilinformationen zu lesen und ihre Beiträge zu sehen. Andersherum kann man seine eigenen Informationen mit anderen tauschen und teilen. Eure Freunde können deine verfassten Beiträge mit &quot;Gefällt mir&quot; markieren und ihren Kommentar hinzufügen.
 Es entsteht also ein Austausch zwischen dir und deinen Freunden. Jeder Austausch ist dabei schöner als gar kein Austausch. Genau dieses Thema wollen wir in diesem Kapitel behandeln.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/keine_freunde.jpg&quot; alt=&quot;Profil einrichten&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/keine_freunde.jpg&quot; alt=&quot;Profil einrichten&quot;&gt;&lt;/div&gt;}
 [[1.3 Freundschaftsanfragen 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="116" name="1.4 Kommunikation" tags="" position="1221,670">&#39;&#39;Kommunikation&#39;&#39;
 
@@ -1299,13 +1301,13 @@ Es gibt mehrere Arten, um mit Freunden zu kommunizieren. Diese Formen werde ich 
 
 &#39;&#39;Privater Chat:&#39;&#39; Hier kannst du in einem privaten Chatraum mit euren Freunden kommunizieren. Keine andere Person kann Beiträge in diesem Raum lesen, es sei denn, du hast diese eingeladen. So sieht ein Beispiel im Facebook-Fenster aus. Auf der nächsten Seite findest du die wichtigsten Bildausschnitte in vergrößerter Form.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/privater_chat.jpg&quot; alt=&quot;Privater Chat&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/privater_chat.jpg&quot; alt=&quot;Privater Chat&quot;&gt;&lt;/div&gt;}
 [[1.4 Kommunikation 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="117" name="1.5 Listen" tags="" position="1371,670">&#39;&#39;Listen&#39;&#39;
 
 Nach einer gewissen Zeit haben wir eine Menge Freunde zu unserer Freundesliste hinzugefügt. Das erzeugt leider ein Problem. Es wir unübersichtlich. 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces/surprised.jpg&quot; alt=&quot;Überraschte Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/faces/surprised.jpg&quot; alt=&quot;Überraschte Susi&quot;&gt;&lt;/div&gt;}
 Wenn wir beispielweise eine Geburtstagseinladung verschicken wollen, dann sollten diese nicht alle Personen auf Facebook lesen, denn wir wollen nur unseren engsten Freundeskreis einladen und nicht auch Personen, die wir vielleicht nur ein bis zweimal im Jahr sehen. Daher sollten wir beschreiben, welche Personen zu unserem engsten Freundeskreis oder zu unserer Familie gehören.
 
 Die Listenfunktion dient also dazu, Freunde in separaten Listen zu kategorisieren, damit es übersichtlicher wird. Hier ein Beispiel für eine mögliche Aufteilung:
@@ -1380,7 +1382,7 @@ Wie die Listenfunktion und benutzerspezifische Beiträge funktionieren, erfährs
 
 {
 &lt;video controls&gt;
-  &lt;source src=&quot;res/kap1/benutzer_listen.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;static/res/kap1/benutzer_listen.mp4&quot; type=&quot;video/mp4&quot;&gt;
 Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 &lt;/video&gt;
 }
@@ -1397,7 +1399,7 @@ Genau dies wird in diesem Kapitel behandelt. Wir werden lernen, was Gruppen sind
 
 Gruppen sind ein eigener Bereich, in denen gleichgesinnte Personen zusammenkommen, um über ein Thema zu reden. Es gibt Gruppen über Sportmannschaften, über die Heimat und viele andere Themen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/groups.jpg&quot; alt=&quot;Gruppen&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/groups.jpg&quot; alt=&quot;Gruppen&quot;&gt;&lt;/div&gt;}
 Ich bin eine Hobbygärtnerin und möchte gerne Bilder von anderen Gärten sehen. Deswegen habe ich nach einer Gruppe für Hobbygärtner gesucht. Um eine derartige Gruppe zu finden, musste ich im Suchfeld oben links den Begriff &quot;Hobbygärtner&quot; eingeben. Dann hat mir Facebook einige Seiten und Gruppen vorgeschlagen. Ich habe mich für die größte Gruppe entschieden, welche über 1884 Mitglieder verfügt. Anschließend muss ich nur auf das Feld &#39;&#39;Gruppe beitreten&#39;&#39; klicken. 
 
 In der Gruppenbeschreibung sehen wir, dass dies eine geschlossene Gruppe ist, das bedeutet, dass ich auf eine Freischaltung warten muss. Das bedeutet, dass die Person, die die Gruppe verwaltet, mich erst annehmen muss.
@@ -1410,7 +1412,7 @@ Facebook ist nicht nur eine Plattform zur Kommunikation, sondern auch dazu geeig
 
 Dies können Personen des öffentlichen Lebens sein, wie etwa Sportler oder Musiker. Thomas Müller beispielsweise verfügt über eine Facebook Seite, welche von 9,5 Millionen Menschen verfolgt wird. Er liefert dort seinen Fans Informationen über Spiele, über seine Werbedeals oder über seinen Urlaub. Somit wissen seine Fans immer, was um die Person Thomas Müller geschieht.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/thomas_mueller.jpg&quot; alt=&quot;Thomas Müller Facebook&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/thomas_mueller.jpg&quot; alt=&quot;Thomas Müller Facebook&quot;&gt;&lt;/div&gt;}
 [[1.7 Abonnieren 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="120" name="1.8 Smartphone" tags="" position="1813,668">&#39;&#39;Smartphone&#39;&#39;
 
@@ -1422,7 +1424,7 @@ Auf vielen Smartphones ist die Facebook-App schon vorinstalliert, wenn dies bei 
 
 Lade Facebook also auf dein Smartphone herunter. Dies ist abhängig von deinem Handy. Es gibt drei verschiedene Betriebssysteme, die bei uns verbreitet sind. Android, IOS und das Windows Phone.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/app_stores.jpg&quot; alt=&quot;App Stores&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/app_stores.jpg&quot; alt=&quot;App Stores&quot;&gt;&lt;/div&gt;}
 Jeder Anbieter benutzt seine eigene App, daher musst du schauen, welches Betriebssystem du hast oder welches dieser drei Symbole bei dir zu finden ist. Wenn du dieses gefunden hast, dann musst du darauf klicken. Oben müsste nun eine Suchleiste auftauchen, in der du nun Facebook eingibst. Dann verweist dich die App direkt zu der Facebook-App. Dort ist ein Knopf zu finden, auf dem //Installieren// steht. Auf diesem musst du klicken und das Handy macht den Rest.
 
 [[1.8 Smartphone 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]
@@ -1444,7 +1446,7 @@ Viel Spaß!
 [[1.9.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Quiz&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="122" name="1.1 Anmeldung 2" tags="" position="736,645">&#39;&#39;Anmeldung&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 2&quot;&gt;&lt;/div&gt;}
 Auf dieser Seite möchte ich erklären, wie du die Fragen auflösen kannst. Ich habe die Seite von Facebook in drei Bereiche eingeteilt und werde diese nacheinander erläutern.
 
 1.	Dieser Bereich ist für bereits registrierte Benutzer. Hier kann sich jede Person anmelden. Voraussetzung hierfür ist, dass man sich bereits angemeldet hat. Also die Bereiche 2 &amp; 3 ausgefüllt und abgeschickt hat.
@@ -1485,7 +1487,7 @@ Im Beispielvideo haben wir meinen guten Freund Bernd Meyer gesucht. Das Problem 
 
 Diese Suche wollen wir anderen Personen ersparen, deswegen sollten wir weitere Informationen über unsere Person angeben. Ich rede nicht von sensiblen Daten, wie Haus-, Konto- oder Telefonnummer, sondern von normalen Daten, welche man bei einem persönlichen Gespräch auch sagen würde. Zum Beispiel aus welchen Dorf ich komme, in welchen Dorf ich jetzt wohne, zu welcher Schule ich gegangen bin oder was ich für einen Beruf gelernt habe.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/profil_einrichten.jpg&quot; alt=&quot;Profil einrichten&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/profil_einrichten.jpg&quot; alt=&quot;Profil einrichten&quot;&gt;&lt;/div&gt;}
 Hierfür müssen wir lediglich auf unser Profil klicken und schon können wir dieses Bild sehen. Auf der linken Seite, also die grünen Pfeile, können wir die einzelnen Kategorien sehen. Diese Kategorien kannst du mit der Maus anklicken.
 
 Auf der rechten Seite finden die einzelnen Eigenschaften. Hier kannst du deine Angaben einfügen. Aber denke daran, dass dich keiner dazu zwingt und du wirklich nur das Angeben solltest, wobei du dich auch wohl fühlst. Anschließend musst du diese Eingaben nur noch speichern und schon hast du dir ein Profil erstellt und eingerichtet.
@@ -1501,10 +1503,10 @@ Heutzutage sind sehr viele Menschen auf Facebook und daher kann man mit sehr vie
 
 Als erstes betrachten wir die Möglichkeit, dass uns eine Freundschaftsanfrage gestellt wird.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/freundschaftsanfrage.jpg&quot; alt=&quot;Freundschaftsanfrage1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/freundschaftsanfrage.jpg&quot; alt=&quot;Freundschaftsanfrage1&quot;&gt;&lt;/div&gt;}
 Wenn wir eine Anfrage erhalten, dann leuchtet in unserem Bild oben rechts ein Symbol auf. In diesem Symbol sehen wir zwei Personen mit einer Zahl. Wenn diese Bild aufleuchtet, dann haben wir eine Freundschaftsanfrage erhalten. Die Zahl daneben zeigt, wie viele Anfragen wir erhalten haben. Für weitere Informationen müssen wir auf das Symbol klicken.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/freundschaftsanfrage2.jpg&quot; alt=&quot;Freundschaftsanfrage2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/freundschaftsanfrage2.jpg&quot; alt=&quot;Freundschaftsanfrage2&quot;&gt;&lt;/div&gt;}
 Nun erhalten wir nähere Informationen zu diesem Thema. Wir sehen die Personen, die uns Anfragen geschickt haben. Außerdem können wir nun die Anfrage bestätigen oder löschen.
 
 [[1.3 Freundschaftsanfragen 3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
@@ -1514,7 +1516,7 @@ Als nächstes betrachten wir die andere Seite, also wenn wir eine Freundschaftsa
 
 {
 &lt;video controls&gt;
-  &lt;source src=&quot;res/kap1/freundschaftsanfragen.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;static/res/kap1/freundschaftsanfragen.mp4&quot; type=&quot;video/mp4&quot;&gt;
 Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 &lt;/video&gt;
 }
@@ -1523,7 +1525,7 @@ Nachdem wir das Video angeguckt haben, können wir nun Freundschaftsanfragen ver
 
 Nun könnt ihr eure Freundesliste füllen und wahrscheinlich wird euer Ergebnis bald genauso aussehen wie meines!
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/viele_freunde.jpg&quot; alt=&quot;Viele Freunde&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/viele_freunde.jpg&quot; alt=&quot;Viele Freunde&quot;&gt;&lt;/div&gt;}
 {
 [[1.3 Freundschaftsanfragen&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Kapitelanfang&lt;/button&gt;]]
 
@@ -1532,7 +1534,7 @@ Nun könnt ihr eure Freundesliste füllen und wahrscheinlich wird euer Ergebnis 
 </tw-passagedata>
 <tw-passagedata pid="126" name="1.4 Kommunikation 2" tags="" position="1221,820">&#39;&#39;Kommunikation&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/privater_chat_gezoomt.jpg&quot; alt=&quot;Privater Chat gezoomt&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/privater_chat_gezoomt.jpg&quot; alt=&quot;Privater Chat gezoomt&quot;&gt;&lt;/div&gt;}
 0. Dieses Symbol leuchtet auf, wenn uns eine Person eine private Nachricht geschrieben hat. Die Zahl daneben zeigt uns, wie viele Nachrichten wir bekommen haben.
 0. In dieser Liste werden unsere Freunde angezeigt. Der grüne Kreis daneben zeigt uns an, dass diese Person gerade online ist. Wenn wir auf einen Namen in dieser Liste klicken, dann öffnet sich ein privater Chatraum, so wie er in &#39;&#39;3&#39;&#39; zu sehen ist.
 0. Das ist ein privater Chatraum. Hier können die Beteiligten Person ungestört miteinander kommunizieren. Wenn wir auf das &#39;&#39;+-Symbol&#39;&#39; klicken, dann können wir weitere Personen zu diesem Gespräch hinzufügen. 
@@ -1544,15 +1546,15 @@ Beiträge werden in Facebook direkt auf der Startseite angezeigt und können von
 
 Beiträge können mit Videos, Bildern, Ortsangaben und weiteren Elementen angereichert werden. In unserem Beispiel habe ich ein Bild meines letzten Urlaubs verwendet. Unter dem Bild können Freunde das Bild kommentieren, teilen oder liken.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/beitrag_1.jpg&quot; alt=&quot;Beitrag 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/beitrag_1.jpg&quot; alt=&quot;Beitrag 1&quot;&gt;&lt;/div&gt;}
 Nun stellt sich noch die Frage: &#39;&#39;„Wie erstelle ich einen Beitrag?“&#39;&#39;
 
 Das ist ganz einfach. Auf unsere Startseite finden wir diesen Abschnitt an erster Stelle.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/beitrag_verfassen_1.jpg&quot; alt=&quot;Beitrag verfassen 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/beitrag_verfassen_1.jpg&quot; alt=&quot;Beitrag verfassen 1&quot;&gt;&lt;/div&gt;}
 Im Bereich „Was machst du gerade?“ können wir unseren Text schreiben. Wenn wir auf Foto/Video oder Fotoalbum klicken, dann können wir Fotos &amp; Videos zu unserem Beitrag hinzufügen. Das würde dann so aussehen:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/beitrag_verfassen_2.jpg&quot; alt=&quot;Beitrag Verfassen 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/beitrag_verfassen_2.jpg&quot; alt=&quot;Beitrag Verfassen 2&quot;&gt;&lt;/div&gt;}
 Darunter erlaubt uns Facebook, unseren Beitrag nach eigenen Wünschen zu gestalten.
 
 &#39;&#39;Orange:&#39;&#39; Hier haben wir die Möglichkeit Personen hinzufügen, welche mit uns auf dem Bild sind. 
@@ -1571,32 +1573,32 @@ Wenn wir zufrieden mit unserem Post sind, dann können wir auf „Posten“ klic
 
 Jetzt bin ich in der Lage, meine eigenen Beiträge zu verfassen. Aber was passiert, wenn ich einen Fehler, z.B. bei der Rechtschreibung oder bei der Ortsangabe gemacht habe?
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Keine Panik! Auch für dieses Problem gibt es Lösungen.
 Folgendes Bild zeigt, welche Lösungen es hierzu gibt.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/beitrag_bearbeiten_1.jpg&quot; alt=&quot;Beiträge bearbeiten 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/beitrag_bearbeiten_1.jpg&quot; alt=&quot;Beiträge bearbeiten 1&quot;&gt;&lt;/div&gt;}
 
 Wenn wir auf unseren Beitrag schauen, dann bemerken wir oben rechts einen Pfeil. Wenn wir auf diesen klicken, dann öffnen sich neue Optionen, mit denen wir den Beitrag bearbeiten können. Wir haben die Möglichkeit, den Beitrag zu bearbeiten, zu löschen oder zu speichern.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/beitrag_bearbeiten_2.jpg&quot; alt=&quot;Beitrag bearbeiten 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/beitrag_bearbeiten_2.jpg&quot; alt=&quot;Beitrag bearbeiten 2&quot;&gt;&lt;/div&gt;}
 Auf der linken Seite finden wir ebenfalls einen Pfeil. Wenn wir auf diesen klicken, dann können wir die Privatsphäre-Einstellungen verändern. Wir geben also an, wer den Beitrag lesen darf. 
 Wie genau die Privatsphäre-Einstellungen getroffen werden, erfährst du in Kapitel Zwei!
 
 [[1.4 Kommunikation 5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="129" name="1.4 Kommunikation 5" tags="" position="1221,1270">&#39;&#39;Kommunikation&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces/confused.jpg&quot; alt=&quot;Verwirrte Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/faces/confused.jpg&quot; alt=&quot;Verwirrte Susi&quot;&gt;&lt;/div&gt;}
 Innerhalb dieses Kapitels kamen schon wieder neue Begriffe vor! Was bedeuten &#39;&#39;liken&#39;&#39;, &#39;&#39;kommentieren&#39;&#39; und &#39;&#39;teilen&#39;&#39; auf Facebook?
 
 Mit //liken// wird dem Verfasser gezeigt, welche Gefühle der Leser damit verbindet. Wenn die Maus länger auf dem Begriff „Gefällt mir“ steht, dann werden sechs Bilder gezeigt, welche unterschiedliche Gefühle demonstrieren. Hier kann sich der Leser aussuchen, welches am besten seine Gefühle zu diesem Beitrag beschreibt.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/liken.jpg&quot; alt=&quot;Liken&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/liken.jpg&quot; alt=&quot;Liken&quot;&gt;&lt;/div&gt;}
 //Kommentieren// ist ganz einfach. Hier kann jeder Leser sein Kommentar zu diesem Bild abgeben. Zu meinem Strandbeitrag hat Bernd Meyer geschrieben: „Wow. Da wird man glatt neidisch“.
 
 Mit //teilen// ist gemeint, dass eine Person diesen Beitrag auch auf seiner Pinnwand zeigt, damit auch seine Freunde diesen Beitrag sehen. Der Nutzen hieran ist, dass dieser Beitrag eine höhere Reichweite erhält. 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/schnittmenge.jpg&quot; alt=&quot;Schnittmenge&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/schnittmenge.jpg&quot; alt=&quot;Schnittmenge&quot;&gt;&lt;/div&gt;}
 Beispiel: Person A sucht eine vermisste Person. Ihre Reichweite (die Freunde, die das lesen können) ist begrenzt. Person B möchte Person A helfen und teilt ihren Beitrag. Dadurch können mehr Leute diesen Beitrag lesen, da Person B Freunde besitzt, welche Person A nicht besitzt. Somit erhält ein Beitrag eine größere Reichweite.
 {
 [[1.4 Kommunikation&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum Kapitelanfang&lt;/button&gt;]]
@@ -1606,12 +1608,12 @@ Beispiel: Person A sucht eine vermisste Person. Ihre Reichweite (die Freunde, di
 </tw-passagedata>
 <tw-passagedata pid="130" name="1.6 Gruppen 2" tags="" position="1521,820">&#39;&#39;Gruppen&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Überglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Überglückliche Susi&quot;&gt;&lt;/div&gt;}
 Natürlich kann jede Person auch eigene Gruppen erstellen und Leute hierzu einladen. Im folgenden Video wird erläutert, wie Gruppen in Facebook erstellt und bearbeitet werden. Außerdem gibt es noch eine Erläuterung der Privatsphäre-Einstellungen (Offene, geschlossene und geheime Gruppen).
 
 {
 &lt;video controls&gt;
-  &lt;source src=&quot;res/kap1/create_groups.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;static/res/kap1/create_groups.mp4&quot; type=&quot;video/mp4&quot;&gt;
 Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 &lt;/video&gt;
 }
@@ -1625,14 +1627,14 @@ Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 
 Nicht nur Personen, sondern auch Organisationen, Verbände oder Agenturen haben ihre eigenen Facebook Seiten. Du könntest nach deinem (ehemaligen) Arbeitgeber suchen. Höchstwahrscheinlich ist dieser auch auf Facebook vertreten und informiert alle Interessierten über die neuesten Entwicklungen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/deutsche_post.jpg&quot; alt=&quot;Deutsche Post&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/deutsche_post.jpg&quot; alt=&quot;Deutsche Post&quot;&gt;&lt;/div&gt;}
 Ebenfalls besteht die Möglichkeit Nachrichtenagenturen zu abonnieren, damit keine aktuellen Geschehnisse in der Welt mehr verpasst werden. Somit müsste man kein Geld mehr für eine Zeitung ausgeben. Einfach Facebook starten und sich informieren lassen.
 
 Habe ich dein Interesse geweckt? Dann schau dir das folgende Video an. Dort wird euch erklärt, wie ihr solche Seiten abonnieren könnt.
 
 {
 &lt;video controls&gt;
-  &lt;source src=&quot;res/kap1/person_abonnieren.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;static/res/kap1/person_abonnieren.mp4&quot; type=&quot;video/mp4&quot;&gt;
 Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 &lt;/video&gt;
 }
@@ -1650,7 +1652,7 @@ Nun bist du auch mobil mit Facebook verbunden und kannst jederzeit informiert we
 
 Wichtig zu wissen ist noch, was das Symbol ganz rechts mit den drei Balken darstellt. Hier findet ihr eure Freunde, Listen, Gruppen und so weiter.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/handy_1.jpg&quot; alt=&quot;Facebook Handy 1&quot;&gt;&lt;/div&gt;}{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;res/kap1/handy_2.jpg&quot; alt=&quot;Facebook Handy 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/handy_1.jpg&quot; alt=&quot;Facebook Handy 1&quot;&gt;&lt;/div&gt;}{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/handy_2.jpg&quot; alt=&quot;Facebook Handy 2&quot;&gt;&lt;/div&gt;}
 Diese beiden Bilder zeigen euch, wie es auf einem Handy (mit dem Betriebssystem Android) aussieht. Wenn du ein anderes Betriebssystem benutzt, dann sollten die Unterschiede nur gering ausfallen.
 
 {
@@ -1688,7 +1690,7 @@ In diesem Kapitel sollst Du lernen …
 
 {
 &lt;video controls&gt;
-  &lt;source src=&quot;res/kap3/datenschutz.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;static/res/kap3/datenschutz.mp4&quot; type=&quot;video/mp4&quot;&gt;
 Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 &lt;/video&gt;
 }
@@ -1713,7 +1715,7 @@ Susi Sorglos ist sich unsicher, welche Daten sie problemlos ins Internet stellen
 &#39;&#39;Frage 1:&#39;&#39;
 Da sie vor kurzem Umgezogen ist, möchte sie ihren Freunden ihre neue Adresse mitteilen und postet sie an ihre Pinnwand, da dies viel einfacher geht als alle persönlich anzuschreiben. 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap3/datenschutz_frage_1.jpg&quot; alt=&quot;Facebook Datenschutz 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap3/datenschutz_frage_1.jpg&quot; alt=&quot;Facebook Datenschutz 1&quot;&gt;&lt;/div&gt;}
 * (link: &#39;&lt;strong&gt;Schutzbedürftig&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;K3.1.4.1.1&quot;)]
 * (link: &#39;&lt;strong&gt;Nicht Schutzbedürftig&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;K3.1.4.1.2&quot;)]</tw-passagedata>
 <tw-passagedata pid="138" name="K3.1.4.1.1" tags="" position="5140,940">&#39;&#39;Deine Antwort:&#39;&#39;
@@ -1721,7 +1723,7 @@ Da sie vor kurzem Umgezogen ist, möchte sie ihren Freunden ihre neue Adresse mi
 
 &#39;&#39;Sehr gut!&#39;&#39; 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
 Die persönliche Adresse gehört definitiv zu den persönlichen Angaben, die sie nicht öffentlich im Internet preisgeben sollte.
 
 [[K3.1.4.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -1730,7 +1732,7 @@ Die persönliche Adresse gehört definitiv zu den persönlichen Angaben, die sie
 
 &#39;&#39;Achtung!&#39;&#39; 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Die Adresse gehört zu den sehr persönlichen Angaben von Susi und ist deshalb auch Schutzbedürftig. Sie sollte sie besser nicht öffentlich im Internet preisgeben.
 
 [[K3.1.4.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -1739,7 +1741,7 @@ Die Adresse gehört zu den sehr persönlichen Angaben von Susi und ist deshalb a
 &#39;&#39;Frage 2:&#39;&#39;
 Ihre E-Mail-Adresse und ihre Telefonnummer, falls sie mal jemanden außerhalb des sozialen Netzwerkes erreichen möchte.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap3/datenschutz_frage_2.jpg&quot; alt=&quot;Facebook Datenschutz 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap3/datenschutz_frage_2.jpg&quot; alt=&quot;Facebook Datenschutz 2&quot;&gt;&lt;/div&gt;}
 * (link: &#39;&lt;strong&gt;Schutzbedürftig&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;K3.1.4.2.1&quot;)]
 * (link: &#39;&lt;strong&gt;Nicht Schutzbedürftig&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;K3.1.4.2.2&quot;)]</tw-passagedata>
 <tw-passagedata pid="141" name="K3.1.4.2.1" tags="" position="5140,1241">&#39;&#39;Deine Antwort:&#39;&#39;
@@ -1747,7 +1749,7 @@ Ihre E-Mail-Adresse und ihre Telefonnummer, falls sie mal jemanden außerhalb de
 
 &#39;&#39;Sehr gut!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
 Die E-Mail-Adresse und die Telefonnummer gehören auch zu den persönlichen Angaben, die sie nicht öffentlich im Internet preisgeben sollte. Diese Informationen sollte sie nur bestimmten Personen anvertrauen.
 
 [[K3.1.4.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -1756,7 +1758,7 @@ Die E-Mail-Adresse und die Telefonnummer gehören auch zu den persönlichen Anga
 
 &#39;&#39;Achtung!&#39;&#39; 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Die E-Mail-Adresse gehört auch zu den persönlichen Angaben von Susi und ist deshalb auch Schutzbedürftig. Sie sollte sie besser nicht öffentlich im Internet preisgeben, sondern nur denen geben, die sie auch wirklich benötigen.
 
 [[K3.1.4.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -1765,7 +1767,7 @@ Die E-Mail-Adresse gehört auch zu den persönlichen Angaben von Susi und ist de
 &#39;&#39;Frage 3:&#39;&#39;
 Einen Link zu einem Zeitungsartikel, den sie sehr interessant findet und gerne mit ihren Freunden teilen möchte.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap3/datenschutz_frage_3.jpg&quot; alt=&quot;Facebook Datenschutz 3&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap3/datenschutz_frage_3.jpg&quot; alt=&quot;Facebook Datenschutz 3&quot;&gt;&lt;/div&gt;}
 * (link: &#39;&lt;strong&gt;Schutzbedürftig&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;K3.1.4.3.1&quot;)]
 * (link: &#39;&lt;strong&gt;Nicht Schutzbedürftig&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;K3.1.4.3.2&quot;)]</tw-passagedata>
 <tw-passagedata pid="144" name="K3.1.4.3.1" tags="" position="5140,1541">&#39;&#39;Deine Antwort:&#39;&#39;
@@ -1773,7 +1775,7 @@ Einen Link zu einem Zeitungsartikel, den sie sehr interessant findet und gerne m
 
 &#39;&#39;Leider falsch!&#39;&#39; 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Einen Bericht, der Online für alle frei zugänglich ist, kann Susi Sorglos ohne Bedenken posten, denn es handelt sich weder um sachliche noch um personenbezogene Daten.
 
 [[K3.1.4.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -1782,7 +1784,7 @@ Einen Bericht, der Online für alle frei zugänglich ist, kann Susi Sorglos ohne
 
 &#39;&#39;Richtig!&#39;&#39; 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
 Einen Bericht, der Online für alle frei zugänglich ist, kann Susi Sorglos ohne Bedenken posten, denn es handelt sich weder um sachliche noch um personenbezogene Daten.
 
 [[K3.1.4.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -1797,7 +1799,7 @@ Ein Foto von sich selbst und ihrem neuen Auto, bei dem auch das Nummernschild zu
 
 &#39;&#39;Sehr gut!&#39;&#39; 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
 Ein Kfz Nummernschild gehört zu den sachlichen Angaben, die sie nicht öffentlich im Internet preisgeben sollte. Erst wenn das Nummernschild unkenntlich gemacht wurde, kann sie das Foto posten.
 
 [[K3.1.4.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -1806,7 +1808,7 @@ Ein Kfz Nummernschild gehört zu den sachlichen Angaben, die sie nicht öffentli
 
 &#39;&#39;Achtung!&#39;&#39; 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Ein Kfz Nummernschild gehört zu den sachlichen Angaben von Susi und ist deshalb auch schutzbedürftig. Sie sollte sie besser nicht öffentlich im Internet preisgeben, sondern zumindest unkenntlich machen.
 
 [[K3.1.4.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
@@ -1821,7 +1823,7 @@ Schutzbedürftig
 
 &#39;&#39;Leider falsch!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Ein so persönliches Dokument wie ein Zeugnis ist selbstverständlich schutzbedürftig. Jedoch hat Susi alle persönlichen Angaben unkenntlich gemacht, sodass sie das Foto posten kann ohne dass es schutzbedürftige Daten enthält.
 
 [[K3.1.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur Punktestand&lt;/button&gt;]]</tw-passagedata>
@@ -1830,7 +1832,7 @@ Nicht Schutzbedürftig
 
 &#39;&#39;Richtig!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
 Da alle persönlichen Angaben geschwärzt wurden, kann sie das Foto posten. Bedenklich wäre es nur, wenn Daten wie ihre Noten oder ihr Wohnort etc. zu sehen wären.
 
 [[K3.1.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur Punktestand&lt;/button&gt;]]</tw-passagedata>
@@ -1897,7 +1899,7 @@ Jedoch werden Facebook sogenannte Verwertungsrechte eingeräumt. In den Nutzungs
 
 Häufig kursieren in sozialen Netzwerken Fotos oder Texte, die erklären, dass der Nutzer den Nutzungsrechten von dem Netzwerk widerspricht und ihm somit die Nutzung der persönlichen Inhalte untersagen. Sicherlich wirst du bei deinen Erlebnissen in der virtuellen Welt häufiger auf solche Texte stoßen:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap3/nutzungsbedingungen_widersprechen.png&quot; alt=&quot;Facebook Nutzerbedingungen&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap3/nutzungsbedingungen_widersprechen.png&quot; alt=&quot;Facebook Nutzerbedingungen&quot;&gt;&lt;/div&gt;}
 Einige Nutzer denken, sie seien mit dem Posten solcher Texte auf der sicheren Seite – aber: Sie sind &#39;&#39;rechtlich wirkungslos&#39;&#39;.
 
 [[K3.2.7&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Quiz&lt;/button&gt;]]</tw-passagedata>
@@ -1913,7 +1915,7 @@ Darf sie das?
 
 Das ist falsch!
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Schließlich ist Susi nicht die Eigentümerin des Fotos.
 
 [[K3.2.8&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu Szenario 2&lt;/button&gt;]]</tw-passagedata>
@@ -1922,7 +1924,7 @@ Schließlich ist Susi nicht die Eigentümerin des Fotos.
 
 Genau!
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
 Schließlich ist Susi nicht die Eigentümerin des Fotos.
 
 [[K3.2.8&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu Szenario 2&lt;/button&gt;]]</tw-passagedata>
@@ -1938,7 +1940,7 @@ Ist sie nun auf der sicheren Seite?
 
 &#39;&#39;Richtig!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
 Das Foto zeigt ihr Eigentum und ist auch von ihr selbst gemacht worden. Sie ist Urheber des Fotos und darf es somit auch verbreiten.
 
 [[K3.2.9&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu Szenario 3&lt;/button&gt;]]</tw-passagedata>
@@ -1947,7 +1949,7 @@ Das Foto zeigt ihr Eigentum und ist auch von ihr selbst gemacht worden. Sie ist 
 
 &#39;&#39;Doch, darf sie!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/confused.jpg&quot; alt=&quot;Confused Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/confused.jpg&quot; alt=&quot;Confused Face&quot;&gt;&lt;/div&gt;}
 Immerhin hat sie das Foto selbst gemacht und ist die Urheberin.
 
 [[K3.2.9&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu Szenario 3&lt;/button&gt;]]</tw-passagedata>
@@ -1968,7 +1970,7 @@ Susi Sorglos meldet den Verstoß beim Anbieter und dieser prüft die Meldung. Di
 
 Die Nachbarin meldet sich nach kurzer Zeit bei Susi. Sie entschuldigt sich und verspricht zukünftig nicht so leichtfertig mit den Fotos anderer umzugehen.
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap3/konversation.png&quot; alt=&quot;Facebook Konversation&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap3/konversation.png&quot; alt=&quot;Facebook Konversation&quot;&gt;&lt;/div&gt;}
 Problem gelöst!
 
 [[K3.2.10&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>
@@ -2016,7 +2018,7 @@ Mittels sogenannter Cookies werden Informationen zu dir und deinem Verhalten im 
 
 {
 &lt;video controls&gt;
-  &lt;source src=&quot;res/kap3/cookies.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;static/res/kap3/cookies.mp4&quot; type=&quot;video/mp4&quot;&gt;
 Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 &lt;/video&gt;
 }
@@ -2034,7 +2036,7 @@ Keine Panik, denn wie Susi Sorglos bereits feststellte, ist personalisierte Werb
 
 Werbemittel, die Nutzungsdaten erheben, kannst du außerdem an folgendem Symbol erkennen:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;picture&quot; src=&quot;res/kap3/personalisierte_werbung.jpg&quot; alt=&quot;Personalisierte Werbung Symbol&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;picture&quot; src=&quot;static/res/kap3/personalisierte_werbung.jpg&quot; alt=&quot;Personalisierte Werbung Symbol&quot;&gt;&lt;/div&gt;}
 Ein positiver Effekt dieser Werbung ist zum Beispiel, dass die passende Werbung tatsächlich etwas weniger störend ist als beliebige Anzeigen. Denn auch wenn du die personalisierte Werbung abschaltest, &#39;&#39;bekommst du immer noch Werbung angezeigt&#39;&#39;.
 
 Möchtest du sie dennoch abschalten zeigen wir dir im nächsten Video wie du diese abschalten kannst:
@@ -2050,7 +2052,7 @@ Wie du deaktivieren kannst, dass die angezeigte Werbung personalisiert ist, erf�
 
 {
 &lt;video controls&gt;
-  &lt;source src=&quot;res/kap3/personalisierte_werbung_deaktivieren.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;static/res/kap3/personalisierte_werbung_deaktivieren.mp4&quot; type=&quot;video/mp4&quot;&gt;
 Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 &lt;/video&gt;
 }
@@ -2060,7 +2062,7 @@ Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 
 Nachdem Susi Sorglos einige Zeit in sozialen Netzwerken aktiv war, fällt ihr bei den Werbeanzeigen etwas auf. Immer wieder erscheint ein blaues Symbol am Rand der Werbeanzeige: 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;picture&quot; src=&quot;res/kap3/personalisierte_werbung.jpg&quot; alt=&quot;Personalisierte Werbung Symbol&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;picture&quot; src=&quot;static/res/kap3/personalisierte_werbung.jpg&quot; alt=&quot;Personalisierte Werbung Symbol&quot;&gt;&lt;/div&gt;}
 Was bedeutet dieses Symbol für dich?
 * (link: &#39;&lt;strong&gt;Es werden persönliche Daten, wie der Name und die Adresse erhoben und gespeichert.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;K3.3.6.1&quot;)]
 * (link: &#39;&lt;strong&gt;Das Symbol weist darauf hin, dass das anklicken der Werbeanzeige potenziell gefährlich ist.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;K3.3.6.2&quot;)]
@@ -2070,7 +2072,7 @@ Was bedeutet dieses Symbol für dich?
 
 &#39;&#39;Falsch!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Dies ist nicht der Fall. Es werden keine persönlichen Daten von ihr erhoben oder gespeichert. Versuche es erneut.
 
 [[K3.3.6&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zu den Antwortmöglichkeiten&lt;/button&gt;]]
@@ -2080,7 +2082,7 @@ Dies ist nicht der Fall. Es werden keine persönlichen Daten von ihr erhoben ode
 
 &#39;&#39;Falsch!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Nein, diese Werbeanzeige ist nicht gefährlich für sie. Versuche es erneut.
 
 [[K3.3.6&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zu den Antwortmöglichkeiten&lt;/button&gt;]]
@@ -2090,7 +2092,7 @@ Nein, diese Werbeanzeige ist nicht gefährlich für sie. Versuche es erneut.
 
 &#39;&#39;Korrekt!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
 Susi bekommt mit diesem Zeichen angezeigt, dass diese Werbeanzeige auf sie persönlich zugeschnitten ist und es wahrscheinlich ist, dass sie ihren Interessen entspricht.
 
 [[K3.3.7&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu &quot;Das Internet vergisst nie&quot;&lt;/button&gt;]]</tw-passagedata>
@@ -2110,7 +2112,7 @@ Können die werbetreibenden Unternehmen mich genau identifizieren?
 
 &#39;&#39;Falsch!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Nein, Susi bleibt anonym. Die Werbetreibenden können sie nicht genau identifizieren.
 
 [[K3.3.8.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu Frage 2&lt;/button&gt;]]</tw-passagedata>
@@ -2119,7 +2121,7 @@ Nein, Susi bleibt anonym. Die Werbetreibenden können sie nicht genau identifizi
 
 &#39;&#39;Richtig!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
 Susi bleibt tatsächlich anonym. Die Werbetreibenden können sie nicht genau identifizieren.
 
 [[K3.3.8.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu Frage 2&lt;/button&gt;]]</tw-passagedata>
@@ -2132,7 +2134,7 @@ Ist es möglich, die personalisierte Werbung abzuschalten?
 
 &#39;&#39;Richtig!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
 Auf der Seite &#39;&#39;http://www.youronlinechoices.com/de/praferenzmanagement/&#39;&#39; können Anbieter von personalisierten Werbeanzeigen deaktiviert und auch wieder aktiviert werden.
 
 [[K3.3.8.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu Frage 3&lt;/button&gt;]]</tw-passagedata>
@@ -2141,7 +2143,7 @@ Auf der Seite &#39;&#39;http://www.youronlinechoices.com/de/praferenzmanagement/
 
 &#39;&#39;Leider falsch.&#39;&#39; 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Auf der Seite &#39;&#39;http://www.youronlinechoices.com/de/praferenzmanagement/&#39;&#39; können Anbieter von personalisierten Werbeanzeigen deaktiviert und auch wieder aktiviert werden.
 
 [[K3.3.8.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu Frage 3&lt;/button&gt;]]</tw-passagedata>
@@ -2154,7 +2156,7 @@ Werden mir, nachdem ich die personalisierte Werbung abgeschaltet habe, keine Wer
 
 &#39;&#39;Leider falsch.&#39;&#39; 
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Es werden weiterhin Werbeanzeigen angezeigt. Jedoch sind diese nicht speziell auf Susis Interessen zugeschnitten, sondern zufällig ausgewählt.
 
 [[K3.3.9&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>
@@ -2163,7 +2165,7 @@ Es werden weiterhin Werbeanzeigen angezeigt. Jedoch sind diese nicht speziell au
 
 &#39;&#39;Richtig.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
 Es werden weiterhin Werbeanzeigen angezeigt. Jedoch sind diese nicht speziell auf Susis Interessen zugeschnitten, sondern zufällig ausgewählt.
 
 [[K3.3.9&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>
@@ -2215,7 +2217,7 @@ Das folgende Video soll über die Gefahren aufklären, die im Internet lauern k�
 
 {
 &lt;video controls&gt;
-  &lt;source src=&quot;res/kap3/gefahren.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;static/res/kap3/gefahren.mp4&quot; type=&quot;video/mp4&quot;&gt;
 Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 &lt;/video&gt;
 }
@@ -2253,7 +2255,7 @@ Gehe erst alle drei Maßnahmen durch und gehe dann weiter zu:
 
 {
 &lt;video controls&gt;
-  &lt;source src=&quot;res/kap3/schutz_vor_identitaetsdiebstahl.mp4&quot; type=&quot;video/mp4&quot;&gt;
+  &lt;source src=&quot;static/res/kap3/schutz_vor_identitaetsdiebstahl.mp4&quot; type=&quot;video/mp4&quot;&gt;
 Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 &lt;/video&gt;
 }
@@ -2361,7 +2363,7 @@ Thema: //Anmeldung//
 
 Betrachte das folgende Bild:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 2&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap1/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 2&quot;&gt;&lt;/div&gt;}
 Welches Feld müssen Anwender ausfüllen, welche sich neu auf Facebook registrieren wollen?
 * (link: &#39;&lt;strong&gt;Feld 1&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.1.1&quot;)]
 * (link: &#39;&lt;strong&gt;Feld 2&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.1.2&quot;)]
@@ -2370,7 +2372,7 @@ Welches Feld müssen Anwender ausfüllen, welche sich neu auf Facebook registrie
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]</tw-passagedata>
@@ -2378,7 +2380,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2390,7 +2392,7 @@ Thema: //Anmeldung//
 
 Betrachte das folgende Bild:
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap1/anmeldung2.jpg&quot; alt=&quot;Facebook Anmeldung 1&quot;&gt;&lt;/div&gt;}
 Welche Personen können das Feld 1 benutzen?
 * (link: &#39;&lt;strong&gt;Personen, die bereits bei Facebook registriert sind.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.2.1&quot;)]
 * (link: &#39;&lt;strong&gt;Personen, die in Facebook unbekannt bleiben möchten.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.2.2&quot;)]
@@ -2399,7 +2401,7 @@ Welche Personen können das Feld 1 benutzen?
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2409,7 +2411,7 @@ Weiter geht’s zur nächsten Frage:
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]</tw-passagedata>
@@ -2425,7 +2427,7 @@ Warum ist es ratsam ein Profilbild zu verwenden?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2434,7 +2436,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2447,7 +2449,7 @@ Thema: //Freundschaftsanfragen//
 
 Welches dieser Symbole zeigt dem Anwender, dass er eine neue Freundschaftsanfrage erhalten hat?
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1/quiz.jpg&quot; alt=&quot;Facebook Benachrichtigung&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap1/quiz.jpg&quot; alt=&quot;Facebook Benachrichtigung&quot;&gt;&lt;/div&gt;}
 * (link: &#39;&lt;strong&gt;Symbol 1&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.4.1&quot;)]
 * (link: &#39;&lt;strong&gt;Symbol 2&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.4.2&quot;)]
 * (link: &#39;&lt;strong&gt;Symbol 3&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.4.2&quot;)]</tw-passagedata>
@@ -2455,7 +2457,7 @@ Welches dieser Symbole zeigt dem Anwender, dass er eine neue Freundschaftsanfrag
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2466,7 +2468,7 @@ Weiter geht’s zur nächsten Frage:
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2483,7 +2485,7 @@ Wieviele Freunde kann eine Person maximal haben?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2492,7 +2494,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2511,7 +2513,7 @@ Was für Kommunikationsformen gibt es?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.6&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2520,7 +2522,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2533,7 +2535,7 @@ Thema: //Beiträge//
 
 Welches Symbol zeigt private Nachrichten an?
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;res/kap1/quiz.jpg&quot; alt=&quot;Facebook Benachrichtigung&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap1/quiz.jpg&quot; alt=&quot;Facebook Benachrichtigung&quot;&gt;&lt;/div&gt;}
 * (link: &#39;&lt;strong&gt;Symbol 1&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.7.1&quot;)]
 * (link: &#39;&lt;strong&gt;Symbol 2&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.7.2&quot;)]
 * (link: &#39;&lt;strong&gt;Symbol 3&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.7.1&quot;)]</tw-passagedata>
@@ -2541,7 +2543,7 @@ Welches Symbol zeigt private Nachrichten an?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.7&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2550,7 +2552,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2569,7 +2571,7 @@ Was ist eine Private Nachricht?
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2580,7 +2582,7 @@ Weiter geht’s zur nächsten Frage:
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.8&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2597,7 +2599,7 @@ Können Beiträge nachträglich geändert werden?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.9&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2606,7 +2608,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2625,7 +2627,7 @@ Wieviele Arten von Likes gibt es?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.10&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2634,7 +2636,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2653,7 +2655,7 @@ Wozu dienen Listen?
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2663,7 +2665,7 @@ Weiter geht’s zur nächsten Frage:
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.11&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2680,7 +2682,7 @@ Können eigene Gruppen erstellt werden?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.12&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2689,7 +2691,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2707,7 +2709,7 @@ Wer kann Gruppenmitglieder aus der Gruppe werfen?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.13&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2716,7 +2718,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2734,7 +2736,7 @@ Was kann ein Außenstehender von einer „geschlossenen Gruppe“ sehen?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.14&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2743,7 +2745,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2761,7 +2763,7 @@ Was ist eine geheime Gruppe?
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2771,7 +2773,7 @@ Weiter geht’s zur nächsten Frage:
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.15&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2788,7 +2790,7 @@ Welche Privatsphäre Einstellungen gibt es?
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2798,7 +2800,7 @@ Weiter geht’s zur nächsten Frage:
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.16&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2815,7 +2817,7 @@ Kann ich eine Person des öffentlichen Lebens abonnieren?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.17&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2824,7 +2826,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 Weiter geht’s zur nächsten Frage:
@@ -2842,7 +2844,7 @@ Sieht Facebook auf jedem Smartphone gleich aus?
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.18&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
@@ -2851,7 +2853,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
-{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
+{&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
 Das war die richtige Antwort.
 
 [[1.10&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>

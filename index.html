@@ -11,9 +11,12 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="index" startnode="261" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("css/bootstrap.min.css");
-@import url("css/bootstrap-theme.min.css");
-@import url("css/style.css");
+<tw-storydata name="index" startnode="261" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("static/css/bootstrap.min.css");
+@import url("static/css/bootstrap-theme.min.css");
+@import url("static/css/style.css");
+
+
+
 
 
 
@@ -69,14 +72,17 @@
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
-	$.getScript("js/bootstrap.min.js", function(){
+	$.getScript("static/js/bootstrap.min.js", function(){
 		console.log("bootstrap.min.js loaded!");
 	});
 
-	$.getScript("js/myscript.js", function(){
+	$.getScript("static/js/myscript.js", function(){
 		console.log("myscript.js loaded!");
 	});
 });
+
+
+
 
 
 
@@ -202,13 +208,13 @@ Wir hoffen, dass es dir gefällt. Viel Spaß!
 &lt;div class=&quot;footer&quot;&gt;
 (if: (history:)&#39;s length &gt; 0)[[[&lt;button class=&quot;btn btn-info&quot;&gt;Zurück&lt;/button&gt;-&gt;(string: (history:)&#39;s last)]]]
 
-[[Übersicht&lt;-&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Zur Übersicht&lt;/button&gt;]]
+[[Hauptseite&lt;-&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Hauptseite&lt;/button&gt;]]
 
 &lt;/div&gt;
 
 &lt;script&gt;
 $(document).ready(function() {
-	$.getScript(&quot;js/footer.js&quot;);
+	$.getScript(&quot;static/js/footer.js&quot;);
 });
 &lt;/script&gt;
 }</tw-passagedata>
@@ -2283,7 +2289,7 @@ Wenn du alle Zuordnungen richtig gewählt hast, erhältst du die Meldung &quot;/
 Klicke anschließend auf den Button unten, um zum Punktestand zu kommen.
 
 {
-&lt;script type=&quot;text/javascript&quot; src=&quot;js/drag-drop.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;static/js/drag-drop.js&quot;&gt;&lt;/script&gt;
 &lt;div id=&quot;DragAndDrop&quot;&gt;
 
 &lt;!-- Column 1 --&gt;
@@ -2875,14 +2881,14 @@ Nachname: &lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;
 	(set: $firstname to ?firstname)
 	(set: $lastname to ?lastname)
 	(if: $firstname is not &quot;Spieler&quot;)[
-		(replace: ?link)[(link-goto: &quot;Weiter&quot;, &quot;Willkommen zurück&quot;)]
+		(replace: ?link)[(link-goto: &quot;Zur zuletzt besuchten Seite&quot;, &quot;Letzte Session&quot;)]
 		(stop:)
 	]
 ]
 {
 &lt;script&gt;
 $(document).ready(function() {
-	$.getScript(&quot;js/get-variable.js&quot;);
+	$.getScript(&quot;static/js/get-variable.js&quot;);
 });
 &lt;/script&gt;
 }
@@ -2902,62 +2908,51 @@ Nachname: &lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;
 Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot;&gt;
 
 &lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;firstname&#39;);submitVariable(&#39;lastname&#39;);submitVariable(&#39;age&#39;);&quot;&gt;Bestätigen&lt;/button&gt;
-
+{
+[$firstname]&lt;firstname|
+[$lastname]&lt;lastname|
+[$age]&lt;age|
+}
 |message&gt;[]
 (live:100ms)[
 	(set: $firstname to ?firstname)
 	(set: $lastname to ?lastname)
 	(set: $age to ?age)
 	(if: $firstname is not &quot;Vorname&quot; and $lastname is not &quot;Nachname&quot; and $age is not &quot;Alter&quot;)[
-		(replace: ?message)[(link-goto: &quot;Weiter&quot;, &quot;Willkommen zurück&quot;)]
+		(replace: ?message)[(link-goto: &quot;Weiter&quot;, &quot;Hauptseite&quot;)]
 		(stop:)
 	  ]]
-{[]&lt;variablen|
-(click: ?variablen)[
-[$firstname]&lt;firstname|
-[$lastname]&lt;lastname|
-[$age]&lt;age|
-]}
 {
 &lt;script&gt;
 $(document).ready(function() {
-	$.getScript(&quot;js/get-variable.js&quot;);
+	$.getScript(&quot;static/js/get-variable.js&quot;);
 });
 &lt;/script&gt;
 }</tw-passagedata>
-<tw-passagedata pid="262" name="Willkommen zurück" tags="" position="200,217">{
-&lt;!-- Here the savegame is loaded --&gt;
-(if: (savedgames:) contains &quot;A&quot;)[(loadgame: &quot;A&quot;)]
-}
-&lt;div id=&quot;main&quot;&gt;
-    &lt;b&gt;Willkommen, $firstname $lastname!&lt;/b&gt;
-	
-	Alter: $age
-    &lt;div id=&quot;lastsession&quot;&gt;
-      Wo habe ich das letzte Mal aufgehört?
-	  {(if: (saved-games:) contains &quot;Slot A&quot;)[
-  (link: &quot;Load game&quot;)[(load-game:&quot;Slot A&quot;)]
+<tw-passagedata pid="262" name="Hauptseite" tags="" position="200,217">&lt;b&gt;Willkommen, $firstname $lastname!&lt;/b&gt;
+
+Alter: $age
+
+Hier klicken, um den letzten Speicherstand zu laden:
+{(if: (saved-games:) contains &quot;Slot A&quot;)[
+(link: &quot;Load game&quot;)[(load-game:&quot;Slot A&quot;)]
 ]}
-    &lt;/div&gt;
-    &lt;div id=&quot;scoreandrang&quot;&gt;
-      Aktueller Punktestand: $score
-      &lt;br&gt;
-      {Aktueller Rang: 
-	  (if: $score &lt;= 5)[Neuling]
-	  (else-if: 5 &lt; $score and $score &lt;= 10)[Fortgeschrittener Anfänger]
-	  (else-if: 10 &lt; $score and $score &lt;= 15)[Kompetenter]
-	  (else-if: 15 &lt; $score and $score &lt;= 20)[Gewandter]
-	  (else-if: $score &gt; 20)[Experte]}
-    &lt;/div&gt;
-    &lt;div id=&quot;top10&quot;&gt;
-      Übersicht Punktestand der 10 besten Spieler:
-	  {
+
+Aktueller Punktestand: $score
+
+{Aktueller Rang: 
+(if: $score &lt;= 5)[Neuling]
+(else-if: 5 &lt; $score and $score &lt;= 10)[Fortgeschrittener Anfänger]
+(else-if: 10 &lt; $score and $score &lt;= 15)[Kompetenter]
+(else-if: 15 &lt; $score and $score &lt;= 20)[Gewandter]
+(else-if: $score &gt; 20)[Experte]}
+
+Übersicht Punktestand der 10 besten Spieler:
+{
 &lt;div class=&quot;continue&quot;&gt;
 [[Top10&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Top 10 Spieler&lt;/button&gt;]]
-&lt;/div&gt;
 }
-     &lt;/div&gt;
-&lt;/div&gt;
+
 {
 &lt;div class=&quot;continue&quot;&gt;
 [[Übersicht&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Weiter zur Übersicht&lt;/button&gt;]]
@@ -3043,6 +3038,10 @@ tr:nth-child(even) {
   &lt;/tr&gt;
 &lt;/table&gt;
 &lt;/html&gt;
+}</tw-passagedata>
+<tw-passagedata pid="264" name="Letzte Session" tags="" position="48,371">{
+&lt;!-- Here the savegame is loaded --&gt;
+(if: (savedgames:) contains &quot;Slot A&quot;)[(loadgame: &quot;Slot A&quot;)]
 }</tw-passagedata>
 </tw-storydata>
 

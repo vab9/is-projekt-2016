@@ -1,5 +1,7 @@
 .DS_Store
-res/
+
+# need to upload resources to heroku for production
+# res/
 
 # python executable and cache
 server.pyc

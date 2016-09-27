@@ -2908,8 +2908,16 @@ $(document).ready(function() {
 (set: $lastname to &quot;Nachname&quot;)
 (set: $age to &quot;Alter&quot;)
 }
-Wenn du schon registriert bist, klicke [[hier-&gt;Einleitung]].
+&lt;div class=&quot;intropage&quot;&gt;
+Wenn du schon registriert bist, klicke hier: [[Einleitung&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Anmelden&lt;/button&gt;]]
 
+&lt;/div&gt;
+&lt;div class=&quot;intropage&quot;&gt;
+Um anonym zu spielen, klicke hier: [[Hauptseite&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Anoynm spielen&lt;/button&gt;]]
+&#39;&#39;Hinweis&#39;&#39;: Wenn du anonym spielst, dann wird dein Spielstand nicht gespeichert und du kannst nicht in die Bestenliste kommen.
+
+&lt;/div&gt;
+&lt;div class=&quot;intropage&quot;&gt;
 Nutze folgendes Formular, um dich bei erstmaligem Anmelden zu registrieren:
 
 Vorname:  &lt;input type=&quot;text&quot; name=&quot;firstname&quot; value=&quot;&quot;&gt;
@@ -2923,6 +2931,7 @@ Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot
 [$age]&lt;age|
 }
 |message&gt;[]
+&lt;/div&gt;
 (live:100ms)[
 	(set: $firstname to ?firstname)
 	(set: $lastname to ?lastname)

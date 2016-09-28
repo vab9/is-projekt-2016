@@ -2963,9 +2963,9 @@ $(document).ready(function() {
 });
 &lt;/script&gt;
 }</tw-passagedata>
-<tw-passagedata pid="262" name="Hauptseite" tags="" position="200,217">&lt;b&gt;Willkommen, $firstname $lastname!&lt;/b&gt;
+<tw-passagedata pid="262" name="Hauptseite" tags="" position="200,217">&lt;b&gt;Willkommen, $vorname $nachname!&lt;/b&gt;
 
-Alter: $age
+Alter: $geburtsjahr
 
 Hier klicken, um den letzten Speicherstand zu laden:
 {(if: (saved-games:) contains &quot;Slot A&quot;)[
@@ -3077,37 +3077,35 @@ tr:nth-child(even) {
 &lt;!-- Here the savegame is loaded --&gt;
 (if: (savedgames:) contains &quot;Slot A&quot;)[(loadgame: &quot;Slot A&quot;)]
 }</tw-passagedata>
-<tw-passagedata pid="265" name="Anmeldung neu" tags="" position="12,120">{&lt;script&gt;
-$(function () {
-  $.getScript(&quot;static/js/angular.min.js&quot;,function() {
-        console.log(&quot;angular.js loaded.&quot;);
-		});
-	});
-&lt;/script&gt;}
-&#39;&#39;Anmeldeseite - Serious Game&#39;&#39;
-(set: $vorname to &quot;Vorname&quot;)
-
+<tw-passagedata pid="265" name="Anmeldung neu" tags="" position="12,120">&#39;&#39;Anmeldeseite - Serious Game&#39;&#39;
+{
+(set: $vorname to &quot;Vorname&quot;)(set: $nachname to &quot;Nachname&quot;)(set: $geburtsjahr to &quot;Geburtsjahr&quot;)
+}
 &lt;div ng-app=&quot;&quot;&gt;
 Wenn du ganz neu bist, registriere dich bitte hier:
-
-&lt;input type=&quot;text&quot; ng-model=&quot;vorname&quot; placeholder=&quot;Vorname&quot; value=&quot;Vorname&quot;&gt;
-&lt;input type=&quot;text&quot; ng-model=&quot;nachname&quot; placeholder=&quot;Nachname&quot; value=&quot;Vorname&quot;&gt;
-&lt;input type=&quot;text&quot; ng-model=&quot;geburtsjahr&quot; placeholder=&quot;Geburtsjahr&quot; value=&quot;Geburtsjahr&quot;&gt;
+&lt;input type=&quot;text&quot; ng-model=&quot;vorname&quot; placeholder=&quot;Vorname&quot;&gt;
+&lt;input type=&quot;text&quot; ng-model=&quot;nachname&quot; placeholder=&quot;Nachname&quot;&gt;
+&lt;input type=&quot;text&quot; ng-model=&quot;geburtsjahr&quot; placeholder=&quot;Geburtsjahr&quot;&gt;
 &lt;input type=&quot;password&quot; name=&quot;pass&quot; placeholder=&quot;Passwort&quot;&gt;
-
-|register&gt;[//...bitte alle Felder ausfüllen...//]
-(if: $vorname is not &quot;Vorname&quot; and $nachname is not &quot;Nachname&quot; and $geburtsjahr is not &quot;Geburtsjahr&quot;)[
-	(replace: ?register)[(link-goto: &quot;Registrieren&quot;, &quot;Hauptseite&quot;)]
-	]
+|register&gt;[Eingaben prüfen]
+  (click: ?register)[
+	  (set: $vorname to ?vtemp)
+	  (set: $nachname to ?ntemp)
+	  (set: $geburtsjahr to ?gtemp)
+	  (if: $vorname is not &quot;Vorname&quot; and $nachname is not &quot;Nachname&quot; and $geburtsjahr is not &quot;Geburtsjahr&quot;)[
+		(replace: ?register)[(link-goto: &quot;Bestätigen&quot;, &quot;Hauptseite&quot;)]
+	  ]
+  ]
 {
-(put: &quot;&lt;span ng-bind=vorname&gt;&lt;/span&gt;&quot; into $vorname)
-(set: $nachname to &quot;&lt;span ng-bind=nachname&gt;&lt;/span&gt;&quot;)
-(set: $geburtsjahr to &quot;&lt;span ng-bind=geburtsjahr&gt;&lt;/span&gt;&quot;)
-(set: $score to 2)
+(set: $vtemp to &quot;&lt;span ng-bind=vorname&gt;&lt;/span&gt;&quot;)
+(set: $ntemp to &quot;&lt;span ng-bind=nachname&gt;&lt;/span&gt;&quot;)
+(set: $gtemp to &quot;&lt;span ng-bind=geburtsjahr&gt;&lt;/span&gt;&quot;)
 }
-
-Name: [$vorname]&lt;vorname| $nachname, $geburtsjahr.
-
+{
+&lt;span style=&quot;display: none&quot;&gt;
+Ihre Eingaben: [$vtemp]&lt;vtemp| [$ntemp]&lt;ntemp|, geboren [$gtemp]&lt;gtemp|.
+&lt;/span&gt;
+}
 &lt;div class=&quot;intropage&quot;&gt;
 Wenn du schon registriert bist, klicke hier: [[Einleitung&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Anmelden&lt;/button&gt;]]
 
@@ -3115,9 +3113,14 @@ Wenn du schon registriert bist, klicke hier: [[Einleitung&lt;-&lt;button class=&
 &lt;div class=&quot;intropage&quot;&gt;
 Um anonym zu spielen, klicke hier: [[Hauptseite&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Anonym spielen&lt;/button&gt;]]
 &#39;&#39;Hinweis&#39;&#39;: Wenn du anonym spielst, dann wird dein Spielstand nicht gespeichert und du kannst nicht in die Bestenliste kommen.
-
 &lt;/div&gt;
-[[Hauptseite&lt;-&lt;button class=&quot;btn btn-default&quot; onclick=&quot;&quot;&gt;Registrieren&lt;/button&gt;]]</tw-passagedata>
+{&lt;script&gt;
+$(function () {
+  $.getScript(&quot;static/js/angular.min.js&quot;,function() {
+        console.log(&quot;angular.js loaded.&quot;);
+		});
+	});
+&lt;/script&gt;}</tw-passagedata>
 </tw-storydata>
 
 

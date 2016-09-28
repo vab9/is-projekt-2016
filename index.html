@@ -76,6 +76,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("static/js/bootstrap.min.js", function(){
@@ -90,6 +91,7 @@ $(document).ready(function() {
 		console.log("fluidtextresizer.js loaded!");
 	});
 });
+
 
 
 
@@ -3016,9 +3018,9 @@ $(document).ready(function() {
 });
 &lt;/script&gt;
 }</tw-passagedata>
-<tw-passagedata pid="262" name="Hauptseite" tags="" position="200,217">&lt;b&gt;Willkommen, $firstname $lastname!&lt;/b&gt;
+<tw-passagedata pid="262" name="Hauptseite" tags="" position="200,217">&lt;b&gt;Willkommen, $vorname $nachname!&lt;/b&gt;
 
-Alter: $age
+Alter: $geburtstag
 
 Hier klicken, um den letzten Speicherstand zu laden:
 {(if: (saved-games:) contains &quot;Slot A&quot;)[

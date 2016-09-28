@@ -60,6 +60,11 @@ fluidtextresizer.prototype={
         }
         if (level<-s.levels || level>s.levels || level==this.curfontlevel) //if target level is out or range (range is int from -s.levels to +s.levels) or is current level already
             return
+
+        // get old font size
+        var oldfontsize = $( "tw-include" ).css( "fontSize" );
+
+        // change for whole tw-passage
         for (var i=0; i<$els.length; i++){
             var abslevel=Math.abs(level)
             var valchange=Math.pow(1.2, abslevel) //calculate fontlevel^1.2
@@ -67,6 +72,10 @@ fluidtextresizer.prototype={
             var newfontsize=this.defaultfontsizes[i].val * (level<0? 1/valchange : level>0? valchange : 1) + this.defaultfontsizes[i].unit
             $els[i].animate({fontSize: newfontsize}, disableanim? 0 : this.setting.animate)
         }
+
+        // change back for headers and footers
+        $("tw-include").css("fontSize", oldfontsize);
+
         if (s.persist=="session"){
             fluidtextresizer.routines.setCookie(this.cookiename, level)
         }

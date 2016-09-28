@@ -55,7 +55,10 @@ img {
 .header, .footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 1% 0;
 }
+
 
 /* buttons and links within right side of header */
 .righthead a, .righthead button {

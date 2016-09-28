@@ -12,7 +12,6 @@
 <tw-story></tw-story>
 
 <tw-storydata name="index" startnode="265" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("static/css/bootstrap.min.css");
-@import url("static/css/bootstrap-theme.min.css");
 @import url("static/css/style.css");
 
 
@@ -77,20 +76,20 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
-$(document).ready(function() {
-	$.getScript("static/js/bootstrap.min.js", function(){
-		console.log("bootstrap.min.js loaded!");
-	});
-	
-	$.getScript("static/js/jquery-1.4.2.min.js", function(){
-		console.log("jquery-1.4.2.min.js loaded!");
-	});
-	
-	$.getScript("static/js/fluidtextresizer.js", function(){
-		console.log("fluidtextresizer.js loaded!");
-	});
+$.getScript("static/js/bootstrap.min.js", function(){
+	console.log("bootstrap.min.js loaded!");
 });
+
+$.getScript("static/js/jquery-1.4.2.min.js", function(){
+	console.log("jquery-1.4.2.min.js loaded!");
+});
+
+$.getScript("static/js/fluidtextresizer.js", function(){
+	console.log("fluidtextresizer.js loaded!");
+});
+
 
 
 
@@ -3207,13 +3206,23 @@ Um anonym zu spielen, klicke hier: [[Hauptseite&lt;-&lt;button class=&quot;btn b
 
 &#39;&#39;Hinweis&#39;&#39;: Wenn du anonym spielst, dann wird dein Spielstand nicht gespeichert und du kannst nicht in die Bestenliste kommen.
 
-{&lt;script&gt;
+{
+&lt;!-- Hier laden wir alles, was wir so brauchen --&gt;
+&lt;head&gt;
+&lt;script&gt;
+
+$.getScript(&quot;static/js/textresizerinstance.js&quot;);
+
 $(function () {
   $.getScript(&quot;static/js/angular.min.js&quot;,function() {
         console.log(&quot;angular.js loaded.&quot;);
-		});
-	});
-&lt;/script&gt;}
+  });
+});
+	
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;!-- ENDE scripte --&gt;
+}
 }</tw-passagedata>
 </tw-storydata>
 

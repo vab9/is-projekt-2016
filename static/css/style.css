@@ -62,6 +62,11 @@ img {
     margin: 0 10px;
 }
 
+/* hack to stop twine from chaning height oddly */
+.righthead {
+    max-height: 45px;
+}
+
 .continue {
     text-align: center;
 }

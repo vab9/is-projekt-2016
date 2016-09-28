@@ -5,5 +5,3 @@ var mytextsizer=new fluidtextresizer({
     persist: "session", //enter "session" or "none"
     animate: 200 //animation duration of text resize. Enter 0 to disable
 });
-
-// inverse css selector - so only passage text is magnified

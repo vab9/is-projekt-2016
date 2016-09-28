@@ -74,14 +74,13 @@
 
 
 
+
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $(document).ready(function() {
 	$.getScript("static/js/bootstrap.min.js", function(){
 		console.log("bootstrap.min.js loaded!");
-	});
-
-	$.getScript("static/js/myscript.js", function(){
-		console.log("myscript.js loaded!");
 	});
 	
 	$.getScript("static/js/jquery-1.4.2.min.js", function(){
@@ -142,27 +141,37 @@ $(document).ready(function() {
 
 
 
-</script><tw-passagedata pid="1" name="Header" tags="header" position="1000,12">{
+
+
+
+</script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
 &lt;div class=&quot;header&quot;&gt;
 
-&lt;span class=&quot;score&quot;&gt;
+&lt;span class=&quot;lefthead&quot;&gt;
 Punkte: $score
 &lt;/span&gt;
 
-&lt;span&gt;[[Hilfe&lt;-&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-question-sign&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Hilfe&lt;/button&gt;]]&lt;/span&gt;
+&lt;!-- BEGIN HEADERBUTTON SPAN --&gt;
+&lt;span class=&quot;righthead&quot;&gt;
 
-[&lt;span&gt;&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-disk&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;   Spiel speichern&lt;/button&gt;&lt;/span&gt;]&lt;saveGame|
+&lt;!-- HILFE BUTTON --&gt;
+[[Hilfe&lt;-&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-question-sign&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt; Hilfe&lt;/a&gt;]]
+
+&lt;!-- TEXT RESIZING --&gt;
+&lt;a class=&quot;btn btn-default&quot; href=&quot;javascript:mytextsizer.setFontLevel(&#39;smaller&#39;)&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-zoom-out&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;&lt;/a&gt;
+
+&lt;a class=&quot;btn btn-default&quot; href=&quot;javascript:mytextsizer.setFontLevel(&#39;bigger&#39;)&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-zoom-in&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;&lt;/a&gt;
+
+&lt;!-- SAVE GAME --&gt;
+[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-disk&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;   Spiel speichern&lt;/a&gt;]&lt;saveGame|
 (click: ?saveGame)[
 	(if:(save-game:&quot;Slot A&quot;))[
-    	(replace: ?saveGame)[&lt;span&gt;&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-saved&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Spiel gespeichert&lt;/button&gt;&lt;/span&gt;]]
+    	(replace: ?saveGame)[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-saved&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Spiel gespeichert&lt;/a&gt;]]
 		(else: )[
-    	(replace: ?saveGame)[&lt;span&gt;&lt;button class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-disk&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Fehler beim Speichern&lt;/button&gt;&lt;/span&gt;]]]
+    	(replace: ?saveGame)[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-disk&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Fehler beim Speichern&lt;/a&gt;]]]
 
-&lt;button class=&quot;enlarge btn btn-default&quot;&gt;Text vergrößern&lt;/button&gt;
-&lt;button class=&quot;shrink btn btn-default&quot;&gt;Text verkleinern&lt;/button&gt;
-
-&lt;a class=&quot;btn btn-default&quot; href=&quot;javascript:mytextsizer.setFontLevel(&#39;smaller&#39;)&quot;&gt;smaller&lt;/a&gt;
-&lt;a class=&quot;btn btn-default&quot; href=&quot;javascript:mytextsizer.setFontLevel(&#39;bigger&#39;)&quot;&gt;larger&lt;/a&gt;
+&lt;/span&gt;
+&lt;!-- END HEADERBUTTON SPAN --&gt;
 
 &lt;/div&gt;
 &lt;hr&gt;
@@ -239,9 +248,14 @@ Wir hoffen, dass es dir gefällt. Viel Spaß!
 {
 &lt;hr&gt;
 &lt;div class=&quot;footer&quot;&gt;
-(if: (history:)&#39;s length &gt; 0)[[[&lt;button class=&quot;btn btn-info&quot;&gt;Zurück&lt;/button&gt;-&gt;(string: (history:)&#39;s last)]]]
 
+&lt;span class=&quot;leftfoot&quot;&gt;
+(if: (history:)&#39;s length &gt; 0)[[[&lt;button class=&quot;btn btn-info&quot;&gt;Zurück&lt;/button&gt;-&gt;(string: (history:)&#39;s last)]]]
+&lt;/span&gt;
+
+&lt;span class=&quot;rightfoot&quot;&gt;
 [[Hauptseite&lt;-&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Hauptseite&lt;/button&gt;]]
+&lt;/span&gt;
 
 &lt;/div&gt;
 }</tw-passagedata>
@@ -2888,38 +2902,77 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 
 [[Das Quiz noch einmal machen.-&gt;1.9 Quiz]]</tw-passagedata>
 <tw-passagedata pid="260" name="Einleitung" tags="" position="199,72">{
-(set: $score to 0)
-(set: $firstname to &quot;Spieler&quot;)
-(set: $lastname to &quot;&quot;)
-}
-&lt;b&gt;Willkommen zurück zu unserem Lernspiel!&lt;/b&gt;
+&#39;&#39;Willkommen zurück zu unserem Lernspiel!&#39;&#39;
 
-Hallo [$firstname]&lt;firstname| [$lastname]&lt;lastname|!
+&lt;br&gt;&lt;br&gt;
 
-Gib doch bitte deinen Namen und deinen Nachnamen ein um dich einzuloggen:
-
-Vorname: &lt;input type=&quot;text&quot; name=&quot;firstname&quot; value=&quot;&quot;&gt;
-Nachname: &lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;&quot;&gt;
-
-&lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;firstname&#39;);submitVariable(&#39;lastname&#39;)&quot;&gt;Bestätigen&lt;/button&gt;
-
-|link&gt;[]
-(live:100ms)[
-	(set: $firstname to ?firstname)
-	(set: $lastname to ?lastname)
-	(if: $firstname is not &quot;Spieler&quot;)[
-		(replace: ?link)[(link-goto: &quot;Zur zuletzt besuchten Seite&quot;, &quot;Letzte Session&quot;)]
-		(stop:)
-	]
-]
 {
-&lt;script&gt;
-$(document).ready(function() {
-	$.getScript(&quot;static/js/get-variable.js&quot;);
-});
-&lt;/script&gt;
+(set: $vtemp to &quot;Vorname&quot;)
+(set: $ntemp to &quot;Nachname&quot;)
+(set: $gtemp to &quot;Geburtstag&quot;)
+(set: $score to 0)
 }
-</tw-passagedata>
+
+&lt;!-- Angulus-Logik und Eingabefelder --&gt;
+
+&lt;div ng-app=&quot;&quot;&gt;
+
+
+Gib doch bitte deinen Vornamen, deinen Nachnamen und dein Geburtsdatum ein um dich einzuloggen:
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;div class=&quot;form-group row&quot;&gt;
+  &lt;label for=&quot;example-text-input&quot; class=&quot;col-xs-2 col-form-label&quot;&gt;Vorname&lt;/label&gt;
+  &lt;div class=&quot;col-xs-10&quot;&gt;
+    &lt;input class=&quot;form-control&quot; type=&quot;text&quot; ng-model=&quot;vorname&quot; placeholder=&quot;Susi&quot; id=&quot;example-text-input&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-group row&quot;&gt;
+  &lt;label for=&quot;example-search-input&quot; class=&quot;col-xs-2 col-form-label&quot;&gt;Nachname&lt;/label&gt;
+  &lt;div class=&quot;col-xs-10&quot;&gt;
+    &lt;input class=&quot;form-control&quot; type=&quot;search&quot; ng-model=&quot;nachname&quot; placeholder=&quot;Sorglos&quot; id=&quot;example-search-input&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;form-group row&quot;&gt;
+  &lt;label for=&quot;example-date-input&quot; class=&quot;col-xs-2 col-form-label&quot;&gt;Geburtstag&lt;/label&gt;
+  &lt;div class=&quot;col-xs-10&quot;&gt;
+    &lt;input class=&quot;form-control&quot; type=&quot;date&quot; ng-model=&quot;geburtstag&quot; placeholder=&quot;1960-08-19&quot; id=&quot;example-date-input&quot;&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;button class=&quot;btn btn-default&quot; onclick=&quot;myFunction()&quot;&gt;Abschicken&lt;/button&gt;
+
+&lt;div class=&quot;continue&quot;&gt;
+|register&gt;[Eingaben prüfen]
+  (click: ?register)[
+	  (set: $vorname to ?vtemp)
+	  (set: $nachname to ?ntemp)
+	  (set: $geburtstag to ?gtemp)
+	  (if: $vorname is not &quot;Vorname&quot; and $nachname is not &quot;Nachname&quot; and $geburtstag is not &quot;Geburtstag&quot;)[
+		(replace: ?register)[
+[[Hauptseite&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Absenden&lt;/button&gt;]]]
+	  ]
+  ]
+&lt;/div&gt;
+
+{
+(set: $vtemp to &quot;&lt;span ng-bind=vorname&gt;&lt;/span&gt;&quot;)
+(set: $ntemp to &quot;&lt;span ng-bind=nachname&gt;&lt;/span&gt;&quot;)
+(set: $gtemp to &quot;&lt;span ng-bind=geburtstag&gt;&lt;/span&gt;&quot;)
+}
+
+{
+&lt;span style=&quot;display: none&quot;&gt;
+[$vtemp]&lt;vtemp| 
+[$ntemp]&lt;ntemp|
+[$gtemp]&lt;gtemp|
+&lt;/span&gt;
+}
+&lt;/div&gt;
+}</tw-passagedata>
 <tw-passagedata pid="261" name="Anmeldung alt" tags="" position="448,562">&#39;&#39;Anmeldung&#39;&#39;
 {
 (set: $firstname to &quot;Vorname&quot;)
@@ -2967,7 +3020,7 @@ $(document).ready(function() {
 }</tw-passagedata>
 <tw-passagedata pid="262" name="Hauptseite" tags="" position="200,217">&lt;b&gt;Willkommen, $vorname $nachname!&lt;/b&gt;
 
-Alter: $geburtsjahr
+Alter: $geburtstag
 
 Hier klicken, um den letzten Speicherstand zu laden:
 {(if: (saved-games:) contains &quot;Slot A&quot;)[
@@ -3079,50 +3132,89 @@ tr:nth-child(even) {
 &lt;!-- Here the savegame is loaded --&gt;
 (if: (savedgames:) contains &quot;Slot A&quot;)[(loadgame: &quot;Slot A&quot;)]
 }</tw-passagedata>
-<tw-passagedata pid="265" name="Anmeldung neu" tags="" position="12,120">&#39;&#39;Anmeldeseite - Serious Game&#39;&#39;
+<tw-passagedata pid="265" name="Anmeldung" tags="" position="12,120">{
+&#39;&#39;Registrierung - Serious Game&#39;&#39;
+
+&lt;br&gt;&lt;br&gt;
+
 {
-(set: $vorname to &quot;Vorname&quot;)(set: $nachname to &quot;Nachname&quot;)(set: $geburtsjahr to &quot;Geburtsjahr&quot;)
+(set: $vtemp to &quot;Vorname&quot;)
+(set: $ntemp to &quot;Nachname&quot;)
+(set: $gtemp to &quot;Geburtstag&quot;)
+(set: $score to 0)
 }
+
+&lt;!-- Angulus-Logik und Eingabefelder --&gt;
+
 &lt;div ng-app=&quot;&quot;&gt;
-Wenn du ganz neu bist, registriere dich bitte hier:
-&lt;input type=&quot;text&quot; ng-model=&quot;vorname&quot; placeholder=&quot;Vorname&quot;&gt;
-&lt;input type=&quot;text&quot; ng-model=&quot;nachname&quot; placeholder=&quot;Nachname&quot;&gt;
-&lt;input type=&quot;text&quot; ng-model=&quot;geburtsjahr&quot; placeholder=&quot;Geburtsjahr&quot;&gt;
-&lt;input type=&quot;password&quot; name=&quot;pass&quot; placeholder=&quot;Passwort&quot;&gt;
-|register&gt;[Eingaben prüfen]
-  (click: ?register)[
-	  (set: $vorname to ?vtemp)
-	  (set: $nachname to ?ntemp)
-	  (set: $geburtsjahr to ?gtemp)
-	  (if: $vorname is not &quot;Vorname&quot; and $nachname is not &quot;Nachname&quot; and $geburtsjahr is not &quot;Geburtsjahr&quot;)[
-		(replace: ?register)[(link-goto: &quot;Bestätigen&quot;, &quot;Hauptseite&quot;)]
-	  ]
-  ]
+
+&lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;VorName&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName&quot; ng-model=&quot;vorname&quot; placeholder=&quot;Susi&quot; required&gt;
+  &lt;/div&gt;
+
+  &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;NachName&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName&quot; ng-model=&quot;nachname&quot; placeholder=&quot;Sorglos&quot; required&gt;
+  &lt;/div&gt;
+
+  &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+	&lt;label for=&quot;date-input&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
+	  &lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag&quot; placeholder=&quot;&quot; id=&quot;date-input&quot; required&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;form-group&quot;&gt;
+    [&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Bestätigen&lt;/button&gt;]&lt;send|
+  &lt;/div&gt;
+&lt;/form&gt;
+
+(click: ?send)[
+  (set: $vorname to ?vtemp)
+  (set: $nachname to ?ntemp)
+  (set: $geburtstag to ?gtemp)
+  (replace: ?send)[
+[[Hauptseite&lt;-&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Absenden&lt;/button&gt;]]]
+]
+
 {
 (set: $vtemp to &quot;&lt;span ng-bind=vorname&gt;&lt;/span&gt;&quot;)
 (set: $ntemp to &quot;&lt;span ng-bind=nachname&gt;&lt;/span&gt;&quot;)
-(set: $gtemp to &quot;&lt;span ng-bind=geburtsjahr&gt;&lt;/span&gt;&quot;)
+(set: $gtemp to &quot;&lt;span ng-bind=geburtstag&gt;&lt;/span&gt;&quot;)
 }
+
 {
 &lt;span style=&quot;display: none&quot;&gt;
-Ihre Eingaben: [$vtemp]&lt;vtemp| [$ntemp]&lt;ntemp|, geboren [$gtemp]&lt;gtemp|.
+[$vtemp]&lt;vtemp| 
+[$ntemp]&lt;ntemp|
+[$gtemp]&lt;gtemp|
 &lt;/span&gt;
 }
-&lt;div class=&quot;intropage&quot;&gt;
-Wenn du schon registriert bist, klicke hier: [[Einleitung&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Anmelden&lt;/button&gt;]]
 
 &lt;/div&gt;
-&lt;div class=&quot;intropage&quot;&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+Wenn du schon registriert bist, klicke hier: [[Einleitung&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Anmelden&lt;/button&gt;]]
+
+&lt;br&gt;&lt;br&gt;
+
 Um anonym zu spielen, klicke hier: [[Hauptseite&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Anonym spielen&lt;/button&gt;]]
+
+&lt;br&gt;
+
 &#39;&#39;Hinweis&#39;&#39;: Wenn du anonym spielst, dann wird dein Spielstand nicht gespeichert und du kannst nicht in die Bestenliste kommen.
-&lt;/div&gt;
+
 {&lt;script&gt;
 $(function () {
   $.getScript(&quot;static/js/angular.min.js&quot;,function() {
         console.log(&quot;angular.js loaded.&quot;);
 		});
 	});
-&lt;/script&gt;}</tw-passagedata>
+&lt;/script&gt;}
+}</tw-passagedata>
 </tw-storydata>
 
 

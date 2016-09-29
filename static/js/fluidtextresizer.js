@@ -14,8 +14,20 @@ function fluidtextresizer(setting){
     this.$controls=null
     this.defaultfontsizes=[]
     this.curfontlevel=0
+
     var thisobj=this
     jQuery(function($){ //on document.ready
+
+        // apply styles from last page
+        var neueStyles = fluidtextresizer.routines.gibMirStyle();
+        if (typeof(neueStyles) === 'string') {
+            var arrayStyles = neueStyles.split(',');
+            console.log(arrayStyles[2]);
+            $('tw-passage').css("fontSize", arrayStyles[2]);
+            $('tw-include').css("fontSize", arrayStyles[0]);
+            this.curfontlevel = arrayStyles[1];
+        }
+
         var els=setting.targets
         for (var i=0; i<els.length; i++){
             if ($(els[i]).length==0){ //if selector doesn't yield any matched elements
@@ -26,24 +38,6 @@ function fluidtextresizer(setting){
             var curfontsize=$(els[i]).css('fontSize')
             thisobj.defaultfontsizes.push({val:parseFloat(curfontsize), unit:curfontsize.slice(-2)}) //remember default font sizes of target elements
             thisobj.selectors.push($(els[i])) //cache selector
-        }
-        if (setting.controlsdiv){ //if special container for resize controls defined
-            thisobj.$controls=$('#'+setting.controlsdiv).find('a[href^=#fontsize], a[href=#bigger], a[href=#smaller]')
-            thisobj.$controls.each(function(){
-                var $target=$(this)
-                $target.data('level', $target.attr('href').replace(/(#)|(fontsize)/ig, '')) //remove "#" and "fontsize" from href to derive level
-                $target.click(function(){
-                thisobj.setFontLevel($target.data('level'))
-                return false
-                })
-            })
-        }
-        if (setting.persisttype!="none"){
-            var curfontlevel=fluidtextresizer.routines.getCookie(thisobj.cookiename) || 0 //get persisted font level, or 0 to indicate no change in font size
-            curfontlevel=parseInt(curfontlevel)
-            if (curfontlevel>=-setting.levels && curfontlevel<=setting.levels){ //if font level within range
-                thisobj.setFontLevel(curfontlevel, true)
-            }
         }
     })
 }
@@ -64,12 +58,17 @@ fluidtextresizer.prototype={
         // get old font size
         var oldfontsize = $( "tw-include" ).css( "fontSize" );
 
+        var exportfontsize;
+
         // change for whole tw-passage
         for (var i=0; i<$els.length; i++){
             var abslevel=Math.abs(level)
             var valchange=Math.pow(1.2, abslevel) //calculate fontlevel^1.2
             //calculate new font size, which is default font size multiply or divided by valchange:
             var newfontsize=this.defaultfontsizes[i].val * (level<0? 1/valchange : level>0? valchange : 1) + this.defaultfontsizes[i].unit
+
+            exportfontsize = newfontsize;
+
             $els[i].animate({fontSize: newfontsize}, disableanim? 0 : this.setting.animate)
         }
 
@@ -80,11 +79,14 @@ fluidtextresizer.prototype={
             fluidtextresizer.routines.setCookie(this.cookiename, level)
         }
         this.curfontlevel=level
+
+        fluidtextresizer.routines.speicherStyle(oldfontsize, this.curfontlevel, exportfontsize);
     }
 
 }
 
 fluidtextresizer.routines={
+
     getCookie:function(Name){
         var re=new RegExp(Name+"=[^;]*", "i"); //construct RE to search for target name/value pair
         return (document.cookie.match(re))? document.cookie.match(re)[0].split("=")[1] : null //return cookie value if found or null
@@ -95,5 +97,18 @@ fluidtextresizer.routines={
         if (typeof days!="undefined") //if set persistent cookie
             expirestr="; expires="+expireDate.setDate(new Date().getDate()+days).toGMTString()
         document.cookie = name+"="+value+"; path=/"+expirestr
+    },
+
+    speicherStyle:function(kopfzeile, aktuellesLevel, abschnitt) {
+
+        window.sessionStorage.setItem('style', [kopfzeile, aktuellesLevel, abschnitt]);
+
+        console.log("style saved: ");
+        console.log(window.sessionStorage);
+    },
+
+    gibMirStyle:function(einResizer) {
+        return window.sessionStorage.getItem('style');
     }
+
 }

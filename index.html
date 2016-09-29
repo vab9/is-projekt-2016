@@ -144,7 +144,6 @@ $.getScript("static/js/fluidtextresizer.js", function(){
 
 
 
-
 </script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
 &lt;div class=&quot;header&quot;&gt;
 
@@ -2904,68 +2903,70 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 (set: $vtemp to &quot;Vorname&quot;)
 (set: $ntemp to &quot;Nachname&quot;)
 (set: $gtemp to &quot;Geburtstag&quot;)
-(set: $score to 0)
 }
 
-&lt;!-- Angulus-Logik und Eingabefelder --&gt;
+&lt;div ng-app=&quot;&quot;&gt;
+ 	&lt;p&gt;Name: &lt;input type=&quot;text&quot; ng-model=&quot;name&quot;&gt;&lt;/p&gt;
+ 	&lt;p ng-bind=&quot;name&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;!-- Eingabefelder für Anmeldung --&gt;
 
 &lt;div ng-app=&quot;&quot;&gt;
-
 
 Gib doch bitte deinen Vornamen, deinen Nachnamen und dein Geburtsdatum ein um dich einzuloggen:
 
 &lt;br&gt;&lt;br&gt;
 
-&lt;div class=&quot;form-group row&quot;&gt;
-  &lt;label for=&quot;example-text-input&quot; class=&quot;col-xs-2 col-form-label&quot;&gt;Vorname&lt;/label&gt;
-  &lt;div class=&quot;col-xs-10&quot;&gt;
-    &lt;input class=&quot;form-control&quot; type=&quot;text&quot; ng-model=&quot;vorname&quot; placeholder=&quot;Susi&quot; id=&quot;example-text-input&quot;&gt;
+&lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;VorName&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName&quot; ng-model=&quot;vorname&quot; placeholder=&quot;Susi&quot; required&gt;
   &lt;/div&gt;
-&lt;/div&gt;
 
-&lt;div class=&quot;form-group row&quot;&gt;
-  &lt;label for=&quot;example-search-input&quot; class=&quot;col-xs-2 col-form-label&quot;&gt;Nachname&lt;/label&gt;
-  &lt;div class=&quot;col-xs-10&quot;&gt;
-    &lt;input class=&quot;form-control&quot; type=&quot;search&quot; ng-model=&quot;nachname&quot; placeholder=&quot;Sorglos&quot; id=&quot;example-search-input&quot;&gt;
+  &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+    &lt;label for=&quot;NachName&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
+    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName&quot; ng-model=&quot;nachname&quot; placeholder=&quot;Sorglos&quot; required&gt;
   &lt;/div&gt;
-&lt;/div&gt;
 
-&lt;div class=&quot;form-group row&quot;&gt;
-  &lt;label for=&quot;example-date-input&quot; class=&quot;col-xs-2 col-form-label&quot;&gt;Geburtstag&lt;/label&gt;
-  &lt;div class=&quot;col-xs-10&quot;&gt;
-    &lt;input class=&quot;form-control&quot; type=&quot;date&quot; ng-model=&quot;geburtstag&quot; placeholder=&quot;1960-08-19&quot; id=&quot;example-date-input&quot;&gt;
+  &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
+  &lt;div class=&quot;form-group&quot;&gt;
+	&lt;label for=&quot;date-input&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
+	  &lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag&quot; placeholder=&quot;&quot; id=&quot;date-input&quot; required&gt;
   &lt;/div&gt;
+
+&lt;div class=&quot;form-group&quot;&gt;
+	&lt;button id=&quot;confirmButton&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;
 &lt;/div&gt;
 
-&lt;button class=&quot;btn btn-default&quot; onclick=&quot;myFunction()&quot;&gt;Abschicken&lt;/button&gt;
-
-&lt;div class=&quot;continue&quot;&gt;
-|register&gt;[Eingaben prüfen]
-  (click: ?register)[
-	  (set: $vorname to ?vtemp)
-	  (set: $nachname to ?ntemp)
-	  (set: $geburtstag to ?gtemp)
-	  (if: $vorname is not &quot;Vorname&quot; and $nachname is not &quot;Nachname&quot; and $geburtstag is not &quot;Geburtstag&quot;)[
-		(replace: ?register)[
-[[Hauptseite&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Absenden&lt;/button&gt;]]]
-	  ]
-  ]
+&lt;div ng-app=&quot;&quot;&gt;
+ 	&lt;p&gt;Name: &lt;input type=&quot;text&quot; ng-model=&quot;name&quot;&gt;&lt;/p&gt;
+ 	&lt;p ng-bind=&quot;name&quot;&gt;&lt;/p&gt;
 &lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;!--
+
+&lt;!-- Hier Anonyme Klassen laden --&gt;
 
 {
-(set: $vtemp to &quot;&lt;span ng-bind=vorname&gt;&lt;/span&gt;&quot;)
-(set: $ntemp to &quot;&lt;span ng-bind=nachname&gt;&lt;/span&gt;&quot;)
-(set: $gtemp to &quot;&lt;span ng-bind=geburtstag&gt;&lt;/span&gt;&quot;)
-}
+&lt;script&gt;
 
-{
-&lt;span style=&quot;display: none&quot;&gt;
-[$vtemp]&lt;vtemp| 
-[$ntemp]&lt;ntemp|
-[$gtemp]&lt;gtemp|
-&lt;/span&gt;
+$(function() {
+	$(&quot;#confirmDiv&quot;).click(function(e){
+    &lt;!-- Hier Button-Logik einfügen (Serverkommunikation) --&gt;
+    });
+	console.log(&quot;Serverkommunikation...&quot;);
+});
+
+&lt;/script&gt;
 }
-&lt;/div&gt;
+--&gt;
+
 }</tw-passagedata>
 <tw-passagedata pid="261" name="Anmeldung alt" tags="" position="448,562">&#39;&#39;Anmeldung&#39;&#39;
 {
@@ -3127,7 +3128,7 @@ tr:nth-child(even) {
 (if: (savedgames:) contains &quot;Slot A&quot;)[(loadgame: &quot;Slot A&quot;)]
 }</tw-passagedata>
 <tw-passagedata pid="265" name="Anmeldung" tags="" position="12,120">{
-&#39;&#39;Registrierung - Serious Game&#39;&#39;
+&#39;&#39;Serious Game&#39;&#39;
 
 &lt;br&gt;&lt;br&gt;
 
@@ -3138,70 +3139,130 @@ tr:nth-child(even) {
 (set: $score to 0)
 }
 
-&lt;!-- Angulus-Logik und Eingabefelder --&gt;
+&lt;!-- Tab-Logik --&gt;
+
+&lt;div class=&quot;container&quot;&gt;
+  Bitte registriere dich oder melde dich an:
+  &lt;br&gt;&lt;br&gt;
+	&lt;ul class=&quot;nav nav-tabs nav-justified&quot;&gt;
+	  &lt;li class=&quot;active&quot;&gt;&lt;a data-toggle=&quot;tab&quot; href=&quot;#register&quot;&gt;Registrieren&lt;/a&gt;&lt;/li&gt;
+	  &lt;li&gt;&lt;a data-toggle=&quot;tab&quot; href=&quot;#login&quot;&gt;Anmelden&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;!-- Tab: #register mit Eingabefeldern --&gt;
+
+  &lt;div class=&quot;tab-content&quot;&gt;
+  
+	&lt;div id=&quot;register&quot; class=&quot;tab-pane fade in active&quot;&gt;
+	  &lt;div ng-app=&quot;&quot;&gt;
+
+	  &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
+		&lt;div class=&quot;form-group&quot;&gt;
+		  &lt;label for=&quot;VorName&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
+		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName&quot; ng-model=&quot;vorname&quot; placeholder=&quot;Susi&quot; required&gt;
+		&lt;/div&gt;
+
+		&lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
+		&lt;div class=&quot;form-group&quot;&gt;
+		  &lt;label for=&quot;NachName&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
+		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName&quot; ng-model=&quot;nachname&quot; placeholder=&quot;Sorglos&quot; required&gt;
+		&lt;/div&gt;
+
+		&lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
+		&lt;div class=&quot;form-group&quot;&gt;
+		  &lt;label for=&quot;date-input&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
+			&lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag&quot; placeholder=&quot;&quot; id=&quot;date-input&quot; required&gt;
+		&lt;/div&gt;
+
+		&lt;div class=&quot;form-group&quot;&gt;
+		  &lt;div id=&quot;confirmDiv&quot;
+			&lt;button id=&quot;confirmButton&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Registrieren&lt;/button&gt;
+		  &lt;/div&gt;
+		&lt;/div&gt;
+
+	  &lt;div style=&quot;display: none&quot;&gt;
+		  &lt;div id=&quot;submitDiv&quot;&gt;
+			[&lt;button id=&quot;submitButton&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;]&lt;register|
+		  &lt;/div&gt;
+	  &lt;/div&gt;
+
+	  (click: ?register)[
+		(set: $vorname to ?vtemp)
+		(set: $nachname to ?ntemp)
+		(set: $geburtstag to ?gtemp)
+		(go-to: &quot;Hauptseite&quot;)
+	  ]
+
+	  {
+	  (set: $vtemp to &quot;&lt;span ng-bind=vorname&gt;&lt;/span&gt;&quot;)
+	  (set: $ntemp to &quot;&lt;span ng-bind=nachname&gt;&lt;/span&gt;&quot;)
+	  (set: $gtemp to &quot;&lt;span ng-bind=geburtstag&gt;&lt;/span&gt;&quot;)
+	  }
+
+	  {
+	  &lt;span style=&quot;display: none&quot;&gt;
+	  [$vtemp]&lt;vtemp| 
+	  [$ntemp]&lt;ntemp|
+	  [$gtemp]&lt;gtemp|
+	  &lt;/span&gt;
+	  }
 
 &lt;div ng-app=&quot;&quot;&gt;
-
-&lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label for=&quot;VorName&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
-    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName&quot; ng-model=&quot;vorname&quot; placeholder=&quot;Susi&quot; required&gt;
-  &lt;/div&gt;
-
-  &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label for=&quot;NachName&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
-    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName&quot; ng-model=&quot;nachname&quot; placeholder=&quot;Sorglos&quot; required&gt;
-  &lt;/div&gt;
-
-  &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-	&lt;label for=&quot;date-input&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
-	  &lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag&quot; placeholder=&quot;&quot; id=&quot;date-input&quot; required&gt;
-  &lt;/div&gt;
-
-  &lt;div class=&quot;form-group&quot;&gt;
-  	&lt;div id=&quot;confirmDiv&quot;
-      &lt;button id=&quot;confirmButton&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Bestätigen&lt;/button&gt;
-	&lt;/div&gt;
-  &lt;/div&gt;
-
-&lt;div style=&quot;display: none&quot;&gt;
-    &lt;div id=&quot;submitDiv&quot;&gt;
-	  [&lt;button id=&quot;submitButton&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;]&lt;send|
-	&lt;/div&gt;
+ 	&lt;p&gt;Name: &lt;input type=&quot;text&quot; ng-model=&quot;name&quot;&gt;&lt;/p&gt;
+ 	&lt;p ng-bind=&quot;name&quot;&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-(click: ?send)[
-  (set: $vorname to ?vtemp)
-  (set: $nachname to ?ntemp)
-  (set: $geburtstag to ?gtemp)
+	  &lt;/div&gt;
+	&lt;/div&gt;
+
+
+  &lt;!-- Tab: &quot;#login&quot; mit Eingabefeldern --&gt;
+
+	&lt;div id=&quot;login&quot; class=&quot;tab-pane fade&quot;&gt;
+	  &lt;div ng-app=&quot;&quot;&gt;
+
+	  &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
+		&lt;div class=&quot;form-group&quot;&gt;
+		  &lt;label for=&quot;VorName&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
+		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName&quot; ng-model=&quot;vorname2&quot; placeholder=&quot;Susi&quot; required&gt;
+		&lt;/div&gt;
+
+		&lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
+		&lt;div class=&quot;form-group&quot;&gt;
+		  &lt;label for=&quot;NachName&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
+		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName&quot; ng-model=&quot;nachname2&quot; placeholder=&quot;Sorglos&quot; required&gt;
+		&lt;/div&gt;
+
+		&lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
+		&lt;div class=&quot;form-group&quot;&gt;
+		  &lt;label for=&quot;date-input&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
+			&lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag2&quot; placeholder=&quot;&quot; id=&quot;date-input&quot; required&gt;
+		&lt;/div&gt;
+
+	  &lt;div class=&quot;form-group&quot;&gt;
+		  &lt;button id=&quot;confirmButton&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Einloggen&lt;/button&gt;
+	  &lt;/div&gt;
+
+&lt;div ng-app=&quot;&quot;&gt;
+ 	&lt;p&gt;Name: &lt;input type=&quot;text&quot; ng-model=&quot;name&quot;&gt;&lt;/p&gt;
+ 	&lt;p ng-bind=&quot;name&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+	  &lt;/div&gt;
+    &lt;/div&gt;
+
+&lt;br&gt;&lt;br&gt;
+
+Um anonym zu spielen, klicke hier: [&lt;button class=&quot;btn btn-default&quot;&gt;Anonym spielen&lt;/button&gt;]&lt;anonym|
+
+(click: ?anonym)[
+  (set: $vorname to &quot;Spieler&quot;)
+  (set: $nachname to &quot;&quot;)
+  (set: $geburtstag to &quot;&quot;)
   (go-to: &quot;Hauptseite&quot;)
 ]
-
-{
-(set: $vtemp to &quot;&lt;span ng-bind=vorname&gt;&lt;/span&gt;&quot;)
-(set: $ntemp to &quot;&lt;span ng-bind=nachname&gt;&lt;/span&gt;&quot;)
-(set: $gtemp to &quot;&lt;span ng-bind=geburtstag&gt;&lt;/span&gt;&quot;)
-}
-
-{
-&lt;span style=&quot;display: none&quot;&gt;
-[$vtemp]&lt;vtemp| 
-[$ntemp]&lt;ntemp|
-[$gtemp]&lt;gtemp|
-&lt;/span&gt;
-}
-
-&lt;/div&gt;
-
-&lt;br&gt;&lt;br&gt;
-
-Wenn du schon registriert bist, klicke hier: [[Einleitung&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Anmelden&lt;/button&gt;]]
-
-&lt;br&gt;&lt;br&gt;
-
-Um anonym zu spielen, klicke hier: [[Hauptseite&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Anonym spielen&lt;/button&gt;]]
 
 &lt;br&gt;
 
@@ -3214,8 +3275,8 @@ Um anonym zu spielen, klicke hier: [[Hauptseite&lt;-&lt;button class=&quot;btn b
 $(function() {
 	$(&quot;#confirmDiv&quot;).click(function(e){
         $(&#39;#confirmDiv&#39;).replaceWith( $(&#39;#submitDiv&#39;));
+		console.log(&quot;button-divs changed&quot;);
     });
-	console.log(&quot;button-divs changed&quot;);
 });
 
 &lt;/script&gt;

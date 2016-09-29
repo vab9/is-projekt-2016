@@ -16,6 +16,8 @@ if 'APP_SETTINGS' in os.environ:
 else:
     app.config.from_object(config.Config)
 
+from model import User
+
 
 @app.route('/')
 def index():
@@ -36,4 +38,6 @@ def save_score(player):
 
 @app.route('/add_user/<vorname>/<nachname>/<geb>', methods=['GET', 'POST'])
 def add_user(vorname, nachname, geb):
+    new_user = User(vorname, nachname, geb)
+    return str(new_user)
     return "Hello " + vorname + nachname + geb

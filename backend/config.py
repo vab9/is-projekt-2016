@@ -1,4 +1,4 @@
-# Flask config.py
+# Flask backend/config.py
 
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))

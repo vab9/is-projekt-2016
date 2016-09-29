@@ -1,7 +1,7 @@
 from sqlalchemy import Sequence
 from sqlalchemy.dialects.postgresql import JSONB
 
-from server import db
+from serious_game import db
 
 
 class User(db.Model):

@@ -3,7 +3,7 @@ import config
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 
-from server import app, db
+from serious_game import app, db
 
 
 # Custom or Default Config

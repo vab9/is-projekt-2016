@@ -1,20 +1,25 @@
 #! /usr/bin/env python
 
+import config
 import os
+import sys
 from flask import Flask, send_file
 from whitenoise import WhiteNoise
 
 app = Flask(__name__)
 noiseapp = WhiteNoise(app, root='./static/')
 
-# Debugging on
-app.debug = True
+# Custom or Default Config
+if 'APP_SETTINGS' in os.environ:
+    app.config.from_object(os.environ['APP_SETTINGS'])
+else:
+    app.config.from_object(config.Config)
 
 
 @app.route('/')
 def index():
+    # sys.stderr.write(str(app.config))
     return send_file(open('index.html'))
-
 
 @app.route('/<name>')
 def hello_name(name):
@@ -27,7 +32,6 @@ def save_score(player):
     # find player score, compare to database, save etc.
 
 
-if 'DATABASE_URL' in os.environ('DATABASE_URL'):
-    db_url = os.environ('DATABASE_URL')
-else:
-    db_url = 'postgres://serious-db'
+@app.route('/add_user/<vorname>/<nachname>/<geb>', methods=['GET', 'POST'])
+def add_user(vorname, nachname, geb):
+    return "Hello " + vorname + nachname + geb

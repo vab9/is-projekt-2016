@@ -5,6 +5,7 @@
 
 # python executable and cache
 server.pyc
+config.pyc
 __pycache__/
 
 iwas_reinschreiben

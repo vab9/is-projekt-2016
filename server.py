@@ -40,4 +40,3 @@ def save_score(player):
 def add_user(vorname, nachname, geb):
     new_user = User(vorname, nachname, geb)
     return str(new_user)
-    return "Hello " + vorname + nachname + geb

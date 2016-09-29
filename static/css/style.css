@@ -1,7 +1,5 @@
 html {
-    /*background-color: #160f29;*/
     background-color: #0d3d56;
-
 }
 
 button:focus {
@@ -15,14 +13,11 @@ hr {
 
 tw-story {
     width: 95%;
-    /* padding wichtig fuer arrow icons */
-    /*padding: 2%;*/
     align-self: center;
     overflow: hidden;
 }
 
 tw-passage {
-/*    background-color: #FCFBE3;*/
     font-size: 1.8em;
     /* golden ratio for readability */
     line-height: 1.6;
@@ -30,11 +25,7 @@ tw-passage {
     padding: 2%;
     align-self: center;
     white-space: normal;
-
-    /*border: solid #000 0.05em;*/
     border-radius: 0.2em;
-
-    /*color:#373d3F;*/
     background-color: white;
 }
 
@@ -46,18 +37,11 @@ tw-link:hover {
     text-decoration-line: overline underline;
 }
 
-
 /* icon arrows */
 tw-icon {
     color: black;
     opacity: 1;
 }
-/* Forward / backward icons */
-/*tw-sidebar {
-    font-size: 24px;
-    margin: auto 2%;
-    display: none;
-}*/
 
 /* Try to make images scale */
 img {
@@ -67,49 +51,32 @@ img {
     margin: 2%;
 }
 
-/* Span containing Player name and score */
-.score {
-    float: left;
-    margin: 1%;
-}
-
-/* buttons in headers and footers */
-.header button, .footer button {
-    float: right;
-    margin: 1%;
-}
-
-.intropage {
-    border: 2px solid #0d3d56;
-    border-radius: 8px;
-    text-align: center
-    position: absolute
-    margin-left: 10px
-}
-
-.footer button.uebersicht {
-    float: left;
-}
-
+/* header & footer */
 .header, .footer {
-    overflow: hidden;
-    clear: both;
-    /*background-color: #F26D21*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1% 0;
+}
 
+
+/* buttons and links within right side of header */
+.righthead a, .righthead button {
+    margin: 0 10px;
+}
+
+/* hack to stop twine from chaning height oddly */
+.righthead {
+    max-height: 45px;
 }
 
 .continue {
     text-align: center;
 }
 
-.versteckt {
-
-}
-
-mark {}
-
-html.kapitel2 {
-    /*background-color: white;*/
+.centered-content {
+    text-align: center;
+    width: 100%;
 }
 
 video {
@@ -117,11 +84,6 @@ video {
     height:auto;
     align-self: center;
     preload: none;
-}
-
-.clearFloat {
-    clear: both;
-    display: hidden;
 }
 
 

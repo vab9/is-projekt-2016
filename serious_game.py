@@ -1,7 +1,8 @@
 #! /usr/bin/env python
 
+import config
 import os
-from backend import config
+
 from flask import Flask, send_file
 from flask_sqlalchemy import SQLAlchemy
 from whitenoise import WhiteNoise
@@ -17,7 +18,7 @@ else:
     app.config.from_object(config.Config)
 
 # need to suppress PEP8 E402 warning here
-from backend.model import User
+from model import User
 
 
 @app.route('/')

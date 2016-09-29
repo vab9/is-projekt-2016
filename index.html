@@ -11,8 +11,9 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="index" startnode="265" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("static/css/bootstrap.min.css");
+<tw-storydata name="index" startnode="263" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("static/css/bootstrap.min.css");
 @import url("static/css/style.css");
+
 
 
 
@@ -91,6 +92,7 @@ $.getScript("static/js/jquery-1.4.2.min.js", function(){
 $.getScript("static/js/fluidtextresizer.js", function(){
 	console.log("fluidtextresizer.js loaded!");
 });
+
 
 
 
@@ -2901,126 +2903,7 @@ Das war die richtige Antwort.
 Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$score Punkte!]}
 
 [[Das Quiz noch einmal machen.-&gt;1.9 Quiz]]</tw-passagedata>
-<tw-passagedata pid="260" name="Einleitung" tags="" position="199,72">{
-&#39;&#39;Willkommen zurück zu unserem Lernspiel!&#39;&#39;
-
-&lt;br&gt;&lt;br&gt;
-
-{
-(set: $vtemp to &quot;Vorname&quot;)
-(set: $ntemp to &quot;Nachname&quot;)
-(set: $gtemp to &quot;Geburtstag&quot;)
-}
-
-&lt;div ng-app=&quot;&quot;&gt;
- 	&lt;p&gt;Name: &lt;input type=&quot;text&quot; ng-model=&quot;name&quot;&gt;&lt;/p&gt;
- 	&lt;p ng-bind=&quot;name&quot;&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;br&gt;&lt;br&gt;
-
-&lt;!-- Eingabefelder für Anmeldung --&gt;
-
-&lt;div ng-app=&quot;&quot;&gt;
-
-Gib doch bitte deinen Vornamen, deinen Nachnamen und dein Geburtsdatum ein um dich einzuloggen:
-
-&lt;br&gt;&lt;br&gt;
-
-&lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label for=&quot;VorName&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
-    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName&quot; ng-model=&quot;vorname&quot; placeholder=&quot;Susi&quot; required&gt;
-  &lt;/div&gt;
-
-  &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-    &lt;label for=&quot;NachName&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
-    &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName&quot; ng-model=&quot;nachname&quot; placeholder=&quot;Sorglos&quot; required&gt;
-  &lt;/div&gt;
-
-  &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
-  &lt;div class=&quot;form-group&quot;&gt;
-	&lt;label for=&quot;date-input&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
-	  &lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag&quot; placeholder=&quot;&quot; id=&quot;date-input&quot; required&gt;
-  &lt;/div&gt;
-
-&lt;div class=&quot;form-group&quot;&gt;
-	&lt;button id=&quot;confirmButton&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;
-&lt;/div&gt;
-
-&lt;div ng-app=&quot;&quot;&gt;
- 	&lt;p&gt;Name: &lt;input type=&quot;text&quot; ng-model=&quot;name&quot;&gt;&lt;/p&gt;
- 	&lt;p ng-bind=&quot;name&quot;&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;!--
-
-&lt;!-- Hier Anonyme Klassen laden --&gt;
-
-{
-&lt;script&gt;
-
-$(function() {
-	$(&quot;#confirmDiv&quot;).click(function(e){
-    &lt;!-- Hier Button-Logik einfügen (Serverkommunikation) --&gt;
-    });
-	console.log(&quot;Serverkommunikation...&quot;);
-});
-
-&lt;/script&gt;
-}
---&gt;
-
-}</tw-passagedata>
-<tw-passagedata pid="261" name="Anmeldung alt" tags="" position="448,562">&#39;&#39;Anmeldung&#39;&#39;
-{
-(set: $firstname to &quot;Vorname&quot;)
-(set: $lastname to &quot;Nachname&quot;)
-(set: $age to &quot;Alter&quot;)
-}
-&lt;div class=&quot;intropage&quot;&gt;
-Wenn du schon registriert bist, klicke hier: [[Einleitung&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Anmelden&lt;/button&gt;]]
-
-&lt;/div&gt;
-&lt;div class=&quot;intropage&quot;&gt;
-Um anonym zu spielen, klicke hier: [[Hauptseite&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Anoynm spielen&lt;/button&gt;]]
-&#39;&#39;Hinweis&#39;&#39;: Wenn du anonym spielst, dann wird dein Spielstand nicht gespeichert und du kannst nicht in die Bestenliste kommen.
-
-&lt;/div&gt;
-&lt;div class=&quot;intropage&quot;&gt;
-Nutze folgendes Formular, um dich bei erstmaligem Anmelden zu registrieren:
-
-Vorname:  &lt;input type=&quot;text&quot; name=&quot;firstname&quot; value=&quot;&quot;&gt;
-Nachname: &lt;input type=&quot;text&quot; name=&quot;lastname&quot; value=&quot;&quot;&gt;
-Alter:    &lt;input type=&quot;text&quot; name=&quot;age&quot; value=&quot;&quot;&gt;
-
-&lt;button type=&quot;submit&quot; onclick=&quot;submitVariable(&#39;firstname&#39;);submitVariable(&#39;lastname&#39;);submitVariable(&#39;age&#39;);&quot;&gt;Bestätigen&lt;/button&gt;
-{
-[$firstname]&lt;firstname|
-[$lastname]&lt;lastname|
-[$age]&lt;age|
-}
-|message&gt;[]
-&lt;/div&gt;
-(live:100ms)[
-	(set: $firstname to ?firstname)
-	(set: $lastname to ?lastname)
-	(set: $age to ?age)
-	(if: $firstname is not &quot;Vorname&quot; and $lastname is not &quot;Nachname&quot; and $age is not &quot;Alter&quot;)[
-		(replace: ?message)[(link-goto: &quot;Weiter&quot;, &quot;Hauptseite&quot;)]
-		(stop:)
-	  ]]
-{
-&lt;script&gt;
-$(document).ready(function() {
-	$.getScript(&quot;static/js/get-variable.js&quot;);
-});
-&lt;/script&gt;
-}</tw-passagedata>
-<tw-passagedata pid="262" name="Hauptseite" tags="" position="200,217">&lt;b&gt;Willkommen, $vorname $nachname!&lt;/b&gt;
+<tw-passagedata pid="260" name="Hauptseite" tags="" position="200,217">&lt;b&gt;Willkommen, $vorname $nachname!&lt;/b&gt;
 
 Alter: $geburtstag
 
@@ -3049,7 +2932,7 @@ Aktueller Punktestand: $score
 [[Übersicht&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Weiter zur Übersicht&lt;/button&gt;]]
 &lt;/div&gt;
 }</tw-passagedata>
-<tw-passagedata pid="263" name="Top10" tags="" position="199,371">&lt;!-- Hier soll die Top 10 der Spieler mit den meisten Punkten aufgelistet werden --&gt;
+<tw-passagedata pid="261" name="Top10" tags="" position="199,371">&lt;!-- Hier soll die Top 10 der Spieler mit den meisten Punkten aufgelistet werden --&gt;
 
 {
 &lt;html&gt;
@@ -3130,11 +3013,11 @@ tr:nth-child(even) {
 &lt;/table&gt;
 &lt;/html&gt;
 }</tw-passagedata>
-<tw-passagedata pid="264" name="Letzte Session" tags="" position="48,371">{
+<tw-passagedata pid="262" name="Letzte Session" tags="" position="48,371">{
 &lt;!-- Here the savegame is loaded --&gt;
 (if: (savedgames:) contains &quot;Slot A&quot;)[(loadgame: &quot;Slot A&quot;)]
 }</tw-passagedata>
-<tw-passagedata pid="265" name="Anmeldung" tags="" position="12,120">{
+<tw-passagedata pid="263" name="Anmeldung" tags="" position="12,120">{
 &#39;&#39;Serious Game&#39;&#39;
 
 &lt;br&gt;&lt;br&gt;

@@ -16,6 +16,7 @@ if 'APP_SETTINGS' in os.environ:
 else:
     app.config.from_object(config.Config)
 
+# need to suppress PEP8 E402 warning here
 from model import User
 
 

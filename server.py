@@ -2,12 +2,13 @@
 
 import config
 import os
-import sys
 from flask import Flask, send_file
+from flask_sqlalchemy import SQLAlchemy
 from whitenoise import WhiteNoise
 
 app = Flask(__name__)
 noiseapp = WhiteNoise(app, root='./static/')
+db = SQLAlchemy(app)
 
 # Custom or Default Config
 if 'APP_SETTINGS' in os.environ:
@@ -20,6 +21,7 @@ else:
 def index():
     # sys.stderr.write(str(app.config))
     return send_file(open('index.html'))
+
 
 @app.route('/<name>')
 def hello_name(name):

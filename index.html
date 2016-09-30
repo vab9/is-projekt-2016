@@ -90,8 +90,12 @@ $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
 });
 
-$.getScript("static/js/jquery-1.4.2.min.js", function(){
-	console.log("jquery-1.4.2.min.js loaded!");
+$.getScript("static/js/validator.min.js",function() {
+	console.log("validator.js loaded.");
+});
+
+$.getScript("static/js/jquery-1.4.2.min.js",function() {
+	console.log("jquery-1.4.2.min.js loaded.");
 });
 
 $.getScript("static/js/angular.min.js",function() {
@@ -103,6 +107,7 @@ $.getScript("static/js/fluidtextresizer.js", function(){
 	$.getScript("static/js/textresizerinstance.js");
 });
 
+$('#meinform').validator('update');
 
 
 </script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
@@ -141,9 +146,9 @@ Punkte: $score
 
 Bitte wähle ein Kapitel:
 
-[[1. Kapitel - Grundfunktionen von Facebook-&gt;Kapitel 1]] 
+[[1. Kapitel - Grundfunktionen von Facebook-&gt;Kapitel 1]]
 
-[[2. Kapitel - Sicherheit-&gt;Kapitel 2]] 
+[[2. Kapitel - Sicherheit-&gt;Kapitel 2]]
 
 [[3. Kapitel - Allgemeiner Teil-&gt;Kapitel 3]]
 
@@ -277,7 +282,7 @@ Was passiert, wenn jemand anderes einen falschen Namen angibt?
 [[F1.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu „Sparsamkeit mit Profilinformationen“&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="14" name="F1.4" tags="" position="2416,1815">&#39;&#39;Sparsamkeit mit Profilinformationen&#39;&#39;
 
-Stelle dir folgendes Szenario vor:	
+Stelle dir folgendes Szenario vor:
 
 Susi Sorglos trifft ihre Nachbarin, die sie nur flüchtig kennt auf der Straße auf dem Weg zum Bäcker. Völlig unvermittelt erzählt sie der Nachbarin aus ihrem Leben. Susi erzählt, dass Sie gerne Hunde, Wellensittiche, Greenpeace und Helene Fischer mag. Außerdem, dass sie Vegetarierin ist und dass sie gerne schläft. Weiterhin berichtet Susi wo sie zur Schule gegangen ist und fragt ihre Nachbarin, ob diese nicht Bilder von Susis letztem Urlaub und von Susis Enkelkindern sehen möchte.
 
@@ -286,7 +291,7 @@ Susi Sorglos trifft ihre Nachbarin, die sie nur flüchtig kennt auf der Straße 
 * (link: &#39;&lt;strong&gt;Völlig normal&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F1.4.1.2&quot;)]
 * (link: &#39;&lt;strong&gt;Ungewöhnlich&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;F1.4.1.3&quot;)]
 * (link: &#39;&lt;strong&gt;Dazu habe ich keine Meinung&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F1.4.1.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="16" name="F1.4.1.2" tags="" position="2443,1990">&#39;&#39;Achtung!&#39;&#39; 
+<tw-passagedata pid="16" name="F1.4.1.2" tags="" position="2443,1990">&#39;&#39;Achtung!&#39;&#39;
 
 In dem Szenario handelt Susi sehr sorglos und ungewöhnlich. Da sie die Nachbarin kaum kennt, teilt sie viel zu offen zu private Informationen.
 
@@ -303,16 +308,16 @@ Das Verhalten von Susi ist sehr sorglos und ungewöhnlich. Sie teilt sehr privat
 </tw-passagedata>
 <tw-passagedata pid="18" name="F1.4.2" tags="" position="2611,2128">&#39;&#39;Warum ist das Szenario relevant?&#39;&#39;
 
-Das Verhalten von Susi ist ungewöhnlich und gefährlich. Wahrscheinlich würdest du dieses Verhalten im echten Leben nicht an den Tag legen. Das gleiche solltest du auch beachten, wenn du ein soziales Netzwerk wie Facebook benutzt. Denn hier können andere Nutzer Informationen über dich erfahren. Es liegt an dir, darauf zu achten, dass nur die Informationen mit anderen geteilt werden, die du bestimmst. 
+Das Verhalten von Susi ist ungewöhnlich und gefährlich. Wahrscheinlich würdest du dieses Verhalten im echten Leben nicht an den Tag legen. Das gleiche solltest du auch beachten, wenn du ein soziales Netzwerk wie Facebook benutzt. Denn hier können andere Nutzer Informationen über dich erfahren. Es liegt an dir, darauf zu achten, dass nur die Informationen mit anderen geteilt werden, die du bestimmst.
 
-Aber keine Sorge, du wirst im Folgenden genau lernen, wie du das machst. Behalte aber im Hinterkopf, dass Informationen, die du gar nicht erst veröffentlichst, auch nicht von den falschen Menschen gelesen werden können. 
+Aber keine Sorge, du wirst im Folgenden genau lernen, wie du das machst. Behalte aber im Hinterkopf, dass Informationen, die du gar nicht erst veröffentlichst, auch nicht von den falschen Menschen gelesen werden können.
 
 So wie du einer flüchtigen Bekanntschaft keine intimen Details über dein Leben erzählen würdest, so behältst du diese Informationen besser auch online für dich.
 
 [[F1.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Gleiches gilt für Geheimnisse&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="19" name="F1.5" tags="" position="2604,2276">&#39;&#39;Keine Geheimnisse teilen&#39;&#39;
 
-Stell dir folgendes Szenario vor: 
+Stell dir folgendes Szenario vor:
 
 Du hast deinen Urlaub geplant. Du freust dich so sehr, dass du deiner Familie davon erzählen möchtest.
 Was machst du?
@@ -350,11 +355,11 @@ Umfragen, Spiele und Ratespiele sind auf Facebook beliebt.
 [[F1.6.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Was gilt es zu beachten?&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="23" name="F1.6.1" tags="" position="2608,2708">&#39;&#39;Was gilt es bei Spielen und Umfragen zu beachten?&#39;&#39;
 
-* Man sollte sich immer genau überlegen, ob man bei diesen Interaktionsmöglichkeiten mitmachen möchte 
+* Man sollte sich immer genau überlegen, ob man bei diesen Interaktionsmöglichkeiten mitmachen möchte
 * Du solltest dir darüber im Klaren sein, dass diese Programme und Veranstalter im Gegenzug Zugriff haben wollen auf deine in Facebook hinterlegten Daten
 * Was diese Seiten nicht machen, ist in deinem Namen etwas an deine Pinnwand zu posten
 
-Ein Beispiel für eine Meldung eines solchen Programmes: 
+Ein Beispiel für eine Meldung eines solchen Programmes:
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap2/zugriff_facebook_hinterlegte_informationen.png&quot; alt=&quot;Zugriff auf in Facebook hinterlegte Informationen&quot;&gt;&lt;/div&gt;}
 
@@ -363,9 +368,9 @@ Ein Beispiel für eine Meldung eines solchen Programmes:
 </tw-passagedata>
 <tw-passagedata pid="24" name="F1.7" tags="" position="2608,2860">&#39;&#39;Misstrauisch sein&#39;&#39;
 
-Wie du im Punkt //„Sich selbst treu bleiben“// gelernt hast, kann man sich theoretisch auch unter falschem Namen bei Facebook anmelden. 
+Wie du im Punkt //„Sich selbst treu bleiben“// gelernt hast, kann man sich theoretisch auch unter falschem Namen bei Facebook anmelden.
 
-Du solltest also immer auf eventuelle gemeinsame Freunde und weitere Informationen achten, die die Person als eine dir bekannte Bekanntschaft identifiziert. 
+Du solltest also immer auf eventuell gemeinsame Freunde und weitere Informationen achten, die die Person als eine dir bekannte Bekanntschaft identifiziert.
 
 [[F1.7.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Beispiele gefährlicher Situationen&lt;/button&gt;]]
 </tw-passagedata>
@@ -377,7 +382,7 @@ Wenn du Nachrichten oder Freundschaftsanfragen von unbekannten Person erhältst�
 * &#39;&#39;Gefahr&#39;&#39;: Enkeltrick!
 Als Enkeltrick wird ein betrügerisches Vorgehen verstanden, bei dem sich Trickbetrüger meist gegenüber älteren und/oder hilflosen Personen als deren nahe Verwandte ausgeben, um unter Vorspiegelung falscher Tatsachen an deren Bargeld oder Wertgegenstände zu gelangen.
 
-* &#39;&#39;Lösung&#39;&#39;: 
+* &#39;&#39;Lösung&#39;&#39;:
 Bevor du eine Person blind zu deinen Freunden hinzufügst, schreibe sie direkt an und vergewissere dich, dass du sie auch wirklich kennst. Um sicherzustellen, dass es sich einen Verwandten handelt, solltest du andere Familienmitglieder um Rat fragen und dir eine zweite Meinung holen.
 
 Im Zweifel solltest du den Kontakt abbrechen!
@@ -388,10 +393,10 @@ Im Zweifel solltest du den Kontakt abbrechen!
 
 Wenn man eine Einladung erhält, eine Facebook-Seite mit &quot;gefällt mir&quot; zu kennzeichnen, die man nicht kennt.
 
-* &#39;&#39;Gefahr&#39;&#39;: 
+* &#39;&#39;Gefahr&#39;&#39;:
 Man drückt „gefällt mir“ bei einer Seite, mit der man nicht in Verbindung gebracht werden möchte, z. B. eine rechts- oder linksextreme, frauen- oder ausländerfeindliche Seite
 
-* &#39;&#39;Lösung:&#39;&#39; 
+* &#39;&#39;Lösung:&#39;&#39;
 Im Zweifel diese Einladung lieber ignorieren und in einem privaten Gespräch klären, welche Intention die Person verfolgt und wovon diese Seite genau handelt
 
 [[F1.8&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu „Beenden von Freundschaften“&lt;/button&gt;]]</tw-passagedata>
@@ -402,7 +407,7 @@ Im echten Leben, wenn man den Kontakt zu einem Menschen abbrechen möchte, verme
 * In sozialen Netzwerken musst du proaktiv handeln und Vorkehrungen treffen, um sicherzustellen, dass diese Person nicht weiter zu deinen Freunden zählt und so deine Beiträge und privaten Informationen einsehen kann
 * So entfernst du einen Freund aus deiner Freundesliste:
 
-0. Zuerst gehst du auf das Profil des Freundes, der entfernt werden soll 
+0. Zuerst gehst du auf das Profil des Freundes, der entfernt werden soll
 0. Dann gehst du oben rechts auf //Freunde// (&#39;&#39;1.&#39;&#39;)
 0. Anschließend auf //Als Freund entfernen// (&#39;&#39;2.&#39;&#39;)
 
@@ -446,7 +451,7 @@ Dazu klickst du auf den Pfeil oben rechts und dann auf //Abmelden//:
 </tw-passagedata>
 <tw-passagedata pid="30" name="F1.10.1" tags="" position="2608,3620">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Frage 1: 
+Frage 1:
 Ist es wichtig seinen richtigen Namen bei der Anmeldung bei Facebook anzugeben?
 
 Antworten:
@@ -464,7 +469,7 @@ Klicke auf das gewünschte Kapitel um zum Inhalt zu gelangen:
 Vermittelte Inhalte:
 * Sichere Passwörter und wie sie behandelt werden sollten
 * Facebook-Einstellungen und Sicherung deines Benutzerkontos
-* Vorgehensweise bei Infiltrierung des Facebook-Accounts 
+* Vorgehensweise bei Infiltrierung des Facebook-Accounts
 [[F2.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zu den Lernzielen&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="33" name="Kapitel 2.3" tags="" position="3872,308">&#39;&#39;Teil 3: Privatsphären-Einstellung in Facebook&#39;&#39;
 
@@ -565,7 +570,7 @@ Zusätzlich zur Sicherung des Facebook-Accounts durch ein Passwort gibt es weite
 
 &#39;&#39;Anmeldebestätigung per SMS:&#39;&#39;
 
-Es ist möglich das Mobiltelefon als zusätzliche Sicherheitsmaßnahme zu verwenden, um den Zugriff auf dein Konto durch andere Personen zu verhindern. 
+Es ist möglich das Mobiltelefon als zusätzliche Sicherheitsmaßnahme zu verwenden, um den Zugriff auf dein Konto durch andere Personen zu verhindern.
 Gehe hierzu in die Kontoeinstellungen (Pfeil-Symbol oben rechts und dann //Einstellungen//), dann links auf //Sicherheit// und dann auf aktiviere das Häkchen //Sicherheitscode für den Zugriff auf mein Kontoüber einen unbekannten Browser anfordern//.
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;faceboo_picture&quot; src=&quot;static/res/kap2/facebook_authorisation1.png&quot; alt=&quot;Facebook Autorisierung 1&quot;&gt;&lt;/div&gt;}
@@ -631,7 +636,7 @@ Du hast den Zugriff auf dein Facebook-Konto verloren, weil sich jemand mit deine
 
 &#39;&#39;Was kann ich dagegen machen?&#39;&#39;
 
-* Facebook kontaktieren! 
+* Facebook kontaktieren!
 
 Wie du das machst:
 
@@ -646,7 +651,7 @@ Folge anschließend den Anweisungen aus der E-Mail um zusammen mit Facebook dein
 [[F2.7.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum abschließenden Quiz&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="46" name="F2.7.1" tags="" position="3072,2452">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Frage 1: 
+Frage 1:
 Welches der folgenden Passwörter wäre ein sicheres Passwort?
 
 Antworten:
@@ -749,7 +754,7 @@ Ein auf deiner Pinnwand veröffentlichter Beitrag kann über das Pfeil-Symbol re
 [[F3.9.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Quiz: Meldungswürdiger Post?&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="57" name="F3.9.1" tags="" position="3784,2752">&#39;&#39;Quiz: Was ist ein meldungswürdiger Post und was nicht?&#39;&#39;
 
-Frage: 
+Frage:
 Was ist ein Post, der deiner Meinung nach gegen die Allgemeinen Geschäftsbedingungen von Facebook verstößt und gemeldet werden sollte?
 
 Antworten:
@@ -790,13 +795,13 @@ Er ist schwulenfeindlich, menschenverachtend und hetzerisch. Außerdem wird dari
 [[F3.9.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Fazit&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="63" name="F3.10.1" tags="" position="3784,3204">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Frage 1: 
+Frage 1:
 Facebook bietet unterschiedliche Privatsphären-Einstellung an, die festlegen, welcher meiner Freunde z. B. meine Beiträge sehen können. Dabei unterscheidet Facebook lediglich in „Öffentlich“, also für alle Sichtbar und „Freunde“, also für alle Freunde sichtbar. Stimmt diese Aussage?
 
 Antworten:
 * (link: &#39;&lt;strong&gt;Ja, es gibt nur die beiden Einstellungsmöglichkeiten „Öffentlich“ und „Freunde“.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F3.10.1.1&quot;)]
 * (link: &#39;&lt;strong&gt;Nein, es gibt weitere Einstellungsmöglichkeiten.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;F3.10.1.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="64" name="F3.10.1.1" tags="" position="3784,3348">Deine Antwort: 
+<tw-passagedata pid="64" name="F3.10.1.1" tags="" position="3784,3348">Deine Antwort:
 //Ja, es gibt nur die beiden Einstellungsmöglichkeiten „Öffentlich“ und „Freunde“.//
 
 &#39;&#39;Das ist leider nicht richtig.&#39;&#39;
@@ -805,7 +810,7 @@ Antworten:
 Neben den Optionen „Öffentlich“ und „Freunde“ gibt es die weiteren Einstellungen „Freunde ohne Bekannte“, „Nur ich“, sowie benutzerdefinierte Listen.
 
 [[F3.10.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="65" name="F3.10.1.2" tags="" position="3936,3352">Deine Antwort: 
+<tw-passagedata pid="65" name="F3.10.1.2" tags="" position="3936,3352">Deine Antwort:
 //Nein, es gibt weitere Einstellungsmöglichkeiten.//
 
 &#39;&#39;Genau!&#39;&#39;
@@ -816,13 +821,13 @@ Neben den Optionen „Öffentlich“ und „Freunde“ gibt es die weiteren Eins
 [[F3.10.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="66" name="F3.10.2" tags="" position="3784,3500">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Frage 2: 
+Frage 2:
 Gibt es eine Möglichkeit, Veröffentlichungen auf Facebook, in denen ich erwähnt werde oder wo ich auf einem Bild markiert wurde zu unterdrücken, sodass ich proaktiv zustimmen muss, damit ein solcher Post mit meiner Markierung auf meinem Profil erscheint?
 
 Antworten:
 * (link: &#39;&lt;strong&gt;Ja, es gibt diese Möglichkeit.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;F3.10.2.1&quot;)]
 * (link: &#39;&lt;strong&gt;Leider ist das nicht möglich, und sobald ich bei Facebook angemeldet bin, muss ich damit leben, dass mich Nutzer auf Fotos markieren und in anderen Veröffentlichungen mit Namen erwähnen können.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F3.10.2.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="67" name="F3.10.2.1" tags="" position="3784,3648">Deine Antwort: 
+<tw-passagedata pid="67" name="F3.10.2.1" tags="" position="3784,3648">Deine Antwort:
 //Ja, es gibt diese Möglichkeit.//
 
 &#39;&#39;Vollkommen korrekt!&#39;&#39;
@@ -831,7 +836,7 @@ Antworten:
 Es gibt die sogenannte „Chroniküberprüfung“, die dich festlegen lässt, welche Beiträge von Freunden, oder Markierungen mit deinem Namen in deiner Chronik veröffentlich werden dürfen, bevor sie tatsächlich an deiner Pinnwand zu sehen sind.
 
 [[F3.10.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="68" name="F3.10.2.2" tags="" position="3936,3648">Deine Antwort: 
+<tw-passagedata pid="68" name="F3.10.2.2" tags="" position="3936,3648">Deine Antwort:
 //Leider ist das nicht möglich, und sobald ich bei Facebook angemeldet bin, muss ich damit leben, dass mich Nutzer auf Fotos markieren und mich in anderen Veröffentlichungen mit Namen erwähnen können.//
 
 &#39;&#39;Das stimmt leider nicht!&#39;&#39;
@@ -842,7 +847,7 @@ Es gibt die sogenannte „Chroniküberprüfung“, die dich festlegen lässt, we
 [[F3.10.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="69" name="F3.10.3" tags="" position="3784,3800">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Frage 3: 
+Frage 3:
 Ist es möglich seine letzten Aktionen in Facebook einzusehen, um nachzuvollziehen, welche Seiten man besucht und mit „Gefällt mir“ markiert hat und wo man von anderen erwähnt wurde?
 
 Antworten:
@@ -868,22 +873,22 @@ Das sogenannte „Aktivitätenprotokoll“ ermöglicht genau dies. Es listet all
 [[F3.10.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="72" name="F3.10.4" tags="" position="3784,4100">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Frage 4: 
+Frage 4:
 Kann man seine Meinung ändern und Personen, die man als Freunde hinzugefügt hat, wieder aus der Freundesliste entfernen?
 
 Antworten:
 * (link: &#39;&lt;strong&gt;Das ist, so wie es im echten Leben möglich ist, auch auf Facebook möglich.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;F3.10.4.1&quot;)]
 * (link: &#39;&lt;strong&gt;Da Facebook ein soziales Netzwerk ist, das darauf ausgelegt ist Menschen zu verbinden, können Freundeslisten nur vergrößert und nicht wieder verkleinert werden.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F3.10.4.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="73" name="F3.10.4.1" tags="" position="3784,4248">Deine Antwort: 
+<tw-passagedata pid="73" name="F3.10.4.1" tags="" position="3784,4248">Deine Antwort:
 //Das ist, so wie es im echten Leben möglich ist, auch auf Facebook möglich.//
 
 &#39;&#39;Korrekte Antwort!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
-Es ist natürlich auch möglich, Personen, die man vielleicht vor einiger Zeit als Freunde hinzugefügt hat, man jetzt aber nicht mehr in der Freundesliste haben möchte, aus dieser wieder zu entfernen. Ein anderer Grund wäre, wenn man von einer Person belästigt oder bedroht wird. Dann kann man diese Person zusätzlich noch blockieren und so jeglichen Kontakt unterbinden. 
+Es ist natürlich auch möglich, Personen, die man vielleicht vor einiger Zeit als Freunde hinzugefügt hat, man jetzt aber nicht mehr in der Freundesliste haben möchte, aus dieser wieder zu entfernen. Ein anderer Grund wäre, wenn man von einer Person belästigt oder bedroht wird. Dann kann man diese Person zusätzlich noch blockieren und so jeglichen Kontakt unterbinden.
 
 [[F3.10.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="74" name="F3.10.4.2" tags="" position="3936,4248">Deine Antwort: 
+<tw-passagedata pid="74" name="F3.10.4.2" tags="" position="3936,4248">Deine Antwort:
 //Da Facebook ein soziales Netzwerk ist, das darauf ausgelegt ist Menschen zu verbinden, können Freundeslisten nur vergrößert und nicht wieder verkleinert werden.//
 
 &#39;&#39;Leider falsch!&#39;&#39;
@@ -894,14 +899,14 @@ Es ist möglich, Personen, die man vielleicht vor einiger Zeit als Freunde hinzu
 [[F3.10.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="75" name="F3.10.5" tags="" position="3784,4400">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Frage 5: 
+Frage 5:
 Wenn ich auf Facebook Inhalte sehe, von denen ich überzeugt bin, dass sie rassistisch, sexistisch, ausländerfeindlich, strafbar oder ähnliches sind, habe die Möglichkeit diese Inhalte jemandem zu melden?
 
 Antworten:
 * (link: &#39;&lt;strong&gt;Solche Inhalte immer direkt bei der Polizei melden.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F3.10.5.1&quot;)]
 * (link: &#39;&lt;strong&gt;Solche Inhalte werden zunächst am besten über die „Melden-Funktion“ von Facebook bei Facebook selber gemeldet.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;F3.10.5.2&quot;)]
 * (link: &#39;&lt;strong&gt;Aufgrund der großen Zahl an Beiträgen und Mitgliedern kann man nichts gegen solche Kommentare machen.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F3.10.5.3&quot;)]</tw-passagedata>
-<tw-passagedata pid="76" name="F3.10.5.1" tags="" position="3784,4548">Deine Antwort: 
+<tw-passagedata pid="76" name="F3.10.5.1" tags="" position="3784,4548">Deine Antwort:
 //Solche Inhalte immer direkt bei der Polizei melden.//
 
 &#39;&#39;Vorsicht!&#39;&#39;
@@ -910,7 +915,7 @@ Antworten:
 Die Polizei solltest du nur kontaktieren, wenn es absolut akut ist. Dies wäre bspw. bei einem angekündigten Amoklauf oder Suizid-Versuch. In der Regel sollte es ausreichend sein, zunächst die „Melden-Funktion“ von Facebook zu nutzen und Facebook entscheiden zu lassen, ob der Inhalt tatsächlich gegen die AGBs oder gar Gesetze verstoßen.
 
 [[F3.11&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="77" name="F3.10.5.2" tags="" position="3936,4548">Deine Antwort: 
+<tw-passagedata pid="77" name="F3.10.5.2" tags="" position="3936,4548">Deine Antwort:
 //Solche Inhalte werden zunächst am besten über die „Melden-Funktion“ von Facebook bei Facebook selber gemeldet.//
 
 &#39;&#39;Genau richtig!&#39;&#39;
@@ -919,7 +924,7 @@ Die Polizei solltest du nur kontaktieren, wenn es absolut akut ist. Dies wäre b
 Sobald du das Gefühl hast, dass du auf einen Inhalt gestoßen bist, der gegen geltende Gesetze oder die AGBs verstößt, kannst du über die „Melden-Funktion“ Facebook darauf hinweisen. Diese befassen sich daraufhin damit und entscheiden von Fall zu Fall.
 
 [[F3.11&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="78" name="F3.10.5.3" tags="" position="4084,4548">Deine Antwort: 
+<tw-passagedata pid="78" name="F3.10.5.3" tags="" position="4084,4548">Deine Antwort:
 //Aufgrund der großen Zahl an Beiträgen und Mitgliedern kann man nichts gegen solche Kommentare machen.//
 
 &#39;&#39;Leider nicht korrekt!&#39;&#39;
@@ -933,7 +938,7 @@ Sobald du das Gefühl hast, dass du auf einen Inhalt gestoßen bist, der gegen g
 Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$score Punkte!]}
 
 [[F3.10.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Das Quiz noch einmal machen&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="80" name="F1.10.1.1" tags="" position="2608,3768">Deine Antwort: 
+<tw-passagedata pid="80" name="F1.10.1.1" tags="" position="2608,3768">Deine Antwort:
 //Ja, denn so stelle ich sicher, dass andere mich unter meinem korrekten Namen finden und, dass ich nicht gegen die Allgemeinen Geschäftsbedingungen (AGB) verstoße.//
 
 &#39;&#39;Genau, das ist die richtige Antwort.&#39;&#39;
@@ -943,7 +948,7 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 Halte dich an die Allgemeinen Geschäftsbedingungen von Facebook und helfe deinen bekannten bei der Suche nach deinem Benutzerprofil.
 
 [[F1.10.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="81" name="F1.10.1.2" tags="" position="2760,3768">Deine Antwort: 
+<tw-passagedata pid="81" name="F1.10.1.2" tags="" position="2760,3768">Deine Antwort:
 //Nein, weil alle Nutzer von Facebook vertrauenswürdig sind und mich Bekannte auf jeden Fall unter einem Pseudonym finden werden.//
 
 &#39;&#39;Vorsicht!&#39;&#39;
@@ -955,7 +960,7 @@ Wenn du einen falschen Namen angibst, dann verstößt du gegen die Allgemeinen G
 [[F1.10.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="82" name="F1.10.2" tags="" position="2608,3924">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Frage 2: 
+Frage 2:
 Welcher Aussage würdest du zustimmen?
 
 Antworten:
@@ -964,7 +969,7 @@ Antworten:
 <tw-passagedata pid="83" name="F1.10.2.1" tags="" position="2608,4072">Deine Antwort:
 //Wenn ich eine fremde Person kennenlerne, dann erzähle ich ihr möglichst viel aus meinem Leben.//
 
-&#39;&#39;Vorsicht!&#39;&#39; 
+&#39;&#39;Vorsicht!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 
@@ -973,7 +978,7 @@ Das wäre ein sehr unvorsichtiges und gefährliches Verhalten. Das gleiche würd
 Wie du das machst, lernst in Teil drei dieses Kapitels.
 
 [[F1.10.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="84" name="F1.10.2.2" tags="" position="2760,4072">Deine Antwort: 
+<tw-passagedata pid="84" name="F1.10.2.2" tags="" position="2760,4072">Deine Antwort:
 //Private Informationen teile ich nur mit meinen engsten Bekannten und Familienmitgliedern.//
 
 &#39;&#39;Das ist eine gute Einstellung!&#39;&#39;
@@ -985,13 +990,13 @@ Und wie du auf Facebook Informationen nur mit Menschen teilst, mit denen du sie 
 [[F1.10.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="85" name="F1.10.3" tags="" position="2608,4224">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Frage 3: 
+Frage 3:
 Ist es eine gute Idee, einen Post mit deinen Urlaubsplänen auf deiner Pinnwand für alle deine Freunde sichtbar zu veröffentlichen?
 
 Antworten:
 * (link: &#39;&lt;strong&gt;Nein, denn das ist eine sehr sensible Information. In den falschen Händen könnte ich so Opfer eines Einbruchs werden.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;F1.10.3.1&quot;)]
 * (link: &#39;&lt;strong&gt;Ja, denn so kann ich meine Freunde und Verwandten an meinen Plänen teilhaben lassen und vielleicht kann ich sie sogar neidisch machen.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F1.10.3.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="86" name="F1.10.3.1" tags="" position="2608,4368">Deine Antwort: 
+<tw-passagedata pid="86" name="F1.10.3.1" tags="" position="2608,4368">Deine Antwort:
 //Nein, denn das ist eine sehr sensible Information. In den falschen Händen könnte ich so Opfer eines Einbruchs werden.//
 
 &#39;&#39;Genau, das hast du gut erkannt.&#39;&#39;
@@ -1001,10 +1006,10 @@ Antworten:
 Gehe auf Nummer Sicher und teile sensible Informationen nur im privaten Chat oder mit eingerichteten Gruppen, die nur aus Personen besteht, denen du uneingeschränkt vertrauen kannst.
 
 [[F1.10.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="87" name="F1.10.3.2" tags="" position="2756,4372">Deine Antwort: 
+<tw-passagedata pid="87" name="F1.10.3.2" tags="" position="2756,4372">Deine Antwort:
 //Ja, denn so kann ich meine Freunde und Verwandten an meinen Plänen teilhaben lassen und vielleicht kann ich sie sogar neidisch machen.//
 
-&#39;&#39;Achtung!&#39;&#39; 
+&#39;&#39;Achtung!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
 
@@ -1013,13 +1018,13 @@ So solltest du dich nicht auf Facebook verhalten. Gehe auf Nummer Sicher und tei
 [[F1.10.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="88" name="F1.10.4" tags="" position="2608,4520">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Frage 4: 
+Frage 4:
 Jemand mit dem gleichen Nachnamen wie du möchte dich hinzufügen, aber du bist dir nicht sicher, ob du die Person kennst. Wie reagierst du?
 
 Antworten:
 * (link: &#39;&lt;strong&gt;Ich füge die Person trotzdem zu meinen Freunden hinzu, schließlich haben wir den gleichen Nachnamen.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F1.10.4.1&quot;)]
 * (link: &#39;&lt;strong&gt;Ich kontaktiere die Person und frage sie, warum sie mich zu den Freunden hinzufügen möchte. Außerdem informiere ich mich bei anderen Verwandten oder Bekannten, ob die Person ihnen bekannt ist.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;F1.10.4.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="89" name="F1.10.4.1" tags="" position="2608,4668">Deine Antwort: 
+<tw-passagedata pid="89" name="F1.10.4.1" tags="" position="2608,4668">Deine Antwort:
 //Ich füge die Person trotzdem zu meinen Freunden hinzu, schließlich haben wir den gleichen Nachnamen.//
 
 &#39;&#39;Vorsicht!&#39;&#39;
@@ -1029,7 +1034,7 @@ Antworten:
 Du solltest grundsätzlich misstrauisch sein und sicherstellen, dass du die Person auch kennst, die dich zu ihren Freunden hinzufügen möchte. Vergiss nicht, dass es möglich ist, sich unter einem falschen Namen bei Facebook anzumelden. Die Person könnte ein Betrüger sein, der dich z. B. durch den Enkeltrick täuschen möchte.
 
 [[F1.10.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="90" name="F1.10.4.2" tags="" position="2757,4668">Deine Antwort: 
+<tw-passagedata pid="90" name="F1.10.4.2" tags="" position="2757,4668">Deine Antwort:
 //Ich kontaktiere die Person und frage sie, warum sie mich zu den Freunden hinzufügen möchte. Außerdem informiere ich mich bei anderen Verwandten oder Bekannten, ob die Person ihnen bekannt ist.//
 
 &#39;&#39;Gute Vorgehensweise!&#39;&#39;
@@ -1041,13 +1046,13 @@ In solchen Situationen Misstrauen zu zeigen kann dich vor Betrügern schützen.
 [[F1.10.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="91" name="F1.10.5" tags="" position="2608,4820">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Frage 5: 
+Frage 5:
 Wenn du eine Freundschaft auf Facebook beenden möchtest, reicht es dann, die Person zu ignorieren?
 
 Antworten:
 * (link: &#39;&lt;strong&gt;Ja, denn auf Facebook ist es wie im echten Leben. Wenn ich die Person ignoriere, dann habe ich auch nichts mehr mit ihr zu tun.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F1.10.5.1&quot;)]
 * (link: &#39;&lt;strong&gt;Nein, denn auf Facebook muss ich proaktiv handeln und die Person aus meinem Freundeskreis entfernen.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;F1.10.5.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="92" name="F1.10.5.1" tags="" position="2600,4963">Deine Antwort: 
+<tw-passagedata pid="92" name="F1.10.5.1" tags="" position="2600,4963">Deine Antwort:
 //Ja, denn auf Facebook ist es wie im echten Leben. Wenn ich die Person ignoriere, dann habe ich auch nichts mehr mit ihr zu tun.//
 
 &#39;&#39;Falsch!&#39;&#39;
@@ -1057,7 +1062,7 @@ Antworten:
 Um eine Freundschaft auf Facebook zu beenden musst du proaktiv handeln und die Person aus deinem Freundeskreis entfernen. Wie du das machst, lernst du in Teil drei dieses Kapitels.
 
 [[F1.10.6&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="93" name="F1.10.5.2" tags="" position="2756,4968">Deine Antwort: 
+<tw-passagedata pid="93" name="F1.10.5.2" tags="" position="2756,4968">Deine Antwort:
 //Nein, denn auf Facebook muss ich proaktiv handeln und die Person aus meinem Freundeskreis entfernen.//
 
 &#39;&#39;Genau!&#39;&#39;
@@ -1069,13 +1074,13 @@ Merke dir, dass du deine Freundeslisten aktiv pflegen musst, damit du nur mit de
 [[F1.10.6&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="94" name="F1.10.6" tags="" position="2600,5112">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Frage 6: 
+Frage 6:
 Gibt es etwas, das du am Ende einer Facebook-Session beachten solltest?
 
 Antworten:
 * (link: &#39;&lt;strong&gt;Ja, ich sollte mich von Facebook abmelden.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;F1.10.6.1&quot;)]
 * (link: &#39;&lt;strong&gt;Nein, ich muss nichts beachten.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F1.10.6.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="95" name="F1.10.6.1" tags="" position="2600,5264">Deine Antwort: 
+<tw-passagedata pid="95" name="F1.10.6.1" tags="" position="2600,5264">Deine Antwort:
 //Ja, ich sollte mich von Facebook abmelden.//
 
 &#39;&#39;Richtig!&#39;&#39;
@@ -1085,7 +1090,7 @@ Antworten:
 Nach dem Benutzen von Facebook solltest du dich über den „Abmelden-Button“ von Facebook abmelden. Dies ist vor allem dann wichtig, wenn du an einem öffentlichen Ort wie einem Internet-Café oder einem Flughafen bist, wo auch andere Personen den gleichen Computer benutzen.
 
 [[F1.11&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="96" name="F1.10.6.2" tags="" position="2756,5264">Deine Antwort: 
+<tw-passagedata pid="96" name="F1.10.6.2" tags="" position="2756,5264">Deine Antwort:
 //Nein, ich muss nichts beachten.//
 
 &#39;&#39;Hier aufpassen!&#39;&#39;
@@ -1100,56 +1105,56 @@ Grundsätzlich ist es ratsam, sich nach einer Facebook-Session von Facebook übe
 Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$score Punkte!]}
 
 [[F1.10.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Das Quiz noch einmal machen&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="98" name="F2.7.1.1" tags="" position="3068,2816">Deine Antwort: 
+<tw-passagedata pid="98" name="F2.7.1.1" tags="" position="3068,2816">Deine Antwort:
 //Nu9´ßD$m//
 
 &#39;&#39;Genau!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Glückliche Susi&quot;&gt;&lt;/div&gt;}
-Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch aus Buchstaben- oder Zahlenfolgen und schon gar nicht den eigenen Namen benutzen. 
+Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch aus Buchstaben- oder Zahlenfolgen und schon gar nicht den eigenen Namen benutzen.
 Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleinschreibung mit einfließen zu lassen.
 
 [[F2.7.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="99" name="F2.7.1.2" tags="" position="3208,2816">Deine Antwort: 
+<tw-passagedata pid="99" name="F2.7.1.2" tags="" position="3208,2816">Deine Antwort:
 //Nußbaumgarten//
 
 &#39;&#39;Vorsicht!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
-Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch aus Buchstaben- oder Zahlenfolgen und schon gar nicht den eigenen Namen benutzen. 
+Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch aus Buchstaben- oder Zahlenfolgen und schon gar nicht den eigenen Namen benutzen.
 Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleinschreibung mit einfließen zu lassen.
 
 [[F2.7.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="100" name="F2.7.1.3" tags="" position="3348,2816">Deine Antwort: 
+<tw-passagedata pid="100" name="F2.7.1.3" tags="" position="3348,2816">Deine Antwort:
 //Susi1234//
 
 &#39;&#39;Vorsicht!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
-Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch aus Buchstaben- oder Zahlenfolgen und schon gar nicht den eigenen Namen benutzen. 
+Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch aus Buchstaben- oder Zahlenfolgen und schon gar nicht den eigenen Namen benutzen.
 Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleinschreibung mit einfließen zu lassen.
 
 [[F2.7.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="101" name="F2.7.1.4" tags="" position="3479,2816">Deine Antwort: 
+<tw-passagedata pid="101" name="F2.7.1.4" tags="" position="3479,2816">Deine Antwort:
 //abcdefg//
 
 &#39;&#39;Vorsicht!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
-Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch aus Buchstaben- oder Zahlenfolgen und schon gar nicht den eigenen Namen benutzen. 
+Ein gutes Passwort sollte weder aus Wörtern bestehen, die im Duden stehen, noch aus Buchstaben- oder Zahlenfolgen und schon gar nicht den eigenen Namen benutzen.
 Besser ist es, sowohl Zahlen, Buchstaben und Sonderzeichen und Groß- und Kleinschreibung mit einfließen zu lassen.
 
 [[F2.7.2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="102" name="F2.7.2" tags="" position="3068,2968">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Frage 2: 
+Frage 2:
 Ich habe Probleme mir mein Passwort zu merken. Wo bewahre ich es am besten auf?
 
 Antworten:
 * (link: &#39;&lt;strong&gt;Auf einem Post-It am Bildschirm, dann kann ich es sofort einsehen.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F2.7.2.1&quot;)]
 * (link: &#39;&lt;strong&gt;In meiner Geldbörse, die habe ich schließlich immer dabei.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F2.7.2.2&quot;)]
 * (link: &#39;&lt;strong&gt;An einem geheimen Ort in meinem Haus an einem sicheren Platz.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;F2.7.2.3&quot;)]</tw-passagedata>
-<tw-passagedata pid="103" name="F2.7.2.1" tags="" position="3068,3116">Deine Antwort: 
+<tw-passagedata pid="103" name="F2.7.2.1" tags="" position="3068,3116">Deine Antwort:
 //Auf einem Post-It am Bildschirm, dann kann ich es sofort einsehen.//
 
 &#39;&#39;Achtung!&#39;&#39;
@@ -1159,17 +1164,17 @@ Das solltest du nicht tun. Das ist zwar auf dem ersten Blick verlockend, aber de
 Besser: An einem geheimen Ort in deiner Wohnung oder deinem Haus an einem sicheren Platz.
 
 [[F2.7.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="104" name="F2.7.2.2" tags="" position="3212,3116">Deine Antwort: 
+<tw-passagedata pid="104" name="F2.7.2.2" tags="" position="3212,3116">Deine Antwort:
 //In meiner Geldbörse, die habe ich schließlich immer dabei.//
 
 &#39;&#39;Gefährlich!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;face&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Unglückliche Susi&quot;&gt;&lt;/div&gt;}
-Deine Geldbörse trägst du mit dir wenn du das Haus verlässt, immer mit der Gefahr, dass es abhandenkommt. 
+Deine Geldbörse trägst du mit dir wenn du das Haus verlässt, immer mit der Gefahr, dass es abhandenkommt.
 Besser: An einem geheimen Ort in deiner Wohnung oder deinem Haus an einem sicheren Platz.
 
 [[F2.7.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="105" name="F2.7.2.3" tags="" position="3368,3116">Deine Antwort: 
+<tw-passagedata pid="105" name="F2.7.2.3" tags="" position="3368,3116">Deine Antwort:
 //An einem geheimen Ort in meinem Haus an einem sicheren Platz.//
 
 &#39;&#39;Sehr gut!&#39;&#39;
@@ -1180,14 +1185,14 @@ Optimal ist es natürlich, wenn du dein Passwort gar nicht aufschreibst. Wenn du
 [[F2.7.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur nächsten Frage&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="106" name="F2.7.3" tags="" position="3068,3268">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Frage 3: 
+Frage 3:
 Leider war ich unvorsichtig und du hast den Verdacht, dass sich jemand hat unter meinem Namen bei Facebook eingeloggt hat. Welche Schritte leitest du am besten in welcher Reihenfolge ein?
 
 Antworten:
 * (link: &#39;&lt;strong&gt;Facebook über www.facebook.com/hacked kontaktieren und dann Passwort zurücksetzen.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F2.7.3.1&quot;)]
 * (link: &#39;&lt;strong&gt;Passwort zurücksetzen und dann Facebook über www.facebook.com/hacked kontaktieren.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;F2.7.3.2&quot;)]
 * (link: &#39;&lt;strong&gt;Erstmal abwarten und dann Passwort zurücksetzen und dann  Facebook über www.facebook.com/hacked kontaktieren.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F2.7.3.3&quot;)]</tw-passagedata>
-<tw-passagedata pid="107" name="F2.7.3.1" tags="" position="3068,3416">Deine Antwort: 
+<tw-passagedata pid="107" name="F2.7.3.1" tags="" position="3068,3416">Deine Antwort:
 //Facebook über www.facebook.com/hacked kontaktieren und dann Passwort zurücksetzen.//
 
 &#39;&#39;//Fast// richtig!&#39;&#39;
@@ -1196,7 +1201,7 @@ Antworten:
 Sofern du dich noch bei Facebook einloggen kannst, solltest du zunächst versuchen, dein Passwort zurückzusetzen und ein neues einzurichten.
 
 [[F2.8&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="108" name="F2.7.3.2" tags="" position="3216,3416">Deine Antwort: 
+<tw-passagedata pid="108" name="F2.7.3.2" tags="" position="3216,3416">Deine Antwort:
 //Passwort zurücksetzen und dann Facebook über www.facebook.com/hacked kontaktieren.//
 
 &#39;&#39;Sehr gut!&#39;&#39;
@@ -1205,7 +1210,7 @@ Sofern du dich noch bei Facebook einloggen kannst, solltest du zunächst versuch
 So solltest du vorgehen. Versuche zunächst dein Passwort zurückzusetzen und ein neues einzurichten. Ist dies nicht mehr möglich, weil z. B. deine E-Mail-Adresse geändert wurde, dann kontaktiere Facebook über www.facebook.com/hacked.
 
 [[F2.8&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Punktestand&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="109" name="F2.7.3.3" tags="" position="3368,3416">Deine Antwort: 
+<tw-passagedata pid="109" name="F2.7.3.3" tags="" position="3368,3416">Deine Antwort:
 //Erstmal abwarten und dann Passwort zurücksetzen und dann  Facebook über www.facebook.com/hacked kontaktieren.//
 
 &#39;&#39;Keine gute Idee!&#39;&#39;
@@ -1298,7 +1303,7 @@ Es gibt mehrere Arten, um mit Freunden zu kommunizieren. Diese Formen werde ich 
 [[1.4 Kommunikation 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="117" name="1.5 Listen" tags="" position="1371,670">&#39;&#39;Listen&#39;&#39;
 
-Nach einer gewissen Zeit haben wir eine Menge Freunde zu unserer Freundesliste hinzugefügt. Das erzeugt leider ein Problem. Es wir unübersichtlich. 
+Nach einer gewissen Zeit haben wir eine Menge Freunde zu unserer Freundesliste hinzugefügt. Das erzeugt leider ein Problem. Es wir unübersichtlich.
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/faces/surprised.jpg&quot; alt=&quot;Überraschte Susi&quot;&gt;&lt;/div&gt;}
 Wenn wir beispielweise eine Geburtstagseinladung verschicken wollen, dann sollten diese nicht alle Personen auf Facebook lesen, denn wir wollen nur unseren engsten Freundeskreis einladen und nicht auch Personen, die wir vielleicht nur ein bis zweimal im Jahr sehen. Daher sollten wir beschreiben, welche Personen zu unserem engsten Freundeskreis oder zu unserer Familie gehören.
@@ -1393,7 +1398,7 @@ Genau dies wird in diesem Kapitel behandelt. Wir werden lernen, was Gruppen sind
 Gruppen sind ein eigener Bereich, in denen gleichgesinnte Personen zusammenkommen, um über ein Thema zu reden. Es gibt Gruppen über Sportmannschaften, über die Heimat und viele andere Themen.
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/groups.jpg&quot; alt=&quot;Gruppen&quot;&gt;&lt;/div&gt;}
-Ich bin eine Hobbygärtnerin und möchte gerne Bilder von anderen Gärten sehen. Deswegen habe ich nach einer Gruppe für Hobbygärtner gesucht. Um eine derartige Gruppe zu finden, musste ich im Suchfeld oben links den Begriff &quot;Hobbygärtner&quot; eingeben. Dann hat mir Facebook einige Seiten und Gruppen vorgeschlagen. Ich habe mich für die größte Gruppe entschieden, welche über 1884 Mitglieder verfügt. Anschließend muss ich nur auf das Feld &#39;&#39;Gruppe beitreten&#39;&#39; klicken. 
+Ich bin eine Hobbygärtnerin und möchte gerne Bilder von anderen Gärten sehen. Deswegen habe ich nach einer Gruppe für Hobbygärtner gesucht. Um eine derartige Gruppe zu finden, musste ich im Suchfeld oben links den Begriff &quot;Hobbygärtner&quot; eingeben. Dann hat mir Facebook einige Seiten und Gruppen vorgeschlagen. Ich habe mich für die größte Gruppe entschieden, welche über 1884 Mitglieder verfügt. Anschließend muss ich nur auf das Feld &#39;&#39;Gruppe beitreten&#39;&#39; klicken.
 
 In der Gruppenbeschreibung sehen wir, dass dies eine geschlossene Gruppe ist, das bedeutet, dass ich auf eine Freischaltung warten muss. Das bedeutet, dass die Person, die die Gruppe verwaltet, mich erst annehmen muss.
 
@@ -1401,7 +1406,7 @@ In der Gruppenbeschreibung sehen wir, dass dies eine geschlossene Gruppe ist, da
 </tw-passagedata>
 <tw-passagedata pid="119" name="1.7 Abonnieren" tags="" position="1646,670">&#39;&#39;Abonnieren&#39;&#39;
 
-Facebook ist nicht nur eine Plattform zur Kommunikation, sondern auch dazu geeignet sich Informationen zu beschaffen. Es gibt diverse Seiten die rund um die Uhr ihren Abonnenten die neuesten Informationen bereitstellen. 
+Facebook ist nicht nur eine Plattform zur Kommunikation, sondern auch dazu geeignet sich Informationen zu beschaffen. Es gibt diverse Seiten die rund um die Uhr ihren Abonnenten die neuesten Informationen bereitstellen.
 
 Dies können Personen des öffentlichen Lebens sein, wie etwa Sportler oder Musiker. Thomas Müller beispielsweise verfügt über eine Facebook Seite, welche von 9,5 Millionen Menschen verfolgt wird. Er liefert dort seinen Fans Informationen über Spiele, über seine Werbedeals oder über seinen Urlaub. Somit wissen seine Fans immer, was um die Person Thomas Müller geschieht.
 
@@ -1411,7 +1416,7 @@ Dies können Personen des öffentlichen Lebens sein, wie etwa Sportler oder Musi
 
 Facebook kann überall und jederzeit verwendet werden. Jedoch ist es oft mühsam immer seinen Laptop mitzunehmen. Daher kann es sich empfehlen, sich Facebook auf sein Smartphone zu laden, um somit überall mit den Smartphone online zu gehen. Wie das Ganze funktioniert, werde ich in diesem Kapitel erklären.
 
-Auf vielen Smartphones ist die Facebook-App schon vorinstalliert, wenn dies bei dir der Fall ist, dann kannst du zur nächsten Seite gehen. Falls nicht, dann solltest du den weiteren Text lesen. 
+Auf vielen Smartphones ist die Facebook-App schon vorinstalliert, wenn dies bei dir der Fall ist, dann kannst du zur nächsten Seite gehen. Falls nicht, dann solltest du den weiteren Text lesen.
 
 [[1.8 Smartphone 2&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]
 
@@ -1457,7 +1462,7 @@ Auf dieser Seite möchte ich erklären, wie du die Fragen auflösen kannst. Ich 
 	Hinweise:
 	Dies sind die Daten, die ich für meine Registrierung eingegeben habe. Passe die Eingaben deinen eigenen Daten an.
 	Mein Passwort lautet natürlich nicht 12345678!
-	
+
 Du hast die Wahl eine E-Mail-Adresse oder eine Handynummer einzugeben. Diese muss dann doppelt eingegeben werden, damit sichergestellt wird, dass du keinen Fehler einbaust.
 
 3.	 Wenn alle Daten korrekt eingegeben wurden, dann einfach auf Registrieren klicken.
@@ -1529,7 +1534,7 @@ Nun könnt ihr eure Freundesliste füllen und wahrscheinlich wird euer Ergebnis 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/privater_chat_gezoomt.jpg&quot; alt=&quot;Privater Chat gezoomt&quot;&gt;&lt;/div&gt;}
 0. Dieses Symbol leuchtet auf, wenn uns eine Person eine private Nachricht geschrieben hat. Die Zahl daneben zeigt uns, wie viele Nachrichten wir bekommen haben.
 0. In dieser Liste werden unsere Freunde angezeigt. Der grüne Kreis daneben zeigt uns an, dass diese Person gerade online ist. Wenn wir auf einen Namen in dieser Liste klicken, dann öffnet sich ein privater Chatraum, so wie er in &#39;&#39;3&#39;&#39; zu sehen ist.
-0. Das ist ein privater Chatraum. Hier können die Beteiligten Person ungestört miteinander kommunizieren. Wenn wir auf das &#39;&#39;+-Symbol&#39;&#39; klicken, dann können wir weitere Personen zu diesem Gespräch hinzufügen. 
+0. Das ist ein privater Chatraum. Hier können die Beteiligten Person ungestört miteinander kommunizieren. Wenn wir auf das &#39;&#39;+-Symbol&#39;&#39; klicken, dann können wir weitere Personen zu diesem Gespräch hinzufügen.
 
 [[1.4 Kommunikation 3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="127" name="1.4 Kommunikation 3" tags="" position="1221,970">&#39;&#39;Kommunikation&#39;&#39;
@@ -1549,7 +1554,7 @@ Im Bereich „Was machst du gerade?“ können wir unseren Text schreiben. Wenn 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/beitrag_verfassen_2.jpg&quot; alt=&quot;Beitrag Verfassen 2&quot;&gt;&lt;/div&gt;}
 Darunter erlaubt uns Facebook, unseren Beitrag nach eigenen Wünschen zu gestalten.
 
-&#39;&#39;Orange:&#39;&#39; Hier haben wir die Möglichkeit Personen hinzufügen, welche mit uns auf dem Bild sind. 
+&#39;&#39;Orange:&#39;&#39; Hier haben wir die Möglichkeit Personen hinzufügen, welche mit uns auf dem Bild sind.
 
 &#39;&#39;Rot:&#39;&#39; Hier können wir unsere Emotionen hinzufügen. Macht uns das Bild glücklich oder eher traurig?
 
@@ -1574,7 +1579,7 @@ Folgendes Bild zeigt, welche Lösungen es hierzu gibt.
 Wenn wir auf unseren Beitrag schauen, dann bemerken wir oben rechts einen Pfeil. Wenn wir auf diesen klicken, dann öffnen sich neue Optionen, mit denen wir den Beitrag bearbeiten können. Wir haben die Möglichkeit, den Beitrag zu bearbeiten, zu löschen oder zu speichern.
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/beitrag_bearbeiten_2.jpg&quot; alt=&quot;Beitrag bearbeiten 2&quot;&gt;&lt;/div&gt;}
-Auf der linken Seite finden wir ebenfalls einen Pfeil. Wenn wir auf diesen klicken, dann können wir die Privatsphäre-Einstellungen verändern. Wir geben also an, wer den Beitrag lesen darf. 
+Auf der linken Seite finden wir ebenfalls einen Pfeil. Wenn wir auf diesen klicken, dann können wir die Privatsphäre-Einstellungen verändern. Wir geben also an, wer den Beitrag lesen darf.
 Wie genau die Privatsphäre-Einstellungen getroffen werden, erfährst du in Kapitel Zwei!
 
 [[1.4 Kommunikation 5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zum nächsten Abschnitt&lt;/button&gt;]]</tw-passagedata>
@@ -1588,7 +1593,7 @@ Mit //liken// wird dem Verfasser gezeigt, welche Gefühle der Leser damit verbin
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/liken.jpg&quot; alt=&quot;Liken&quot;&gt;&lt;/div&gt;}
 //Kommentieren// ist ganz einfach. Hier kann jeder Leser sein Kommentar zu diesem Bild abgeben. Zu meinem Strandbeitrag hat Bernd Meyer geschrieben: „Wow. Da wird man glatt neidisch“.
 
-Mit //teilen// ist gemeint, dass eine Person diesen Beitrag auch auf seiner Pinnwand zeigt, damit auch seine Freunde diesen Beitrag sehen. Der Nutzen hieran ist, dass dieser Beitrag eine höhere Reichweite erhält. 
+Mit //teilen// ist gemeint, dass eine Person diesen Beitrag auch auf seiner Pinnwand zeigt, damit auch seine Freunde diesen Beitrag sehen. Der Nutzen hieran ist, dass dieser Beitrag eine höhere Reichweite erhält.
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;&quot; src=&quot;static/res/kap1/schnittmenge.jpg&quot; alt=&quot;Schnittmenge&quot;&gt;&lt;/div&gt;}
 Beispiel: Person A sucht eine vermisste Person. Ihre Reichweite (die Freunde, die das lesen können) ist begrenzt. Person B möchte Person A helfen und teilt ihren Beitrag. Dadurch können mehr Leute diesen Beitrag lesen, da Person B Freunde besitzt, welche Person A nicht besitzt. Somit erhält ein Beitrag eine größere Reichweite.
@@ -1674,7 +1679,7 @@ Vermittelte Lerninhalte:
 
 In diesem Kapitel sollst Du lernen …
 * … zu verstehen, was Datenschutz in Deutschland ist und ob deine Daten wirklich geschützt sind.
-* … warum du nicht rücksichtslos mit deinen persönlichen Daten umgehen solltest. 
+* … warum du nicht rücksichtslos mit deinen persönlichen Daten umgehen solltest.
 * … bewerten zu können, welche Daten schutzbedürftig sind und welche nicht.
 
 [[K3.1.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu „Was ist Datenschutz?“&lt;/button&gt;]]</tw-passagedata>
@@ -1705,7 +1710,7 @@ Schutzbedürftige Daten sind persönliche Angaben sowie sachliche Angaben. Zu pe
 Susi Sorglos ist sich unsicher, welche Daten sie problemlos ins Internet stellen kann und welche nicht. Hilf ihr zu entscheiden, welche Daten schutzbedürftig sind und welche nicht:
 
 &#39;&#39;Frage 1:&#39;&#39;
-Da sie vor kurzem Umgezogen ist, möchte sie ihren Freunden ihre neue Adresse mitteilen und postet sie an ihre Pinnwand, da dies viel einfacher geht als alle persönlich anzuschreiben. 
+Da sie vor kurzem Umgezogen ist, möchte sie ihren Freunden ihre neue Adresse mitteilen und postet sie an ihre Pinnwand, da dies viel einfacher geht als alle persönlich anzuschreiben.
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/kap3/datenschutz_frage_1.jpg&quot; alt=&quot;Facebook Datenschutz 1&quot;&gt;&lt;/div&gt;}
 * (link: &#39;&lt;strong&gt;Schutzbedürftig&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;K3.1.4.1.1&quot;)]
@@ -1713,7 +1718,7 @@ Da sie vor kurzem Umgezogen ist, möchte sie ihren Freunden ihre neue Adresse mi
 <tw-passagedata pid="138" name="K3.1.4.1.1" tags="" position="5140,940">&#39;&#39;Deine Antwort:&#39;&#39;
 //Schutzbedürftig//
 
-&#39;&#39;Sehr gut!&#39;&#39; 
+&#39;&#39;Sehr gut!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
 Die persönliche Adresse gehört definitiv zu den persönlichen Angaben, die sie nicht öffentlich im Internet preisgeben sollte.
@@ -1722,7 +1727,7 @@ Die persönliche Adresse gehört definitiv zu den persönlichen Angaben, die sie
 <tw-passagedata pid="139" name="K3.1.4.1.2" tags="" position="5290,941">&#39;&#39;Deine Antwort:&#39;&#39;
 //Nicht Schutzbedürftig//
 
-&#39;&#39;Achtung!&#39;&#39; 
+&#39;&#39;Achtung!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Die Adresse gehört zu den sehr persönlichen Angaben von Susi und ist deshalb auch Schutzbedürftig. Sie sollte sie besser nicht öffentlich im Internet preisgeben.
@@ -1748,7 +1753,7 @@ Die E-Mail-Adresse und die Telefonnummer gehören auch zu den persönlichen Anga
 <tw-passagedata pid="142" name="K3.1.4.2.2" tags="" position="5290,1240">&#39;&#39;Deine Antwort:&#39;&#39;
 //Nicht Schutzbedürftig//
 
-&#39;&#39;Achtung!&#39;&#39; 
+&#39;&#39;Achtung!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Die E-Mail-Adresse gehört auch zu den persönlichen Angaben von Susi und ist deshalb auch Schutzbedürftig. Sie sollte sie besser nicht öffentlich im Internet preisgeben, sondern nur denen geben, die sie auch wirklich benötigen.
@@ -1765,7 +1770,7 @@ Einen Link zu einem Zeitungsartikel, den sie sehr interessant findet und gerne m
 <tw-passagedata pid="144" name="K3.1.4.3.1" tags="" position="5140,1541">&#39;&#39;Deine Antwort:&#39;&#39;
 //Schutzbedürftig//
 
-&#39;&#39;Leider falsch!&#39;&#39; 
+&#39;&#39;Leider falsch!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Einen Bericht, der Online für alle frei zugänglich ist, kann Susi Sorglos ohne Bedenken posten, denn es handelt sich weder um sachliche noch um personenbezogene Daten.
@@ -1774,7 +1779,7 @@ Einen Bericht, der Online für alle frei zugänglich ist, kann Susi Sorglos ohne
 <tw-passagedata pid="145" name="K3.1.4.3.2" tags="" position="5290,1541">&#39;&#39;Deine Antwort:&#39;&#39;
 //Nicht Schutzbedürftig//
 
-&#39;&#39;Richtig!&#39;&#39; 
+&#39;&#39;Richtig!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
 Einen Bericht, der Online für alle frei zugänglich ist, kann Susi Sorglos ohne Bedenken posten, denn es handelt sich weder um sachliche noch um personenbezogene Daten.
@@ -1789,7 +1794,7 @@ Ein Foto von sich selbst und ihrem neuen Auto, bei dem auch das Nummernschild zu
 <tw-passagedata pid="147" name="K3.1.4.4.1" tags="" position="5140,1851">&#39;&#39;Deine Antwort:&#39;&#39;
 //Schutzbedürftig//
 
-&#39;&#39;Sehr gut!&#39;&#39; 
+&#39;&#39;Sehr gut!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/happy.jpg&quot; alt=&quot;Happy Face&quot;&gt;&lt;/div&gt;}
 Ein Kfz Nummernschild gehört zu den sachlichen Angaben, die sie nicht öffentlich im Internet preisgeben sollte. Erst wenn das Nummernschild unkenntlich gemacht wurde, kann sie das Foto posten.
@@ -1798,7 +1803,7 @@ Ein Kfz Nummernschild gehört zu den sachlichen Angaben, die sie nicht öffentli
 <tw-passagedata pid="148" name="K3.1.4.4.2" tags="" position="5290,1851">&#39;&#39;Deine Antwort:&#39;&#39;
 //Nicht Schutzbedürftig//
 
-&#39;&#39;Achtung!&#39;&#39; 
+&#39;&#39;Achtung!&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Ein Kfz Nummernschild gehört zu den sachlichen Angaben von Susi und ist deshalb auch schutzbedürftig. Sie sollte sie besser nicht öffentlich im Internet preisgeben, sondern zumindest unkenntlich machen.
@@ -1866,7 +1871,7 @@ Im ersten Teil dieses Kapitels hast du gelernt, welche deiner Daten schutzbedür
 
 Der Urheber ist der Schöpfer eines Werkes. Er ist derjenige, der beispielsweise ein Bild gemalt, ein Lied komponiert oder einen Text geschrieben hat.
 
-Grundsätzlich gilt: Was man selbst gemacht hat, kann man auch nutzen wie man will, solange man damit nicht in andere Rechte, zum Beispiel die Persönlichkeitsrechte anderer, eingreift. 
+Grundsätzlich gilt: Was man selbst gemacht hat, kann man auch nutzen wie man will, solange man damit nicht in andere Rechte, zum Beispiel die Persönlichkeitsrechte anderer, eingreift.
 
 [[K3.2.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu &quot;Fremde Inhalte posten&quot;&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="157" name="K3.2.4" tags="" position="5790,790">&#39;&#39;Fremde Inhalte posten&#39;&#39;
@@ -1880,7 +1885,7 @@ Wenn man – ohne vorher gefragt worden zu sein – Bilder von sich in sozialen 
 
 Zuerst die gute Nachricht: Die sogenannten Urheberpersönlichkeitsrechte können nach deutschem Recht nicht übertragen werden. Das heißt, dass du weiterhin Urheber des von dir veröffentlichten Fotos oder Textes bist.
 
-Jedoch werden Facebook sogenannte Verwertungsrechte eingeräumt. In den Nutzungsbedingungen heißt es: „Du gewährst uns eine nicht-exklusive, übertragbare, unterlizenzierbare, gebührenfreie, weltweite Lizenz für die Nutzung jedweder IP-Inhalte, die du auf bzw. im Zusammenhang mit Facebook postest (IP-Lizenz)“. Zwar ist bislang noch nicht geklärt, ob diese Klauseln überhaupt rechtlich wirksam sind - angenommen sie wären es jedoch, bedeutet dies, dass Facebook die von dir veröffentlichten Fotos woanders veröffentlichen und die Nutzungsrechte an andere verkaufen darf. 
+Jedoch werden Facebook sogenannte Verwertungsrechte eingeräumt. In den Nutzungsbedingungen heißt es: „Du gewährst uns eine nicht-exklusive, übertragbare, unterlizenzierbare, gebührenfreie, weltweite Lizenz für die Nutzung jedweder IP-Inhalte, die du auf bzw. im Zusammenhang mit Facebook postest (IP-Lizenz)“. Zwar ist bislang noch nicht geklärt, ob diese Klauseln überhaupt rechtlich wirksam sind - angenommen sie wären es jedoch, bedeutet dies, dass Facebook die von dir veröffentlichten Fotos woanders veröffentlichen und die Nutzungsrechte an andere verkaufen darf.
 
 Überlege dir also stets vorm Veröffentlichen: Möchte ich Facebook das Recht geben, über diesen Inhalt verfügen zu dürfen? Es hilft hierbei zu überlegen, ob die Daten schutzbedürftig sind oder nicht. Ob sie es sind, hast du im ersten Teil dieses Kapitels gelernt.
 
@@ -1895,7 +1900,7 @@ Einige Nutzer denken, sie seien mit dem Posten solcher Texte auf der sicheren Se
 [[K3.2.7&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zum Quiz&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="160" name="K3.2.7" tags="" position="5788,1243">&#39;&#39;Szenario 1: Fremdes Bild hochladen&#39;&#39;
 
-Susi Sorglos möchte ungern ein Bild von sich selbst auf Facebook stellen. Deshalb sucht sie im Internet nach einem Foto ihrer Lieblingsmusikerin Gitta Rensolo, lädt dieses herunter und stellt es als Profilbild bei Facebook rein. 
+Susi Sorglos möchte ungern ein Bild von sich selbst auf Facebook stellen. Deshalb sucht sie im Internet nach einem Foto ihrer Lieblingsmusikerin Gitta Rensolo, lädt dieses herunter und stellt es als Profilbild bei Facebook rein.
 
 Darf sie das?
 * (link: &#39;&lt;strong&gt;Ja&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;K3.2.7.1&quot;)]
@@ -1920,7 +1925,7 @@ Schließlich ist Susi nicht die Eigentümerin des Fotos.
 [[K3.2.8&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu Szenario 2&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="163" name="K3.2.8" tags="" position="5785,1540">&#39;&#39;Szenario 2: Eigenes Bild hochladen&#39;&#39;
 
-Nachdem Susi von ihrem Enkel auf ihren Fauxpas aufmerksam gemacht wurde, überlegt sie sich ein Bild ihres Kanarienvogels Karl-Heinz hochzuladen. 
+Nachdem Susi von ihrem Enkel auf ihren Fauxpas aufmerksam gemacht wurde, überlegt sie sich ein Bild ihres Kanarienvogels Karl-Heinz hochzuladen.
 
 Ist sie nun auf der sicheren Seite?
 * (link: &#39;&lt;strong&gt;Ja&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;K3.2.8.1&quot;)]
@@ -1979,7 +1984,7 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 [[K3.2.11&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zur Zusammenfassung des Gelernten&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="171" name="K3.2.11" tags="" position="5763,2305">&#39;&#39;Das wichtigste auf einem Blick&#39;&#39;
 
-* Grundsätzlich gilt: Was man selbst gemacht hat, kann man auch nutzen wie man will, solange man damit nicht in andere Rechte, zum Beispiel die Persönlichkeitsrechte anderer, eingreift. 
+* Grundsätzlich gilt: Was man selbst gemacht hat, kann man auch nutzen wie man will, solange man damit nicht in andere Rechte, zum Beispiel die Persönlichkeitsrechte anderer, eingreift.
 * Werden statt eines selbst gemachten Fotos, Fotos von Prominenten oder anderen Personen genutzt, so geht man damit ein Risiko einer Abmahnung ein.
 * Wenn man – ohne vorher gefragt worden zu sein – Bilder von sich in sozialen Netzwerken oder anderswo im Internet findet, hat man einen rechtlichen Anspruch darauf, dass sie entfernt werden.
 
@@ -2015,7 +2020,7 @@ Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 
 [Hier klicken um den Text zum Video nachzulesen.]&lt;nachlesen| (click: ?nachlesen)[
 
-Cookies, das sind kleine Datenpakete, die beim Besuch einer Webseite auf dem eigenen Rechner abgespeichert werden. Sie beinhalten Nutzerdaten, wie z.B. Informationen über die Dauer des Besuchs auf der jeweiligen Internetseite, besuchte Seiten oder Eingaben. Bei jedem weiteren Besuch dieser Seite werden diese abgespeicherten Informationen übermittelt, um dem Benutzer einen möglichst individuellen Inhalt zu bieten, der den persönlichen Interessen des Besuchers entspricht. 
+Cookies, das sind kleine Datenpakete, die beim Besuch einer Webseite auf dem eigenen Rechner abgespeichert werden. Sie beinhalten Nutzerdaten, wie z.B. Informationen über die Dauer des Besuchs auf der jeweiligen Internetseite, besuchte Seiten oder Eingaben. Bei jedem weiteren Besuch dieser Seite werden diese abgespeicherten Informationen übermittelt, um dem Benutzer einen möglichst individuellen Inhalt zu bieten, der den persönlichen Interessen des Besuchers entspricht.
 
 Susi Sorglos sucht im Internet nach einem Film den sie ihrem Enkel zum Geburtstag schenken möchte. Kurz darauf bemerkt sie, dass ihr dieser Film und auch ähnliche Filme immer wieder in den Werbeanzeigen angezeigt werden. Was kann sie nun machen? Es gibt ja die Möglichkeit die Cookies zu löschen, dann würde sie keine Werbung für die Filme mehr bekommen. Auch die Abschaltung wäre jederzeit möglich. Doch verwundert stellt sie fest, dass diese personalisierte Werbung auch Vorteile mit sich bringt und weniger gefährlich ist, als sie erwartet hat.]
 
@@ -2053,7 +2058,7 @@ Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 [[K3.3.6&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu den Szenarien&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="178" name="K3.3.6" tags="" position="6385,1250">&#39;&#39;Szenarien&#39;&#39;
 
-Nachdem Susi Sorglos einige Zeit in sozialen Netzwerken aktiv war, fällt ihr bei den Werbeanzeigen etwas auf. Immer wieder erscheint ein blaues Symbol am Rand der Werbeanzeige: 
+Nachdem Susi Sorglos einige Zeit in sozialen Netzwerken aktiv war, fällt ihr bei den Werbeanzeigen etwas auf. Immer wieder erscheint ein blaues Symbol am Rand der Werbeanzeige:
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;picture&quot; src=&quot;static/res/kap3/personalisierte_werbung.jpg&quot; alt=&quot;Personalisierte Werbung Symbol&quot;&gt;&lt;/div&gt;}
 Was bedeutet dieses Symbol für dich?
@@ -2091,7 +2096,7 @@ Susi bekommt mit diesem Zeichen angezeigt, dass diese Werbeanzeige auf sie pers�
 [[K3.3.7&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu &quot;Das Internet vergisst nie&quot;&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="182" name="K3.3.8" tags="" position="6483,1718">&#39;&#39;Quiz: Zusammenfassung des Gelernten&#39;&#39;
 
-Susi fragt sich, woher die Informationen für die Werbeanzeigen über sie kommen und was sie nun unternehmen muss. Außerdem ist sie sich nicht ganz sicher, ob sie die auf sie abgestimmte Werbung gut oder schlecht finden soll. Einerseits freut sie sich, endlich nicht mehr von uninteressanten Werbeanzeigen belästigt zu werden, andererseits aber fragt sie sich, welche persönlichen Informationen noch über sie bekannt sind. 
+Susi fragt sich, woher die Informationen für die Werbeanzeigen über sie kommen und was sie nun unternehmen muss. Außerdem ist sie sich nicht ganz sicher, ob sie die auf sie abgestimmte Werbung gut oder schlecht finden soll. Einerseits freut sie sich, endlich nicht mehr von uninteressanten Werbeanzeigen belästigt zu werden, andererseits aber fragt sie sich, welche persönlichen Informationen noch über sie bekannt sind.
 
 Ihr gehen mehrere Fragen durch den Kopf. Kannst du Susi weiterhelfen?
 
@@ -2134,7 +2139,7 @@ Auf der Seite &#39;&#39;http://www.youronlinechoices.com/de/praferenzmanagement/
 <tw-passagedata pid="188" name="K3.3.8.2.2" tags="" position="6633,2316">&#39;&#39;Deine Antwort:&#39;&#39;
 //Nein//
 
-&#39;&#39;Leider falsch.&#39;&#39; 
+&#39;&#39;Leider falsch.&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Auf der Seite &#39;&#39;http://www.youronlinechoices.com/de/praferenzmanagement/&#39;&#39; können Anbieter von personalisierten Werbeanzeigen deaktiviert und auch wieder aktiviert werden.
@@ -2147,7 +2152,7 @@ Werden mir, nachdem ich die personalisierte Werbung abgeschaltet habe, keine Wer
 <tw-passagedata pid="190" name="K3.3.8.3.1" tags="" position="6483,2616">&#39;&#39;Deine Antwort:&#39;&#39;
 //Ja//
 
-&#39;&#39;Leider falsch.&#39;&#39; 
+&#39;&#39;Leider falsch.&#39;&#39;
 
 {&lt;div class=&quot;continue&quot;&gt;&lt;img class=&quot;facebook_picture&quot; src=&quot;static/res/faces/sad.jpg&quot; alt=&quot;Sad Face&quot;&gt;&lt;/div&gt;}
 Es werden weiterhin Werbeanzeigen angezeigt. Jedoch sind diese nicht speziell auf Susis Interessen zugeschnitten, sondern zufällig ausgewählt.
@@ -2169,7 +2174,7 @@ Aber nicht nur unbewusst hinterlässt du Spuren im Internet. Du hinterlässt auc
 Es gilt der Grundsatz: &#39;&#39;„Das Internet vergisst nie!“&#39;&#39;. Denn selbst wenn du ein Foto wieder löschst, hat es möglicherweise schon jemand deiner Kontakte heruntergeladen und verbreitet es weiter. Wenn du die folgenden vier Gebote verinnerlichst, bist du auf der sicheren Seite:
 
 &#39;&#39;1. Gebot: Sei du selbst!&#39;&#39;
-Baue dir im Internet keine zweite Persönlichkeit auf. Überlege vor dem Posten, ob du die Informationen, die du preisgibst auch im wahren Leben preisgeben würdest. 
+Baue dir im Internet keine zweite Persönlichkeit auf. Überlege vor dem Posten, ob du die Informationen, die du preisgibst auch im wahren Leben preisgeben würdest.
 &#39;&#39;2. Gebot: Gib nicht zu viel von dir preis!&#39;&#39;
 Zwar leben soziale Netzwerke davon, dass man etwas von sich preisgibt. Jedoch gehören bestimmte Informationen nicht ins Internet. Dazu gehören Daten wie Adresse, Telefonnummer, Autokennzeichen. In gewissen Fällen solltest du dir auch überlegen, ob du deinen aktuellen Standort mit all deinen Kontakten teilen willst.
 &#39;&#39;3. Gebot: Sei wachsam!&#39;&#39;
@@ -2204,7 +2209,7 @@ In diesem Kapitel sollst Du lernen …
 * … welche Maßnahmen es zum Schutz gibt
 
 [[K3.4.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu &quot;Welche Gefahren gibt es?&quot;&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="197" name="K3.4.3" tags="" position="7131,618">&#39;&#39;Welche Gefahren es gibt&#39;&#39; 
+<tw-passagedata pid="197" name="K3.4.3" tags="" position="7131,618">&#39;&#39;Welche Gefahren es gibt&#39;&#39;
 
 Das folgende Video soll über die Gefahren aufklären, die im Internet lauern können:
 
@@ -2224,7 +2229,7 @@ Von Social Engineering spricht man immer dann, wenn ein Angreifer menschliche Ei
 Beim Identitätsmissbrauch nimmt jemand deine Identität an. Generell hat man, erst wenn es zu einem Missbrauch kommt und ein Schaden entsteht, überhaupt die Möglichkeit, Kenntnis von dem Datenklau zu erlangen. Die Täter nutzen beispielsweise deinen Namen, dein Geburtsdatum oder sonstige persönliche Informationen und übernehmen deine Verhaltenseigenschaften, um sich möglichst gut als dich auszugeben.
 
 &#39;&#39;Cybermobbing&#39;&#39;
-Unter Cyber-Mobbing versteht man das absichtliche Beleidigen, Bedrohen, Bloßstellen oder Belästigen anderer mithilfe von Internet- und Mobiltelefondiensten über einen längeren Zeitraum hinweg. 
+Unter Cyber-Mobbing versteht man das absichtliche Beleidigen, Bedrohen, Bloßstellen oder Belästigen anderer mithilfe von Internet- und Mobiltelefondiensten über einen längeren Zeitraum hinweg.
 Die Besonderheiten des Cybermobbings im Gegensatz zum Mobbing in der realen Welt sind, dass die Täter die Möglichkeit haben anonym zu bleiben, dass sie rund um die Uhr eingreifen können und dass es ein sehr großes Publikum gibt.]
 
 [[K3.4.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Weiter zu &quot;Welche Maßnahmen gibt es?&quot;&lt;/button&gt;]]
@@ -2256,7 +2261,7 @@ Video Tag nicht unterstüzt! Bitte Firefox 40.0 oder höher verwenden.
 [[K3.4.4&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zu &quot;Welche Maßnahmen gibt es?&quot;&lt;/button&gt;]]</tw-passagedata>
 <tw-passagedata pid="200" name="K3.4.4.2" tags="" position="7280,916">&#39;&#39;Social Engineering&#39;&#39;
 
-Fünf goldene Regeln, die Tätern das Leben schwer machen können: 
+Fünf goldene Regeln, die Tätern das Leben schwer machen können:
 
 0. Sei zurückhaltend bei Gesprächen mit eher unbekannten Personen im Internet.
 0. Lasse dich nicht unter Druck setzen.
@@ -2269,7 +2274,7 @@ Fünf goldene Regeln, die Tätern das Leben schwer machen können:
 
 * &#39;&#39;Vertraue auf deine innere Stimme!&#39;&#39; Jeder Mensch hat eine natürliche Intuition, die ihn in riskanten Situationen wachsam werden lässt. Vertraue auf dieses „Bauchgefühl“ und sprich mit einer Vertrauensperson, wenn dir etwas komisch vorkommt.
 * &#39;&#39;Sichere Beweise!&#39;&#39; Sichere alle Beweise, die du brauchst, damit deine Geschichte glaubhaft ist. Speichere unangenehme Nachrichten, Bilder oder Chats bzw. drucke diese aus. So kann dir schneller geholfen werden.
-* &#39;&#39;Sperre Nutzer, die dich belästigen!&#39;&#39; In den meisten Sozialen Netzwerken und Online-Diensten können unerwünschte Personen gesperrt werden. Nutze dieses Angebot, denn du musst dich mit niemandem abgeben, der dich belästigt. 
+* &#39;&#39;Sperre Nutzer, die dich belästigen!&#39;&#39; In den meisten Sozialen Netzwerken und Online-Diensten können unerwünschte Personen gesperrt werden. Nutze dieses Angebot, denn du musst dich mit niemandem abgeben, der dich belästigt.
 * &#39;&#39;Melde Probleme!&#39;&#39; Nimm Belästigungen nicht einfach hin, sondern informiere umgehend die Betreiber der Website.
 * &#39;&#39;Hol dir Rat!&#39;&#39; Es ist manchmal einfacher, sich erst Hilfe im Familien- oder Freundeskreis zu suchen, bevor man eine offizielle Beratungsstelle kontaktiert
 * &#39;&#39;Kenne deine Rechte!&#39;&#39; Wenn du es nicht erlaubst, darf niemand Fotos von dir ins Internet stellen, die dich bloßstellen. Außerdem darf dich niemand vor anderen verspotten oder beleidigen. Wenn Cyber-Mobbing besonders ernst ist, kann dies für den Täter rechtliche Folgen haben.
@@ -2278,7 +2283,7 @@ Fünf goldene Regeln, die Tätern das Leben schwer machen können:
 <tw-passagedata pid="202" name="K3.4.5" tags="" position="7128,1124">&#39;&#39;Quiz: Maßnahmen den Gefahren zuordnen&#39;&#39;
 
 Deine Aufgabe in diesem Fenster ist es, die Maßnahmen auf der linken Seite (grau unterlegt) mit den passenden Gefahren auf der rechten Seite (gelb unterlegt) zu verbinden.
-Dazu klickst du auf die Maßnahmen und hältst die Maustaste gedrückt. Anschließend ziehst du die Maßnahme mit der Maus auf die dazugehörige Gefahr. Wenn die Zuordnung passt und du die richtige Maßnahme zur Bekämpfung der Gefahr gewählt hast, dann bleibt der graue Kasten im gelben Kasten liegen. Wenn die Zuordnung nicht passt, dann springt der gelbe Kasten wieder zurück an seine ursprüngliche Position. 
+Dazu klickst du auf die Maßnahmen und hältst die Maustaste gedrückt. Anschließend ziehst du die Maßnahme mit der Maus auf die dazugehörige Gefahr. Wenn die Zuordnung passt und du die richtige Maßnahme zur Bekämpfung der Gefahr gewählt hast, dann bleibt der graue Kasten im gelben Kasten liegen. Wenn die Zuordnung nicht passt, dann springt der gelbe Kasten wieder zurück an seine ursprüngliche Position.
 
 Wenn du alle Zuordnungen richtig gewählt hast, erhältst du die Meldung &quot;//Super! Alle Maßnahmen wurden richtig zugeordnet!//&quot;.
 Klicke anschließend auf den Button unten, um zum Punktestand zu kommen.
@@ -2341,16 +2346,16 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 * Sicheres Passwort nutzen
 * Sich benachrichtigen lassen, wenn sich ein Fremder bei mir einloggt
 
-&#39;&#39;Social Engineering&#39;&#39;	
+&#39;&#39;Social Engineering&#39;&#39;
 * Identität von Menschen überprüfen, die einem Freundschaftsanfragen senden
 * zurückhaltend bei Gesprächen mit eher unbekannten Personen im Internet sein
 
-&#39;&#39;Cybermobbing&#39;&#39;	
+&#39;&#39;Cybermobbing&#39;&#39;
 * Nutzer sperren, die einen belästigen
 * Beweise sichern, indem man unangenehme Nachrichten, Bilder oder Chats speichert oder ausdruckt
 
 [[Kapitel 3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Übersicht&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="205" name="1.9.1" tags="" position="1986,820">&#39;&#39;Frage 1&#39;&#39; 
+<tw-passagedata pid="205" name="1.9.1" tags="" position="1986,820">&#39;&#39;Frage 1&#39;&#39;
 
 Thema: //Anmeldung//
 
@@ -2361,7 +2366,7 @@ Welches Feld müssen Anwender ausfüllen, welche sich neu auf Facebook registrie
 * (link: &#39;&lt;strong&gt;Feld 1&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.1.1&quot;)]
 * (link: &#39;&lt;strong&gt;Feld 2&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.1.2&quot;)]
 * (link: &#39;&lt;strong&gt;Feld 3&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.1.1&quot;)]</tw-passagedata>
-<tw-passagedata pid="206" name="1.9.1.1" tags="" position="1983,970">&#39;&#39;Frage 1&#39;&#39; 
+<tw-passagedata pid="206" name="1.9.1.1" tags="" position="1983,970">&#39;&#39;Frage 1&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2369,7 +2374,7 @@ Welches Feld müssen Anwender ausfüllen, welche sich neu auf Facebook registrie
 Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durch.
 
 [[1.9.1&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="207" name="1.9.1.2" tags="" position="2135,970">&#39;&#39;Frage 1&#39;&#39; 
+<tw-passagedata pid="207" name="1.9.1.2" tags="" position="2135,970">&#39;&#39;Frage 1&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2390,7 +2395,7 @@ Welche Personen können das Feld 1 benutzen?
 * (link: &#39;&lt;strong&gt;Personen, die bereits bei Facebook registriert sind.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.2.1&quot;)]
 * (link: &#39;&lt;strong&gt;Personen, die in Facebook unbekannt bleiben möchten.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.2.2&quot;)]
 * (link: &#39;&lt;strong&gt;Personen, die sich zum ersten Mal bei Facebook anmelden wollen.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.2.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="209" name="1.9.2.1" tags="" position="2135,1270">&#39;&#39;Frage 2&#39;&#39; 
+<tw-passagedata pid="209" name="1.9.2.1" tags="" position="2135,1270">&#39;&#39;Frage 2&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2400,7 +2405,7 @@ Das war die richtige Antwort.
 Weiter geht’s zur nächsten Frage:
 
 [[1.9.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Nächste Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="210" name="1.9.2.2" tags="" position="1978,1270">&#39;&#39;Frage 2&#39;&#39; 
+<tw-passagedata pid="210" name="1.9.2.2" tags="" position="1978,1270">&#39;&#39;Frage 2&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2416,7 +2421,7 @@ Warum ist es ratsam ein Profilbild zu verwenden?
 * (link: &#39;&lt;strong&gt;Weil Facebook Profile ohne Profilbild nach einer Woche wieder löscht.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.3.1&quot;)]
 * (link: &#39;&lt;strong&gt;Damit die Suche nach meiner Person für andere einfacher wird.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.3.2&quot;)]
 * (link: &#39;&lt;strong&gt;Weil Profile ohne Profilbild nicht angezeigt werden.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.3.1&quot;)]</tw-passagedata>
-<tw-passagedata pid="212" name="1.9.3.1" tags="" position="1976,1563">&#39;&#39;Frage 3&#39;&#39; 
+<tw-passagedata pid="212" name="1.9.3.1" tags="" position="1976,1563">&#39;&#39;Frage 3&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2425,7 +2430,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 [[1.9.3&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
 </tw-passagedata>
-<tw-passagedata pid="213" name="1.9.3.2" tags="" position="2137,1570">&#39;&#39;Frage 3&#39;&#39; 
+<tw-passagedata pid="213" name="1.9.3.2" tags="" position="2137,1570">&#39;&#39;Frage 3&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2446,7 +2451,7 @@ Welches dieser Symbole zeigt dem Anwender, dass er eine neue Freundschaftsanfrag
 * (link: &#39;&lt;strong&gt;Symbol 1&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.4.1&quot;)]
 * (link: &#39;&lt;strong&gt;Symbol 2&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.4.2&quot;)]
 * (link: &#39;&lt;strong&gt;Symbol 3&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.4.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="215" name="1.9.4.1" tags="" position="2134,1867">&#39;&#39;Frage 4&#39;&#39; 
+<tw-passagedata pid="215" name="1.9.4.1" tags="" position="2134,1867">&#39;&#39;Frage 4&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2457,7 +2462,7 @@ Weiter geht’s zur nächsten Frage:
 
 [[1.9.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Nächste Frage&lt;/button&gt;]]
 </tw-passagedata>
-<tw-passagedata pid="216" name="1.9.4.2" tags="" position="1972,1870">&#39;&#39;Frage 4&#39;&#39; 
+<tw-passagedata pid="216" name="1.9.4.2" tags="" position="1972,1870">&#39;&#39;Frage 4&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2474,7 +2479,7 @@ Wieviele Freunde kann eine Person maximal haben?
 * (link: &#39;&lt;strong&gt;100 Freunde&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.5.1&quot;)]
 * (link: &#39;&lt;strong&gt;Unbegrenzt&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.5.2&quot;)]
 * (link: &#39;&lt;strong&gt;500 Freunde&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.5.1&quot;)]</tw-passagedata>
-<tw-passagedata pid="218" name="1.9.5.1" tags="" position="1975,2165">&#39;&#39;Frage 5&#39;&#39; 
+<tw-passagedata pid="218" name="1.9.5.1" tags="" position="1975,2165">&#39;&#39;Frage 5&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2483,7 +2488,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 [[1.9.5&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
 </tw-passagedata>
-<tw-passagedata pid="219" name="1.9.5.2" tags="" position="2136,2165">&#39;&#39;Frage 5&#39;&#39; 
+<tw-passagedata pid="219" name="1.9.5.2" tags="" position="2136,2165">&#39;&#39;Frage 5&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2502,7 +2507,7 @@ Was für Kommunikationsformen gibt es?
 * (link: &#39;&lt;strong&gt;Benutzerspezifische Beiträge, Private Nachrichten und Mails&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.6.1&quot;)]
 * (link: &#39;&lt;strong&gt;Beiträge, Benutzerspezifische Beiträge und Mails&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.6.1&quot;)]
 * (link: &#39;&lt;strong&gt;Beiträge, Benutzerspezifische Beiträge und private Nachrichten&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.6.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="221" name="1.9.6.1" tags="" position="1957,2462">&#39;&#39;Frage 6&#39;&#39; 
+<tw-passagedata pid="221" name="1.9.6.1" tags="" position="1957,2462">&#39;&#39;Frage 6&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2511,7 +2516,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 [[1.9.6&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
 </tw-passagedata>
-<tw-passagedata pid="222" name="1.9.6.2" tags="" position="2134,2464">&#39;&#39;Frage 6&#39;&#39; 
+<tw-passagedata pid="222" name="1.9.6.2" tags="" position="2134,2464">&#39;&#39;Frage 6&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2532,7 +2537,7 @@ Welches Symbol zeigt private Nachrichten an?
 * (link: &#39;&lt;strong&gt;Symbol 1&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.7.1&quot;)]
 * (link: &#39;&lt;strong&gt;Symbol 2&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.7.2&quot;)]
 * (link: &#39;&lt;strong&gt;Symbol 3&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.7.1&quot;)]</tw-passagedata>
-<tw-passagedata pid="224" name="1.9.7.1" tags="" position="1956,2762">&#39;&#39;Frage 7&#39;&#39; 
+<tw-passagedata pid="224" name="1.9.7.1" tags="" position="1956,2762">&#39;&#39;Frage 7&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2541,7 +2546,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 [[1.9.7&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
 </tw-passagedata>
-<tw-passagedata pid="225" name="1.9.7.2" tags="" position="2135,2760">&#39;&#39;Frage 7&#39;&#39; 
+<tw-passagedata pid="225" name="1.9.7.2" tags="" position="2135,2760">&#39;&#39;Frage 7&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2560,7 +2565,7 @@ Was ist eine Private Nachricht?
 * (link: &#39;&lt;strong&gt;Eine Nachricht, die nur von der angeschriebenen Person gelesen werden kann.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.8.1&quot;)]
 * (link: &#39;&lt;strong&gt;Eine Nachricht, die von einer bestimmten Liste gelesen werden kann.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.8.2&quot;)]
 * (link: &#39;&lt;strong&gt;Eine Nachricht, welche jeder Anwender von Facebook lesen kann.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.8.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="227" name="1.9.8.1" tags="" position="2136,3060">&#39;&#39;Frage 8&#39;&#39; 
+<tw-passagedata pid="227" name="1.9.8.1" tags="" position="2136,3060">&#39;&#39;Frage 8&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2571,7 +2576,7 @@ Weiter geht’s zur nächsten Frage:
 
 [[1.9.9&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Nächste Frage&lt;/button&gt;]]
 </tw-passagedata>
-<tw-passagedata pid="228" name="1.9.8.2" tags="" position="1963,3063">&#39;&#39;Frage 8&#39;&#39; 
+<tw-passagedata pid="228" name="1.9.8.2" tags="" position="1963,3063">&#39;&#39;Frage 8&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2588,7 +2593,7 @@ Können Beiträge nachträglich geändert werden?
 * (link: &#39;&lt;strong&gt;Nein, der alte Beitrag muss gelöscht und ein neuer Beitrag geschrieben werden.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.9.1&quot;)]
 * (link: &#39;&lt;strong&gt;Ja&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.9.2&quot;)]
 * (link: &#39;&lt;strong&gt;Nein, das wird aufgrund rechtlicher Vorschriften verboten, da Facebook den ursprünglichen Beitrag muss.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.9.1&quot;)]</tw-passagedata>
-<tw-passagedata pid="230" name="1.9.9.1" tags="" position="1959,3349">&#39;&#39;Frage 9&#39;&#39; 
+<tw-passagedata pid="230" name="1.9.9.1" tags="" position="1959,3349">&#39;&#39;Frage 9&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2597,7 +2602,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 [[1.9.9&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
 </tw-passagedata>
-<tw-passagedata pid="231" name="1.9.9.2" tags="" position="2135,3349">&#39;&#39;Frage 9&#39;&#39; 
+<tw-passagedata pid="231" name="1.9.9.2" tags="" position="2135,3349">&#39;&#39;Frage 9&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2616,7 +2621,7 @@ Wieviele Arten von Likes gibt es?
 * (link: &#39;&lt;strong&gt;1&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.10.1&quot;)]
 * (link: &#39;&lt;strong&gt;12&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.10.1&quot;)]
 * (link: &#39;&lt;strong&gt;6&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.10.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="233" name="1.9.10.1" tags="" position="1955,3649">&#39;&#39;Frage 10&#39;&#39; 
+<tw-passagedata pid="233" name="1.9.10.1" tags="" position="1955,3649">&#39;&#39;Frage 10&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2625,7 +2630,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 [[1.9.10&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
 </tw-passagedata>
-<tw-passagedata pid="234" name="1.9.10.2" tags="" position="2136,3651">&#39;&#39;Frage 10&#39;&#39; 
+<tw-passagedata pid="234" name="1.9.10.2" tags="" position="2136,3651">&#39;&#39;Frage 10&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2644,7 +2649,7 @@ Wozu dienen Listen?
 * (link: &#39;&lt;strong&gt;Sie ordnen die Freundesliste in Kategorien.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.11.1&quot;)]
 * (link: &#39;&lt;strong&gt;Sie ordnen die Gruppen nach dem Eintrittsdatum.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.11.2&quot;)]
 * (link: &#39;&lt;strong&gt;Sie ordnen verfasste Beiträge nach Datum.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.11.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="236" name="1.9.11.1" tags="" position="2136,3951">&#39;&#39;Frage 11&#39;&#39; 
+<tw-passagedata pid="236" name="1.9.11.1" tags="" position="2136,3951">&#39;&#39;Frage 11&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2654,7 +2659,7 @@ Das war die richtige Antwort.
 Weiter geht’s zur nächsten Frage:
 
 [[1.9.12&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Nächste Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="237" name="1.9.11.2" tags="" position="1963,3955">&#39;&#39;Frage 11&#39;&#39; 
+<tw-passagedata pid="237" name="1.9.11.2" tags="" position="1963,3955">&#39;&#39;Frage 11&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2671,7 +2676,7 @@ Können eigene Gruppen erstellt werden?
 * (link: &#39;&lt;strong&gt;Nein, dies erlaubt Facebook nicht, da sie diese dann nicht kontrollieren könnten.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.12.1&quot;)]
 * (link: &#39;&lt;strong&gt;Ja&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.12.2&quot;)]
 * (link: &#39;&lt;strong&gt;Nein, es gibt nur Gruppen, welche bereits vorinstalliert sind.&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.12.1&quot;)]</tw-passagedata>
-<tw-passagedata pid="239" name="1.9.12.1" tags="" position="1956,4254">&#39;&#39;Frage 12&#39;&#39; 
+<tw-passagedata pid="239" name="1.9.12.1" tags="" position="1956,4254">&#39;&#39;Frage 12&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2680,7 +2685,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 [[1.9.12&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
 </tw-passagedata>
-<tw-passagedata pid="240" name="1.9.12.2" tags="" position="2137,4255">&#39;&#39;Frage 12&#39;&#39; 
+<tw-passagedata pid="240" name="1.9.12.2" tags="" position="2137,4255">&#39;&#39;Frage 12&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2698,7 +2703,7 @@ Wer kann Gruppenmitglieder aus der Gruppe werfen?
 * (link: &#39;&lt;strong&gt;Jedes Mitglied in der Gruppe kann andere rauswerfen.&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.13.1&quot;)]
 * (link: &#39;&lt;strong&gt;Gruppenmitglieder können nicht rausgeworfen werden.&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.13.1&quot;)]
 * (link: &#39;&lt;strong&gt;Nur der Administrator kann Gruppenmitglieder entfernen.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.13.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="242" name="1.9.13.1" tags="" position="1952,4555">&#39;&#39;Frage 13&#39;&#39; 
+<tw-passagedata pid="242" name="1.9.13.1" tags="" position="1952,4555">&#39;&#39;Frage 13&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2707,7 +2712,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 [[1.9.13&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
 </tw-passagedata>
-<tw-passagedata pid="243" name="1.9.13.2" tags="" position="2135,4554">&#39;&#39;Frage 13&#39;&#39; 
+<tw-passagedata pid="243" name="1.9.13.2" tags="" position="2135,4554">&#39;&#39;Frage 13&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2725,7 +2730,7 @@ Was kann ein Außenstehender von einer „geschlossenen Gruppe“ sehen?
 * (link: &#39;&lt;strong&gt;Gruppe, Mitglieder und Beiträge.&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.14.1&quot;)]
 * (link: &#39;&lt;strong&gt;Gruppenname und Mitglieder.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.14.2&quot;)]
 * (link: &#39;&lt;strong&gt;Gruppenname und Beiträge.&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.14.1&quot;)]</tw-passagedata>
-<tw-passagedata pid="245" name="1.9.14.1" tags="" position="1951,4847">&#39;&#39;Frage 14&#39;&#39; 
+<tw-passagedata pid="245" name="1.9.14.1" tags="" position="1951,4847">&#39;&#39;Frage 14&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2734,7 +2739,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 [[1.9.14&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
 </tw-passagedata>
-<tw-passagedata pid="246" name="1.9.14.2" tags="" position="2133,4856">&#39;&#39;Frage 14&#39;&#39; 
+<tw-passagedata pid="246" name="1.9.14.2" tags="" position="2133,4856">&#39;&#39;Frage 14&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2752,7 +2757,7 @@ Was ist eine geheime Gruppe?
 * (link: &#39;&lt;strong&gt;Gruppe kann bei einer Suche nicht gefunden werden.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.15.1&quot;)]
 * (link: &#39;&lt;strong&gt;Die Gruppen kann gesucht, aber ihr kann nicht beigetreten werden.&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.15.2&quot;)]
 * (link: &#39;&lt;strong&gt;Geheime Gruppe ist ein Synonym für geschlossene Gruppe.&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.15.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="248" name="1.9.15.1" tags="" position="2133,5156">&#39;&#39;Frage 15&#39;&#39; 
+<tw-passagedata pid="248" name="1.9.15.1" tags="" position="2133,5156">&#39;&#39;Frage 15&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2762,7 +2767,7 @@ Das war die richtige Antwort.
 Weiter geht’s zur nächsten Frage:
 
 [[1.9.16&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Nächste Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="249" name="1.9.15.2" tags="" position="1940,5163">&#39;&#39;Frage 15&#39;&#39; 
+<tw-passagedata pid="249" name="1.9.15.2" tags="" position="1940,5163">&#39;&#39;Frage 15&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2779,7 +2784,7 @@ Welche Privatsphäre Einstellungen gibt es?
 * (link: &#39;&lt;strong&gt;Geschlossene, öffentliche und geheime Gruppen.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.16.1&quot;)]
 * (link: &#39;&lt;strong&gt;Öffentliche, private und geschlossene Gruppen.&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.16.2&quot;)]
 * (link: &#39;&lt;strong&gt;Geheime, Versteckte und Öffentliche Gruppen.&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.16.2&quot;)]</tw-passagedata>
-<tw-passagedata pid="251" name="1.9.16.1" tags="" position="2133,5456">&#39;&#39;Frage 16&#39;&#39; 
+<tw-passagedata pid="251" name="1.9.16.1" tags="" position="2133,5456">&#39;&#39;Frage 16&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2789,7 +2794,7 @@ Das war die richtige Antwort.
 Weiter geht’s zur nächsten Frage:
 
 [[1.9.17&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Nächste Frage&lt;/button&gt;]]</tw-passagedata>
-<tw-passagedata pid="252" name="1.9.16.2" tags="" position="1934,5460">&#39;&#39;Frage 16&#39;&#39; 
+<tw-passagedata pid="252" name="1.9.16.2" tags="" position="1934,5460">&#39;&#39;Frage 16&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2806,7 +2811,7 @@ Kann ich eine Person des öffentlichen Lebens abonnieren?
 * (link: &#39;&lt;strong&gt;Nein, Facebook unterstützt keine Stalker.&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.17.1&quot;)]
 * (link: &#39;&lt;strong&gt;Ja&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.17.2&quot;)]
 * (link: &#39;&lt;strong&gt;Nein, diese Funktion gibt es nicht.&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.17.1&quot;)]</tw-passagedata>
-<tw-passagedata pid="254" name="1.9.17.1" tags="" position="1936,5756">&#39;&#39;Frage 17&#39;&#39; 
+<tw-passagedata pid="254" name="1.9.17.1" tags="" position="1936,5756">&#39;&#39;Frage 17&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2815,7 +2820,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 [[1.9.17&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
 </tw-passagedata>
-<tw-passagedata pid="255" name="1.9.17.2" tags="" position="2135,5760">&#39;&#39;Frage 17&#39;&#39; 
+<tw-passagedata pid="255" name="1.9.17.2" tags="" position="2135,5760">&#39;&#39;Frage 17&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2833,7 +2838,7 @@ Sieht Facebook auf jedem Smartphone gleich aus?
 * (link: &#39;&lt;strong&gt;Nein, nur auf den neuesten Smartphones.&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.18.1&quot;)]
 * (link: &#39;&lt;strong&gt;Nein, aufgrund verschiedener Betriebssysteme.&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;1.9.18.2&quot;)]
 * (link: &#39;&lt;strong&gt;Ja&lt;strong&gt;&#39;)[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;1.9.18.1&quot;)]</tw-passagedata>
-<tw-passagedata pid="257" name="1.9.18.1" tags="" position="1926,6057">&#39;&#39;Frage 18&#39;&#39; 
+<tw-passagedata pid="257" name="1.9.18.1" tags="" position="1926,6057">&#39;&#39;Frage 18&#39;&#39;
 
 &#39;&#39;Die Antwort war leider falsch.&#39;&#39;
 
@@ -2842,7 +2847,7 @@ Versuch es bitte erneut oder lies dir das entsprechende Kapitel noch einmal durc
 
 [[1.9.18&lt;-&lt;button class=&quot;btn btn-default&quot;&gt;Zurück zur Frage&lt;/button&gt;]]
 </tw-passagedata>
-<tw-passagedata pid="258" name="1.9.18.2" tags="" position="2132,6070">&#39;&#39;Frage 18&#39;&#39; 
+<tw-passagedata pid="258" name="1.9.18.2" tags="" position="2132,6070">&#39;&#39;Frage 18&#39;&#39;
 
 &#39;&#39;Gut gemacht!&#39;&#39;
 
@@ -2866,7 +2871,7 @@ Hier klicken, um den letzten Speicherstand zu laden:
 
 Aktueller Punktestand: $score
 
-{Aktueller Rang: 
+{Aktueller Rang:
 (if: $score &lt;= 5)[Neuling]
 (else-if: 5 &lt; $score and $score &lt;= 10)[Fortgeschrittener Anfänger]
 (else-if: 10 &lt; $score and $score &lt;= 15)[Kompetenter]
@@ -2969,7 +2974,7 @@ tr:nth-child(even) {
 &lt;!-- Here the savegame is loaded --&gt;
 (if: (savedgames:) contains &quot;Slot A&quot;)[(loadgame: &quot;Slot A&quot;)]
 }</tw-passagedata>
-<tw-passagedata pid="263" name="Anmeldung" tags="" position="12,120">{
+<tw-passagedata pid="263" name="Anmeldung" tags="" position="12,119">{
 &#39;&#39;Serious Game&#39;&#39;
 
 &lt;br&gt;&lt;br&gt;
@@ -2986,10 +2991,10 @@ tr:nth-child(even) {
 &lt;div class=&quot;container&quot; ng-app=&quot;&quot;&gt;
   Bitte registriere dich oder melde dich an:
   &lt;br&gt;&lt;br&gt;
-	&lt;ul class=&quot;nav nav-tabs nav-justified&quot;&gt;
-	  &lt;li class=&quot;active&quot;&gt;&lt;a data-toggle=&quot;tab&quot; href=&quot;#register&quot;&gt;Registrieren&lt;/a&gt;&lt;/li&gt;
-	  &lt;li&gt;&lt;a data-toggle=&quot;tab&quot; href=&quot;#login&quot;&gt;Anmelden&lt;/a&gt;&lt;/li&gt;
-	&lt;/ul&gt;
+  &lt;ul class=&quot;nav nav-tabs nav-justified&quot;&gt;
+    &lt;li class=&quot;active&quot;&gt;&lt;a data-toggle=&quot;tab&quot; href=&quot;#register&quot;&gt;Registrieren&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a data-toggle=&quot;tab&quot; href=&quot;#login&quot;&gt;Anmelden&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
 
 &lt;br&gt;&lt;br&gt;
 
@@ -2997,73 +3002,78 @@ tr:nth-child(even) {
 
   &lt;!-- Tab: #register mit Eingabefeldern --&gt;
 
-	&lt;div id=&quot;register&quot; class=&quot;tab-pane fade in active&quot;&gt;
+  &lt;div id=&quot;register&quot; class=&quot;tab-pane fade in active&quot;&gt;
 
-	  &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-		  &lt;label for=&quot;VorName1&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
-		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName1&quot; ng-model=&quot;vorname1&quot; placeholder=&quot;Susi&quot; required&gt;
+    &lt;form id=&quot;meinform&quot; data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
+    &lt;div class=&quot;form-group has-feedback&quot;&gt;
+      &lt;label for=&quot;VorName1&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName1&quot; ng-model=&quot;vorname1&quot; placeholder=&quot;Susi&quot; pattern=&quot;^([a-zA-Z ]+)$&quot; data-validate=&quot;true&quot; required&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+      &lt;label for=&quot;NachName1&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName1&quot; ng-model=&quot;nachname1&quot; placeholder=&quot;Sorglos&quot; pattern=&quot;^([a-zA-Z ]+)$&quot; data-validate=&quot;true&quot; required&gt;
+        &lt;/div&gt;
 
-		  &lt;label for=&quot;NachName1&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
-		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName1&quot; ng-model=&quot;nachname1&quot; placeholder=&quot;Sorglos&quot; required&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+      &lt;label for=&quot;date-input1&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
+      &lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag1&quot; placeholder=&quot;&quot; id=&quot;date-input1&quot; pattern=&quot;^([a-zA-Z ]+)$&quot; data-validate=&quot;true&quot; required&gt;
+        &lt;/div&gt;
 
-		  &lt;label for=&quot;date-input1&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
-			&lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag1&quot; placeholder=&quot;&quot; id=&quot;date-input1&quot; required&gt;
+      &lt;div id=&quot;confirmDiv1&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+              &lt;button id=&quot;confirmButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Registrieren&lt;/button&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
 
-		  &lt;div id=&quot;confirmDiv1&quot;&gt;
-	        &lt;button id=&quot;confirmButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Registrieren&lt;/button&gt;
-		  &lt;/div&gt;
-
-	      &lt;div style=&quot;display: none&quot;&gt;
-		    &lt;div id=&quot;submitDiv1&quot;&gt;
-			  [&lt;button id=&quot;submitButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;]&lt;register|
-		    &lt;/div&gt;
-	      &lt;/div&gt;
-	    &lt;/div&gt;
+        &lt;div style=&quot;display: none&quot;&gt;
+        &lt;div id=&quot;submitDiv1&quot;&gt;
+        [&lt;button id=&quot;submitButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;]&lt;register|
+        &lt;/div&gt;
+        &lt;/div&gt;
       &lt;/form&gt;
     &lt;/div&gt;
-	  (click: ?register)[
-		(set: $vorname to ?vtemp)
-		(set: $nachname to ?ntemp)
-		(set: $geburtstag to ?gtemp)
-		(go-to: &quot;Hauptseite&quot;)
-	  ]
+    (click: ?register)[
+    (set: $vorname to ?vtemp)
+    (set: $nachname to ?ntemp)
+    (set: $geburtstag to ?gtemp)
+    (go-to: &quot;Hauptseite&quot;)
+    ]
 
-	  {
-	  (set: $vtemp to &quot;&lt;span ng-bind=vorname1&gt;&lt;/span&gt;&quot;)
-	  (set: $ntemp to &quot;&lt;span ng-bind=nachname1&gt;&lt;/span&gt;&quot;)
-	  (set: $gtemp to &quot;&lt;span ng-bind=geburtstag1&gt;&lt;/span&gt;&quot;)
-	  }
+    {
+    (set: $vtemp to &quot;&lt;span ng-bind=vorname1&gt;&lt;/span&gt;&quot;)
+    (set: $ntemp to &quot;&lt;span ng-bind=nachname1&gt;&lt;/span&gt;&quot;)
+    (set: $gtemp to &quot;&lt;span ng-bind=geburtstag1&gt;&lt;/span&gt;&quot;)
+    }
 
-	  {
-	  &lt;span style=&quot;display: none&quot;&gt;
-	  [$vtemp]&lt;vtemp|
-	  [$ntemp]&lt;ntemp|
-	  [$gtemp]&lt;gtemp|
-	  &lt;/span&gt;
-	  }
+    {
+    &lt;span style=&quot;display: none&quot;&gt;
+    [$vtemp]&lt;vtemp|
+    [$ntemp]&lt;ntemp|
+    [$gtemp]&lt;gtemp|
+    &lt;/span&gt;
+    }
 
   &lt;!-- Tab: &quot;#login&quot; mit Eingabefeldern --&gt;
 
-	&lt;div id=&quot;login&quot; class=&quot;tab-pane fade&quot;&gt;
+  &lt;div id=&quot;login&quot; class=&quot;tab-pane fade&quot;&gt;
 
-	  &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-		  &lt;label for=&quot;VorName2&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
-		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName2&quot; ng-model=&quot;vorname2&quot; placeholder=&quot;Susi&quot; required&gt;
+    &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+      &lt;label for=&quot;VorName2&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName2&quot; ng-model=&quot;vorname2&quot; placeholder=&quot;Susi&quot; required&gt;
 
-		  &lt;label for=&quot;NachName2&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
-		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName2&quot; ng-model=&quot;nachname2&quot; placeholder=&quot;Sorglos&quot; required&gt;
+      &lt;label for=&quot;NachName2&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName2&quot; ng-model=&quot;nachname2&quot; placeholder=&quot;Sorglos&quot; required&gt;
 
-		  &lt;label for=&quot;date-input2&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
-			&lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag2&quot; placeholder=&quot;&quot; id=&quot;date-input2&quot; required&gt;
+      &lt;label for=&quot;date-input2&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
+      &lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag2&quot; placeholder=&quot;&quot; id=&quot;date-input2&quot; required&gt;
 
-		    &lt;button id=&quot;confirmButton2&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Einloggen&lt;/button&gt;
+        &lt;button id=&quot;confirmButton2&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Einloggen&lt;/button&gt;
         &lt;/div&gt;
-	  &lt;/form&gt;
+    &lt;/form&gt;
 
     &lt;/div&gt;
-    
+
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -3085,17 +3095,21 @@ Um zu spielen ohne dich zu registrieren oder dich anzumelden, klicke hier: [&lt;
 {
 &lt;!-- Hier Anonyme Klassen laden --&gt;
 &lt;script&gt;
-
-$(function() {
-	$(&quot;#confirmButton1&quot;).click(function(e){
-        $(&#39;#confirmDiv1&#39;).replaceWith( $(&#39;#submitDiv1&#39;));
-		console.log(&quot;buttons changed&quot;);
-    });
+console.log(&quot;hellas&quot;);
+$( document ).ready(function() {
+  $(&quot;confirmDiv1&quot;).click(function() {
+    console.log(&quot;button clicked&quot;);
+    $(&#39;#confirmDiv1&#39;).replaceWith( $(&#39;#submitDiv1&#39;));
+    console.log(&quot;button clicked&quot;);
+  });
 });
+
+
 
 &lt;/script&gt;
 }
-}</tw-passagedata>
+}
+</tw-passagedata>
 </tw-storydata>
 
 

@@ -7,4 +7,7 @@
 *.pyc
 __pycache__/
 
+# windows backup files
+*.bak
+
 iwas_reinschreiben

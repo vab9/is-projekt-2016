@@ -99,9 +99,7 @@ $.getScript("static/js/angular.min.js",function() {
 
 $.getScript("static/js/fluidtextresizer.js", function(){
 	console.log("fluidtextresizer.js loaded!");
-	$.getScript("static/js/textresizerinstance.js", function(){
-		console.log("textresizer loaded!");
-	});
+	$.getScript("static/js/textresizerinstance.js");
 });
 </script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
 &lt;div class=&quot;header&quot;&gt;
@@ -209,14 +207,10 @@ Wir hoffen, dass es dir gefällt. Viel Spaß!
 [[Hauptseite&lt;-&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Hauptseite&lt;/button&gt;]]
 &lt;/span&gt;
 
-&lt;/div&gt;
 &lt;script&gt;
-$(document).ready(function() {
-	$.getScript(&quot;static/js/textresizerinstance.js&quot;);
-	console.log(&quot;textresizerinstance.js loaded.&quot;);
-});
-
+$.getScript(&quot;static/js/textresizerinstance.js&quot;);
 &lt;/script&gt;
+
 }</tw-passagedata>
 <tw-passagedata pid="7" name="Kapitel 2.1" tags="" position="2948,311">&#39;&#39;Teil 1: Verhalten in sozialen Netzwerken&#39;&#39;
 

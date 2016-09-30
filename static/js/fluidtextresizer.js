@@ -17,16 +17,6 @@ function fluidtextresizer(setting){
 
     var thisobj=this
     jQuery(function($){ //on document.ready
-
-        // apply styles from last page
-        var neueStyles = fluidtextresizer.routines.gibMirStyle();
-        if (typeof(neueStyles) === 'string') {
-            var arrayStyles = neueStyles.split(',');
-            $('tw-passage').css("fontSize", arrayStyles[2]);
-            $('tw-include').css("fontSize", arrayStyles[0]);
-            this.curfontlevel = arrayStyles[1];
-        }
-
         var els=setting.targets
         for (var i=0; i<els.length; i++){
             if ($(els[i]).length==0){ //if selector doesn't yield any matched elements
@@ -45,12 +35,17 @@ fluidtextresizer.prototype={
 
     setFontLevel:function(level, disableanim){
         var s=this.setting
-        var $els=this.selectors
+        // var $els=this.selectors
+
+
+        var $els = $(s.targets);
+
         var level=(level=="bigger")? this.curfontlevel+1 : (level=="smaller")? this.curfontlevel-1 : parseInt(level) //calculate new font size level
         if (s.controlsdiv){ //if special container for resize controls defined
             this.$controls.filter('.selectedcontrol').removeClass('selectedcontrol').end()  //deselect previously selected control
                 .filter('[href=#fontsize'+level+']').addClass('selectedcontrol') //apply "selectedcontrol" CSS class to corresponding control
         }
+
         if (level<-s.levels || level>s.levels || level==this.curfontlevel) //if target level is out or range (range is int from -s.levels to +s.levels) or is current level already
             return
 
@@ -67,8 +62,7 @@ fluidtextresizer.prototype={
             var newfontsize=this.defaultfontsizes[i].val * (level<0? 1/valchange : level>0? valchange : 1) + this.defaultfontsizes[i].unit
 
             exportfontsize = newfontsize;
-
-            $els[i].animate({fontSize: newfontsize}, disableanim? 0 : this.setting.animate)
+            $($els[i]).animate({fontSize: newfontsize}, disableanim? 0 : this.setting.animate)
         }
 
         // change back for headers and footers
@@ -77,9 +71,20 @@ fluidtextresizer.prototype={
         if (s.persist=="session"){
             fluidtextresizer.routines.setCookie(this.cookiename, level)
         }
-        this.curfontlevel=level
+        this.curfontlevel=parseInt(level);
 
         fluidtextresizer.routines.speicherStyle(oldfontsize, this.curfontlevel, exportfontsize);
+    },
+
+    styleAktualisieren:function() {
+        // apply styles from last page
+        var neueStyles = fluidtextresizer.routines.gibMirStyle();
+        if (typeof(neueStyles) === 'string') {
+            var arrayStyles = neueStyles.split(',');
+            $('tw-passage').css("fontSize", arrayStyles[2]);
+            $('tw-include').css("fontSize", arrayStyles[0]);
+            this.curfontlevel = parseInt(arrayStyles[1]);
+        }
     }
 
 }
@@ -99,11 +104,7 @@ fluidtextresizer.routines={
     },
 
     speicherStyle:function(kopfzeile, aktuellesLevel, abschnitt) {
-
         window.sessionStorage.setItem('style', [kopfzeile, aktuellesLevel, abschnitt]);
-
-        console.log("style saved: ");
-        console.log(window.sessionStorage);
     },
 
     gibMirStyle:function(einResizer) {

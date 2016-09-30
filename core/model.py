@@ -1,4 +1,4 @@
-from sqlalchemy import Sequence
+from sqlalchemy import Integer
 from sqlalchemy.dialects.postgresql import JSONB
 
 from serious_game import db
@@ -7,7 +7,7 @@ from serious_game import db
 class User(db.Model):
     __tablename__ = 'user'
 
-    id = db.Column(db.Integer, Sequence('users_id_seq'), primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
     vorname = db.Column(db.String(32))
     nachname = db.Column(db.String(32))
     geb = db.Column(db.Date)

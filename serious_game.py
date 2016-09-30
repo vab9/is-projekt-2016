@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 
-import config
+# import core.config
+from core import config
 import os
 
 from flask import Flask, send_file
@@ -18,7 +19,9 @@ else:
     app.config.from_object(config.Config)
 
 # need to suppress PEP8 E402 warning here
-from model import User
+# from core import User
+
+from core.model import User
 
 
 @app.route('/')

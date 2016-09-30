@@ -81,6 +81,8 @@
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -93,6 +95,8 @@ $.getScript("static/js/jquery-1.4.2.min.js", function(){
 $.getScript("static/js/fluidtextresizer.js", function(){
 	console.log("fluidtextresizer.js loaded!");
 });
+
+
 
 
 
@@ -3033,7 +3037,7 @@ tr:nth-child(even) {
 
 &lt;!-- Tab-Logik --&gt;
 
-&lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;container&quot; ng-app=&quot;&quot;&gt;
   Bitte registriere dich oder melde dich an:
   &lt;br&gt;&lt;br&gt;
 	&lt;ul class=&quot;nav nav-tabs nav-justified&quot;&gt;
@@ -3043,43 +3047,35 @@ tr:nth-child(even) {
 
 &lt;br&gt;&lt;br&gt;
 
-&lt;!-- Tab: #register mit Eingabefeldern --&gt;
-
   &lt;div class=&quot;tab-content&quot;&gt;
-  
+
+  &lt;!-- Tab: #register mit Eingabefeldern --&gt;
+
 	&lt;div id=&quot;register&quot; class=&quot;tab-pane fade in active&quot;&gt;
-	  &lt;div ng-app=&quot;&quot;&gt;
 
 	  &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
 		&lt;div class=&quot;form-group&quot;&gt;
-		  &lt;label for=&quot;VorName&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
-		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName&quot; ng-model=&quot;vorname&quot; placeholder=&quot;Susi&quot; required&gt;
-		&lt;/div&gt;
+		  &lt;label for=&quot;VorName1&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
+		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName1&quot; ng-model=&quot;vorname1&quot; placeholder=&quot;Susi&quot; required&gt;
 
-		&lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-		  &lt;label for=&quot;NachName&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
-		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName&quot; ng-model=&quot;nachname&quot; placeholder=&quot;Sorglos&quot; required&gt;
-		&lt;/div&gt;
+		  &lt;label for=&quot;NachName1&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
+		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName1&quot; ng-model=&quot;nachname1&quot; placeholder=&quot;Sorglos&quot; required&gt;
 
-		&lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-		  &lt;label for=&quot;date-input&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
-			&lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag&quot; placeholder=&quot;&quot; id=&quot;date-input&quot; required&gt;
-		&lt;/div&gt;
+		  &lt;label for=&quot;date-input1&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
+			&lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag1&quot; placeholder=&quot;&quot; id=&quot;date-input1&quot; required&gt;
 
-		&lt;div class=&quot;form-group&quot;&gt;
-		  &lt;div id=&quot;confirmDiv&quot;
-			&lt;button id=&quot;confirmButton&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Registrieren&lt;/button&gt;
+		  &lt;div id=&quot;confirmDiv1&quot;&gt;
+	        &lt;button id=&quot;confirmButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Registrieren&lt;/button&gt;
 		  &lt;/div&gt;
-		&lt;/div&gt;
 
-	  &lt;div style=&quot;display: none&quot;&gt;
-		  &lt;div id=&quot;submitDiv&quot;&gt;
-			[&lt;button id=&quot;submitButton&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;]&lt;register|
-		  &lt;/div&gt;
-	  &lt;/div&gt;
-
+	      &lt;div style=&quot;display: none&quot;&gt;
+		    &lt;div id=&quot;submitDiv1&quot;&gt;
+			  [&lt;button id=&quot;submitButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;]&lt;register|
+		    &lt;/div&gt;
+	      &lt;/div&gt;
+	    &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
 	  (click: ?register)[
 		(set: $vorname to ?vtemp)
 		(set: $nachname to ?ntemp)
@@ -3088,66 +3084,46 @@ tr:nth-child(even) {
 	  ]
 
 	  {
-	  (set: $vtemp to &quot;&lt;span ng-bind=vorname&gt;&lt;/span&gt;&quot;)
-	  (set: $ntemp to &quot;&lt;span ng-bind=nachname&gt;&lt;/span&gt;&quot;)
-	  (set: $gtemp to &quot;&lt;span ng-bind=geburtstag&gt;&lt;/span&gt;&quot;)
+	  (set: $vtemp to &quot;&lt;span ng-bind=vorname1&gt;&lt;/span&gt;&quot;)
+	  (set: $ntemp to &quot;&lt;span ng-bind=nachname1&gt;&lt;/span&gt;&quot;)
+	  (set: $gtemp to &quot;&lt;span ng-bind=geburtstag1&gt;&lt;/span&gt;&quot;)
 	  }
 
 	  {
 	  &lt;span style=&quot;display: none&quot;&gt;
-	  [$vtemp]&lt;vtemp| 
+	  [$vtemp]&lt;vtemp|
 	  [$ntemp]&lt;ntemp|
 	  [$gtemp]&lt;gtemp|
 	  &lt;/span&gt;
 	  }
 
-&lt;div ng-app=&quot;&quot;&gt;
- 	&lt;p&gt;Name: &lt;input type=&quot;text&quot; ng-model=&quot;name&quot;&gt;&lt;/p&gt;
- 	&lt;p ng-bind=&quot;name&quot;&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-	  &lt;/div&gt;
-	&lt;/div&gt;
-
-
   &lt;!-- Tab: &quot;#login&quot; mit Eingabefeldern --&gt;
 
 	&lt;div id=&quot;login&quot; class=&quot;tab-pane fade&quot;&gt;
-	  &lt;div ng-app=&quot;&quot;&gt;
 
 	  &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
 		&lt;div class=&quot;form-group&quot;&gt;
-		  &lt;label for=&quot;VorName&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
-		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName&quot; ng-model=&quot;vorname2&quot; placeholder=&quot;Susi&quot; required&gt;
-		&lt;/div&gt;
+		  &lt;label for=&quot;VorName2&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
+		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName2&quot; ng-model=&quot;vorname2&quot; placeholder=&quot;Susi&quot; required&gt;
 
-		&lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-		  &lt;label for=&quot;NachName&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
-		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName&quot; ng-model=&quot;nachname2&quot; placeholder=&quot;Sorglos&quot; required&gt;
-		&lt;/div&gt;
+		  &lt;label for=&quot;NachName2&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
+		  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName2&quot; ng-model=&quot;nachname2&quot; placeholder=&quot;Sorglos&quot; required&gt;
 
-		&lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
-		&lt;div class=&quot;form-group&quot;&gt;
-		  &lt;label for=&quot;date-input&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
-			&lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag2&quot; placeholder=&quot;&quot; id=&quot;date-input&quot; required&gt;
-		&lt;/div&gt;
+		  &lt;label for=&quot;date-input2&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
+			&lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag2&quot; placeholder=&quot;&quot; id=&quot;date-input2&quot; required&gt;
 
-	  &lt;div class=&quot;form-group&quot;&gt;
-		  &lt;button id=&quot;confirmButton&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Einloggen&lt;/button&gt;
-	  &lt;/div&gt;
+		    &lt;button id=&quot;confirmButton2&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Einloggen&lt;/button&gt;
+        &lt;/div&gt;
+	  &lt;/form&gt;
 
-&lt;div ng-app=&quot;&quot;&gt;
- 	&lt;p&gt;Name: &lt;input type=&quot;text&quot; ng-model=&quot;name&quot;&gt;&lt;/p&gt;
- 	&lt;p ng-bind=&quot;name&quot;&gt;&lt;/p&gt;
-&lt;/div&gt;
-
-	  &lt;/div&gt;
     &lt;/div&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;br&gt;&lt;br&gt;
 
-Um anonym zu spielen, klicke hier: [&lt;button class=&quot;btn btn-default&quot;&gt;Anonym spielen&lt;/button&gt;]&lt;anonym|
+Um zu spielen ohne dich zu registrieren oder dich anzumelden, klicke hier: [&lt;button class=&quot;btn btn-default&quot;&gt;Anonym spielen&lt;/button&gt;]&lt;anonym|
 
 (click: ?anonym)[
   (set: $vorname to &quot;Spieler&quot;)
@@ -3156,7 +3132,7 @@ Um anonym zu spielen, klicke hier: [&lt;button class=&quot;btn btn-default&quot;
   (go-to: &quot;Hauptseite&quot;)
 ]
 
-&lt;br&gt;
+&lt;br&gt;&lt;br&gt;
 
 &#39;&#39;Hinweis&#39;&#39;: Wenn du anonym spielst, dann wird dein Spielstand nicht gespeichert und du kannst nicht in die Bestenliste kommen.
 
@@ -3165,9 +3141,9 @@ Um anonym zu spielen, klicke hier: [&lt;button class=&quot;btn btn-default&quot;
 &lt;script&gt;
 
 $(function() {
-	$(&quot;#confirmDiv&quot;).click(function(e){
-        $(&#39;#confirmDiv&#39;).replaceWith( $(&#39;#submitDiv&#39;));
-		console.log(&quot;button-divs changed&quot;);
+	$(&quot;#confirmButton1&quot;).click(function(e){
+        $(&#39;#confirmDiv1&#39;).replaceWith( $(&#39;#submitDiv1&#39;));
+		console.log(&quot;buttons changed&quot;);
     });
 });
 

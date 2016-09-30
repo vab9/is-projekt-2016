@@ -22,7 +22,6 @@ function fluidtextresizer(setting){
         var neueStyles = fluidtextresizer.routines.gibMirStyle();
         if (typeof(neueStyles) === 'string') {
             var arrayStyles = neueStyles.split(',');
-            console.log(arrayStyles[2]);
             $('tw-passage').css("fontSize", arrayStyles[2]);
             $('tw-include').css("fontSize", arrayStyles[0]);
             this.curfontlevel = arrayStyles[1];

@@ -82,6 +82,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -93,7 +94,11 @@ $.getScript("static/js/jquery-1.4.2.min.js", function(){
 
 $.getScript("static/js/fluidtextresizer.js", function(){
 	console.log("fluidtextresizer.js loaded!");
+	$.getScript("static/js/textresizerinstance.js", function(){
+		console.log("textresizer loaded!");
+	});
 });
+
 
 
 

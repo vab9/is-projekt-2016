@@ -83,6 +83,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -92,70 +93,16 @@ $.getScript("static/js/jquery-1.4.2.min.js", function(){
 	console.log("jquery-1.4.2.min.js loaded!");
 });
 
+$.getScript("static/js/angular.min.js",function() {
+	console.log("angular.js loaded.");
+});
+
 $.getScript("static/js/fluidtextresizer.js", function(){
 	console.log("fluidtextresizer.js loaded!");
 	$.getScript("static/js/textresizerinstance.js", function(){
 		console.log("textresizer loaded!");
 	});
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
 &lt;div class=&quot;header&quot;&gt;
 
@@ -268,6 +215,7 @@ $(document).ready(function() {
 	$.getScript(&quot;static/js/textresizerinstance.js&quot;);
 	console.log(&quot;textresizerinstance.js loaded.&quot;);
 });
+
 &lt;/script&gt;
 }</tw-passagedata>
 <tw-passagedata pid="7" name="Kapitel 2.1" tags="" position="2948,311">&#39;&#39;Teil 1: Verhalten in sozialen Netzwerken&#39;&#39;
@@ -3179,21 +3127,6 @@ $(function() {
 });
 
 &lt;/script&gt;
-
-
-&lt;!-- Hier laden wir alles, was wir so brauchen --&gt;
-&lt;head&gt;
-&lt;script&gt;
-
-$(function () {
-  $.getScript(&quot;static/js/angular.min.js&quot;,function() {
-        console.log(&quot;angular.js loaded.&quot;);
-  });
-});
-	
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;!-- ENDE scripte --&gt;
 }
 }</tw-passagedata>
 </tw-storydata>

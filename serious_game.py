@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 
 # import core.config
-from core import config
+import config
 import os
 
 from flask import Flask, send_file

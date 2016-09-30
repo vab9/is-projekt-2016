@@ -86,6 +86,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -106,7 +107,8 @@ $.getScript("static/js/angular.min.js",function() {
 $.getScript("static/js/fluidtextresizer.js", function(){
 	console.log("fluidtextresizer.js loaded!");
 	$.getScript("static/js/textresizerinstance.js");
-});</script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
+});
+</script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
 &lt;div class=&quot;header&quot;&gt;
 
 &lt;span class=&quot;lefthead&quot;&gt;
@@ -126,6 +128,9 @@ Punkte: $score
 
 &lt;!-- SAVE GAME --&gt;
 [&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-disk&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;   Spiel speichern&lt;/a&gt;]&lt;saveGame|
+
+(if: $vorname is &quot;Spieler&quot;)[(replace: ?saveGame)[]]
+
 (click: ?saveGame)[
 	(if:(save-game:&quot;Slot A&quot;))[
     	(replace: ?saveGame)[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-saved&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Spiel gespeichert&lt;/a&gt;]]

@@ -83,6 +83,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -100,6 +101,7 @@ $.getScript("static/js/fluidtextresizer.js", function(){
 	console.log("fluidtextresizer.js loaded!");
 	$.getScript("static/js/textresizerinstance.js");
 });
+
 
 </script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
 &lt;div class=&quot;header&quot;&gt;
@@ -204,8 +206,9 @@ Wir hoffen, dass es dir gefällt. Viel Spaß!
 &lt;/span&gt;
 
 &lt;span class=&quot;rightfoot&quot;&gt;
-[[Hauptseite&lt;-&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Hauptseite&lt;/button&gt;]]
+(if: (passage:)&#39;s name is not &quot;Anmeldung&quot;)[[[&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Hauptseite&lt;/button&gt;-&gt;Hauptseite]]]
 &lt;/span&gt;
+
 
 &lt;script&gt;
 $.getScript(&quot;static/js/textresizerinstance.js&quot;);

@@ -81,6 +81,9 @@
 
 
 
+
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -90,65 +93,14 @@ $.getScript("static/js/jquery-1.4.2.min.js", function(){
 	console.log("jquery-1.4.2.min.js loaded!");
 });
 
-$.getScript("static/js/fluidtextresizer.js", function(){
-	console.log("fluidtextresizer.js loaded!");
+$.getScript("static/js/angular.min.js",function() {
+	console.log("angular.js loaded.");
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+$.getScript("static/js/fluidtextresizer.js", function(){
+	console.log("fluidtextresizer.js loaded!");
+	$.getScript("static/js/textresizerinstance.js");
+});
 </script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
 &lt;div class=&quot;header&quot;&gt;
 
@@ -220,7 +172,7 @@ Dieses Spiel wird aktiv an der Universität Osnabrück entwickelt. Wir sind Mast
 Fachgebiet Unternehmensrechnung und Wirtschaftsinformatik
 Katharinenstr. 1
 D-49069 Osnabrück
-&lt;form action=&quot;http://www.wiwi.uni-osnabrueck.de/fachgebiete_und_institute/unternehmensrechnung_und_wirtschaftsinformatik_prof_teuteberg/aktuelles.html&quot; target=&quot;_blank&quot;&gt;
+&lt;form action=&quot;https://www.wiwi.uni-osnabrueck.de/fachgebiete_und_institute/unternehmensrechnung_und_wirtschaftsinformatik_prof_teuteberg/aktuelles.html&quot; target=&quot;_blank&quot;&gt;
     &lt;input type=&quot;submit&quot; value=&quot;Zur Webseite des Fachbereichs&quot; /&gt;
 &lt;/form&gt;
 </tw-passagedata>
@@ -255,13 +207,10 @@ Wir hoffen, dass es dir gefällt. Viel Spaß!
 [[Hauptseite&lt;-&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Hauptseite&lt;/button&gt;]]
 &lt;/span&gt;
 
-&lt;/div&gt;
 &lt;script&gt;
-$(document).ready(function() {
-	$.getScript(&quot;static/js/textresizerinstance.js&quot;);
-	console.log(&quot;textresizerinstance.js loaded.&quot;);
-});
+$.getScript(&quot;static/js/textresizerinstance.js&quot;);
 &lt;/script&gt;
+
 }</tw-passagedata>
 <tw-passagedata pid="7" name="Kapitel 2.1" tags="" position="2948,311">&#39;&#39;Teil 1: Verhalten in sozialen Netzwerken&#39;&#39;
 
@@ -3172,21 +3121,6 @@ $(function() {
 });
 
 &lt;/script&gt;
-
-
-&lt;!-- Hier laden wir alles, was wir so brauchen --&gt;
-&lt;head&gt;
-&lt;script&gt;
-
-$(function () {
-  $.getScript(&quot;static/js/angular.min.js&quot;,function() {
-        console.log(&quot;angular.js loaded.&quot;);
-  });
-});
-	
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;!-- ENDE scripte --&gt;
 }
 }</tw-passagedata>
 </tw-storydata>

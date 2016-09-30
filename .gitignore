@@ -4,7 +4,7 @@
 # res/
 
 # python executable and cache
-server.pyc
+*.pyc
 __pycache__/
 
 iwas_reinschreiben

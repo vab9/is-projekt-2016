@@ -11,8 +11,9 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="index" startnode="263" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("static/css/bootstrap.min.css");
+<tw-storydata name="index" startnode="264" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("static/css/bootstrap.min.css");
 @import url("static/css/style.css");
+
 
 
 
@@ -108,12 +109,15 @@ $.getScript("static/js/fluidtextresizer.js", function(){
 	console.log("fluidtextresizer.js loaded!");
 	$.getScript("static/js/textresizerinstance.js");
 });
+
 </script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
 &lt;div class=&quot;header&quot;&gt;
 
 &lt;span class=&quot;lefthead&quot;&gt;
-Punkte: $score
+[Punkte: $score]&lt;punktestand|
 &lt;/span&gt;
+
+(if: (passage:)&#39;s name is &quot;Startseite&quot; or (passage:)&#39;s name is  &quot;Anmeldung&quot; or (passage:)&#39;s name is &quot;Registrierung&quot;)[(replace: ?punktestand)[]]
 
 &lt;!-- BEGIN HEADERBUTTON SPAN --&gt;
 &lt;span class=&quot;righthead&quot;&gt;
@@ -193,7 +197,7 @@ D-49069 Osnabrück
 (print: &quot;&lt;script&gt;$(&#39;html&#39;).addClass(&#39;&quot; + (passage:)&#39;s tags.join(&#39; &#39;) + &quot;&#39;\)&lt;/script&gt;&quot;)
 ]
 }</tw-passagedata>
-<tw-passagedata pid="5" name="Willkommen" tags="" position="417,65">&lt;b&gt;Hallo $player!&lt;/b&gt;
+<tw-passagedata pid="5" name="Willkommen" tags="" position="544,39">&lt;b&gt;Hallo $player!&lt;/b&gt;
 
 Wir freuen uns, dass du dich entschieden hast, unser Lernspiel auszuprobieren. Dieses Spiel vermittelt im &#39;&#39;ersten Kapitel&#39;&#39; Grundkenntnisse über das digitale soziale Netzwerk Facebook. Im &#39;&#39;zweiten Kapitel&#39;&#39; erfährst du, wie du deine Sicherheit im Internet und im Speziellen Facebook sicherstellen kannst und im &#39;&#39;dritten Kapitel&#39;&#39; lernst du allgemeine, wichtige Lektionen für den Umgang mit sozialen Medien und dem Internet.
 
@@ -204,7 +208,7 @@ Wir hoffen, dass es dir gefällt. Viel Spaß!
 [[Übersicht&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Los geht&#39;s!&lt;/button&gt;]]
 &lt;/div&gt;
 }</tw-passagedata>
-<tw-passagedata pid="6" name="Footer" tags="footer" position="497,334">{}
+<tw-passagedata pid="6" name="Footer" tags="footer" position="569,369">{}
 {
 &lt;hr&gt;
 &lt;div class=&quot;footer&quot;&gt;
@@ -2861,7 +2865,7 @@ Das war die richtige Antwort.
 Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$score Punkte!]}
 
 [[Das Quiz noch einmal machen.-&gt;1.9 Quiz]]</tw-passagedata>
-<tw-passagedata pid="260" name="Hauptseite" tags="" position="200,217">&lt;b&gt;Willkommen, $vorname $nachname!&lt;/b&gt;
+<tw-passagedata pid="260" name="Hauptseite" tags="" position="452,203">&lt;b&gt;Willkommen, $vorname $nachname!&lt;/b&gt;
 
 Alter: $geburtstag
 
@@ -2887,10 +2891,10 @@ Aktueller Punktestand: $score
 
 {
 &lt;div class=&quot;continue&quot;&gt;
-[[Übersicht&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Weiter zur Übersicht&lt;/button&gt;]]
+[[Willkommen&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Jetzt spielen&lt;/button&gt;]]
 &lt;/div&gt;
 }</tw-passagedata>
-<tw-passagedata pid="261" name="Top10" tags="" position="199,371">&lt;!-- Hier soll die Top 10 der Spieler mit den meisten Punkten aufgelistet werden --&gt;
+<tw-passagedata pid="261" name="Top10" tags="" position="344,376">&lt;!-- Hier soll die Top 10 der Spieler mit den meisten Punkten aufgelistet werden --&gt;
 
 {
 &lt;html&gt;
@@ -2971,11 +2975,11 @@ tr:nth-child(even) {
 &lt;/table&gt;
 &lt;/html&gt;
 }</tw-passagedata>
-<tw-passagedata pid="262" name="Letzte Session" tags="" position="48,371">{
+<tw-passagedata pid="262" name="Letzte Session" tags="" position="187,378">{
 &lt;!-- Here the savegame is loaded --&gt;
 (if: (savedgames:) contains &quot;Slot A&quot;)[(loadgame: &quot;Slot A&quot;)]
 }</tw-passagedata>
-<tw-passagedata pid="263" name="Anmeldung" tags="" position="12,119">{
+<tw-passagedata pid="263" name="Anmeldung" tags="" position="246,105">{
 &#39;&#39;Serious Game&#39;&#39;
 
 &lt;br&gt;&lt;br&gt;
@@ -2983,100 +2987,89 @@ tr:nth-child(even) {
 {
 (set: $vtemp to &quot;Vorname&quot;)
 (set: $ntemp to &quot;Nachname&quot;)
-(set: $gtemp to &quot;Geburtstag&quot;)
+(set: $gtemp to &quot;&quot;)
 (set: $score to 0)
 }
 
-&lt;!-- Tab-Logik --&gt;
-
-&lt;div class=&quot;container&quot; ng-app=&quot;&quot;&gt;
-  Bitte registriere dich oder melde dich an:
-  &lt;br&gt;&lt;br&gt;
-  &lt;ul class=&quot;nav nav-tabs nav-justified&quot;&gt;
-    &lt;li class=&quot;active&quot;&gt;&lt;a data-toggle=&quot;tab&quot; href=&quot;#register&quot;&gt;Registrieren&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a data-toggle=&quot;tab&quot; href=&quot;#login&quot;&gt;Anmelden&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+Bitte melde dich an:
 
 &lt;br&gt;&lt;br&gt;
 
-  &lt;div class=&quot;tab-content&quot;&gt;
+&lt;div ng-app=&quot;&quot;&gt;
 
-  &lt;!-- Tab: #register mit Eingabefeldern --&gt;
+&lt;form&gt;
 
-  &lt;div id=&quot;register&quot; class=&quot;tab-pane fade in active&quot;&gt;
+     &lt;label for=&quot;firstName&quot;&gt;Vorname:&lt;/label&gt;
+     &lt;input id=&quot;firstName&quot; type=&quot;text&quot; ng-model=&quot;vorname1&quot; placeholder=&quot;Susi&quot; required pattern=&quot;[a-zA-Z]+&quot; required&gt;
+     &lt;br/&gt;
+     &lt;label for=&quot;lastName&quot;&gt;Nachname:&lt;/label&gt;
+     &lt;input id=&quot;lastName&quot; type=&quot;text&quot; ng-model=&quot;nachname1&quot; placeholder=&quot;Sorglos&quot; required pattern=&quot;[a-zA-Z]+&quot; required&gt;
+     &lt;br/&gt;
+     &lt;label for=&quot;birthday&quot;&gt;Geburtstag:&lt;/label&gt;
+     &lt;input id=&quot;birthday&quot; type=&quot;date&quot; ng-model=&quot;geburtstag1&quot; required&gt;
+     &lt;br&gt;
 
-    &lt;form id=&quot;meinform&quot; data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
-    &lt;div class=&quot;form-group has-feedback&quot;&gt;
-      &lt;label for=&quot;VorName1&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
-      &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName1&quot; ng-model=&quot;vorname1&quot; placeholder=&quot;Susi&quot; pattern=&quot;^([a-zA-Z ]+)$&quot; data-validate=&quot;true&quot; required&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;form-group&quot;&gt;
-      &lt;label for=&quot;NachName1&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
-      &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName1&quot; ng-model=&quot;nachname1&quot; placeholder=&quot;Sorglos&quot; pattern=&quot;^([a-zA-Z ]+)$&quot; data-validate=&quot;true&quot; required&gt;
-        &lt;/div&gt;
+     &lt;button id=&quot;confirmButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Anmelden&lt;/button&gt;
 
-        &lt;div class=&quot;form-group&quot;&gt;
-      &lt;label for=&quot;date-input1&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
-      &lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag1&quot; placeholder=&quot;&quot; id=&quot;date-input1&quot; pattern=&quot;^([a-zA-Z ]+)$&quot; data-validate=&quot;true&quot; required&gt;
-        &lt;/div&gt;
+     &lt;div style=&quot;display: none&quot;&gt;
+         [&lt;button id=&quot;submitButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;]&lt;register|
+     &lt;/div&gt;
 
-      &lt;div id=&quot;confirmDiv1&quot;&gt;
-        &lt;div class=&quot;form-group&quot;&gt;
-              &lt;button id=&quot;confirmButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Registrieren&lt;/button&gt;
-          &lt;/div&gt;
-      &lt;/div&gt;
+&lt;/form&gt;
 
-        &lt;div style=&quot;display: none&quot;&gt;
-        &lt;div id=&quot;submitDiv1&quot;&gt;
-        [&lt;button id=&quot;submitButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;]&lt;register|
-        &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/form&gt;
-    &lt;/div&gt;
-    (click: ?register)[
-    (set: $vorname to ?vtemp)
-    (set: $nachname to ?ntemp)
-    (set: $geburtstag to ?gtemp)
-    (go-to: &quot;Hauptseite&quot;)
-    ]
+(click: ?register)[
+  (set: $vorname to ?vtemp)
+  (set: $nachname to ?ntemp)
+  (set: $geburtstag to ?gtemp)
+  (go-to: &quot;Hauptseite&quot;)
+]
 
-    {
-    (set: $vtemp to &quot;&lt;span ng-bind=vorname1&gt;&lt;/span&gt;&quot;)
-    (set: $ntemp to &quot;&lt;span ng-bind=nachname1&gt;&lt;/span&gt;&quot;)
-    (set: $gtemp to &quot;&lt;span ng-bind=geburtstag1&gt;&lt;/span&gt;&quot;)
-    }
+{
+(set: $vtemp to &quot;&lt;span ng-bind=vorname1&gt;&lt;/span&gt;&quot;)
+(set: $ntemp to &quot;&lt;span ng-bind=nachname1&gt;&lt;/span&gt;&quot;)
+(set: $gtemp to &quot;&lt;span ng-bind=geburtstag1&gt;&lt;/span&gt;&quot;)
+}
 
-    {
-    &lt;span style=&quot;display: none&quot;&gt;
-    [$vtemp]&lt;vtemp|
-    [$ntemp]&lt;ntemp|
-    [$gtemp]&lt;gtemp|
-    &lt;/span&gt;
-    }
+{
+&lt;span style=&quot;display: none&quot;&gt;
+[$vtemp]&lt;vtemp|
+[$ntemp]&lt;ntemp|
+[$gtemp]&lt;gtemp|
+&lt;/span&gt;
+}
 
-  &lt;!-- Tab: &quot;#login&quot; mit Eingabefeldern --&gt;
-
-  &lt;div id=&quot;login&quot; class=&quot;tab-pane fade&quot;&gt;
-
-    &lt;form data-toggle=&quot;validator&quot; role=&quot;form&quot;&gt;
-    &lt;div class=&quot;form-group&quot;&gt;
-      &lt;label for=&quot;VorName2&quot; class=&quot;control-label&quot;&gt;Vorname&lt;/label&gt;
-      &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;VorName2&quot; ng-model=&quot;vorname2&quot; placeholder=&quot;Susi&quot; required&gt;
-
-      &lt;label for=&quot;NachName2&quot; class=&quot;control-label&quot;&gt;Nachname&lt;/label&gt;
-      &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;NachName2&quot; ng-model=&quot;nachname2&quot; placeholder=&quot;Sorglos&quot; required&gt;
-
-      &lt;label for=&quot;date-input2&quot; class=&quot;control-label&quot;&gt;Geburtstag&lt;/label&gt;
-      &lt;input type=&quot;date&quot; class=&quot;form-control&quot; ng-model=&quot;geburtstag2&quot; placeholder=&quot;&quot; id=&quot;date-input2&quot; required&gt;
-
-        &lt;button id=&quot;confirmButton2&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Einloggen&lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/form&gt;
-
-    &lt;/div&gt;
-
-  &lt;/div&gt;
 &lt;/div&gt;
+
+{
+&lt;!-- Hier anonyme Klassen laden --&gt;
+&lt;script&gt;
+
+document.getElementById(&quot;confirmButton1&quot;).addEventListener(&quot;click&quot;,function (){ 
+    event.preventDefault();
+    $(&quot;#submitButton1&quot;).click(); 
+});
+
+&lt;/script&gt;
+}
+}</tw-passagedata>
+<tw-passagedata pid="264" name="Startseite" tags="" position="76,163">{
+&#39;&#39;Serious Game&#39;&#39;
+
+&lt;br&gt;&lt;br&gt;
+
+Registriere dich, wenn du dich zum ersten Mal anmeldest:
+
+&lt;br&gt;&lt;br&gt;
+
+[[Registrierung-&gt;Registrierung]]
+
+&lt;br&gt;&lt;br&gt;
+
+Melde dich an, wenn du dich schon einmal registriert hast:
+
+&lt;br&gt;&lt;br&gt;
+
+[[Anmeldung-&gt;Anmeldung]]
 
 &lt;br&gt;&lt;br&gt;
 
@@ -3092,25 +3085,80 @@ Um zu spielen ohne dich zu registrieren oder dich anzumelden, klicke hier: [&lt;
 &lt;br&gt;&lt;br&gt;
 
 &#39;&#39;Hinweis&#39;&#39;: Wenn du anonym spielst, dann wird dein Spielstand nicht gespeichert und du kannst nicht in die Bestenliste kommen.
+}</tw-passagedata>
+<tw-passagedata pid="265" name="Registrierung" tags="" position="249,234">{
+&#39;&#39;Serious Game&#39;&#39;
+
+&lt;br&gt;&lt;br&gt;
 
 {
-&lt;!-- Hier Anonyme Klassen laden --&gt;
+(set: $vtemp to &quot;Vorname&quot;)
+(set: $ntemp to &quot;Nachname&quot;)
+(set: $gtemp to &quot;&quot;)
+(set: $score to 0)
+}
+
+Bitte registriere dich:
+
+&lt;br&gt;&lt;br&gt;
+
+&lt;div ng-app=&quot;&quot;&gt;
+
+&lt;form&gt;
+
+     &lt;label for=&quot;firstName&quot;&gt;Vorname:&lt;/label&gt;
+     &lt;input id=&quot;firstName&quot; type=&quot;text&quot; ng-model=&quot;vorname1&quot; placeholder=&quot;Susi&quot; required pattern=&quot;[a-zA-Z]+&quot; required&gt;
+     &lt;br/&gt;
+     &lt;label for=&quot;lastName&quot;&gt;Nachname:&lt;/label&gt;
+     &lt;input id=&quot;lastName&quot; type=&quot;text&quot; ng-model=&quot;nachname1&quot; placeholder=&quot;Sorglos&quot; required pattern=&quot;[a-zA-Z]+&quot; required&gt;
+     &lt;br/&gt;
+     &lt;label for=&quot;birthday&quot;&gt;Geburtstag:&lt;/label&gt;
+     &lt;input id=&quot;birthday&quot; type=&quot;date&quot; ng-model=&quot;geburtstag1&quot; required&gt;
+     &lt;br&gt;
+
+     &lt;button id=&quot;confirmButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Registrieren&lt;/button&gt;
+
+     &lt;div style=&quot;display: none&quot;&gt;
+         [&lt;button id=&quot;submitButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;]&lt;register|
+     &lt;/div&gt;
+
+&lt;/form&gt;
+
+(click: ?register)[
+  (set: $vorname to ?vtemp)
+  (set: $nachname to ?ntemp)
+  (set: $geburtstag to ?gtemp)
+  (go-to: &quot;Hauptseite&quot;)
+]
+
+{
+(set: $vtemp to &quot;&lt;span ng-bind=vorname1&gt;&lt;/span&gt;&quot;)
+(set: $ntemp to &quot;&lt;span ng-bind=nachname1&gt;&lt;/span&gt;&quot;)
+(set: $gtemp to &quot;&lt;span ng-bind=geburtstag1&gt;&lt;/span&gt;&quot;)
+}
+
+{
+&lt;span style=&quot;display: none&quot;&gt;
+[$vtemp]&lt;vtemp|
+[$ntemp]&lt;ntemp|
+[$gtemp]&lt;gtemp|
+&lt;/span&gt;
+}
+
+&lt;/div&gt;
+
+{
+&lt;!-- Hier anonyme Klassen laden --&gt;
 &lt;script&gt;
-console.log(&quot;hellas&quot;);
-$( document ).ready(function() {
-  $(&quot;confirmDiv1&quot;).click(function() {
-    console.log(&quot;button clicked&quot;);
-    $(&#39;#confirmDiv1&#39;).replaceWith( $(&#39;#submitDiv1&#39;));
-    console.log(&quot;button clicked&quot;);
-  });
+
+document.getElementById(&quot;confirmButton1&quot;).addEventListener(&quot;click&quot;,function (){ 
+    event.preventDefault();
+    $(&quot;#submitButton1&quot;).click(); 
 });
-
-
 
 &lt;/script&gt;
 }
-}
-</tw-passagedata>
+}</tw-passagedata>
 </tw-storydata>
 
 

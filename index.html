@@ -3124,16 +3124,30 @@ Bitte registriere dich:
 
 &lt;br&gt;&lt;br&gt;
 
-&lt;div ng-app=&quot;&quot;&gt;
+&lt;div clas=&quot;container&quot; ng-app=&quot;&quot;&gt;
 
-&lt;form action=&quot;/register&quot; id=&quot;registrationForm&quot; method=&quot;post&quot; name=&quot;registrationForm&quot; role=&quot;form&quot;&gt;
-    &lt;label for=&quot;firstName&quot;&gt;Vorname:&lt;/label&gt; &lt;input id=&quot;firstName&quot; name=&quot;reg_vorname&quot; pattern=&quot;[a-zA-Z]+&quot; placeholder=&quot;Max&quot; required type=&quot;text&quot;&gt;&lt;br&gt;
-    &lt;label for=&quot;lastName&quot;&gt;Nachname:&lt;/label&gt; &lt;input id=&quot;lastName&quot; name=&quot;reg_nachname&quot; pattern=&quot;[a-zA-Z]+&quot; placeholder=&quot;Mustermann&quot; required type=&quot;text&quot;&gt;&lt;br&gt;
-    &lt;label for=&quot;birthday&quot;&gt;Geburtstag:&lt;/label&gt; &lt;input id=&quot;birthday&quot; name=&quot;reg_geb&quot; pattern=&quot;^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$&quot; required type=&quot;date&quot;&gt;&lt;br&gt;
-    &lt;button class=&quot;btn btn-primary&quot; id=&quot;confirmButton1&quot;&gt;Eingabe prüfen&lt;/button&gt;&lt;br&gt;
+&lt;form class=&quot;form-horizontal&quot; action=&quot;/register&quot; id=&quot;registrationForm&quot; method=&quot;post&quot; name=&quot;registrationForm&quot; role=&quot;form&quot;&gt;
+    &lt;div class=&quot;form-group row&quot;&gt;
+        &lt;label for=&quot;firstName&quot;&gt;Vorname:&lt;/label&gt; &lt;input id=&quot;firstName&quot; class=&quot;form-control&quot; name=&quot;reg_vorname&quot; pattern=&quot;[a-zA-Z]+&quot; placeholder=&quot;Max&quot; required=&quot;&quot; type=&quot;text&quot;&gt;&lt;br&gt;
+    &lt;/div&gt;
 
 
-    &lt;div id=&quot;alert-placeholder&quot;&gt;
+    &lt;div class=&quot;form-group row&quot;&gt;
+        &lt;label for=&quot;lastName&quot;&gt;Nachname:&lt;/label&gt; &lt;input id=&quot;lastName&quot; class=&quot;form-control&quot; name=&quot;reg_nachname&quot; pattern=&quot;[a-zA-Z]+&quot; placeholder=&quot;Mustermann&quot; required=&quot;&quot; type=&quot;text&quot;&gt;&lt;br&gt;
+    &lt;/div&gt;
+
+
+    &lt;div class=&quot;form-group row&quot;&gt;
+        &lt;label for=&quot;birthday&quot;&gt;Geburtstag (TT/MM/JJJJ):&lt;/label&gt; &lt;input id=&quot;birthday&quot; class=&quot;form-control&quot; name=&quot;reg_geb&quot; pattern=&quot;^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$&quot; required=&quot;&quot; type=&quot;date&quot;&gt;&lt;br&gt;
+    &lt;/div&gt;
+
+
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;button class=&quot;btn btn-primary&quot; id=&quot;confirmButton1&quot;&gt;Bestätigen&lt;/button&gt;&lt;br&gt;
+
+
+        &lt;div id=&quot;alert-placeholder&quot;&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
 
 

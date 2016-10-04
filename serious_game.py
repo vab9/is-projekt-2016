@@ -61,7 +61,7 @@ def register():
         db.session.add(new_user)
         db.session.commit()
     except:
-        return "Unable to save " + str(new_user) + " to database..."
+        return "Unable to save " + unicode(new_user) + " to database...", 503
     return unicode(new_user) + " erfolgreich registriert!", 204
     # return "Successfully registered " + str(new_user)
 

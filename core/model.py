@@ -20,4 +20,4 @@ class User(db.Model):
         self.geb = geb
 
     def __repr__(self):
-        return self.vorname + self.nachname
+        return unicode(self.vorname + " " + self.nachname)

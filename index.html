@@ -90,6 +90,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -107,6 +108,7 @@ $.getScript("static/js/fluidtextresizer.js", function(){
 	console.log("fluidtextresizer.js loaded!");
 	$.getScript("static/js/textresizerinstance.js");
 });
+
 
 
 
@@ -3124,24 +3126,27 @@ Bitte registriere dich:
 
 &lt;div ng-app=&quot;&quot;&gt;
 
-&lt;form id=&quot;registrationForm&quot; method=&quot;POST&quot; action=&quot;/register&quot; role=&quot;form&quot;&gt;
+&lt;form action=&quot;/register&quot; id=&quot;registrationForm&quot; method=&quot;post&quot; name=&quot;registrationForm&quot; role=&quot;form&quot;&gt;
+    &lt;label for=&quot;firstName&quot;&gt;Vorname:&lt;/label&gt; &lt;input id=&quot;firstName&quot; name=&quot;reg_vorname&quot; pattern=&quot;[a-zA-Z]+&quot; placeholder=&quot;Max&quot; required type=&quot;text&quot;&gt;&lt;br&gt;
+    &lt;label for=&quot;lastName&quot;&gt;Nachname:&lt;/label&gt; &lt;input id=&quot;lastName&quot; name=&quot;reg_nachname&quot; pattern=&quot;[a-zA-Z]+&quot; placeholder=&quot;Mustermann&quot; required type=&quot;text&quot;&gt;&lt;br&gt;
+    &lt;label for=&quot;birthday&quot;&gt;Geburtstag:&lt;/label&gt; &lt;input id=&quot;birthday&quot; name=&quot;reg_geb&quot; pattern=&quot;^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$&quot; required type=&quot;date&quot;&gt;&lt;br&gt;
+    &lt;button class=&quot;btn btn-primary&quot; id=&quot;confirmButton1&quot;&gt;Eingabe prüfen&lt;/button&gt;&lt;br&gt;
 
-     &lt;label for=&quot;firstName&quot;&gt;Vorname:&lt;/label&gt;
-     &lt;input id=&quot;firstName&quot; name=&quot;reg_vorname&quot; type=&quot;text&quot; ng-model=&quot;vorname1&quot; placeholder=&quot;Susi&quot; required pattern=&quot;[a-zA-Z]+&quot; required&gt;
-     &lt;br/&gt;
-     &lt;label for=&quot;lastName&quot;&gt;Nachname:&lt;/label&gt;
-     &lt;input id=&quot;lastName&quot; name=&quot;reg_nachname&quot; type=&quot;text&quot; ng-model=&quot;nachname1&quot; placeholder=&quot;Sorglos&quot; required pattern=&quot;[a-zA-Z]+&quot; required&gt;
-     &lt;br/&gt;
-     &lt;label for=&quot;birthday&quot;&gt;Geburtstag:&lt;/label&gt;
-     &lt;input id=&quot;birthday&quot; name=&quot;reg_geb&quot; type=&quot;date&quot; ng-model=&quot;geburtstag1&quot; required pattern=&quot;^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$&quot;&gt;
-     &lt;br&gt;
 
-     &lt;button id=&quot;confirmButton1&quot; class=&quot;btn btn-primary&quot;&gt;Eingabe prüfen&lt;/button&gt;
+    &lt;div id=&quot;alert-placeholder&quot;&gt;
+    &lt;/div&gt;
 
-     &lt;div style=&quot;display: none&quot;&gt;
-         &lt;button id=&quot;submitButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;
-     &lt;/div&gt;
 
+    &lt;div style=&quot;display: none&quot;&gt;
+        &lt;div class=&quot;registration-success alert alert-success alert-dismissible fade&quot;&gt;
+            &lt;button aria-label=&quot;close&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&amp;times;&lt;/button&gt; &lt;strong&gt;Super!&lt;/strong&gt; Die Registrierung war erfolgreich.
+        &lt;/div&gt;
+
+
+        &lt;div class=&quot;registration-failure alert alert-danger alert-dismissible fade&quot;&gt;
+            &lt;button aria-label=&quot;close&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&amp;times;&lt;/button&gt; &lt;strong&gt;Ups!&lt;/strong&gt; Die Registrierung ist fehlgeschlagen.
+        &lt;/div&gt;
+    &lt;/div&gt;
 &lt;/form&gt;
 
 (click: ?register)[
@@ -3169,14 +3174,31 @@ Bitte registriere dich:
 
 {
 &lt;script&gt;
+
 $(function() {
-    $(&quot;#confirmButton1&quot;).click(function() {
-        console.log(&quot;clicked the confirm button&quot;);
-		
-		console.log(&quot;DO STUFF TO PUT VARIABLES INTO TWINE HERE&quot;);
-		
-		$(&quot;#submitButton1&quot;).click(); 
-    });
+	$(&quot;#registrationForm&quot;).submit(function(event){
+		event.preventDefault();
+		if ($(&quot;#registrationForm&quot;)[0].checkValidity()) {
+			var $form = $(&#39;#registrationForm&#39;);
+			var data = $form.serialize();
+			var url = $form.attr(&#39;action&#39;);
+			var posting = $.post(&#39;/register&#39;, data);
+			posting.done(function(){
+			    console.log(&quot;posting done bitches&quot;);
+				$(&#39;.registration-success&#39;).clone().appendTo($(&#39;#alert-placeholder&#39;));
+				$(&#39;.registration-success&#39;).addClass(&#39;in&#39;);
+			}).fail(function(){
+				console.log(&quot;positng failed got damn&quot;);
+				$(&#39;.registration-failure&#39;).clone().appendTo(&#39;#alert-placeholder&#39;);
+				$(&#39;.registration-failure&#39;).addClass(&#39;in&#39;);
+			});
+		} else {
+			$(&#39;.registration-failure&#39;).clone().appendTo(&#39;#alert-placeholder&#39;);
+			$(&#39;.registration-failure&#39;).addClass(&#39;in&#39;);
+		}
+		$(&#39;#alert-placeholder&#39;).show();
+	});
+	
 });
 &lt;/script&gt;
 }

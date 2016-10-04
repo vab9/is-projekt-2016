@@ -142,20 +142,20 @@ $.getScript("static/js/fluidtextresizer.js", function(){
     	(replace: ?saveGame)[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-saved&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Spiel gespeichert&lt;/a&gt;
 &lt;script&gt;
   $(function() {
-  	var savegame;
-  	for (key in localStorage) {
-		// player variable here !!!!!!!!!!!
-		if key.includes(&quot;Slot A&quot;) {
-			savegame = localStorage.getItem(key);
-			break;
-		}
-	}
-	
-	if (savegame) {
-		$.post(&#39;/savegame&#39;, savegame, function(data){
-			console.log(&#39;saved: &#39; + data);
-		});
-	}
+      var savegame;
+      for (key in localStorage) {
+          console.log(key);
+          if (key.includes(&quot;Slot A&quot;)) {
+              savegame = localStorage.getItem(key);
+              break;
+          }
+      }
+      if (savegame) {
+	      var send = {sg: savegame};
+          $.post(&#39;/savegame&#39;, send, function(data) {
+              console.log(&#39;saved: &#39; + data);
+          });
+      }
   });
 &lt;/script&gt;]]
 		(else: )[

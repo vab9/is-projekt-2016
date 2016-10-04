@@ -88,6 +88,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -110,6 +111,7 @@ $.getScript("static/js/fluidtextresizer.js", function(){
 	$.getScript("static/js/textresizerinstance.js");
 });
 
+
 </script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
 &lt;div class=&quot;header&quot;&gt;
 
@@ -131,13 +133,31 @@ $.getScript("static/js/fluidtextresizer.js", function(){
 &lt;a class=&quot;btn btn-default&quot; href=&quot;javascript:mytextsizer.setFontLevel(&#39;bigger&#39;)&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-zoom-in&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;&lt;/a&gt;
 
 &lt;!-- SAVE GAME --&gt;
-[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-disk&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;   Spiel speichern&lt;/a&gt;]&lt;saveGame|
+[&lt;a id=&quot;speicherButton&quot; class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-disk&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;   Spiel speichern&lt;/a&gt;]&lt;saveGame|
 
 (if: $vorname is &quot;Spieler&quot;)[(replace: ?saveGame)[]]
 
 (click: ?saveGame)[
 	(if:(save-game:&quot;Slot A&quot;))[
-    	(replace: ?saveGame)[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-saved&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Spiel gespeichert&lt;/a&gt;]]
+    	(replace: ?saveGame)[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-saved&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Spiel gespeichert&lt;/a&gt;
+&lt;script&gt;
+  $(function() {
+  	var savegame;
+  	for (key in localStorage) {
+		// player variable here !!!!!!!!!!!
+		if key.includes(&quot;Slot A&quot;) {
+			savegame = localStorage.getItem(key);
+			break;
+		}
+	}
+	
+	if (savegame) {
+		$.post(&#39;/savegame&#39;, savegame, function(data){
+			console.log(&#39;saved: &#39; + data);
+		});
+	}
+  });
+&lt;/script&gt;]]
 		(else: )[
     	(replace: ?saveGame)[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-disk&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Fehler beim Speichern&lt;/a&gt;]]]
 
@@ -146,6 +166,9 @@ $.getScript("static/js/fluidtextresizer.js", function(){
 
 &lt;/div&gt;
 &lt;hr&gt;
+
+
+
 }</tw-passagedata>
 <tw-passagedata pid="2" name="Übersicht" tags="" position="638,200">&lt;b&gt;Dies ist die Kapitelübersicht.&lt;/b&gt;
 

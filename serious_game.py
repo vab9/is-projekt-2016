@@ -79,6 +79,12 @@ def save_score(player):
     # find player score, compare to database, save etc.
 
 
+@app.route('/savegame', methods=['POST'])
+def save_game():
+    result = [request.form, request.data, request.args]
+    return str(result)
+
+
 @app.route('/add_user/<vorname>/<nachname>/<geb>', methods=['GET', 'POST'])
 def add_user(vorname, nachname, geb):
     new_user = User(vorname, nachname, geb)

@@ -9,6 +9,7 @@ import sys
 from flask import Flask, send_file, request
 from flask_sqlalchemy import SQLAlchemy
 from whitenoise import WhiteNoise
+from dateutil.parser import parse as parse_date
 
 # init flask app
 app = Flask(__name__)
@@ -48,7 +49,7 @@ def register():
     try:
         vorname = request.form['reg_vorname']
         nachname = request.form['reg_nachname']
-        geb = request.form['reg_geb']
+        geb = parse_date(request.form['reg_geb'])
 
     except Exception as e:
         error = str(e)

@@ -153,8 +153,7 @@ $.getScript("static/js/fluidtextresizer.js", function(){
           }
       }
       if (savegame) {
-	      var send = {sg: savegame};
-          $.post(&#39;/savegame&#39;, send, function(data) {
+          $.post(&#39;/savegame&#39;, savegame, function(data) {
               console.log(&#39;saved: &#39; + data);
           });
       }

@@ -81,7 +81,9 @@ def save_score(player):
 
 @app.route('/savegame', methods=['POST'])
 def save_game():
-    return str(request.form.get('sg', type=str))
+    return str(request.form.values()[0])
+    # ('sg', type=str)
+
 
 
 @app.route('/add_user/<vorname>/<nachname>/<geb>', methods=['GET', 'POST'])

@@ -242,7 +242,7 @@ Wir hoffen, dass es dir gefällt. Viel Spaß!
 &lt;/span&gt;
 
 &lt;span class=&quot;rightfoot&quot;&gt;
-(if: (passage:)&#39;s name is not &quot;Anmeldung&quot; and (passage:)&#39;s name is not &quot;Hilfe&quot;)[[[&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Hauptseite&lt;/button&gt;-&gt;Hauptseite]]]
+(if: (passage:)&#39;s name is not &quot;Anmeldung&quot; and (passage:)&#39;s name is not &quot;Hilfe&quot; and (passage:)&#39;s name is not &quot;Registrierung&quot;)[[[&lt;button class=&quot;btn btn-info uebersicht&quot;&gt;Hauptseite&lt;/button&gt;-&gt;Hauptseite]]]
 &lt;/span&gt;
 
 
@@ -3172,12 +3172,11 @@ Bitte registriere dich:
 &lt;/div&gt;
 
 {
-&lt;!-- Hier anonyme Klassen laden --&gt;
 &lt;script&gt;
-
-document.getElementById(&quot;confirmButton1&quot;).addEventListener(&quot;click&quot;,function (){ 
+$(function() {	document.getElementById(&quot;confirmButton1&quot;).addEventListener(&quot;click&quot;,function (){ 
     event.preventDefault();
     $(&quot;#submitButton1&quot;).click(); 
+});
 });
 
 &lt;/script&gt;

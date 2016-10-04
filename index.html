@@ -95,10 +95,6 @@ $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
 });
 
-$.getScript("static/js/validator.min.js",function() {
-	console.log("validator.js loaded.");
-});
-
 $.getScript("static/js/jquery-1.4.2.min.js",function() {
 	console.log("jquery-1.4.2.min.js loaded.");
 });
@@ -3110,7 +3106,7 @@ Um zu spielen ohne dich zu registrieren oder dich anzumelden, klicke hier: [&lt;
 
 &#39;&#39;Hinweis&#39;&#39;: Wenn du anonym spielst, dann wird dein Spielstand nicht gespeichert und du kannst nicht in die Bestenliste kommen.
 }</tw-passagedata>
-<tw-passagedata pid="265" name="Registrierung" tags="" position="249,234">{
+<tw-passagedata pid="265" name="Registrierung" tags="" position="248,234">{
 &#39;&#39;Serious Game&#39;&#39;
 
 &lt;br&gt;&lt;br&gt;
@@ -3128,22 +3124,22 @@ Bitte registriere dich:
 
 &lt;div ng-app=&quot;&quot;&gt;
 
-&lt;form&gt;
+&lt;form id=&quot;registrationForm&quot; method=&quot;POST&quot; action=&quot;/register&quot; role=&quot;form&quot;&gt;
 
      &lt;label for=&quot;firstName&quot;&gt;Vorname:&lt;/label&gt;
-     &lt;input id=&quot;firstName&quot; type=&quot;text&quot; ng-model=&quot;vorname1&quot; placeholder=&quot;Susi&quot; required pattern=&quot;[a-zA-Z]+&quot; required&gt;
+     &lt;input id=&quot;firstName&quot; name=&quot;reg_vorname&quot; type=&quot;text&quot; ng-model=&quot;vorname1&quot; placeholder=&quot;Susi&quot; required pattern=&quot;[a-zA-Z]+&quot; required&gt;
      &lt;br/&gt;
      &lt;label for=&quot;lastName&quot;&gt;Nachname:&lt;/label&gt;
-     &lt;input id=&quot;lastName&quot; type=&quot;text&quot; ng-model=&quot;nachname1&quot; placeholder=&quot;Sorglos&quot; required pattern=&quot;[a-zA-Z]+&quot; required&gt;
+     &lt;input id=&quot;lastName&quot; name=&quot;reg_nachname&quot; type=&quot;text&quot; ng-model=&quot;nachname1&quot; placeholder=&quot;Sorglos&quot; required pattern=&quot;[a-zA-Z]+&quot; required&gt;
      &lt;br/&gt;
      &lt;label for=&quot;birthday&quot;&gt;Geburtstag:&lt;/label&gt;
-     &lt;input id=&quot;birthday&quot; type=&quot;date&quot; ng-model=&quot;geburtstag1&quot; required&gt;
+     &lt;input id=&quot;birthday&quot; name=&quot;reg_geb&quot; type=&quot;date&quot; ng-model=&quot;geburtstag1&quot; required pattern=&quot;^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$&quot;&gt;
      &lt;br&gt;
 
-     &lt;button id=&quot;confirmButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Registrieren&lt;/button&gt;
+     &lt;button id=&quot;confirmButton1&quot; class=&quot;btn btn-primary&quot;&gt;Eingabe prüfen&lt;/button&gt;
 
      &lt;div style=&quot;display: none&quot;&gt;
-         [&lt;button id=&quot;submitButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;]&lt;register|
+         &lt;button id=&quot;submitButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;
      &lt;/div&gt;
 
 &lt;/form&gt;
@@ -3173,12 +3169,15 @@ Bitte registriere dich:
 
 {
 &lt;script&gt;
-$(function() {	document.getElementById(&quot;confirmButton1&quot;).addEventListener(&quot;click&quot;,function (){ 
-    event.preventDefault();
-    $(&quot;#submitButton1&quot;).click(); 
+$(function() {
+    $(&quot;#confirmButton1&quot;).click(function() {
+        console.log(&quot;clicked the confirm button&quot;);
+		
+		console.log(&quot;DO STUFF TO PUT VARIABLES INTO TWINE HERE&quot;);
+		
+		$(&quot;#submitButton1&quot;).click(); 
+    });
 });
-});
-
 &lt;/script&gt;
 }
 }</tw-passagedata>

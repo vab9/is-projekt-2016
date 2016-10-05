@@ -45,8 +45,9 @@ function speicherstandLaden(data) {
 // function speicherstandSchreiben()
 
 function showCustomAlert(alertObj, msg='') {
-    alertObj.clone().append(msg).appendTo($('#alert-placeholder'));
-    alertObj.addClass('in');
+    var newObj = alertObj.clone();
+    newObj.append(msg).appendTo($('#alert-placeholder'));
+    newObj.addClass('in');
 }
 
 $(function() {
@@ -59,6 +60,7 @@ $(function() {
             var posting = $.post(action_url, data);
             posting.done(function(dt, textStatus, jqXHR){
                 console.log("successfully posted to database");
+                console.log(dt);
                 var msg = 'score' in dt ? "Willkommen! Du wurdest erfolgreich registriert!" : "Willkommen zurück! Du wurdest erfolgreich angemeldet!";
                 showCustomAlert($('.registration-success'), msg);
 

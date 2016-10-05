@@ -52,7 +52,7 @@ def register():
 
     # look for unique username in db
     requested_usrname = vorname + nachname + unicode(geb.date())
-    usr = User.query.filter_by(User.username == requested_usrname).first()
+    usr = User.query.filter_by(username=requested_usrname).first()
 
     if usr is None:
         # register new user
@@ -62,6 +62,8 @@ def register():
             db.session.commit()
         except:
             return "Unable to save " + unicode(new_user) + " to database...", 503
+        # initial score of 0
+        new_user.score = 0
         return new_user.make_json_data(), 200
     else:
         # return existing user info

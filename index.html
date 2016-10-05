@@ -91,6 +91,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -108,6 +109,7 @@ $.getScript("static/js/fluidtextresizer.js", function(){
 	console.log("fluidtextresizer.js loaded!");
 	$.getScript("static/js/textresizerinstance.js");
 });
+
 
 
 
@@ -3170,8 +3172,10 @@ Bitte registriere dich:
     &lt;/div&gt;
 
 
-    &lt;div class=&quot;form-group&quot; id=&quot;alert-placeholder&quot;&gt;
+    &lt;div class=&quot;form-group&quot;&gt;
+	&lt;div class=&quot;col-md-12&quot; id=&quot;alert-placeholder&quot;&gt;
     &lt;/div&gt;
+	&lt;/div&gt;
 
 
     &lt;div style=&quot;display: none&quot;&gt;
@@ -3200,7 +3204,7 @@ Bitte registriere dich:
 }
 
 {
-&lt;span style=&quot;display: none&quot;&gt;
+&lt;span &gt;
 [$vtemp]&lt;vtemp|
 [$ntemp]&lt;ntemp|
 [$gtemp]&lt;gtemp|

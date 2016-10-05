@@ -67,10 +67,16 @@ def register():
     # return "Successfully registered " + str(new_user)
 
 
+# Do this with username instead, can be computed in JS
+@app.route('/retrieve/<userid>')
+def retrieve(userid):
+    return User.get_user(userid).vorname
+
+
 @app.route('/<name>')
 def hello_name(name):
     error = str(request)
-    sys.stderr.writelines(('===========\n', error, '===========\n'))
+    sys.stderr.writelines(('\n===========\n', error, '\n===========\n\n'))
     return "Hello " + name
 
 

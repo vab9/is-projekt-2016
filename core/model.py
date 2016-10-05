@@ -1,3 +1,4 @@
+import sys
 from sqlalchemy import Integer
 from sqlalchemy.dialects.postgresql import JSONB
 
@@ -25,8 +26,15 @@ class User(db.Model):
     def __repr__(self):
         return unicode(self.vorname + " " + self.nachname)
 
-    def get_user(username):
-        return db.session.query(User).filter(User.username == username).one_or_none()
+    # @classmethod
+    # def get_user(cls, username):
+    #     # Try to create new instance from database and return it ?!?!?!
+    #     return db.session.query(User).filter(User.username == username).one_or_none()
+
+    @classmethod
+    def get_user(cls, userid):
+        new_user = db.session.query(User).get(userid)
+        return new_user
 
     def update_user(self):
         # try - except block here?!

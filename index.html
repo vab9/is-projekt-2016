@@ -103,9 +103,13 @@ $.getScript("static/js/fluidtextresizer.js", function(){
 	$.getScript("static/js/textresizerinstance.js");
 });
 
-if (!window.harlowe){
+if (!window.harlowe) {
 	window.harlowe = {"State": State};
 }
+
+$.getScript("static/js/vic-twine-utils.js", function(){
+	console.log("vic-twine-utilsjs loaded!");
+});
 </script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
 &lt;div class=&quot;header&quot;&gt;
 

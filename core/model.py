@@ -1,5 +1,6 @@
 from sqlalchemy.dialects.postgresql import JSONB
 from serious_game import db
+from flask import json
 
 
 class User(db.Model):
@@ -23,15 +24,22 @@ class User(db.Model):
     def __repr__(self):
         return unicode(self.vorname + " " + self.nachname)
 
-    # @classmethod
-    # def get_user(cls, username):
-    #     # Try to create new instance from database and return it ?!?!?!
-    #     return db.session.query(User).filter(User.username == username).one_or_none()
-
     @classmethod
     def get_user(cls, userid):
         new_user = db.session.query(User).get(userid)
         return new_user
+
+    def make_json_data(self):
+        data = {
+            'vorname': self.vorname,
+            'nachname': self.nachname,
+            'geburtstag': self.geb,
+            'userid': self.id,
+            'highscore': self.highscore,
+        }
+        if hasattr(self, "score"):
+            data['score'] = self.score
+        return json.jsonify(data)
 
     def update_user(self):
         # try - except block here?!

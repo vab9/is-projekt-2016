@@ -50,8 +50,10 @@ def register():
         raise e
         return "Unable to parse form...", 500
 
+    # look for unique username in db
     requested_usrname = vorname + nachname + unicode(geb.date())
     usr = User.query.filter_by(User.username == requested_usrname).first()
+
     if usr is None:
         # register new user
         try:
@@ -66,7 +68,14 @@ def register():
         return usr.make_json_data(), 200
 
 
-
+@app.route('/loadgame/<userid>')
+def load_game(userid):
+    # should already be JSON
+    sg = User.query.get_or_404(userid).savegame
+    if sg is None:
+        return "Dieser User hat noch kein Spielstand gespeichert. ", 404
+    else:
+        return sg, 200
 
 # Do this with username instead, can be computed in JS
 @app.route('/retrieve/<userid>')

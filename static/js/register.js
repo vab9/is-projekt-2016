@@ -22,7 +22,31 @@ function getTwineVariable(name) {
         name = name.slice(1, name.length);
     }
     return _harlowe_state.variables[name];
+}
 
+function speicherstandLaden(data) {
+    // return true if speicherstand added to localstorage
+    var get_url = '/loadgame/' + data['userid'];
+    var request = $.get(get_url);
+    request.done(function(dt, textStatus, jqXHR) {
+        // OK 200
+        // add to local storage
+        // DOUBLE CHECK THIS!!!
+        var k = dt[0];
+        var v = dt[1];
+        window.localStorage.setItem(k, v);
+        return true;
+    }).fail(function(jqXHR, textStatus, errorThrown) {
+        // GET FAILED
+        return false;
+    });
+}
+
+// function speicherstandSchreiben()
+
+function showCustomAlert(alertObj, msg='') {
+    alertObj.clone().append(msg).appendTo($('#alert-placeholder'));
+    alertObj.addClass('in');
 }
 
 $(function() {
@@ -35,12 +59,17 @@ $(function() {
             var posting = $.post(action_url, data);
             posting.done(function(dt, textStatus, jqXHR){
                 console.log("successfully posted to database");
-                $('.registration-success').clone().appendTo($('#alert-placeholder'));
-                $('.registration-success').addClass('in');
+                var msg = 'score' in dt ? "Willkommen! Du wurdest erfolgreich registriert!" : "Willkommen zurück! Du wurdest erfolgreich angemeldet!";
+                showCustomAlert($('.registration-success'), msg);
 
                 // save variables to twine from db data
                 for (var key in dt) {
                     setTwineVariable(key, dt[key]);
+                }
+
+                // try to load savegame if it exists
+                if ('score' in dt && speicherstandLaden(dt)) {
+                    showCustomAlert($('.registration-success'), 'Spielstand importiert!')
                 }
 
                 // disable submit button
@@ -51,12 +80,10 @@ $(function() {
             }).fail(function(jqXHR, textStatus, errorThrown){
                 console.log("positng to database failed, god damn: " + errorThrown);
                 var err = "(" + errorThrown + ")";
-                $('.registration-failure').clone().append(err).appendTo('#alert-placeholder');
-                $('.registration-failure').addClass('in');
+                showCustomAlert($('.registration-failure'), err);
             });
         } else {
-            $('.registration-failure').clone().appendTo('#alert-placeholder');
-            $('.registration-failure').addClass('in');
+            showCustomAlert($('.registration-failure'), '');
         }
         $('#alert-placeholder').show();
     });

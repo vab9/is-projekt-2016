@@ -2,7 +2,7 @@
 
 function setTwineVariable(name, value) {
     // get state Object
-    var _harlow_state = window.harlowe.State;
+    var _harlowe_state = window.harlowe.State;
     if (typeof(name) === 'undefined' || name === '' || typeof(value) === 'undefined') {
         // then cannot set variable
         return;
@@ -10,7 +10,19 @@ function setTwineVariable(name, value) {
         // remove leading $ if present
         name = name.slice(1, name.length);
     }
-    _harlow_state.variables[name] = value;
+    _harlowe_state.variables[name] = value;
+}
+
+function getTwineVariable(name) {
+    // get state Object
+    var _harlowe_state = window.harlowe.State;
+    if (typeof(name) === typeof(undefined) || name === '') {
+        return;
+    } else if (name[0] === '$') {
+        name = name.slice(1, name.length);
+    }
+    return _harlowe_state.variables[name];
+
 }
 
 $(function() {

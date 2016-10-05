@@ -92,6 +92,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -104,7 +105,8 @@ $.getScript("static/js/fluidtextresizer.js", function(){
 
 if (!window.harlowe){
 	window.harlowe = {"State": State};
-}</script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
+}
+</script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
 &lt;div class=&quot;header&quot;&gt;
 
 &lt;span class=&quot;lefthead&quot;&gt;
@@ -228,7 +230,7 @@ Wir hoffen, dass es dir gefällt. Viel Spaß!
 &lt;div class=&quot;footer&quot;&gt;
 
 &lt;span class=&quot;leftfoot&quot;&gt;
-(if: (history:)&#39;s length &gt; 0)[[[&lt;button class=&quot;btn btn-info&quot;&gt;Zurück&lt;/button&gt;-&gt;(string: (history:)&#39;s last)]]]
+(if: (history:)&#39;s length &gt; 0)[[[&lt;button id=&quot;zurueckButton&quot; class=&quot;btn btn-info&quot;&gt;Zurück&lt;/button&gt;-&gt;(string: (history:)&#39;s last)]]]
 &lt;/span&gt;
 
 &lt;span class=&quot;rightfoot&quot;&gt;
@@ -3106,14 +3108,6 @@ Um zu spielen ohne dich anzumelden, klicke hier: [&lt;button class=&quot;btn btn
 
 &lt;div clas=&quot;container&quot;&gt;
 
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;
-    &lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
     &lt;form action=&quot;/register&quot; class=&quot;form-horizontal&quot; id=&quot;registrationForm&quot; method=&quot;post&quot; name=&quot;registrationForm&quot; role=&quot;form&quot;&gt;
         &lt;div class=&quot;form-group&quot;&gt;
             &lt;div class=&quot;col-md-4&quot;&gt;
@@ -3153,16 +3147,16 @@ Um zu spielen ohne dich anzumelden, klicke hier: [&lt;button class=&quot;btn btn
 
         &lt;div class=&quot;form-group&quot;&gt;
             &lt;div class=&quot;col-md-4&quot;&gt;
-                &lt;button class=&quot;btn btn-primary&quot; id=&quot;confirmButton1&quot;&gt;Bestätigen&lt;/button&gt;
+                &lt;button class=&quot;btn btn-primary&quot; id=&quot;confirmButton&quot;&gt;Bestätigen&lt;/button&gt;
+            &lt;/div&gt;
+
+
+            &lt;div class=&quot;col-md-2&quot;&gt;
             &lt;/div&gt;
 
 
             &lt;div class=&quot;col-md-4&quot;&gt;
-            &lt;/div&gt;
-
-
-            &lt;div class=&quot;col-md-4&quot;&gt;
-                [&lt;button class=&quot;btn btn-default&quot; id=&quot;continueRegistration&quot;&gt;Weiter&lt;/button&gt;]&lt;weiter|
+                [&lt;button class=&quot;btn btn-primary&quot; id=&quot;weiterButton&quot; type=&quot;button&quot; disabled&gt;Weiter&lt;/button&gt;]&lt;weiter|
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -3183,31 +3177,25 @@ Um zu spielen ohne dich anzumelden, klicke hier: [&lt;button class=&quot;btn btn
             &lt;div class=&quot;registration-failure alert alert-danger alert-dismissible fade&quot;&gt;
                 &lt;button aria-label=&quot;close&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&amp;times;&lt;/button&gt; &lt;strong&gt;Ups!&lt;/strong&gt; Die Registrierung ist fehlgeschlagen.
             &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;!-- End Hidden Div --&gt;
-    &lt;/form&gt;
-&lt;/body&gt;
-&lt;/html&gt;
 
-(click: ?register)[
+&lt;!-- hook for weiter button --&gt;
+(click: ?weiter)[
 	(if: $vorname is not &quot;Spieler&quot; and $vorname is not 0)[
 		  (go-to: &quot;Hauptseite&quot;)
 	]
 ]
 
-(live: 0.5s)[
-	$vorname $nachname $geburtstag
-]
+		&lt;/div&gt;
+        &lt;!-- End Hidden Div --&gt;
+    &lt;/form&gt;
 
 &lt;/div&gt;
 
-{
 &lt;script&gt;
 $.getScript(&quot;static/js/register.js&quot;, function(){
 	console.log(&quot;register.js loaded!&quot;);
 });
 &lt;/script&gt;
-}
 }</tw-passagedata>
 </tw-storydata>
 

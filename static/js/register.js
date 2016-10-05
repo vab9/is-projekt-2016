@@ -31,6 +31,11 @@ $(function() {
                     setTwineVariable(key, dt[key]);
                 }
 
+                // disable submit button
+                $('#confirmButton').prop('disabled', true);
+                $('#zurueckButton').prop('disabled', true);
+                $('#weiterButton').prop('disabled', false);
+
             }).fail(function(jqXHR, textStatus, errorThrown){
                 console.log("positng to database failed, god damn: " + errorThrown);
                 var err = "(" + errorThrown + ")";

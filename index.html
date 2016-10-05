@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="index" startnode="264" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("static/css/bootstrap.min.css");
+<tw-storydata name="index" startnode="263" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("static/css/bootstrap.min.css");
 @import url("static/css/style.css");
 
 
@@ -2993,97 +2993,12 @@ tr:nth-child(even) {
 &lt;!-- Here the savegame is loaded --&gt;
 (if: (savedgames:) contains &quot;Slot A&quot;)[(loadgame: &quot;Slot A&quot;)]
 }</tw-passagedata>
-<tw-passagedata pid="263" name="Anmeldung" tags="" position="246,105">{
-&#39;&#39;Serious Game&#39;&#39;
+<tw-passagedata pid="263" name="Startseite" tags="" position="76,163">{
+&lt;h3&gt;Serious Game&lt;/h3&gt;
 
+Bitte melde dich an, um alle Funktionen dieses Spiels zu nutzen. Es geht ganz einfach!
 &lt;br&gt;&lt;br&gt;
-
-{
-(set: $vtemp to &quot;Vorname&quot;)
-(set: $ntemp to &quot;Nachname&quot;)
-(set: $gtemp to &quot;&quot;)
-(set: $score to 0)
-}
-
-Bitte melde dich an:
-
-&lt;br&gt;&lt;br&gt;
-
-&lt;div ng-app=&quot;&quot;&gt;
-
-&lt;form&gt;
-
-     &lt;label for=&quot;firstName&quot;&gt;Vorname:&lt;/label&gt;
-     &lt;input id=&quot;firstName&quot; type=&quot;text&quot; ng-model=&quot;vorname1&quot; placeholder=&quot;Susi&quot; required pattern=&quot;[a-zA-Z]+&quot; required&gt;
-     &lt;br/&gt;
-     &lt;label for=&quot;lastName&quot;&gt;Nachname:&lt;/label&gt;
-     &lt;input id=&quot;lastName&quot; type=&quot;text&quot; ng-model=&quot;nachname1&quot; placeholder=&quot;Sorglos&quot; required pattern=&quot;[a-zA-Z]+&quot; required&gt;
-     &lt;br/&gt;
-     &lt;label for=&quot;birthday&quot;&gt;Geburtstag:&lt;/label&gt;
-     &lt;input id=&quot;birthday&quot; type=&quot;date&quot; ng-model=&quot;geburtstag1&quot; required&gt;
-     &lt;br&gt;
-
-     &lt;button id=&quot;confirmButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Anmelden&lt;/button&gt;
-
-     &lt;div style=&quot;display: none&quot;&gt;
-         [&lt;button id=&quot;submitButton1&quot; type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Abschicken&lt;/button&gt;]&lt;register|
-     &lt;/div&gt;
-
-&lt;/form&gt;
-
-(click: ?register)[
-  (set: $vorname to ?vtemp)
-  (set: $nachname to ?ntemp)
-  (set: $geburtstag to ?gtemp)
-  (go-to: &quot;Hauptseite&quot;)
-]
-
-{
-(set: $vtemp to &quot;&lt;span ng-bind=vorname1&gt;&lt;/span&gt;&quot;)
-(set: $ntemp to &quot;&lt;span ng-bind=nachname1&gt;&lt;/span&gt;&quot;)
-(set: $gtemp to &quot;&lt;span ng-bind=geburtstag1&gt;&lt;/span&gt;&quot;)
-}
-
-{
-&lt;span style=&quot;display: none&quot;&gt;
-[$vtemp]&lt;vtemp|
-[$ntemp]&lt;ntemp|
-[$gtemp]&lt;gtemp|
-&lt;/span&gt;
-}
-
-&lt;/div&gt;
-
-{
-&lt;!-- Hier anonyme Klassen laden --&gt;
-&lt;script&gt;
-
-document.getElementById(&quot;confirmButton1&quot;).addEventListener(&quot;click&quot;,function (){ 
-    event.preventDefault();
-    $(&quot;#submitButton1&quot;).click(); 
-});
-
-&lt;/script&gt;
-}
-}</tw-passagedata>
-<tw-passagedata pid="264" name="Startseite" tags="" position="76,163">{
-&#39;&#39;Serious Game&#39;&#39;
-
-&lt;br&gt;&lt;br&gt;
-
-Registriere dich, wenn du dich zum ersten Mal anmeldest:
-
-&lt;br&gt;&lt;br&gt;
-
-[[Registrierung-&gt;Registrierung]]
-
-&lt;br&gt;&lt;br&gt;
-
-Melde dich an, wenn du dich schon einmal registriert hast:
-
-&lt;br&gt;&lt;br&gt;
-
-[[Anmeldung-&gt;Anmeldung]]
+[[Zur Anmeldung-&gt;Anmeldung]]
 
 &lt;br&gt;&lt;br&gt;
 
@@ -3100,13 +3015,15 @@ Um zu spielen ohne dich anzumelden, klicke hier: [&lt;button class=&quot;btn btn
 
 &#39;&#39;Hinweis&#39;&#39;: Wenn du anonym spielst, dann wird dein Spielstand nicht gespeichert und du kannst nicht in die Bestenliste kommen.
 }</tw-passagedata>
-<tw-passagedata pid="265" name="Registrierung" tags="" position="248,234">{
-&#39;&#39;Registrierung&#39;&#39;
-&lt;br&gt;&lt;br&gt;
+<tw-passagedata pid="264" name="Anmeldung" tags="" position="248,234">{
+&lt;h4&gt;Anmeldung&lt;/h4&gt;
+&lt;div&gt;
+Nur wenn du angemeldet bist, kannst du deinen Fortschritt speichern und in die Bestenliste kommen. Wenn du schon einmal gespielt hast, dann gib bitte die selben Daten wie beim letzen Mal ein.
+&lt;/div&gt;
 
 &lt;div clas=&quot;container&quot;&gt;
 
-    &lt;form action=&quot;/register&quot; class=&quot;form-horizontal&quot; id=&quot;registrationForm&quot; method=&quot;post&quot; name=&quot;registrationForm&quot; role=&quot;form&quot;&gt;
+    &lt;form action=&quot;/anmelden&quot; class=&quot;form-horizontal&quot; id=&quot;registrationForm&quot; method=&quot;post&quot; name=&quot;registrationForm&quot; role=&quot;form&quot;&gt;
         &lt;div class=&quot;form-group&quot;&gt;
             &lt;div class=&quot;col-md-4&quot;&gt;
                 &lt;label for=&quot;firstName&quot;&gt;Vorname&lt;/label&gt;
@@ -3147,11 +3064,6 @@ Um zu spielen ohne dich anzumelden, klicke hier: [&lt;button class=&quot;btn btn
             &lt;div class=&quot;col-md-4&quot;&gt;
                 &lt;button class=&quot;btn btn-primary&quot; id=&quot;confirmButton&quot;&gt;Bestätigen&lt;/button&gt;
             &lt;/div&gt;
-
-
-            &lt;div class=&quot;col-md-2&quot;&gt;
-            &lt;/div&gt;
-
 
             &lt;div class=&quot;col-md-4&quot;&gt;
                 [&lt;button class=&quot;btn btn-primary&quot; id=&quot;weiterButton&quot; type=&quot;button&quot; disabled&gt;Weiter&lt;/button&gt;]&lt;weiter|

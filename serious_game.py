@@ -6,7 +6,7 @@ import logging
 import os
 import sys
 
-from flask import Flask, send_file, request
+from flask import Flask, send_file, request, json
 from flask_sqlalchemy import SQLAlchemy
 from whitenoise import WhiteNoise
 from dateutil.parser import parse as parse_date
@@ -63,7 +63,14 @@ def register():
         db.session.commit()
     except:
         return "Unable to save " + unicode(new_user) + " to database...", 503
-    return unicode(new_user) + " erfolgreich registriert!", 204
+    # return unicode(new_user) + " erfolgreich registriert!", 204
+    data = json.jsonify({
+        'vorname': new_user.vorname,
+        'nachname': new_user.nachname,
+        'userid': new_user.id,
+        'highscore': new_user.highscore
+    })
+    return data, 200
     # return "Successfully registered " + str(new_user)
 
 

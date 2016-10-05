@@ -19,20 +19,22 @@ $(function() {
         if ($("#registrationForm")[0].checkValidity()) {
             var $form = $('#registrationForm');
             var data = $form.serializeArray();
-            var url = $form.attr('action');
-            $.post('/register', data).done(function(){
+            var action_url = $form.attr('action');
+            var posting = $.post(action_url, data);
+            posting.done(function(dt, textStatus, jqXHR){
                 console.log("successfully posted to database");
                 $('.registration-success').clone().appendTo($('#alert-placeholder'));
                 $('.registration-success').addClass('in');
 
-                // save variables to twine
-                for (var element of data) {
-                    setTwineVariable(element['name'], element['value'])
+                // save variables to twine from db data
+                for (var key in dt) {
+                    setTwineVariable(key, dt[key]);
                 }
 
-            }).fail(function(){
-                console.log("positng to database failed, god damn");
-                $('.registration-failure').clone().appendTo('#alert-placeholder');
+            }).fail(function(jqXHR, textStatus, errorThrown){
+                console.log("positng to database failed, god damn: " + errorThrown);
+                var err = "(" + errorThrown + ")";
+                $('.registration-failure').clone().append(err).appendTo('#alert-placeholder');
                 $('.registration-failure').addClass('in');
             });
         } else {

@@ -20,7 +20,7 @@ class User(db.Model):
         self.vorname = vorname
         self.nachname = nachname
         self.geb = geb
-        self.username = vorname + nachname + str(geb.year)
+        self.username = vorname + nachname + str(geb.date())
         self.highscore = 0
 
     def __repr__(self):

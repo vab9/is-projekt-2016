@@ -47,13 +47,13 @@ def test_page():
 def register():
     # should do more validation here!
     try:
-        vorname = request.form['reg_vorname']
-        nachname = request.form['reg_nachname']
-        geb = parse_date(request.form['reg_geb'])
+        vorname = request.form['vorname']
+        nachname = request.form['nachname']
+        geb = parse_date(request.form['geburtstag'])
 
     except Exception as e:
         error = str(e)
-        sys.stderr.write(('===========\n', error, '===========\n'))
+        # sys.stderr.write(('===========\n', error, '===========\n'))
         raise e
         return "Unable to process request form...", 500
 
@@ -71,13 +71,6 @@ def register():
 @app.route('/retrieve/<userid>')
 def retrieve(userid):
     return User.get_user(userid).vorname
-
-
-@app.route('/<name>')
-def hello_name(name):
-    error = str(request)
-    sys.stderr.writelines(('\n===========\n', error, '\n===========\n\n'))
-    return "Hello " + name
 
 
 @app.route('/save-score/<player>')

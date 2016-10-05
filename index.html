@@ -110,11 +110,9 @@ $.getScript("static/js/fluidtextresizer.js", function(){
 	$.getScript("static/js/textresizerinstance.js");
 });
 
-
-
-
-
-</script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
+if (!window.harlowe){
+	window.harlowe = {"State": State};
+}</script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
 &lt;div class=&quot;header&quot;&gt;
 
 &lt;span class=&quot;lefthead&quot;&gt;
@@ -3097,7 +3095,7 @@ Melde dich an, wenn du dich schon einmal registriert hast:
 
 &lt;br&gt;&lt;br&gt;
 
-Um zu spielen ohne dich zu registrieren oder dich anzumelden, klicke hier: [&lt;button class=&quot;btn btn-default&quot;&gt;Anonym spielen&lt;/button&gt;]&lt;anonym|
+Um zu spielen ohne dich anzumelden, klicke hier: [&lt;button class=&quot;btn btn-default&quot;&gt;Anonym spielen&lt;/button&gt;]&lt;anonym|
 
 (click: ?anonym)[
   (set: $vorname to &quot;Spieler&quot;)
@@ -3111,135 +3109,110 @@ Um zu spielen ohne dich zu registrieren oder dich anzumelden, klicke hier: [&lt;
 &#39;&#39;Hinweis&#39;&#39;: Wenn du anonym spielst, dann wird dein Spielstand nicht gespeichert und du kannst nicht in die Bestenliste kommen.
 }</tw-passagedata>
 <tw-passagedata pid="265" name="Registrierung" tags="" position="248,234">{
-&#39;&#39;Serious Game&#39;&#39;
-
+&#39;&#39;Registrierung&#39;&#39;
 &lt;br&gt;&lt;br&gt;
 
-{
-(set: $vtemp to &quot;Vorname&quot;)
-(set: $ntemp to &quot;Nachname&quot;)
-(set: $gtemp to &quot;&quot;)
-(set: $score to 0)
-}
+&lt;div clas=&quot;container&quot;&gt;
 
-Bitte registriere dich:
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;
+    &lt;/title&gt;
+&lt;/head&gt;
 
-&lt;br&gt;&lt;br&gt;
+&lt;body&gt;
+    &lt;form action=&quot;/register&quot; class=&quot;form-horizontal&quot; id=&quot;registrationForm&quot; method=&quot;post&quot; name=&quot;registrationForm&quot; role=&quot;form&quot;&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;col-md-4&quot;&gt;
+                &lt;label for=&quot;firstName&quot;&gt;Vorname&lt;/label&gt;
+            &lt;/div&gt;
 
-&lt;div clas=&quot;container&quot; ng-app=&quot;&quot;&gt;
 
-&lt;form action=&quot;/register&quot; class=&quot;form-horizontal&quot; id=&quot;registrationForm&quot; method=&quot;post&quot; name=&quot;registrationForm&quot; role=&quot;form&quot;&gt;
-    &lt;div class=&quot;form-group&quot;&gt;
-        &lt;div class=&quot;col-md-4&quot;&gt;
-            &lt;label for=&quot;firstName&quot;&gt;Vorname&lt;/label&gt;
+            &lt;div class=&quot;col-md-4&quot;&gt;
+                &lt;input class=&quot;form-control&quot; id=&quot;firstName&quot; name=&quot;vorname&quot; pattern=&quot;[a-zA-Z]+&quot; placeholder=&quot;Max&quot; required=&quot;&quot; type=&quot;text&quot;&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
 
 
-        &lt;div class=&quot;col-md-4&quot;&gt;
-            &lt;input class=&quot;form-control&quot; id=&quot;firstName&quot; name=&quot;reg_vorname&quot; pattern=&quot;[a-zA-Z]+&quot; placeholder=&quot;Max&quot; required=&quot;&quot; type=&quot;text&quot;&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;col-md-4&quot;&gt;
+                &lt;label for=&quot;lastName&quot;&gt;Nachname&lt;/label&gt;
+            &lt;/div&gt;
 
 
-    &lt;div class=&quot;form-group&quot;&gt;
-        &lt;div class=&quot;col-md-4&quot;&gt;
-            &lt;label for=&quot;lastName&quot;&gt;Nachname&lt;/label&gt;
-        &lt;/div&gt;
-
-
-        &lt;div class=&quot;col-md-4&quot;&gt;
-            &lt;input class=&quot;form-control&quot; id=&quot;lastName&quot; name=&quot;reg_nachname&quot; pattern=&quot;[a-zA-Z]+&quot; placeholder=&quot;Mustermann&quot; required=&quot;&quot; type=&quot;text&quot;&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-
-    &lt;div class=&quot;form-group&quot;&gt;
-        &lt;div class=&quot;col-md-4&quot;&gt;
-            &lt;label for=&quot;birthday&quot;&gt;Geburtstag (TT/MM/JJJJ)&lt;/label&gt;
+            &lt;div class=&quot;col-md-4&quot;&gt;
+                &lt;input class=&quot;form-control&quot; id=&quot;lastName&quot; name=&quot;nachname&quot; pattern=&quot;[a-zA-Z]+&quot; placeholder=&quot;Mustermann&quot; required=&quot;&quot; type=&quot;text&quot;&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
 
 
-        &lt;div class=&quot;col-md-4&quot;&gt;
-            &lt;input class=&quot;form-control&quot; id=&quot;birthday&quot; name=&quot;reg_geb&quot; pattern=&quot;^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$&quot; required=&quot;&quot; type=&quot;date&quot;&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;col-md-4&quot;&gt;
+                &lt;label for=&quot;birthday&quot;&gt;Geburtstag (TT/MM/JJJJ)&lt;/label&gt;
+            &lt;/div&gt;
 
 
-    &lt;div class=&quot;form-group&quot;&gt;
-        &lt;div class=&quot;col-md-4&quot;&gt;
-            &lt;button class=&quot;btn btn-primary&quot; id=&quot;confirmButton1&quot;&gt;Bestätigen&lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-
-    &lt;div class=&quot;form-group&quot;&gt;
-	&lt;div class=&quot;col-md-12&quot; id=&quot;alert-placeholder&quot;&gt;
-    &lt;/div&gt;
-	&lt;/div&gt;
-
-
-    &lt;div style=&quot;display: none&quot;&gt;
-        &lt;div class=&quot;registration-success alert alert-success alert-dismissible fade&quot;&gt;
-            &lt;button aria-label=&quot;close&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&amp;times;&lt;/button&gt; &lt;strong&gt;Super!&lt;/strong&gt; Die Registrierung war erfolgreich.
+            &lt;div class=&quot;col-md-4&quot;&gt;
+                &lt;input class=&quot;form-control&quot; id=&quot;birthday&quot; name=&quot;geburtstag&quot; pattern=&quot;^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$&quot; required=&quot;&quot; type=&quot;date&quot;&gt;
+            &lt;/div&gt;
         &lt;/div&gt;
 
 
-        &lt;div class=&quot;registration-failure alert alert-danger alert-dismissible fade&quot;&gt;
-            &lt;button aria-label=&quot;close&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&amp;times;&lt;/button&gt; &lt;strong&gt;Ups!&lt;/strong&gt; Die Registrierung ist fehlgeschlagen.
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;col-md-4&quot;&gt;
+                &lt;button class=&quot;btn btn-primary&quot; id=&quot;confirmButton1&quot;&gt;Bestätigen&lt;/button&gt;
+            &lt;/div&gt;
+
+
+            &lt;div class=&quot;col-md-4&quot;&gt;
+            &lt;/div&gt;
+
+
+            &lt;div class=&quot;col-md-4&quot;&gt;
+                [&lt;button class=&quot;btn btn-default&quot; id=&quot;continueRegistration&quot;&gt;Weiter&lt;/button&gt;]&lt;weiter|
+            &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/form&gt;
+
+
+        &lt;div class=&quot;form-group&quot;&gt;
+            &lt;div class=&quot;col-md-12&quot; id=&quot;alert-placeholder&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Start Hidden Div --&gt;
+
+
+        &lt;div style=&quot;display: none&quot;&gt;
+            &lt;div class=&quot;registration-success alert alert-success alert-dismissible fade&quot;&gt;
+                &lt;button aria-label=&quot;close&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&amp;times;&lt;/button&gt; &lt;strong&gt;Super!&lt;/strong&gt; Die Registrierung war erfolgreich.
+            &lt;/div&gt;
+
+
+            &lt;div class=&quot;registration-failure alert alert-danger alert-dismissible fade&quot;&gt;
+                &lt;button aria-label=&quot;close&quot; class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&amp;times;&lt;/button&gt; &lt;strong&gt;Ups!&lt;/strong&gt; Die Registrierung ist fehlgeschlagen.
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- End Hidden Div --&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 
 (click: ?register)[
-  (set: $vorname to ?vtemp)
-  (set: $nachname to ?ntemp)
-  (set: $geburtstag to ?gtemp)
-  (go-to: &quot;Hauptseite&quot;)
+	(if: $vorname is not &quot;Spieler&quot; and $vorname is not 0)[
+		  (go-to: &quot;Hauptseite&quot;)
+	]
 ]
 
-{
-(set: $vtemp to &quot;&lt;span ng-bind=vorname1&gt;&lt;/span&gt;&quot;)
-(set: $ntemp to &quot;&lt;span ng-bind=nachname1&gt;&lt;/span&gt;&quot;)
-(set: $gtemp to &quot;&lt;span ng-bind=geburtstag1&gt;&lt;/span&gt;&quot;)
-}
-
-{
-&lt;span &gt;
-[$vtemp]&lt;vtemp|
-[$ntemp]&lt;ntemp|
-[$gtemp]&lt;gtemp|
-&lt;/span&gt;
-}
+(live: 0.5s)[
+	$vorname $nachname $geburtstag
+]
 
 &lt;/div&gt;
 
 {
 &lt;script&gt;
-
-$(function() {
-	$(&quot;#registrationForm&quot;).submit(function(event){
-		event.preventDefault();
-		if ($(&quot;#registrationForm&quot;)[0].checkValidity()) {
-			var $form = $(&#39;#registrationForm&#39;);
-			var data = $form.serialize();
-			var url = $form.attr(&#39;action&#39;);
-			var posting = $.post(&#39;/register&#39;, data);
-			posting.done(function(){
-			    console.log(&quot;posting done bitches&quot;);
-				$(&#39;.registration-success&#39;).clone().appendTo($(&#39;#alert-placeholder&#39;));
-				$(&#39;.registration-success&#39;).addClass(&#39;in&#39;);
-			}).fail(function(){
-				console.log(&quot;positng failed got damn&quot;);
-				$(&#39;.registration-failure&#39;).clone().appendTo(&#39;#alert-placeholder&#39;);
-				$(&#39;.registration-failure&#39;).addClass(&#39;in&#39;);
-			});
-		} else {
-			$(&#39;.registration-failure&#39;).clone().appendTo(&#39;#alert-placeholder&#39;);
-			$(&#39;.registration-failure&#39;).addClass(&#39;in&#39;);
-		}
-		$(&#39;#alert-placeholder&#39;).show();
-	});
-	
+$.getScript(&quot;static/js/register.js&quot;, function(){
+	console.log(&quot;register.js loaded!&quot;);
 });
 &lt;/script&gt;
 }

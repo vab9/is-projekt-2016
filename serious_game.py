@@ -52,7 +52,6 @@ def register():
         geb = parse_date(request.form['geburtstag'])
 
     except Exception as e:
-        error = str(e)
         # sys.stderr.write(('===========\n', error, '===========\n'))
         raise e
         return "Unable to process request form...", 500
@@ -67,8 +66,11 @@ def register():
     data = json.jsonify({
         'vorname': new_user.vorname,
         'nachname': new_user.nachname,
+        'geburtstag': new_user.geb,
         'userid': new_user.id,
-        'highscore': new_user.highscore
+        'highscore': new_user.highscore,
+        # score for newly registered user is always 0
+        'score': 0
     })
     return data, 200
     # return "Successfully registered " + str(new_user)

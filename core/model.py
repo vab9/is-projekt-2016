@@ -1,7 +1,4 @@
-import sys
-from sqlalchemy import Integer
 from sqlalchemy.dialects.postgresql import JSONB
-
 from serious_game import db
 
 
@@ -20,7 +17,7 @@ class User(db.Model):
         self.vorname = vorname
         self.nachname = nachname
         self.geb = geb
-        self.username = vorname + nachname + str(geb.date())
+        self.username = vorname + nachname + unicode(geb.date())
         self.highscore = 0
 
     def __repr__(self):

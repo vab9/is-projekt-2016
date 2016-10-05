@@ -132,7 +132,7 @@ if (!window.harlowe){
 (if: $vorname is &quot;Spieler&quot; or $vorname is 0)[(replace: ?saveGame)[]]
 
 (click: ?saveGame)[
-	(if:(save-game:&quot;Slot A&quot;))[
+	(if: $userid is not 0 and (save-game: $userid))[
     	(replace: ?saveGame)[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-saved&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Spiel gespeichert&lt;/a&gt;
 &lt;script&gt;
   $(function() {
@@ -2883,11 +2883,9 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 [[Das Quiz noch einmal machen.-&gt;1.9 Quiz]]</tw-passagedata>
 <tw-passagedata pid="260" name="Hauptseite" tags="" position="452,203">&lt;b&gt;Willkommen, $vorname $nachname!&lt;/b&gt;
 
-Alter: $geburtstag
-
 Hier klicken, um den letzten Speicherstand zu laden:
-{(if: (saved-games:) contains &quot;Slot A&quot;)[
-(link: &quot;Load game&quot;)[(load-game:&quot;Slot A&quot;)]
+{(if: (saved-games:) contains $userid)[
+(link: &quot;Load game&quot;)[(load-game: $userid)]
 ]}
 
 Aktueller Punktestand: $score
@@ -2903,9 +2901,9 @@ Aktueller Punktestand: $score
 {
 &lt;div class=&quot;continue&quot;&gt;
 [[Top10&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Top 10 Spieler&lt;/button&gt;]]
-}
 
-{
+&lt;br&gt;&lt;br&gt;
+
 &lt;div class=&quot;continue&quot;&gt;
 [[Willkommen&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Jetzt spielen&lt;/button&gt;]]
 &lt;/div&gt;

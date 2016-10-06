@@ -94,6 +94,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -111,6 +112,7 @@ if (!window.harlowe) {
 $.getScript("static/js/vic-twine-utils.js", function(){
 	console.log("vic-twine-utilsjs loaded!");
 });
+
 
 </script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
 &lt;div class=&quot;header&quot;&gt;
@@ -2897,86 +2899,26 @@ Aktueller Punktestand: $score
 [[Willkommen&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Jetzt spielen&lt;/button&gt;]]
 &lt;/div&gt;
 }</tw-passagedata>
-<tw-passagedata pid="261" name="Top10" tags="" position="344,376">&lt;!-- Hier soll die Top 10 der Spieler mit den meisten Punkten aufgelistet werden --&gt;
-
-{
-&lt;html&gt;
-&lt;head&gt;
-&lt;style&gt;
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;table&gt;
-  &lt;tr&gt;
-    &lt;th&gt;Name&lt;/th&gt;
-    &lt;th&gt;&lt;/th&gt;
-    &lt;th&gt;Anzahl Punkte&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Spieler1&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-    &lt;td&gt;Punktestand1&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Spieler2&lt;/td&gt;
-    &lt;td&gt; &lt;/td&gt;
-    &lt;td&gt;Punktestand2&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Spieler3&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-    &lt;td&gt;Punktestand3&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Spieler4&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-    &lt;td&gt;Punktestand4&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Spieler5&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-    &lt;td&gt;Punktestand5&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Spieler6&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-    &lt;td&gt;Punktestand6&lt;/td&gt;
-  &lt;/tr&gt;
-    &lt;tr&gt;
-    &lt;td&gt;Spieler7&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-    &lt;td&gt;Punktestand7&lt;/td&gt;
-  &lt;/tr&gt;
-      &lt;tr&gt;
-    &lt;td&gt;Spieler8&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-    &lt;td&gt;Punktestand8&lt;/td&gt;
-  &lt;/tr&gt;
-      &lt;tr&gt;
-    &lt;td&gt;Spieler9&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-    &lt;td&gt;Punktestand9&lt;/td&gt;
-  &lt;/tr&gt;
-      &lt;tr&gt;
-    &lt;td&gt;Spieler10&lt;/td&gt;
-    &lt;td&gt;&lt;/td&gt;
-    &lt;td&gt;Punktestand10&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-&lt;/html&gt;
+<tw-passagedata pid="261" name="Top10" tags="" position="344,376">{
+&lt;h2&gt;Bestenliste&lt;/h2&gt;
+&lt;div class=&quot;container&quot;&gt;
+    &lt;table class=&quot;table&quot;&gt;
+	&lt;caption&gt;Hier werden die 10 besten Spieler aufgelistet:&lt;/caption&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Vorname&lt;/th&gt;
+                &lt;th&gt;Alter&lt;/th&gt;
+                &lt;th&gt;Punktestand&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;&lt;/tbody&gt;
+    &lt;/table&gt;
+&lt;/div&gt;
+	&lt;script&gt;
+	$.getScript(&quot;static/js/bestenliste.js&quot;, function(){
+	console.log(&quot;bestenliste.js loaded!&quot;);
+});
+	&lt;/script&gt;
 }</tw-passagedata>
 <tw-passagedata pid="262" name="Startseite" tags="" position="76,163">{
 &lt;h3&gt;Serious Game&lt;/h3&gt;

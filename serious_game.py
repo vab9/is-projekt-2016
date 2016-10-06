@@ -108,6 +108,7 @@ def load_game(userid):
 
 @app.route('/bestenliste')
 def bestenliste():
+    """Sends Top 10 List to client"""
     best_users = User.query.add_columns(User.vorname, User.nachname, User.geb, User.highscore).order_by(User.highscore.desc()).limit(10).all()
     res = []
     # get today once
@@ -127,13 +128,6 @@ def bestenliste():
 ###########################
 
 # Do this with username instead, can be computed in JS
-@app.route('/retrieve/<userid>')
-def retrieve(userid):
-    return User.get_user(userid).vorname
-
-
-# do this by saving a game
-# @app.route('/save-highscore/<player>')
-# def save_score(player):
-#     return "Hello My Friend!"
-#     # find player score, compare to database, save etc.
+# @app.route('/retrieve/<userid>')
+# def retrieve(userid):
+#     return User.get_user(userid).vorname

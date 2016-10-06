@@ -35,6 +35,7 @@ class User(db.Model):
             'nachname': self.nachname,
             'geburtstag': self.geb,
             'userid': self.id,
+            'username': self.username,
             'highscore': self.highscore,
         }
         if hasattr(self, "score"):
@@ -46,9 +47,19 @@ class User(db.Model):
         db.session.add(self)
         db.session.commit()
 
-    def update_highscore(self, new_score):
-        if new_score > self.highscore:
-            self.highscore = new_score
+    def update_highscore(self):
+        # get new score from savegame
+        sg = json.loads(self.savegame)
+        score = 0
+        # look for score variable in savegame
+        for d in sg:
+            if d['passage'] == 'Hauptseite':
+                score = d['variables']['score']
+                break
+        # update hs in model - calling functions should commit db session
+        if score > self.highscore:
+            self.highscore = score
+
 
     def save_game(self, savegame):
         self.savegame = savegame

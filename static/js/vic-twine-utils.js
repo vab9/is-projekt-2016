@@ -26,7 +26,7 @@ function getTwineVariable(name) {
 
 function speicherstandLaden(data) {
     // return true if speicherstand added to localstorage
-    var get_url = '/loadgame/' + data['userid'];
+    var get_url = '/loadgame/' + data.userid;
     var request = $.get(get_url);
     request.done(function(dt, textStatus, jqXHR) {
         // OK 200
@@ -42,4 +42,34 @@ function speicherstandLaden(data) {
     });
 }
 
-// function speicherstandSchreiben()
+function speicherstandSchreiben(keyName, keyValue) {
+    if (keyName.startsWith('(Saved Game Filename')) {
+        return;
+    }
+    // read username or userid
+    var re = /\)\s(.+)$/;
+    var username = keyName.match(re)[1];
+
+    // send of post request to save the game
+    // var post_url = '/savegame'
+    var data = {};
+    data[username] = keyValue;
+    var posting = $.post('/savegame', data);
+    posting.done(function(dt, textStatus, jqXHR) {
+        console.log('saved: ' + dt);
+    });
+
+}
+
+
+$(function() {
+    // rewrite original setItem function to check for twine savegame
+    var originalSetItem = localStorage.setItem;
+    window.localStorage.setItem = function(keyName, keyValue) {
+        if (keyName.startsWith('(Saved Game')) {
+            speicherstandSchreiben(keyName, keyValue);
+        }
+        originalSetItem.apply(this, arguments);
+    };
+
+});

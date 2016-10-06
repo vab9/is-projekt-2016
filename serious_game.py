@@ -33,6 +33,10 @@ app.logger.setLevel(logging.ERROR)
 from core.model import User
 
 
+####################
+# BEGINNING ROUTES #
+####################
+
 @app.route('/')
 def index():
     return send_file(open('index.html'))
@@ -70,6 +74,19 @@ def register():
         return usr.make_json_data(), 200
 
 
+@app.route('/savegame', methods=['POST'])
+def save_game():
+    username = request.form.keys()[0]
+    # sg = json.loads(request.form[username])
+    sg = request.form[username]
+    # query for existing user, return 404 if not
+    usr = User.query.filter_by(username=username).first_or_404()
+    usr.savegame = sg
+    usr.update_highscore()
+    db.session.commit()
+    return str(request.form.values()[0]), 200
+
+
 @app.route('/loadgame/<userid>')
 def load_game(userid):
     # should already be JSON
@@ -79,26 +96,17 @@ def load_game(userid):
     else:
         return sg, 200
 
+
+###########################
+
 # Do this with username instead, can be computed in JS
 @app.route('/retrieve/<userid>')
 def retrieve(userid):
     return User.get_user(userid).vorname
 
 
-@app.route('/save-score/<player>')
-def save_score(player):
-    return "Hello My Friend!"
-    # find player score, compare to database, save etc.
-
-
-@app.route('/savegame', methods=['POST'])
-def save_game():
-    return str(request.form.values()[0])
-    # ('sg', type=str)
-
-
-
-@app.route('/add_user/<vorname>/<nachname>/<geb>', methods=['GET', 'POST'])
-def add_user(vorname, nachname, geb):
-    new_user = User(vorname, nachname, geb)
-    return str(new_user)
+# do this by saving a game
+# @app.route('/save-highscore/<player>')
+# def save_score(player):
+#     return "Hello My Friend!"
+#     # find player score, compare to database, save etc.

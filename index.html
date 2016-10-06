@@ -136,25 +136,8 @@ $.getScript("static/js/vic-twine-utils.js", function(){
 (if: $vorname is &quot;Spieler&quot; or $vorname is 0)[(replace: ?saveGame)[]]
 
 (click: ?saveGame)[
-	(if: $userid is not 0 and (save-game: $userid))[
-    	(replace: ?saveGame)[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-saved&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Spiel gespeichert&lt;/a&gt;
-&lt;script&gt;
-  $(function() {
-      var savegame;
-      for (key in localStorage) {
-          console.log(key);
-          if (key.includes(&quot;Slot A&quot;)) {
-              savegame = localStorage.getItem(key);
-              break;
-          }
-      }
-      if (savegame) {
-          $.post(&#39;/savegame&#39;, savegame, function(data) {
-              console.log(&#39;saved: &#39; + data);
-          });
-      }
-  });
-&lt;/script&gt;]]
+	(if: $username is not 0 and (save-game:$username))[
+    	(replace: ?saveGame)[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-saved&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Spiel gespeichert&lt;/a&gt;]]
 		(else: )[
     	(replace: ?saveGame)[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-disk&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Fehler beim Speichern&lt;/a&gt;]]]
 
@@ -2998,6 +2981,17 @@ tr:nth-child(even) {
 (if: (savedgames:) contains &quot;Slot A&quot;)[(loadgame: &quot;Slot A&quot;)]
 }</tw-passagedata>
 <tw-passagedata pid="263" name="Startseite" tags="" position="76,163">{
+
+(set: $forkoff to &#39;hellas&#39;)
+
+{(link:&quot;Save game&quot;)[
+  (if:(save-game: $forkoff))[
+    Game saved!
+  ](else: )[
+    Sorry, I couldn&#39;t save your game.
+  ]
+]}
+
 &lt;h3&gt;Serious Game&lt;/h3&gt;
 
 Bitte melde dich an, um alle Funktionen dieses Spiels zu nutzen. Es geht ganz einfach!

@@ -2872,11 +2872,12 @@ Das war die richtige Antwort.
 Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$score Punkte!]}
 
 [[Das Quiz noch einmal machen.-&gt;1.9 Quiz]]</tw-passagedata>
-<tw-passagedata pid="260" name="Hauptseite" tags="" position="452,203">&lt;b&gt;Willkommen, $vorname $nachname!&lt;/b&gt;
+<tw-passagedata pid="260" name="Hauptseite" tags="" position="453,203">&lt;b&gt;Willkommen, $vorname $nachname!&lt;/b&gt;
 
 Hier klicken, um den letzten Speicherstand zu laden:
 {(if: (saved-games:) contains $username)[
 (link: &quot;Load game&quot;)[(load-game: $username)]
+(else: ) [Du hast noch nie gespeichert.]
 ]}
 
 Aktueller Punktestand: $score

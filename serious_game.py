@@ -6,7 +6,7 @@ import logging
 import os
 import sys
 
-from flask import Flask, send_file, request
+from flask import Flask, send_file, request, jsonify, json
 from flask_sqlalchemy import SQLAlchemy
 from whitenoise import WhiteNoise
 from dateutil.parser import parse as parse_date
@@ -76,25 +76,31 @@ def register():
 
 @app.route('/savegame', methods=['POST'])
 def save_game():
-    username = request.form.keys()[0]
-    # sg = json.loads(request.form[username])
-    sg = request.form[username]
-    # query for existing user, return 404 if not
+
+    data = request.get_json(force=True)
+
+    # sys.stderr.write("========== HAHAHAHAH ========\n")
+    # sys.stderr.write(unicode(data))
+    # sys.stderr.write("\n========== HAHAHAHAH ========\n\n")
+
+    username = data['username']
     usr = User.query.filter_by(username=username).first_or_404()
-    usr.savegame = sg
+
+    # do i need to call json.dumps(data) ???
+    usr.savegame = data
     usr.update_highscore()
+
     db.session.commit()
-    return str(request.form.values()[0]), 200
+    return usr.make_json_data(), 200
 
 
 @app.route('/loadgame/<userid>')
 def load_game(userid):
-    # should already be JSON
     sg = User.query.get_or_404(userid).savegame
     if sg is None:
         return "Dieser User hat noch kein Spielstand gespeichert. ", 404
     else:
-        return sg, 200
+        return jsonify(sg), 200
 
 
 ###########################

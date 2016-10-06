@@ -2,6 +2,8 @@ from sqlalchemy.dialects.postgresql import JSONB
 from serious_game import db
 from flask import json
 
+import sys
+
 
 class User(db.Model):
     __tablename__ = 'user'
@@ -49,12 +51,15 @@ class User(db.Model):
 
     def update_highscore(self):
         # get new score from savegame
-        sg = json.loads(self.savegame)
+        # self.savegame is a dictionary
+        passages = json.loads(self.savegame['savegame-value'])
+        # sg is now a list of dictionaries that contain passage and variable info
+
         score = 0
         # look for score variable in savegame
-        for d in sg:
-            if d['passage'] == 'Hauptseite':
-                score = d['variables']['score']
+        for passage in passages:
+            if passage['passage'] == 'Hauptseite':
+                score = passage['variables']['score']
                 break
         # update hs in model - calling functions should commit db session
         if score > self.highscore:

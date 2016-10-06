@@ -25,13 +25,17 @@ function getTwineVariable(name) {
 }
 
 function speicherstandLaden(data) {
-    // return true if speicherstand added to localstorage
+    console.log("trying to read spielstand from db and write to localStorage");
+    //
+    // maybe not use userid if we want to load somewhere else?!
+    //
     var get_url = '/loadgame/' + data.userid;
     var request = $.get(get_url);
     request.done(function(dt, textStatus, jqXHR) {
         // OK 200
         // add to local storage
         // DOUBLE CHECK THIS!!!
+        console.log(dt);
         var k = dt[0];
         var v = dt[1];
         window.localStorage.setItem(k, v);
@@ -43,6 +47,7 @@ function speicherstandLaden(data) {
 }
 
 function speicherstandSchreiben(keyName, keyValue) {
+    console.log("trying to write spielstand to db");
     if (keyName.startsWith('(Saved Game Filename')) {
         return;
     }
@@ -53,10 +58,20 @@ function speicherstandSchreiben(keyName, keyValue) {
     // send of post request to save the game
     // var post_url = '/savegame'
     var data = {};
-    data[username] = keyValue;
-    var posting = $.post('/savegame', data);
+    data['username'] = username;
+    data['savegame-key'] = keyName;
+    data['savegame-value'] = keyValue;
+
+    var posting = $.ajax({
+              url: '/savegame',
+              type: "POST",
+              contentType:"applicaton/json",
+              dataType:"json",
+              data: JSON.stringify(data)
+    });
     posting.done(function(dt, textStatus, jqXHR) {
-        console.log('saved: ' + dt);
+        console.log('saved: ');
+        console.log(dt);
     });
 
 }

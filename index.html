@@ -93,6 +93,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -110,6 +111,7 @@ if (!window.harlowe) {
 $.getScript("static/js/vic-twine-utils.js", function(){
 	console.log("vic-twine-utilsjs loaded!");
 });
+
 </script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
 &lt;div class=&quot;header&quot;&gt;
 
@@ -200,7 +202,7 @@ D-49069 Osnabrück
 (print: &quot;&lt;script&gt;$(&#39;html&#39;).addClass(&#39;&quot; + (passage:)&#39;s tags.join(&#39; &#39;) + &quot;&#39;\)&lt;/script&gt;&quot;)
 ]
 }</tw-passagedata>
-<tw-passagedata pid="5" name="Willkommen" tags="" position="544,39">&lt;b&gt;Hallo $player!&lt;/b&gt;
+<tw-passagedata pid="5" name="Willkommen" tags="" position="544,39">&lt;b&gt;Hallo $vorname!&lt;/b&gt;
 
 Wir freuen uns, dass du dich entschieden hast, unser Lernspiel auszuprobieren. Dieses Spiel vermittelt im &#39;&#39;ersten Kapitel&#39;&#39; Grundkenntnisse über das digitale soziale Netzwerk Facebook. Im &#39;&#39;zweiten Kapitel&#39;&#39; erfährst du, wie du deine Sicherheit im Internet und im Speziellen Facebook sicherstellen kannst und im &#39;&#39;dritten Kapitel&#39;&#39; lernst du allgemeine, wichtige Lektionen für den Umgang mit sozialen Medien und dem Internet.
 
@@ -256,7 +258,7 @@ Du möchtest dich bei Facebook anmelden. Wie das geht, hast du bereits in Kapite
 
 Wenn du einen Anmelde-Namen aus folgender Auswahl aussuchen müsstest, welchen würdest du nehmen?
 * (link: &#39;&lt;strong&gt;Franz Ferdinand&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F1.3.3&quot;)]
-* (link: &#39;&lt;strong&gt;$player&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;F1.3.2&quot;)]
+* (link: &#39;&lt;strong&gt;$vorname $nachname&lt;strong&gt;&#39;)[(set: $score to it + 1)(goto: &quot;F1.3.2&quot;)]
 * (link: &#39;&lt;strong&gt;Gundula Gause&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F1.3.3&quot;)]
 * (link: &#39;&lt;strong&gt;Pumuckl&lt;strong&gt;&#39;)[[(if: $score &gt; 0)[(set: $score to it - 1)](goto: &quot;F1.3.3&quot;)]</tw-passagedata>
 <tw-passagedata pid="11" name="F1.3.3" tags="" position="2700,1592">&#39;&#39;Achtung!&#39;&#39;
@@ -2981,17 +2983,6 @@ tr:nth-child(even) {
 (if: (savedgames:) contains &quot;Slot A&quot;)[(loadgame: &quot;Slot A&quot;)]
 }</tw-passagedata>
 <tw-passagedata pid="263" name="Startseite" tags="" position="76,163">{
-
-(set: $forkoff to &#39;hellas&#39;)
-
-{(link:&quot;Save game&quot;)[
-  (if:(save-game: $forkoff))[
-    Game saved!
-  ](else: )[
-    Sorry, I couldn&#39;t save your game.
-  ]
-]}
-
 &lt;h3&gt;Serious Game&lt;/h3&gt;
 
 Bitte melde dich an, um alle Funktionen dieses Spiels zu nutzen. Es geht ganz einfach!

@@ -61,6 +61,7 @@ function speicherstandSchreiben(keyName, keyValue) {
     data['username'] = username;
     data['savegame-key'] = keyName;
     data['savegame-value'] = keyValue;
+    data['score'] = getTwineVariable('score');
 
     var posting = $.ajax({
               url: '/savegame',

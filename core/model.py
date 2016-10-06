@@ -49,22 +49,9 @@ class User(db.Model):
         db.session.add(self)
         db.session.commit()
 
-    def update_highscore(self):
-        # get new score from savegame
-        # self.savegame is a dictionary
-        passages = json.loads(self.savegame['savegame-value'])
-        # sg is now a list of dictionaries that contain passage and variable info
-
-        score = 0
-        # look for score variable in savegame
-        for passage in passages:
-            if passage['passage'] == 'Hauptseite':
-                score = passage['variables']['score']
-                break
-        # update hs in model - calling functions should commit db session
+    def update_highscore(self, score):
         if score > self.highscore:
             self.highscore = score
-
 
     def save_game(self, savegame):
         self.savegame = savegame

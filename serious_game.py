@@ -84,11 +84,12 @@ def save_game():
     # sys.stderr.write("\n========== HAHAHAHAH ========\n\n")
 
     username = data['username']
+    score = data['score']
     usr = User.query.filter_by(username=username).first_or_404()
 
     # do i need to call json.dumps(data) ???
     usr.savegame = data
-    usr.update_highscore()
+    usr.update_highscore(score)
 
     db.session.commit()
     return usr.make_json_data(), 200

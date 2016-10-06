@@ -6,7 +6,7 @@ import logging
 import os
 import sys
 
-from flask import Flask, send_file, request, jsonify, json
+from flask import Flask, send_file, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from whitenoise import WhiteNoise
 from dateutil.parser import parse as parse_date

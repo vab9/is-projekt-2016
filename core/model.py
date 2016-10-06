@@ -2,8 +2,6 @@ from sqlalchemy.dialects.postgresql import JSONB
 from serious_game import db
 from flask import json
 
-import sys
-
 
 class User(db.Model):
     __tablename__ = 'user'

@@ -16,7 +16,7 @@ $(function() {
             var posting = $.post(action_url, data);
             posting.done(function(dt, textStatus, jqXHR){
                 console.log("successfully posted to database");
-                var msg = 'score' in dt ? "Willkommen! Du wurdest erfolgreich registriert!" : "Willkommen zurück! Du wurdest erfolgreich angemeldet!";
+                var msg = 'score' in dt ? "Du hast dich erfolgreich registriert!" : "Du hast dich erfolgreich angemeldet!";
                 showCustomAlert($('.registration-success'), msg);
 
                 // save variables to twine from db data
@@ -25,7 +25,7 @@ $(function() {
                 }
 
                 // try to load savegame if it exists
-                if ('score' in dt && speicherstandLaden(dt)) {
+                if (!('score' in dt) && speicherstandLaden(dt)) {
                     showCustomAlert($('.registration-success'), 'Spielstand importiert!')
                 }
 

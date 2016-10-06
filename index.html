@@ -95,6 +95,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -112,6 +113,7 @@ if (!window.harlowe) {
 $.getScript("static/js/vic-twine-utils.js", function(){
 	console.log("vic-twine-utilsjs loaded!");
 });
+
 
 
 </script><tw-passagedata pid="1" name="Header" tags="header" position="1001,12">{
@@ -2874,11 +2876,12 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 [[Das Quiz noch einmal machen.-&gt;1.9 Quiz]]</tw-passagedata>
 <tw-passagedata pid="260" name="Hauptseite" tags="" position="453,203">&lt;b&gt;Willkommen, $vorname $nachname!&lt;/b&gt;
 
-Hier klicken, um den letzten Speicherstand zu laden:
+Spielstand:
 {(if: (saved-games:) contains $username)[
-(link: &quot;Load game&quot;)[(load-game: $username)]
-(else: ) [Du hast noch nie gespeichert.]
-]}
+(link: &quot;Hier klicken, um deinen letzten Speicherstand zu laden!&quot;)[(load-game: $username)]]
+(else-if: $vorname is &#39;Spieler&#39;)[Nur angemeldete Spieler können speichern und laden.]
+(else: )[Du hast noch nie gespeichert.]
+}
 
 Aktueller Punktestand: $score
 
@@ -2889,15 +2892,15 @@ Aktueller Punktestand: $score
 (else-if: 15 &lt; $score and $score &lt;= 20)[Gewandter]
 (else-if: $score &gt; 20)[Experte]}
 
-Übersicht Punktestand der 10 besten Spieler:
+Von hier kommst du zur Bestenliste, oder kannst direkt mit dem Spiel beginnen. Viel Spaß!
+
 {
 &lt;div class=&quot;continue&quot;&gt;
-[[Top10&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Top 10 Spieler&lt;/button&gt;]]
+&lt;p&gt;
+[[Top10&lt;-&lt;button class=&quot;pull-left btn btn-default btn-lg&quot;&gt;Zur Bestenliste&lt;/button&gt;]]
 
-&lt;br&gt;&lt;br&gt;
-
-&lt;div class=&quot;continue&quot;&gt;
-[[Willkommen&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Jetzt spielen&lt;/button&gt;]]
+[[Willkommen&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Jetzt spielen!&lt;/button&gt;]]
+&lt;/p&gt;
 &lt;/div&gt;
 }</tw-passagedata>
 <tw-passagedata pid="261" name="Top10" tags="" position="344,376">{

@@ -79,24 +79,27 @@ def save_game():
 
     data = request.get_json(force=True)
 
-    # sys.stderr.write("========== HAHAHAHAH ========\n")
-    # sys.stderr.write(unicode(data))
-    # sys.stderr.write("\n========== HAHAHAHAH ========\n\n")
-
     username = data['username']
-    score = data['score']
     usr = User.query.filter_by(username=username).first_or_404()
 
     # do i need to call json.dumps(data) ???
     usr.savegame = data
-    usr.update_highscore(score)
+
+    # Only possible if score variable is set in twine already
+    #
+    # MAKE ANOTHER METHOD FOR THIS SPECIAL CASE
+    #
+    if 'score' in data:
+        score = data['score']
+        usr.update_highscore(score)
 
     db.session.commit()
     return usr.make_json_data(), 200
 
 
-@app.route('/loadgame/<userid>')
+@app.route('/loadgame/<int:userid>')
 def load_game(userid):
+    # this should be a dict of unicode strings...
     sg = User.query.get_or_404(userid).savegame
     if sg is None:
         return "Dieser User hat noch kein Spielstand gespeichert. ", 404

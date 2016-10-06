@@ -24,24 +24,24 @@ function getTwineVariable(name) {
     return _harlowe_state.variables[name];
 }
 
-function speicherstandLaden(data) {
+function speicherstandLaden() {
     console.log("trying to read spielstand from db and write to localStorage");
     //
     // maybe not use userid if we want to load somewhere else?!
     //
-    var get_url = '/loadgame/' + data.userid;
+    var userid = getTwineVariable('userid');
+    var get_url = '/loadgame/' + userid;
     var request = $.get(get_url);
     request.done(function(dt, textStatus, jqXHR) {
-        // OK 200
-        // add to local storage
-        // DOUBLE CHECK THIS!!!
-        console.log(dt);
-        var k = dt[0];
-        var v = dt[1];
+        var k = dt['savegame-key'];
+        var v = dt['savegame-value'];
+        var score = dt['score'];
+
+        setTwineVariable('score', score);
+
         window.localStorage.setItem(k, v);
         return true;
     }).fail(function(jqXHR, textStatus, errorThrown) {
-        // GET FAILED
         return false;
     });
 }
@@ -54,6 +54,7 @@ function speicherstandSchreiben(keyName, keyValue) {
     // read username or userid
     var re = /\)\s(.+)$/;
     var username = keyName.match(re)[1];
+    var score = getTwineVariable('score');
 
     // send of post request to save the game
     // var post_url = '/savegame'
@@ -61,7 +62,7 @@ function speicherstandSchreiben(keyName, keyValue) {
     data['username'] = username;
     data['savegame-key'] = keyName;
     data['savegame-value'] = keyValue;
-    data['score'] = getTwineVariable('score');
+    data['score'] = score;
 
     var posting = $.ajax({
               url: '/savegame',

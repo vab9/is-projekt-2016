@@ -25,7 +25,7 @@ $(function() {
                 }
 
                 // try to load savegame if it exists
-                if (!('score' in dt) && speicherstandLaden(dt)) {
+                if (!('score' in dt) && speicherstandLaden()) {
                     showCustomAlert($('.registration-success'), 'Spielstand importiert!')
                 }
 

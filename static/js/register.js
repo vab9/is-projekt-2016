@@ -4,6 +4,7 @@ function showCustomAlert(alertObj, msg='') {
     var newObj = alertObj.clone();
     newObj.append(msg).appendTo($('#alert-placeholder'));
     newObj.addClass('in');
+    newObj.removeClass('registration-success registration-failure')
 }
 
 $(function() {
@@ -15,8 +16,7 @@ $(function() {
             var action_url = $form.attr('action');
             var posting = $.post(action_url, data);
             posting.done(function(dt, textStatus, jqXHR){
-                console.log("successfully posted to database");
-                var msg = 'score' in dt ? "Du hast dich erfolgreich registriert!" : "Du hast dich erfolgreich angemeldet!";
+                var msg = jqXHR.status == 201 ? "Du hast dich erfolgreich registriert!" : "Du hast dich erfolgreich angemeldet!";
                 showCustomAlert($('.registration-success'), msg);
 
                 // save variables to twine from db data
@@ -24,9 +24,11 @@ $(function() {
                     setTwineVariable(key, dt[key]);
                 }
 
-                // try to load savegame if it exists
-                if (!('score' in dt) && speicherstandLaden()) {
-                    showCustomAlert($('.registration-success'), 'Spielstand importiert!')
+                // try to load savegame if player has already played
+                if (jqXHR.status == 200) {
+                    speicherstandLaden();
+                    // moved this to vic-twine-utils
+                    // showCustomAlert($('.registration-success'), 'Spielstand importiert!');
                 }
 
                 // disable submit button
@@ -35,7 +37,6 @@ $(function() {
                 $('#weiterButton').prop('disabled', false);
 
             }).fail(function(jqXHR, textStatus, errorThrown){
-                console.log("positng to database failed, god damn: " + errorThrown);
                 var err = "(" + errorThrown + ")";
                 showCustomAlert($('.registration-failure'), err);
             });

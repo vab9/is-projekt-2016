@@ -68,7 +68,7 @@ def register():
             return "Unable to save " + unicode(new_user) + " to database...", 503
         # initial score of 0
         new_user.score = 0
-        return new_user.make_json_data(), 200
+        return new_user.make_json_data(), 201
     else:
         # return existing user info
         return usr.make_json_data(), 200

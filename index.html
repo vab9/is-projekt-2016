@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="index" startnode="263" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("static/css/bootstrap.min.css");
+<tw-storydata name="index" startnode="262" creator="Twine" creator-version="2.0.11" ifid="74BBCB7F-F957-498D-83E2-1730077C6C84" format="Harlowe" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url("static/css/bootstrap.min.css");
 @import url("static/css/style.css");
 
 
@@ -2873,8 +2873,8 @@ Dein Punktstand nach diesem Kapitel: {(if: $score is 1)[$score Punkt!](else:)[$s
 <tw-passagedata pid="260" name="Hauptseite" tags="" position="452,203">&lt;b&gt;Willkommen, $vorname $nachname!&lt;/b&gt;
 
 Hier klicken, um den letzten Speicherstand zu laden:
-{(if: (saved-games:) contains $userid)[
-(link: &quot;Load game&quot;)[(load-game: $userid)]
+{(if: (saved-games:) contains $username)[
+(link: &quot;Load game&quot;)[(load-game: $username)]
 ]}
 
 Aktueller Punktestand: $score
@@ -2978,11 +2978,7 @@ tr:nth-child(even) {
 &lt;/table&gt;
 &lt;/html&gt;
 }</tw-passagedata>
-<tw-passagedata pid="262" name="Letzte Session" tags="" position="187,378">{
-&lt;!-- Here the savegame is loaded --&gt;
-(if: (savedgames:) contains &quot;Slot A&quot;)[(loadgame: &quot;Slot A&quot;)]
-}</tw-passagedata>
-<tw-passagedata pid="263" name="Startseite" tags="" position="76,163">{
+<tw-passagedata pid="262" name="Startseite" tags="" position="76,163">{
 &lt;h3&gt;Serious Game&lt;/h3&gt;
 
 Bitte melde dich an, um alle Funktionen dieses Spiels zu nutzen. Es geht ganz einfach!
@@ -3005,7 +3001,7 @@ Um zu spielen ohne dich anzumelden, klicke hier: [&lt;button class=&quot;btn btn
 
 &#39;&#39;Hinweis&#39;&#39;: Wenn du anonym spielst, dann wird dein Spielstand nicht gespeichert und du kannst nicht in die Bestenliste kommen.
 }</tw-passagedata>
-<tw-passagedata pid="264" name="Anmeldung" tags="" position="248,234">{
+<tw-passagedata pid="263" name="Anmeldung" tags="" position="248,234">{
 &lt;h3&gt;Anmeldung&lt;/h3&gt;
 &lt;div&gt;
 Nur wenn du angemeldet bist, kannst du deinen Fortschritt speichern und in die Bestenliste kommen. Wenn du schon einmal gespielt hast, dann gib bitte die selben Daten wie beim letzen Mal ein. &lt;br&gt;&lt;br&gt;
@@ -3021,7 +3017,7 @@ Nur wenn du angemeldet bist, kannst du deinen Fortschritt speichern und in die B
 
 
             &lt;div class=&quot;col-md-4&quot;&gt;
-                &lt;input class=&quot;form-control&quot; id=&quot;firstName&quot; name=&quot;vorname&quot; pattern=&quot;[a-zA-Z]+&quot; placeholder=&quot;Max&quot; required=&quot;&quot; type=&quot;text&quot;&gt;
+                &lt;input class=&quot;form-control&quot; id=&quot;firstName&quot; name=&quot;vorname&quot; pattern=&quot;[a-zA-Z ]{2,32}&quot; placeholder=&quot;Max&quot; required=&quot;&quot; type=&quot;text&quot;&gt;
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -3033,7 +3029,7 @@ Nur wenn du angemeldet bist, kannst du deinen Fortschritt speichern und in die B
 
 
             &lt;div class=&quot;col-md-4&quot;&gt;
-                &lt;input class=&quot;form-control&quot; id=&quot;lastName&quot; name=&quot;nachname&quot; pattern=&quot;[a-zA-Z]+&quot; placeholder=&quot;Mustermann&quot; required=&quot;&quot; type=&quot;text&quot;&gt;
+                &lt;input class=&quot;form-control&quot; id=&quot;lastName&quot; name=&quot;nachname&quot; pattern=&quot;[a-zA-Z ]{2,32}&quot; placeholder=&quot;Mustermann&quot; required=&quot;&quot; type=&quot;text&quot;&gt;
             &lt;/div&gt;
         &lt;/div&gt;
 
@@ -3081,7 +3077,8 @@ Nur wenn du angemeldet bist, kannst du deinen Fortschritt speichern und in die B
 &lt;!-- hook for weiter button --&gt;
 (click: ?weiter)[
 	(if: $vorname is not &quot;Spieler&quot; and $vorname is not 0)[
-		  (go-to: &quot;Hauptseite&quot;)
+(set: $score to 0)
+(go-to: &quot;Hauptseite&quot;)
 	]
 ]
 

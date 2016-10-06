@@ -9,7 +9,9 @@ import sys
 from flask import Flask, send_file, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from whitenoise import WhiteNoise
+from datetime import date
 from dateutil.parser import parse as parse_date
+from dateutil.relativedelta import *
 
 # init flask app
 app = Flask(__name__)
@@ -76,7 +78,7 @@ def register():
 
 @app.route('/savegame', methods=['POST'])
 def save_game():
-
+    """Save a game state to the database and return the user it belongs to or 404"""
     data = request.get_json(force=True)
 
     username = data['username']
@@ -85,10 +87,6 @@ def save_game():
     # do i need to call json.dumps(data) ???
     usr.savegame = data
 
-    # Only possible if score variable is set in twine already
-    #
-    # MAKE ANOTHER METHOD FOR THIS SPECIAL CASE
-    #
     if 'score' in data:
         score = data['score']
         usr.update_highscore(score)
@@ -99,13 +97,32 @@ def save_game():
 
 @app.route('/loadgame/<int:userid>')
 def load_game(userid):
+    """Tries to load a savegame from the database and returns it or 404"""
     # this should be a dict of unicode strings...
     sg = User.query.get_or_404(userid).savegame
     if sg is None:
-        return "Dieser User hat noch kein Spielstand gespeichert. ", 404
+        return "Dieser User hat noch keinen Spielstand gespeichert. ", 404
     else:
         return jsonify(sg), 200
 
+
+@app.route('/bestenliste')
+def bestenliste():
+    best_users = User.query.add_columns(User.vorname, User.nachname, User.geb, User.highscore).order_by(User.highscore.desc()).limit(10).all()
+    res = []
+    # get today once
+    today = date.today()
+
+    for usr in best_users:
+        # get age
+        age = relativedelta(today, usr.geb).years
+        res.append({
+            'vorname': usr.vorname,
+            'nachname': usr.nachname,
+            'alter': age,
+            'highscore': usr.highscore
+        })
+    return jsonify(res), 200
 
 ###########################
 

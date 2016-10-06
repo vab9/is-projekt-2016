@@ -24,7 +24,7 @@ function getTwineVariable(name) {
     return _harlowe_state.variables[name];
 }
 
-function speicherstandLaden(_callback) {
+function speicherstandLaden() {
     console.log("trying to read spielstand from db and write to localStorage");
     //
     // maybe not use userid if we want to load somewhere else?!
@@ -40,10 +40,9 @@ function speicherstandLaden(_callback) {
         var score = dt['score'];
 
         setTwineVariable('score', score);
-
         window.localStorage.setItem(k, v);
+        showCustomAlert($('.registration-success'), 'Spielstand importiert!');
     });
-    showCustomAlert($('.registration-success'), 'Spielstand importiert!');
 }
 
 function speicherstandSchreiben(keyName, keyValue) {

@@ -4,7 +4,7 @@
 * Visit http://www.dynamicdrive.com/ for full source code
 */
 
-jQuery.noConflict()
+// jQuery.noConflict()
 
 function fluidtextresizer(setting){
     fluidtextresizer.count=(fluidtextresizer.count)? ++fluidtextresizer.count : 1

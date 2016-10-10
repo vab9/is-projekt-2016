@@ -117,6 +117,7 @@ def bestenliste():
     for usr in best_users:
         # get age
         age = relativedelta(today, usr.geb).years
+        age = age if age > 0 else 0
         res.append({
             'vorname': usr.vorname,
             'nachname': usr.nachname,

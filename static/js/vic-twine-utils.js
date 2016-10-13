@@ -79,6 +79,21 @@ function speicherstandSchreiben(keyName, keyValue) {
 
 
 $(function() {
+
+    // Set Alert when leaving game
+    window.onbeforeunload = function() { return "You work will be lost."; };
+    window.onbeforeunload = function(e) {
+      var dialogText = 'Achtung: Dein Spielstand geht verloren, wenn du die Seite verlässt, ohne vorher zu speichern!';
+      e.returnValue = dialogText;
+      return dialogText;
+    };
+
+    // Prevent forward and back buttons
+    history.pushState(null, null, document.URL);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, document.URL);
+    });
+
     // rewrite original setItem function to check for twine savegame
     var originalSetItem = localStorage.setItem;
     window.localStorage.setItem = function(keyName, keyValue) {

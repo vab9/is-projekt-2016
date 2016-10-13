@@ -1,5 +1,5 @@
-if (typeof mytextsizer === 'undefined') {
-    mytextsizer = new fluidtextresizer({
+if (typeof window.mytextsizer === 'undefined') {
+    window.mytextsizer = new fluidtextresizer({
         controlsdiv: "", //id of special div containing your resize controls. Enter "" if not defined
         targets: ["tw-passage"], //target elements to resize text within: ["selector1", "selector2", etc]
         levels: 3, //number of levels users can magnify (or shrink) text
@@ -8,7 +8,6 @@ if (typeof mytextsizer === 'undefined') {
     });
 } else {
     $(function() {
-        mytextsizer.styleAktualisieren();
+        window.mytextsizer.styleAktualisieren();
     });
-
 }

@@ -73,6 +73,16 @@ function speicherstandSchreiben(keyName, keyValue) {
     posting.done(function(dt, textStatus, jqXHR) {
         console.log('saved: ');
         console.log(dt);
+        var btn = $('#speicherButton');
+        btn.removeClass("btn-info").addClass('btn-success');
+        btn.find('#speicher-glyph').removeClass('glyphicon-floppy-disk').addClass('glyphicon-floppy-saved');
+        btn.find('#speicher-text').text(' Spiel gespeichert!');
+    }).fail(function(jqXHR, textStatus, error) {
+        console.log('saving to db failed!');
+        var btn = $('#speicherButton');
+        btn.removeClass("btn-info").addClass('btn-warning');
+        btn.find('#speicher-glyph').removeClass('glyphicon-floppy-disk').addClass('glyphicon-floppy-remove');
+        btn.find('#speicher-text').text(' Fehler beim Speichern!');
     });
 
 }
@@ -81,7 +91,6 @@ function speicherstandSchreiben(keyName, keyValue) {
 $(function() {
 
     // Set Alert when leaving game
-    window.onbeforeunload = function() { return "You work will be lost."; };
     window.onbeforeunload = function(e) {
       var dialogText = 'Achtung: Dein Spielstand geht verloren, wenn du die Seite verlässt, ohne vorher zu speichern!';
       e.returnValue = dialogText;

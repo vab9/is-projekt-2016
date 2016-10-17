@@ -103,6 +103,8 @@
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -122,6 +124,8 @@ $.getScript("static/js/vic-twine-utils.js", function(){
 });
 
 $.getScript("static/js/textresizerinstance.js");
+
+
 
 
 
@@ -150,15 +154,13 @@ $.getScript("static/js/textresizerinstance.js");
 &lt;a class=&quot;btn btn-default&quot; href=&quot;javascript:mytextsizer.setFontLevel(&#39;bigger&#39;)&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-zoom-in&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;&lt;/a&gt;
 
 &lt;!-- SAVE GAME --&gt;
-[&lt;a id=&quot;speicherButton&quot; class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-disk&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;   Spiel speichern&lt;/a&gt;]&lt;saveGame|
+[&lt;button id=&quot;speicherButton&quot; class=&quot;btn btn-info&quot;&gt;&lt;span id =&quot;speicher-glyph&quot; class=&quot;glyphicon glyphicon-floppy-disk&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;&lt;span id=&quot;speicher-text&quot;&gt; Spiel speichern&lt;/span&gt;&lt;/button&gt;]&lt;saveGame|
 
 (if: $vorname is &quot;Spieler&quot; or $vorname is 0)[(replace: ?saveGame)[]]
 
 (click: ?saveGame)[
-	(if: $username is not 0 and (save-game:$username))[
-    	(replace: ?saveGame)[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-saved&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Spiel gespeichert&lt;/a&gt;]]
-		(else: )[
-    	(replace: ?saveGame)[&lt;a class=&quot;btn btn-info&quot;&gt;&lt;span class=&quot;glyphicon glyphicon-floppy-disk&quot; aria-hidden=&quot;true&quot;&gt; &lt;/span&gt;  Fehler beim Speichern&lt;/a&gt;]]]
+	(if: $username is not 0)[
+		(save-game:$username)]]
 
 &lt;/span&gt;
 &lt;!-- END HEADERBUTTON SPAN --&gt;

@@ -106,6 +106,7 @@
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">// require JQuery
 $.getScript("static/js/bootstrap.min.js", function(){
 	console.log("bootstrap.min.js loaded!");
@@ -125,6 +126,7 @@ $.getScript("static/js/vic-twine-utils.js", function(){
 });
 
 $.getScript("static/js/textresizerinstance.js");
+
 
 
 
@@ -202,7 +204,7 @@ Mit den Knöpfen neben dem Hilfeknopf lässt sich die Textgröße anpassen.
 
 Mit dem &quot;Spiel speichern&quot; Knopf kannst du deinen Fortschritt im Spiel sichern. Dies ist nur möglich, wenn du angemeldet bist.
 
-Um das Spiel zu beenden oder zu unterbrechen ist keine Abmeldung erforderlich. Es reicht aus, lediglich das Fenster zu schließen. Vergiss nur nicht, deinen Spielstand vorher zu speichern.
+Um das Spiel zu beenden oder zu unterbrechen kannst du auf der Hauptseite auf &quot;Abmelden&quot; klicken. Es reicht allerdings auch aus, lediglich das Fenster zu schließen. Vergiss nur nicht, deinen Spielstand vorher zu sichern, denn sonst geht dein bisheriger Fortschritt verloren.
 
 &lt;b&gt;Kompatibilität&lt;/b&gt;
 
@@ -3287,11 +3289,17 @@ Von hier kommst du zur Bestenliste oder kannst direkt mit dem Spiel beginnen. Vi
 {
 &lt;div class=&quot;continue&quot;&gt;
 &lt;p&gt;
-[[Top10&lt;-&lt;button class=&quot;pull-left btn btn-default btn-lg&quot;&gt;Zur Bestenliste&lt;/button&gt;]]
+[[Top10&lt;-&lt;button class=&quot;pull-left btn btn-default&quot;&gt;Zur Bestenliste&lt;/button&gt;]]
 
-[[Willkommen&lt;-&lt;button class=&quot;btn btn-default btn-lg&quot;&gt;Jetzt spielen!&lt;/button&gt;]]
+[[Willkommen&lt;-&lt;button class=&quot;btn btn-info&quot;&gt;Jetzt spielen!&lt;/button&gt;]]
+
+[&lt;a href=&quot;/&quot; class=&quot;pull-right btn btn-default&quot;&gt;Abmelden&lt;/a&gt;]&lt;abmelden|
+
+(if: $vorname is &quot;Spieler&quot; or $vorname is 0)[(replace: ?abmelden)[]]
+
 &lt;/p&gt;
 &lt;/div&gt;
+
 }</tw-passagedata>
 <tw-passagedata pid="261" name="Top10" tags="" position="344,376">{
 &lt;h2&gt;Bestenliste&lt;/h2&gt;

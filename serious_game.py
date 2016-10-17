@@ -56,6 +56,10 @@ def register():
         raise e
         return "Unable to parse form...", 500
 
+    # check date in range
+    if geb.year not in range(1890, 2020):
+        return "Unrealistisches Geburtsjahr", 400
+
     # look for unique username in db
     requested_usrname = vorname + nachname + unicode(geb.date())
     usr = User.query.filter_by(username=requested_usrname).first()

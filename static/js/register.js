@@ -37,7 +37,7 @@ $(function() {
                 $('#weiterButton').prop('disabled', false);
 
             }).fail(function(jqXHR, textStatus, errorThrown){
-                var err = "(" + errorThrown + ")";
+                var err = "(" + jqXHR.responseText + ")";
                 showCustomAlert($('.registration-failure'), err);
             });
         } else {

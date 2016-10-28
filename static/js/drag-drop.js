@@ -1,11 +1,11 @@
 ﻿"use strict";
 
 function dragenter(ev) {
-    ev.target.style.opacity = 0.4;
+    ev.currentTarget.style.opacity = 0.4;
 }
 
 function dragleave(ev) {
-    ev.target.style.opacity = 1.0;
+    ev.currentTarget.style.opacity = 1.0;
 }
 
 function allowDrop(ev) {

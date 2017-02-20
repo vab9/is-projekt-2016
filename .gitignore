@@ -1,7 +1,7 @@
 .DS_Store
 
 # need to upload resources to heroku for production
-# res/
+static/res/faces
 
 # python executable and cache
 *.pyc
